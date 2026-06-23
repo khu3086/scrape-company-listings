@@ -36,7 +36,8 @@ ENGINEERING_RE = re.compile(
     r"engineer|engineering|developer|swe|sde|programmer|backend|back[- ]?end|"
     r"frontend|front[- ]?end|full[- ]?stack|machine learning|ml engineer|"
     r"infrastructure|infra|platform|software|devops|sre|systems|firmware|"
-    r"data engineer|forward[- ]?deployed|robotics|compiler|kernel"
+    r"data engineer|forward[- ]?deployed|robotics|compiler|kernel|architect|"
+    r"member of technical staff|\bmts\b|technical staff"
     r")\b",
     re.I,
 )
