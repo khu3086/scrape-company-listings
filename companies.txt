@@ -1,0 +1,286 @@
+# One company per line. Lines starting with # and blank lines are ignored.
+# discover.py reads this file and resolves each to an ATS endpoint -> companies.yaml
+Riot Games
+Instacart
+Rollstack
+Accend
+NanoNets
+Infisical
+Vooma
+Onyx
+Swif.ai
+Sapling.ai
+Canary Technologies
+Etleap
+Nextera Robotics
+Informed K12
+DoorDash
+Quickchat AI
+David AI
+Posh
+BetterBasket
+Terra API
+Anima
+Porter
+Atomic
+Velvet
+Encord
+Corgi Insurance
+Zymbly
+Coval
+ClaimSorted
+Chasi
+Juicebox
+Bree
+Astraea
+Parrot
+Combinely
+PointOne
+VectorShift
+Alaan
+Mercura
+CoLoop
+Carbonfact
+Shaped
+Synthio Labs
+Triomics
+Cardboard
+AgentCollect
+Klarity
+Infer
+River Markets
+Resolve AI
+DeepInfra
+Pareto AI
+Outlier
+Epsilon3
+Notion
+Red Hat
+Cognition AI
+Anysphere
+WEKA
+Bland AI
+Reflection AI
+Crusoe Energy
+Turbopuffer
+PolyAI
+Langfuse
+Retell AI
+Hume AI
+LlamaIndex
+Qdrant
+World Labs
+Vercel
+Granola
+Weaviate
+Safe Superintelligence
+Chroma
+Tenstorrent
+Helicone
+Sakana AI
+Cresta
+Lossfunk
+Isomorphic Labs
+Extend
+Tavily
+Cohere
+Oxide Computer
+NVIDIA
+Poolside
+Inflection AI
+fal.ai
+Patronus AI
+Scale AI
+Braintrust
+Black Forest Labs
+Zed Industries
+Sourcegraph
+IBM
+Replit
+E2B
+Letta
+Anduril Industries
+Firecrawl
+AI21 Labs
+Magic.dev
+Q-CTRL
+Listen Labs
+CoreWeave
+Databricks
+Anthropic
+Buffer
+Thinking Machines Lab
+Latent Labs
+Apple
+Ramp
+Google DeepMind
+Factory AI
+OpenAI
+Mistral AI
+Palantir Technologies
+DeepJudge
+Rippling
+Hugging Face
+xAI
+Lovable
+Browserbase
+Pinecone
+Recursive Intelligence
+LangChain
+Suno
+Replicate
+OpenEvidence
+Exa AI
+Doppel
+Mercor
+Abnormal Security
+Nscale
+Gamma
+Harvey AI
+Periodic Labs
+Render
+Lambda Labs
+Distyl AI
+Mintlify
+Pika
+Groq
+Upscale AI
+Luma AI
+Decagon
+Cerebras Systems
+Fireworks AI
+Inferact
+Nexthop AI
+Writer
+Positron
+Hyperbolic
+Waabi
+Giga
+ElevenLabs
+Modal Labs
+Codeium
+Basis
+Abridge
+Simile
+Hippocratic AI
+Wonderful
+Baseten
+Sunday Robotics
+Runway
+Main Func
+Steno
+AssemblyAI
+Sierra AI
+Rogo
+Arena
+Lila Sciences
+Profound
+Hebbia
+Deepgram
+Reka AI
+Inception Labs
+Checkly
+PaleBlueDot AI
+Parallel
+Coreworks AI
+Vobiz.ai
+Banza
+SCIKIQ
+Confluxe
+OrbitShift
+Coulomb AI
+BusinessOnBot
+Apollo
+Wifi Dabba
+Clinikally
+Unsiloed AI
+Crustdata
+SurgeGrowth
+Mandrake Bio
+Ambient.ai
+Runable
+Alt Carbon
+Headout
+Matters.AI
+Consuma AI
+Blue Machines AI
+ScaleKit
+SambaNova Systems
+Vahan.ai
+Deccan AI
+Alltius
+Sprinto
+Athina AI
+Vapi
+Skit.ai
+Uber India
+Vibrium AI
+Perplexity AI
+Reo.Dev
+KOGO
+AI4Bharat
+Fractal Analytics
+Locus.sh
+Adalat AI
+VOGIC AI
+Applied Intuition
+GreyLabs AI
+Auric AI Labs
+P0 Security
+Mihup AI
+Together AI
+Rubrik
+Abacus.AI
+Gupshup
+Innovaccer
+Arrowhead
+Atomicwork
+Adnoxy
+Eightfold AI
+Rifa AI
+Observe.AI
+Neysa
+SigTuple
+Qure.ai
+Gnani.ai
+Haptik
+Sarvam AI
+SuperAGI
+Infinite Uptime
+Kore.ai
+Cropin
+Soket AI Labs
+TrueFoundry
+AgNext Technologies
+Krutrim
+Atlan
+Niramai
+QpiAI
+Composio
+Entropik
+Vodex
+Uniphore
+Mad Street Den
+Bolna
+Miko
+Nurix AI
+Essential AI
+Cartesia
+Arize AI
+SpotDraft
+Galileo
+AuraML
+Glean
+Yellow.ai
+SkildAI
+Wysa
+Lyzr AI
+Pixis
+TurboML
+Portkey
+Smallest.ai
+Simplismart
+Microsoft
+Amazon
+Google
+Meta

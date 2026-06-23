@@ -1,0 +1,46 @@
+name: job-watcher
+
+# Cloud cron: runs even when your laptop is off, and commits state.json back to
+# the repo so dedup memory persists between runs.
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # every 3 hours (UTC)
+  workflow_dispatch: {}       # allow manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write             # needed to commit updated state.json
+
+concurrency:
+  group: job-watcher
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Scrape and email new listings
+        env:
+          SENDER_GMAIL: ${{ secrets.SENDER_GMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT: ${{ secrets.RECIPIENT }}
+        run: python scrape.py
+
+      - name: Persist state
+        run: |
+          if [[ -n "$(git status --porcelain state.json)" ]]; then
+            git config user.name "job-watcher"
+            git config user.email "actions@github.com"
+            git add state.json
+            git commit -m "Update seen-jobs state [skip ci]"
+            git push
+          else
+            echo "No state change."
+          fi
