@@ -5,7 +5,12 @@ name: job-watcher
 on:
   schedule:
     - cron: "0 */3 * * *"   # every 3 hours (UTC)
-  workflow_dispatch: {}       # allow manual "Run workflow" from the Actions tab
+  workflow_dispatch:          # allow manual "Run workflow" from the Actions tab
+    inputs:
+      email_first_run:
+        description: "Email the full current snapshot on this run (use once, for the first run)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write             # needed to commit updated state.json
@@ -31,7 +36,12 @@ jobs:
           SENDER_GMAIL: ${{ secrets.SENDER_GMAIL }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
-        run: python scrape.py
+        run: |
+          if [[ "${{ inputs.email_first_run }}" == "true" ]]; then
+            python scrape.py --email-first-run
+          else
+            python scrape.py
+          fi
 
       - name: Persist state
         run: |
