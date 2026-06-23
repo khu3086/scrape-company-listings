@@ -19,6 +19,7 @@ Returned jobs use the same normalized shape as ats.py:
 from __future__ import annotations
 
 import html
+import random
 import re
 import time
 
@@ -91,11 +92,36 @@ def _parse_cards(page_html):
     return out
 
 
-def search_company(company, location="India", pages=1, pause=1.5, session=None):
+def _fetch_page(sess, url, company, max_retries=3, backoff=20):
+    """GET one page, backing off and retrying on rate-limit responses.
+
+    Returns the HTML on success, None on a soft failure (non-200), and raises
+    LinkedInBlocked only after retries are exhausted.
+    """
+    delay = backoff
+    for attempt in range(max_retries + 1):
+        try:
+            r = sess.get(url, headers=HEADERS, timeout=TIMEOUT)
+        except requests.RequestException:
+            return None
+        if r.status_code in _BLOCKED_STATUS:
+            if attempt < max_retries:
+                time.sleep(delay + random.uniform(0, 5))
+                delay *= 2  # 20s -> 40s -> 80s
+                continue
+            raise LinkedInBlocked(f"HTTP {r.status_code} for {company!r} (after {max_retries} retries)")
+        if r.status_code != 200 or not r.text.strip():
+            return None
+        return r.text
+    return None
+
+
+def search_company(company, location="India", pages=1, pause=3.0, session=None):
     """Return normalized jobs for `company` from LinkedIn guest search.
 
-    Only cards whose company matches `company` are kept. Raises LinkedInBlocked
-    on a rate-limit response so a bulk caller can stop.
+    Only cards whose company matches `company` are kept. Backs off on transient
+    rate-limits; raises LinkedInBlocked if still blocked after retries so a bulk
+    caller can stop.
     """
     sess = session or requests.Session()
     results, seen = [], set()
@@ -103,15 +129,10 @@ def search_company(company, location="India", pages=1, pause=1.5, session=None):
         url = GUEST_URL.format(kw=requests.utils.quote(company),
                                loc=requests.utils.quote(location),
                                start=page * 10)
-        try:
-            r = sess.get(url, headers=HEADERS, timeout=TIMEOUT)
-        except requests.RequestException:
+        text = _fetch_page(sess, url, company)
+        if not text:
             break
-        if r.status_code in _BLOCKED_STATUS:
-            raise LinkedInBlocked(f"HTTP {r.status_code} for {company!r}")
-        if r.status_code != 200 or not r.text.strip():
-            break
-        cards = _parse_cards(r.text)
+        cards = _parse_cards(text)
         if not cards:
             break
         for c in cards:
@@ -127,5 +148,5 @@ def search_company(company, location="India", pages=1, pause=1.5, session=None):
                 "url": c["url"],
                 "company": company,
             })
-        time.sleep(pause)  # be gentle; avoid tripping rate limits
+        time.sleep(pause + random.uniform(0, 2))  # jittered; be gentle on rate limits
     return results

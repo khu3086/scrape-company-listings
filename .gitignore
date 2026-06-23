@@ -1,5 +1,6 @@
 .venv/
 .env
+state.linkedin.json
 __pycache__/
 *.pyc
 /tmp/

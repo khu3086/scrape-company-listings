@@ -106,17 +106,17 @@ def is_india_or_remote(job):
 
 
 # --- state ------------------------------------------------------------------
-def load_state():
+def load_state(path):
     try:
-        with open(STATE_JSON) as f:
+        with open(path) as f:
             data = json.load(f)
         return set(data.get("seen", []))
     except (FileNotFoundError, ValueError):
         return set()
 
 
-def save_state(seen):
-    with open(STATE_JSON, "w") as f:
+def save_state(seen, path):
+    with open(path, "w") as f:
         json.dump({"seen": sorted(seen)}, f, indent=0)
 
 
@@ -237,20 +237,26 @@ def main():
                     help="ALSO scrape LinkedIn for unresolved companies (LOCAL ONLY; against LinkedIn ToS)")
     ap.add_argument("--linkedin-location", default="India",
                     help="LinkedIn location filter for the --linkedin pass (default: India)")
+    ap.add_argument("--no-ats", action="store_true",
+                    help="skip the ATS pass (e.g. LinkedIn-only local runs while the cloud cron handles ATS)")
+    ap.add_argument("--state", default=STATE_JSON,
+                    help="path to the dedup state file (use a separate file for local LinkedIn runs)")
     args = ap.parse_args()
 
-    registry = load_registry()
-    print(f"Scanning {len(registry)} companies...", file=sys.stderr)
-    matches = gather_matches(registry, workers=args.workers)
-    print(f"Matched {len(matches)} engineering roles via ATS (India + Remote).", file=sys.stderr)
+    matches = []
+    if not args.no_ats:
+        registry = load_registry()
+        print(f"Scanning {len(registry)} companies...", file=sys.stderr)
+        matches = gather_matches(registry, workers=args.workers)
+        print(f"Matched {len(matches)} engineering roles via ATS (India + Remote).", file=sys.stderr)
 
     if args.linkedin:
         unresolved = load_unresolved()
         print(f"LinkedIn pass over {len(unresolved)} unresolved companies (rate-limited)...", file=sys.stderr)
         matches.extend(gather_linkedin(unresolved, location=args.linkedin_location))
-        print(f"Total matched: {len(matches)} (ATS + LinkedIn).", file=sys.stderr)
+        print(f"Total matched: {len(matches)}.", file=sys.stderr)
 
-    seen = load_state()
+    seen = load_state(args.state)
     fresh_state = len(seen) == 0
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
 
@@ -283,7 +289,7 @@ def main():
     # Update state with everything currently matching.
     for j in matches:
         seen.add(job_key(j["company"], j))
-    save_state(seen)
+    save_state(seen, args.state)
     print(f"State now tracks {len(seen)} job ids.", file=sys.stderr)
 
 
