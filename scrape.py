@@ -21,6 +21,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from email.mime.text import MIMEText
 from email.utils import formatdate
 
+import requests
 import yaml
 
 import ats as ats_mod
@@ -33,7 +34,7 @@ STATE_JSON = f"{HERE}/state.json"
 ENGINEERING_RE = re.compile(
     r"\b("
     r"engineer|engineering|developer|swe|sde|programmer|backend|back[- ]?end|"
-    r"frontend|front[- ]?end|full[- ]?stack|machine learning|\bml\b|\bai\b|"
+    r"frontend|front[- ]?end|full[- ]?stack|machine learning|ml engineer|"
     r"infrastructure|infra|platform|software|devops|sre|systems|firmware|"
     r"data engineer|forward[- ]?deployed|robotics|compiler|kernel"
     r")\b",
@@ -129,6 +130,39 @@ def load_registry():
     return doc.get("companies", {}) or {}
 
 
+def load_unresolved():
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    return doc.get("unresolved", []) or []
+
+
+def gather_linkedin(companies, location="India"):
+    """Best-effort LinkedIn pass for companies with no scrapable ATS.
+
+    Sequential + rate-limited; stops early if LinkedIn rate-limits us. Local use
+    only (LinkedIn blocks datacenter IPs and this is against their ToS).
+    """
+    import linkedin  # local import so a missing residential setup never breaks ATS runs
+    sess = requests.Session()
+    matches = []
+    for i, company in enumerate(companies, 1):
+        try:
+            jobs = linkedin.search_company(company, location=location, pages=1, session=sess)
+        except linkedin.LinkedInBlocked as e:
+            print(f"  LinkedIn rate-limited after {i-1} companies ({e}); stopping LinkedIn pass.",
+                  file=sys.stderr)
+            break
+        except Exception as e:  # noqa: BLE001
+            print(f"  ! LinkedIn {company}: {e}", file=sys.stderr)
+            continue
+        for j in jobs:
+            if is_engineering(j["title"]) and is_india_or_remote(j):
+                matches.append(j)
+    print(f"LinkedIn pass: {len(matches)} matches across {len(companies)} unresolved companies.",
+          file=sys.stderr)
+    return matches
+
+
 def fetch_company(company, cfg):
     jobs = ats_mod.fetch(cfg)
     for j in jobs:
@@ -198,12 +232,22 @@ def main():
     ap.add_argument("--email-first-run", action="store_true",
                     help="if state is empty, email everything currently matching (not just deltas)")
     ap.add_argument("--workers", type=int, default=12)
+    ap.add_argument("--linkedin", action="store_true",
+                    help="ALSO scrape LinkedIn for unresolved companies (LOCAL ONLY; against LinkedIn ToS)")
+    ap.add_argument("--linkedin-location", default="India",
+                    help="LinkedIn location filter for the --linkedin pass (default: India)")
     args = ap.parse_args()
 
     registry = load_registry()
     print(f"Scanning {len(registry)} companies...", file=sys.stderr)
     matches = gather_matches(registry, workers=args.workers)
-    print(f"Matched {len(matches)} engineering roles (India + Remote).", file=sys.stderr)
+    print(f"Matched {len(matches)} engineering roles via ATS (India + Remote).", file=sys.stderr)
+
+    if args.linkedin:
+        unresolved = load_unresolved()
+        print(f"LinkedIn pass over {len(unresolved)} unresolved companies (rate-limited)...", file=sys.stderr)
+        matches.extend(gather_linkedin(unresolved, location=args.linkedin_location))
+        print(f"Total matched: {len(matches)} (ATS + LinkedIn).", file=sys.stderr)
 
     seen = load_state()
     fresh_state = len(seen) == 0

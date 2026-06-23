@@ -61,6 +61,34 @@ set -a; source .env; set +a
 .venv/bin/python scrape.py
 ```
 
+## LinkedIn fallback (for unresolved companies) — local only
+
+Companies with no scrapable ATS (Gem/Keka/Teamtailor/custom sites under
+`unresolved:`) can be covered best-effort via LinkedIn's public guest jobs
+endpoint:
+
+```bash
+.venv/bin/python scrape.py --linkedin                       # ATS pass + LinkedIn for unresolved
+.venv/bin/python scrape.py --linkedin --linkedin-location "India" --dry-run
+```
+
+It searches each unresolved company by name, keeps only cards whose company
+actually matches (so a keyword hit on an unrelated job is dropped), then applies
+the same engineering + India/Remote filters.
+
+**Read before relying on it:**
+- It uses LinkedIn against their **Terms of Service** — personal, low-volume use
+  only, at your own risk.
+- LinkedIn **blocks datacenter IPs** (instant `999`/`429`), so this only works
+  from your **home connection (your Mac)** — do **NOT** add `--linkedin` to the
+  GitHub Actions cron. On a rate-limit response the LinkedIn pass backs off and
+  stops automatically.
+- It's inherently fragile (LinkedIn can change their HTML anytime) and lower
+  precision than the ATS APIs. Treat it as a bonus, not the backbone.
+
+A good pattern: run the reliable ATS-only scrape in the cloud cron, and
+occasionally run `scrape.py --linkedin` by hand on your Mac for extra coverage.
+
 ## Schedule it (runs when your laptop is off)
 This repo includes a **GitHub Actions** cron (`.github/workflows/scrape.yml`)
 that runs every 3 hours in GitHub's cloud and commits `state.json` back to the
