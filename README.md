@@ -15,9 +15,11 @@ state.json       set of job ids already seen (so you only get NEW listings)
 ```
 
 ## How it works
-1. `discover.py` maps each company name to its ATS board (resolved **147 / 284**
-   on first run; the rest are big custom/Workday sites with no public API —
-   listed under `unresolved:` in `companies.yaml`).
+1. `discover.py` auto-maps each company name to its ATS board; hand-verified
+   boards (including Workday sites like NVIDIA, Red Hat, Fractal, Uniphore) were
+   then added on top. **179 / 284 companies resolved.** The remaining ~105 use
+   unsupported ATSes (Gem, Keka, Teamtailor, BambooHR, Rippling, YC
+   WorkAtAStartup) or fully custom sites; they're listed under `unresolved:`.
 2. `scrape.py` fetches every resolved board, keeps roles whose **title** looks
    like engineering (any seniority) and whose **location** is in India or is an
    open/remote role (foreign-only remote like "Remote – USA" is excluded).

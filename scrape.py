@@ -130,7 +130,7 @@ def load_registry():
 
 
 def fetch_company(company, cfg):
-    jobs = ats_mod.fetch(cfg.get("ats"), cfg.get("slug"))
+    jobs = ats_mod.fetch(cfg)
     for j in jobs:
         j["company"] = company
     return jobs

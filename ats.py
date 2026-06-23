@@ -25,6 +25,18 @@ def _get_json(url):
         return None
 
 
+def _post_json(url, payload):
+    try:
+        r = requests.post(url, headers={**HEADERS, "Content-Type": "application/json",
+                                        "Accept": "application/json"},
+                          json=payload, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return None
+        return r.json()
+    except (requests.RequestException, ValueError):
+        return None
+
+
 def _s(v):
     return "" if v is None else str(v).strip()
 
@@ -131,7 +143,45 @@ def smartrecruiters(slug):
     return out
 
 
-# Ordered for discovery probing (most common first).
+# --- Workday ----------------------------------------------------------------
+def workday(cfg):
+    """Workday CXS endpoint. cfg needs: tenant, dc (wd1/wd3/wd5/...), site.
+
+    Paginates by offset; normalizes the externalPath into an apply URL.
+    """
+    tenant, dc, site = cfg.get("tenant"), cfg.get("dc"), cfg.get("site")
+    if not (tenant and dc and site):
+        return []
+    base = f"https://{tenant}.{dc}.myworkdayjobs.com"
+    api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
+    out, offset, total = [], 0, None
+    while offset < 3000:  # safety cap
+        data = _post_json(api, {"appliedFacets": {}, "limit": 20,
+                                "offset": offset, "searchText": ""})
+        if not isinstance(data, dict):
+            break
+        if total is None:  # Workday only reports the real total on page 1
+            total = data.get("total") or 0
+        postings = data.get("jobPostings") or []
+        if not postings:
+            break
+        for j in postings:
+            path = _s(j.get("externalPath"))
+            loc = _s(j.get("locationsText"))
+            out.append({
+                "id": _s(j.get("bulletFields", [None])[0] or path),
+                "title": _s(j.get("title")),
+                "location": loc,
+                "remote": "remote" in loc.lower(),
+                "url": f"{base}{path}" if path else base,
+            })
+        offset += 20
+        if offset >= total:
+            break
+    return out
+
+
+# Slug-probeable ATSes, ordered for discovery (most common first).
 ADAPTERS = {
     "greenhouse": greenhouse,
     "ashby": ashby,
@@ -141,9 +191,16 @@ ADAPTERS = {
 }
 
 
-def fetch(ats_name, slug):
-    """Fetch normalized jobs for a given ATS + slug."""
+def fetch(cfg):
+    """Fetch normalized jobs for one company config dict.
+
+    cfg = {"ats": "greenhouse"|..., "slug": "..."}  for slug-based ATSes, or
+    cfg = {"ats": "workday", "tenant": ..., "dc": ..., "site": ...}.
+    """
+    ats_name = cfg.get("ats")
+    if ats_name == "workday":
+        return workday(cfg)
     adapter = ADAPTERS.get(ats_name)
     if adapter is None:
         return []
-    return adapter(slug)
+    return adapter(cfg.get("slug"))
