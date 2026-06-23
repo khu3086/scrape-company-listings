@@ -205,9 +205,32 @@ def render_email(new_jobs):
     return "\n".join(lines)
 
 
+def load_dotenv(path=None):
+    """Load KEY=VALUE pairs from .env into the environment (without overriding
+    vars already set, e.g. GitHub Actions secrets). Robust to spaces/quotes in
+    values, so a Gmail App Password pasted with spaces still works.
+    """
+    path = path or f"{HERE}/.env"
+    try:
+        with open(path) as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, val = line.partition("=")
+                key = key.strip()
+                val = val.strip().strip('"').strip("'")
+                if key:
+                    os.environ.setdefault(key, val)
+    except FileNotFoundError:
+        pass
+
+
 def send_email(subject, body):
     sender = os.environ.get("SENDER_GMAIL")
-    password = os.environ.get("GMAIL_APP_PASSWORD")
+    # App passwords never contain spaces; strip them so a pasted "abcd efgh ..."
+    # value still authenticates.
+    password = (os.environ.get("GMAIL_APP_PASSWORD") or "").replace(" ", "")
     recipient = os.environ.get("RECIPIENT", "khushi.nigamwork@gmail.com")
     if not sender or not password:
         print("ERROR: SENDER_GMAIL / GMAIL_APP_PASSWORD not set; cannot send email.", file=sys.stderr)
@@ -228,6 +251,7 @@ def send_email(subject, body):
 
 # --- main -------------------------------------------------------------------
 def main():
+    load_dotenv()  # pick up .env for local runs (no-op when vars already set, e.g. CI)
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true", help="print matches, no email, no state write")
     ap.add_argument("--email-first-run", action="store_true",
