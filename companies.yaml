@@ -661,4 +661,39 @@ unresolved:
 # spam and can match a different company entity with the same name. Pin the
 # correct id here (find it in the company's LinkedIn /jobs/ URL: ...?f_C=<id>).
 linkedin_ids:
+  Alaan: 79116635
+  Amazon: 1586
+  Apple: 162479
+  Auric AI Labs: 105869371
+  BusinessOnBot: 20463828
+  Clinikally: 74489557
+  Cropin: 1711874
+  Crustdata: 73854007
   Deccan AI: 104833915
+  Eightfold AI: 28145130
+  Gnani.ai: 13649041
+  GreyLabs AI: 101881336
+  Gupshup: 3762143
+  Haptik: 3475348
+  IBM: 1009
+  Krutrim: 109899936
+  Locus.sh: 10155969
+  Lyzr AI: 96242391
+  Microsoft: 1035
+  Mihup AI: 7930132
+  Miko: 13198948
+  OrbitShift: 89833601
+  Outlier: 92583550
+  Parrot: 101448794
+  Pixis: 31559415
+  QpiAI: 52164357
+  Qure.ai: 13210940
+  Reo.Dev: 90563783
+  Rippling: 17988315
+  Runable: 106473165
+  Simplismart: 82819726
+  Skit.ai: 13258533
+  Soket AI Labs: 14553442
+  SuperAGI: 91427575
+  Vahan.ai: 10113453
+  Yellow.ai: 3882691
