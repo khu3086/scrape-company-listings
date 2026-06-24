@@ -137,18 +137,31 @@ def load_unresolved():
     return doc.get("unresolved", []) or []
 
 
-def gather_linkedin(companies, location="India"):
+def load_linkedin_ids():
+    """Optional map of company name -> LinkedIn numeric company id (f_C facet).
+
+    Companies with a known id are queried entity-scoped (reliable); the rest fall
+    back to name keyword search.
+    """
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    return doc.get("linkedin_ids", {}) or {}
+
+
+def gather_linkedin(companies, location="India", ids=None):
     """Best-effort LinkedIn pass for companies with no scrapable ATS.
 
     Sequential + rate-limited; stops early if LinkedIn rate-limits us. Local use
     only (LinkedIn blocks datacenter IPs and this is against their ToS).
     """
     import linkedin  # local import so a missing residential setup never breaks ATS runs
+    ids = ids or {}
     sess = requests.Session()
     matches = []
     for i, company in enumerate(companies, 1):
         try:
-            jobs = linkedin.search_company(company, location=location, pages=1, session=sess)
+            jobs = linkedin.search_company(company, location=location, pages=1,
+                                           session=sess, company_id=ids.get(company))
         except linkedin.LinkedInBlocked as e:
             print(f"  LinkedIn rate-limited after {i-1} companies ({e}); stopping LinkedIn pass.",
                   file=sys.stderr)
@@ -276,8 +289,10 @@ def main():
 
     if args.linkedin:
         unresolved = load_unresolved()
-        print(f"LinkedIn pass over {len(unresolved)} unresolved companies (rate-limited)...", file=sys.stderr)
-        matches.extend(gather_linkedin(unresolved, location=args.linkedin_location))
+        ids = load_linkedin_ids()
+        print(f"LinkedIn pass over {len(unresolved)} unresolved companies "
+              f"({len(ids)} with pinned company ids, rate-limited)...", file=sys.stderr)
+        matches.extend(gather_linkedin(unresolved, location=args.linkedin_location, ids=ids))
         print(f"Total matched: {len(matches)}.", file=sys.stderr)
 
     seen = load_state(args.state)

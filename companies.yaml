@@ -655,3 +655,10 @@ unresolved:
 - Wysa
 - Yellow.ai
 - Zymbly
+
+# LinkedIn numeric company ids (the f_C facet) for entity-scoped job search.
+# Keyword search by name is unreliable: it gets buried under "(Freelancer)" gig
+# spam and can match a different company entity with the same name. Pin the
+# correct id here (find it in the company's LinkedIn /jobs/ URL: ...?f_C=<id>).
+linkedin_ids:
+  Deccan AI: 104833915

@@ -4,3 +4,4 @@ state.linkedin.json
 __pycache__/
 *.pyc
 /tmp/
+linkedin-cron.log

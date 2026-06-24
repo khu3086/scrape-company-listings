@@ -27,6 +27,13 @@ import requests
 
 GUEST_URL = ("https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/"
              "search?keywords={kw}&location={loc}&start={start}")
+# Company-scoped search. Far more reliable than keyword search: a keyword like
+# "Deccan AI" is ranked by LinkedIn relevance and gets buried under dozens of
+# near-duplicate "(Freelancer)" gig posts (often from a *different* company
+# entity with the same name), so the real engineering roles never surface. The
+# f_C facet returns exactly one company entity's postings.
+GUEST_ID_URL = ("https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/"
+                "search?f_C={cid}&location={loc}&start={start}")
 HEADERS = {
     "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                    "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -116,19 +123,33 @@ def _fetch_page(sess, url, company, max_retries=3, backoff=20):
     return None
 
 
-def search_company(company, location="India", pages=1, pause=3.0, session=None):
+def search_company(company, location="India", pages=1, pause=3.0, session=None,
+                   company_id=None):
     """Return normalized jobs for `company` from LinkedIn guest search.
 
-    Only cards whose company matches `company` are kept. Backs off on transient
-    rate-limits; raises LinkedInBlocked if still blocked after retries so a bulk
-    caller can stop.
+    If `company_id` (a LinkedIn numeric company id, the `f_C` facet) is given, we
+    query that company entity directly — this returns its real postings instead
+    of keyword-search noise, so we keep every card and fetch until the listing
+    runs out. Otherwise we fall back to a name keyword search and keep only cards
+    whose company fuzzily matches `company`.
+
+    Backs off on transient rate-limits; raises LinkedInBlocked if still blocked
+    after retries so a bulk caller can stop.
     """
     sess = session or requests.Session()
     results, seen = [], set()
-    for page in range(pages):
-        url = GUEST_URL.format(kw=requests.utils.quote(company),
-                               loc=requests.utils.quote(location),
-                               start=page * 10)
+    # A company entity rarely has many open roles; a couple of pages is the whole
+    # list. Keyword search uses the caller's page budget as before.
+    page_budget = max(pages, 3) if company_id else pages
+    for page in range(page_budget):
+        if company_id:
+            url = GUEST_ID_URL.format(cid=company_id,
+                                      loc=requests.utils.quote(location),
+                                      start=page * 10)
+        else:
+            url = GUEST_URL.format(kw=requests.utils.quote(company),
+                                   loc=requests.utils.quote(location),
+                                   start=page * 10)
         text = _fetch_page(sess, url, company)
         if not text:
             break
@@ -136,7 +157,11 @@ def search_company(company, location="India", pages=1, pause=3.0, session=None):
         if not cards:
             break
         for c in cards:
-            if c["id"] in seen or not _company_matches(company, c["company_raw"]):
+            if c["id"] in seen:
+                continue
+            # Company-scoped results are all the target company by construction;
+            # only the keyword path needs the fuzzy company-name guard.
+            if not company_id and not _company_matches(company, c["company_raw"]):
                 continue
             seen.add(c["id"])
             loc_l = c["location"].lower()
