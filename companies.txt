@@ -284,3 +284,60 @@ Microsoft
 Amazon
 Google
 Meta
+# --- large-cap / 30+ LPA India list (added 2026-08-14) ---
+Adobe
+Airbnb
+AMD
+American Express
+Atlassian
+BlackRock
+Blinkit
+Brex
+BrowserStack
+Canva
+Chargebee
+Checkout.com
+Coinbase
+Confluent
+CRED
+CrowdStrike
+Dropbox
+Elastic
+EPAM Systems
+Figma
+Flipkart
+Goldman Sachs
+Groww
+HSBC
+Intel
+Intuit
+JPMorgan Chase
+Juspay
+LTIMindtree
+Meesho
+Morgan Stanley
+Nutanix
+Okta
+Paytm
+PhonePe
+Plaid
+Postman
+Publicis Sapient
+Qualcomm
+Razorpay
+Salesforce
+SAP
+ServiceNow
+Snowflake
+Stripe
+Swiggy
+Target
+Thoughtworks
+Turnitin
+Twilio
+UiPath
+VMware
+Walmart Global Tech
+Workday
+Zepto
+Zomato
