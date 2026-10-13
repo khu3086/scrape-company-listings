@@ -341,3 +341,111 @@ Walmart Global Tech
 Workday
 Zepto
 Zomato
+# --- AI labs / dev tools / quant / Bangalore YC list (added 2026-10-13) ---
+Typesafe AI
+Perseus
+Etched
+Yotta Data Services
+OpenRouter
+Applied Compute
+Proximal
+Emergent
+Manus
+Archestra AI
+BentoLabs AI
+Rowboat Labs
+Ressl AI
+Maya Labs
+Floworks
+Raven
+Kailash Labs
+Slidely AI
+Superhuman
+Higgsfield
+Midjourney
+OpenArt
+Otter.ai
+PLAUD
+Reface
+Speechify
+Clueso
+Rivia.AI
+GitLab
+Linear
+The Browser Company
+SuperAPI
+HydraDB
+Datadog
+OpenObserve
+DrDroid
+Chainguard
+Palo Alto Networks
+Mandiant
+Trail of Bits
+Jane Street
+Citadel
+Citadel Securities
+Renaissance Technologies
+TGS Management
+Hudson River Trading
+PDT Partners
+Five Rings
+Headlands Technologies
+Radix Trading
+Capital One
+Block
+PayPal
+Khatabook
+OkCredit
+FamPay
+Karbon Card
+Infinity
+SALT
+xPay
+Yenmo
+Coupl
+Gullak Money
+Koshex
+marketfeed
+FrontPage
+Mudrex
+Retape
+Kraken
+Monad
+Paradigm
+Flashbots
+Netflix
+SpaceX
+Shield AI
+Tesla
+Waymo
+Zoox
+Neuralink
+Flux Auto
+Discord
+Signal
+Telegram
+Ghost
+ZOKO
+Framework
+Teenage Engineering
+Panic
+System76
+Valve
+Weekday
+CompUp
+DocVita
+Morphle Labs
+Inito
+SuperKalam
+Codingal
+Spark Studio
+Seekho
+Ivy Homes
+FlatX
+Stownest
+WareIQ
+Explorex
+Voosh
+farmtheory
+Vingo
