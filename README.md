@@ -61,6 +61,16 @@ set -a; source .env; set +a
 .venv/bin/python scrape.py
 ```
 
+## US roles at H-1B sponsors
+
+Companies listed under `h1b_sponsors:` in `companies.yaml` (employers with
+regular recent H-1B filings, per DOL LCA data) also have their **US-located**
+engineering roles kept, emailed in a separate "US ... at H-1B sponsors" section.
+The first time a sponsor is scanned, its existing US backlog is absorbed into
+`state.json` silently (`us_seeded`), so you only get newly posted US roles.
+Sponsorship history is no guarantee for a given role. Since Sept 2025, new
+petitions for applicants outside the US also carry a $100k fee.
+
 ## LinkedIn fallback (for unresolved companies) — local only
 
 Companies with no scrapable ATS (Gem/Keka/Teamtailor/custom sites under

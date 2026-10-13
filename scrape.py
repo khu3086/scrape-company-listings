@@ -105,19 +105,60 @@ def is_india_or_remote(job):
     return False
 
 
+# US-located roles, kept only for companies under `h1b_sponsors:` in companies.yaml.
+US_RE = re.compile(
+    r"\b("
+    r"united states|usa|u\.s\.a?\.?|us|bay area|san francisco|sf|new york|nyc|"
+    r"seattle|bellevue|redmond|kirkland|sunnyvale|mountain view|palo alto|"
+    r"menlo park|san jose|santa clara|cupertino|redwood city|san mateo|"
+    r"foster city|south san francisco|san diego|los angeles|austin|dallas|"
+    r"houston|boston|chicago|denver|boulder|atlanta|miami|pittsburgh|"
+    r"portland|raleigh|durham|salt lake city|phoenix|ann arbor|detroit|"
+    r"washington,? d\.?c\.?|"
+    r"alabama|alaska|arizona|arkansas|california|colorado|connecticut|"
+    r"delaware|florida|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|"
+    r"louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|"
+    r"missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|"
+    r"north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|"
+    r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|"
+    r"virginia|wisconsin|wyoming"
+    r")\b",
+    re.I,
+)
+# "Seattle, WA" / "Austin, TX": a two-letter state code after a comma (case-sensitive).
+US_STATE_CODE_RE = re.compile(
+    r",\s*(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|"
+    r"MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|"
+    r"WV|WI|WY|DC)\b"
+)
+
+
+def is_us(job):
+    loc = job.get("location") or ""
+    return bool(US_RE.search(loc) or US_STATE_CODE_RE.search(loc))
+
+
 # --- state ------------------------------------------------------------------
-def load_state(path):
+def _read_state(path):
     try:
         with open(path) as f:
-            data = json.load(f)
-        return set(data.get("seen", []))
+            return json.load(f)
     except (FileNotFoundError, ValueError):
-        return set()
+        return {}
 
 
-def save_state(seen, path):
+def load_state(path):
+    return set(_read_state(path).get("seen", []))
+
+
+def load_us_seeded(path):
+    """H-1B sponsors whose existing US listings have already been absorbed into state."""
+    return set(_read_state(path).get("us_seeded", []))
+
+
+def save_state(seen, path, us_seeded=()):
     with open(path, "w") as f:
-        json.dump({"seen": sorted(seen)}, f, indent=0)
+        json.dump({"seen": sorted(seen), "us_seeded": sorted(us_seeded)}, f, indent=0)
 
 
 def job_key(company, job):
@@ -184,7 +225,13 @@ def fetch_company(company, cfg):
     return jobs
 
 
-def gather_matches(registry, workers=12):
+def load_h1b_sponsors():
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    return set(doc.get("h1b_sponsors", []) or [])
+
+
+def gather_matches(registry, workers=12, h1b_sponsors=()):
     matches = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs = {ex.submit(fetch_company, c, cfg): c for c, cfg in registry.items()}
@@ -196,18 +243,36 @@ def gather_matches(registry, workers=12):
                 print(f"  ! {company}: {e}", file=sys.stderr)
                 continue
             for j in jobs:
-                if j.get("id") and is_engineering(j["title"]) and is_india_or_remote(j):
+                if not (j.get("id") and is_engineering(j["title"])):
+                    continue
+                if is_india_or_remote(j):
+                    matches.append(j)
+                elif company in h1b_sponsors and is_us(j):
+                    j["us_h1b"] = True
                     matches.append(j)
     return matches
 
 
 # --- email ------------------------------------------------------------------
 def render_email(new_jobs):
+    india = [j for j in new_jobs if not j.get("us_h1b")]
+    us = [j for j in new_jobs if j.get("us_h1b")]
+    lines = []
+    if india:
+        lines += [f"{len(india)} new engineering listing(s) (India + Remote):", ""]
+        lines += _render_section(india)
+    if us:
+        lines += [f"{len(us)} new US engineering listing(s) at H-1B sponsors:", ""]
+        lines += _render_section(us)
+    return "\n".join(lines)
+
+
+def _render_section(jobs):
     by_company = {}
-    for j in new_jobs:
+    for j in jobs:
         by_company.setdefault(j["company"], []).append(j)
 
-    lines = [f"{len(new_jobs)} new engineering listing(s) (India + Remote):", ""]
+    lines = []
     for company in sorted(by_company, key=str.lower):
         lines.append(f"== {company} ==")
         for j in sorted(by_company[company], key=lambda x: x["title"].lower()):
@@ -215,7 +280,7 @@ def render_email(new_jobs):
             lines.append(f"  • {j['title']}  [{loc}]")
             lines.append(f"    {j['url']}")
         lines.append("")
-    return "\n".join(lines)
+    return lines
 
 
 def load_dotenv(path=None):
@@ -281,11 +346,15 @@ def main():
     args = ap.parse_args()
 
     matches = []
+    sponsors = set()
     if not args.no_ats:
         registry = load_registry()
         print(f"Scanning {len(registry)} companies...", file=sys.stderr)
-        matches = gather_matches(registry, workers=args.workers)
-        print(f"Matched {len(matches)} engineering roles via ATS (India + Remote).", file=sys.stderr)
+        sponsors = load_h1b_sponsors()
+        matches = gather_matches(registry, workers=args.workers, h1b_sponsors=sponsors)
+        n_us = sum(1 for j in matches if j.get("us_h1b"))
+        print(f"Matched {len(matches) - n_us} engineering roles via ATS (India + Remote), "
+              f"plus {n_us} US roles at {len(sponsors)} H-1B sponsors.", file=sys.stderr)
 
     if args.linkedin:
         unresolved = load_unresolved()
@@ -297,6 +366,16 @@ def main():
 
     seen = load_state(args.state)
     fresh_state = len(seen) == 0
+    # The first time a sponsor's US roles are scanned, absorb its existing backlog
+    # silently (thousands of roles across big boards) and only email new postings after.
+    us_seeded = load_us_seeded(args.state)
+    unseeded = sponsors - us_seeded
+    if unseeded and not fresh_state:
+        backlog = [j for j in matches if j.get("us_h1b") and j["company"] in unseeded]
+        seen.update(job_key(j["company"], j) for j in backlog)
+        print(f"Seeding {len(backlog)} existing US roles for {len(unseeded)} newly listed "
+              f"H-1B sponsor(s) without emailing.", file=sys.stderr)
+    us_seeded |= sponsors
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
 
     if args.dry_run:
@@ -328,7 +407,7 @@ def main():
     # Update state with everything currently matching.
     for j in matches:
         seen.add(job_key(j["company"], j))
-    save_state(seen, args.state)
+    save_state(seen, args.state, us_seeded)
     print(f"State now tracks {len(seen)} job ids.", file=sys.stderr)
 
 

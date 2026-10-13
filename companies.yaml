@@ -1008,3 +1008,51 @@ linkedin_ids:
   Walmart Global Tech: 9390173
   Yellow.ai: 3882691
   Zepto: 76108196
+
+# Employers with recent, regular H-1B filings (DOL LCA data via h1bdata.info /
+# ellis.com, researched 2026-10-13). For these only, scrape.py ALSO keeps
+# US-located engineering roles and emails them in a separate section.
+# Left out on purpose: GitLab (handbook says no US visa sponsorship), and
+# SpaceX / Anduril / Shield AI (ITAR - most roles need US-person status).
+h1b_sponsors:
+- Airbnb
+- Anthropic
+- Anysphere
+- Baseten
+- Block
+- Canva
+- Cerebras Systems
+- Coinbase
+- CoreWeave
+- CrowdStrike
+- Databricks
+- Datadog
+- Discord
+- DoorDash
+- Etched
+- Figma
+- Google DeepMind
+- Intel
+- Jane Street
+- LangChain
+- Mercor
+- Mistral AI
+- Morgan Stanley
+- Neuralink
+- Notion
+- NVIDIA
+- OpenAI
+- PDT Partners
+- Perplexity AI
+- Plaid
+- PLAUD
+- Replit
+- Rubrik
+- Snowflake
+- Stripe
+- Tenstorrent
+- Uber India
+- Vercel
+- Waymo
+- xAI
+- Zoox
