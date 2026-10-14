@@ -386,7 +386,9 @@ def send_email(subject, body):
     # App passwords never contain spaces; strip them so a pasted "abcd efgh ..."
     # value still authenticates.
     password = (os.environ.get("GMAIL_APP_PASSWORD") or "").replace(" ", "")
-    recipient = os.environ.get("RECIPIENT", "khushi.nigamwork@gmail.com")
+    # RECIPIENT may list several addresses, comma-separated.
+    recipients = [r.strip() for r in os.environ.get("RECIPIENT", "khushi.nigamwork@gmail.com").split(",")
+                  if r.strip()]
     if not sender or not password:
         print("ERROR: SENDER_GMAIL / GMAIL_APP_PASSWORD not set; cannot send email.", file=sys.stderr)
         return False
@@ -394,13 +396,13 @@ def send_email(subject, body):
     msg = MIMEText(body, "plain", "utf-8")
     msg["Subject"] = subject
     msg["From"] = sender
-    msg["To"] = recipient
+    msg["To"] = ", ".join(recipients)
     msg["Date"] = formatdate(localtime=True)
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as server:
         server.login(sender, password)
-        server.sendmail(sender, [recipient], msg.as_string())
-    print(f"Emailed {recipient}: {subject}", file=sys.stderr)
+        server.sendmail(sender, recipients, msg.as_string())
+    print(f"Emailed {', '.join(recipients)}: {subject}", file=sys.stderr)
     return True
 
 
