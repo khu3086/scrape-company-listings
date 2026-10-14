@@ -198,12 +198,30 @@ def load_linkedin_ids():
     return doc.get("linkedin_ids", {}) or {}
 
 
-def gather_linkedin(companies, location="India", ids=None):
+LINKEDIN_CURSOR = f"{HERE}/state.linkedin.cursor"
+
+
+def _read_cursor():
+    try:
+        with open(LINKEDIN_CURSOR) as f:
+            return int(f.read().strip() or 0)
+    except (FileNotFoundError, ValueError):
+        return 0
+
+
+def gather_linkedin(companies, location="India", ids=None, rotate=False):
     """Best-effort LinkedIn pass for companies with no scrapable ATS.
 
     Sequential + rate-limited; stops early if LinkedIn rate-limits us. Local use
     only (LinkedIn blocks datacenter IPs and this is against their ToS).
+
+    LinkedIn usually cuts a run off partway, so with rotate=True each run starts
+    where the previous one stopped (cursor in state.linkedin.cursor) and every
+    company gets covered across runs instead of only the first few dozen.
     """
+    start = _read_cursor() % len(companies) if rotate and companies else 0
+    companies = companies[start:] + companies[:start]
+    processed = len(companies)
     import linkedin  # local import so a missing residential setup never breaks ATS runs
     ids = ids or {}
     sess = requests.Session()
@@ -215,6 +233,7 @@ def gather_linkedin(companies, location="India", ids=None):
         except linkedin.LinkedInBlocked as e:
             print(f"  LinkedIn rate-limited after {i-1} companies ({e}); stopping LinkedIn pass.",
                   file=sys.stderr)
+            processed = i - 1
             break
         except Exception as e:  # noqa: BLE001
             print(f"  ! LinkedIn {company}: {e}", file=sys.stderr)
@@ -222,8 +241,11 @@ def gather_linkedin(companies, location="India", ids=None):
         for j in jobs:
             if is_engineering(j["title"]) and is_india_or_remote(j):
                 matches.append(j)
-    print(f"LinkedIn pass: {len(matches)} matches across {len(companies)} unresolved companies.",
-          file=sys.stderr)
+    if rotate and companies:
+        with open(LINKEDIN_CURSOR, "w") as f:
+            f.write(str((start + processed) % len(companies)))
+    print(f"LinkedIn pass: {len(matches)} matches from {processed}/{len(companies)} unresolved "
+          f"companies (started at #{start}).", file=sys.stderr)
     return matches
 
 
@@ -420,7 +442,8 @@ def main():
         ids = load_linkedin_ids()
         print(f"LinkedIn pass over {len(unresolved)} unresolved companies "
               f"({len(ids)} with pinned company ids, rate-limited)...", file=sys.stderr)
-        matches.extend(gather_linkedin(unresolved, location=args.linkedin_location, ids=ids))
+        matches.extend(gather_linkedin(unresolved, location=args.linkedin_location, ids=ids,
+                                       rotate=not args.dry_run))
         print(f"Total matched: {len(matches)}.", file=sys.stderr)
 
     seen = load_state(args.state)

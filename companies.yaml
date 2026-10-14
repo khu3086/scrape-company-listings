@@ -1219,64 +1219,117 @@ unresolved:
 # spam and can match a different company entity with the same name. Pin the
 # correct id here (find it in the company's LinkedIn /jobs/ URL: ...?f_C=<id>).
 linkedin_ids:
+  Adalat AI: 97202698
+  Adnoxy: 105613518
   Alaan: 79116635
+  Alltius: 78425520
   Amazon: 1586
   AMD: 1497
   American Express: 1277
   Apple: 162479
+  Athina AI: 80237601
   Atlassian: 22688
+  AuraML: 87405217
   Auric AI Labs: 105869371
+  BentoLabs AI: 111544222
   BlackRock: 4764
   BrowserStack: 2553488
   BusinessOnBot: 20463828
   Chargebee: 2277385
   Checkout.com: 3110635
+  Citadel Securities: 15259345
+  Citadel: 163056
   Clinikally: 74489557
+  Combinely: 101118340
+  CompUp: 64267954
+  Confluxe: 112225856
+  Coreworks AI: 107557873
+  Coupl: 77079872
   Cropin: 1711874
   Crustdata: 73854007
   Deccan AI: 104833915
+  DocVita: 14023863
+  DrDroid: 82091964
   Eightfold AI: 28145130
   EPAM Systems: 4972
+  farmtheory: 94727677
+  FlatX: 111512520
   Flipkart: 321062
+  Floworks: 80188509
+  Flux Auto: 13353076
   Gnani.ai: 13649041
   Goldman Sachs: 1382
   GreyLabs AI: 101881336
   Gupshup: 3762143
   Haptik: 3475348
   HSBC: 1241
+  HydraDB: 107563707
   IBM: 1009
+  Indeed: 36229
   Intuit: 1666
   JPMorgan Chase: 1068
   Juspay: 3590874
+  Kailash Labs: 139274129
+  Karbon Card: 28461165
+  Khatabook: 14606010
+  KOGO: 26594722
   Krutrim: 109899936
   Locus.sh: 10155969
+  Lossfunk: 105651545
   LTIMindtree: 86813252
   Lyzr AI: 96242391
+  Main Func: 103279984
+  Maya Labs: 74269328
   Microsoft: 1035
   Mihup AI: 7930132
   Miko: 13198948
+  Nextera Robotics: 69047744
   Nutanix: 735085
+  OkCredit: 20390536
   OrbitShift: 89833601
   Outlier: 92583550
+  P0 Security: 91352950
+  PaleBlueDot AI: 104828468
   Parrot: 101448794
+  Patronus AI: 98695525
+  Perseus: 109032075
   Pixis: 31559415
+  Portkey: 92777123
   Publicis Sapient: 10801655
   QpiAI: 52164357
   Qualcomm: 2017
   Qure.ai: 13210940
   Reo.Dev: 90563783
+  Retape: 89561408
   Rippling: 17988315
+  Rowboat Labs: 104884422
   Runable: 106473165
   SAP: 1115
+  ScaleKit: 97426290
+  SCIKIQ: 19264836
+  Seekho: 75885215
+  Signal: 18516949
+  SigTuple: 10078550
   Simplismart: 82819726
   Skit.ai: 13258533
   Soket AI Labs: 14553442
+  Spark Studio: 68886031
+  Steno: 72350555
+  Stownest: 19108777
   SuperAGI: 91427575
+  SuperAPI: 90412499
+  Teenage Engineering: 1759467
+  Tesla: 15564
   Turnitin: 233308
   Vahan.ai: 10113453
+  Velvet: 109589188
+  Vingo: 110252664
+  VOGIC AI: 92490929
   Walmart Global Tech: 9390173
   Yellow.ai: 3882691
+  Yenmo: 90988095
   Zepto: 76108196
+  ZOKO: 13630861
 
 # Employers with recent, regular H-1B filings (DOL LCA data via h1bdata.info /
 # ellis.com, researched 2026-10-13). For these only, scrape.py ALSO keeps
