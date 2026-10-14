@@ -9,6 +9,8 @@ treat "no jobs" and "broken" identically. The registry of adapters is `ADAPTERS`
 """
 from __future__ import annotations
 
+import html
+import json
 import re
 import time
 
@@ -230,6 +232,96 @@ def eightfold(cfg):
     return out
 
 
+# --- Gem ----------------------------------------------------------------------
+def gem(slug):
+    data = _get_json(f"https://api.gem.com/job_board/v0/{slug}/job_posts/")
+    if not isinstance(data, list):
+        return []
+    out = []
+    for j in data:
+        loc = _s((j.get("location") or {}).get("name"))
+        out.append({
+            "id": _s(j.get("id")),
+            "title": _s(j.get("title")),
+            "location": loc,
+            "remote": _s(j.get("location_type")) == "remote" or "remote" in loc.lower(),
+            "url": _s(j.get("absolute_url")),
+        })
+    return out
+
+
+# --- Rippling -----------------------------------------------------------------
+def rippling(slug):
+    data = _get_json(f"https://api.rippling.com/platform/api/ats/v1/board/{slug}/jobs")
+    if not isinstance(data, list):
+        return []
+    by_id = {}  # a job posted in several locations is listed once per location
+    for j in data:
+        jid = _s(j.get("uuid"))
+        loc = _s((j.get("workLocation") or {}).get("label"))
+        if jid in by_id:
+            if loc and loc not in by_id[jid]["location"]:
+                by_id[jid]["location"] += f"; {loc}"
+                by_id[jid]["remote"] |= "remote" in loc.lower()
+            continue
+        by_id[jid] = {
+            "id": jid,
+            "title": _s(j.get("name")),
+            "location": loc,
+            "remote": "remote" in loc.lower(),
+            "url": _s(j.get("url")),
+        }
+    return list(by_id.values())
+
+
+# --- BambooHR -----------------------------------------------------------------
+def bamboohr(slug):
+    data = _get_json(f"https://{slug}.bamboohr.com/careers/list")
+    if not isinstance(data, dict):
+        return []
+    out = []
+    for j in data.get("result") or []:
+        l = j.get("location") or {}
+        loc = ", ".join(_s(x) for x in (l.get("city"), l.get("state")) if x)
+        remote = bool(j.get("isRemote")) or "remote" in loc.lower()
+        out.append({
+            "id": _s(j.get("id")),
+            "title": _s(j.get("jobOpeningName")),
+            "location": loc,
+            "remote": remote,
+            "url": f"https://{slug}.bamboohr.com/careers/{j.get('id')}",
+        })
+    return out
+
+
+# --- YC Work at a Startup -------------------------------------------------------
+_YC_PAGE_RE = re.compile(r'data-page="([^"]+)"')
+
+
+def yc(slug):
+    """Jobs on ycombinator.com/companies/<slug>/jobs (props embedded in the page)."""
+    try:
+        r = requests.get(f"https://www.ycombinator.com/companies/{slug}/jobs",
+                         headers=HEADERS, timeout=TIMEOUT)
+        m = _YC_PAGE_RE.search(r.text) if r.status_code == 200 else None
+        if not m:
+            return []
+        props = json.loads(html.unescape(m.group(1))).get("props") or {}
+    except (requests.RequestException, ValueError):
+        return []
+    out = []
+    for j in props.get("jobPostings") or []:
+        loc = _s(j.get("location"))
+        out.append({
+            "id": _s(j.get("id")),
+            "title": _s(j.get("title")),
+            "location": loc,
+            "remote": "remote" in loc.lower(),
+            "url": f"https://www.ycombinator.com{_s(j.get('url'))}",
+        })
+    return out
+
+
 # Slug-probeable ATSes, ordered for discovery (most common first).
 ADAPTERS = {
     "greenhouse": greenhouse,
@@ -237,6 +329,14 @@ ADAPTERS = {
     "lever": lever,
     "workable": workable,
     "smartrecruiters": smartrecruiters,
+}
+
+# Slug-based but not auto-probed by discover.py (hand-registered in companies.yaml).
+EXTRA_ADAPTERS = {
+    "gem": gem,
+    "rippling": rippling,
+    "bamboohr": bamboohr,
+    "yc": yc,
 }
 
 
@@ -252,7 +352,7 @@ def fetch(cfg):
         return workday(cfg)
     if ats_name == "eightfold":
         return eightfold(cfg)
-    adapter = ADAPTERS.get(ats_name)
+    adapter = ADAPTERS.get(ats_name) or EXTRA_ADAPTERS.get(ats_name)
     if adapter is None:
         return []
     return adapter(cfg.get("slug"))
