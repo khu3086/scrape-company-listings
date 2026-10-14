@@ -61,6 +61,14 @@ set -a; source .env; set +a
 .venv/bin/python scrape.py
 ```
 
+## Email layout
+
+Each digest is split into India + Remote, then US roles at H-1B sponsors.
+Within each part, companies are grouped by stage: research labs, big tech /
+public & established, late-stage (Series D+), Series C, B, A, seed, pre-seed,
+then other. Stages come from the hand-editable `stages:` section of
+`companies.yaml`; an untagged company lands in "Other".
+
 ## US roles at H-1B sponsors
 
 Companies listed under `h1b_sponsors:` in `companies.yaml` (employers with

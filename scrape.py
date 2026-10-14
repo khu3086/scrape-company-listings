@@ -240,6 +240,31 @@ def load_h1b_sponsors():
     return set(doc.get("h1b_sponsors", []) or [])
 
 
+# Email section order and headings for the `stages:` tags in companies.yaml.
+STAGE_ORDER = [
+    ("research", "Research labs"),
+    ("public", "Big tech / public & established"),
+    ("late", "Late-stage startups (Series D+)"),
+    ("series_c", "Series C"),
+    ("series_b", "Series B"),
+    ("series_a", "Series A"),
+    ("seed", "Seed"),
+    ("pre_seed", "Pre-seed"),
+    ("other", "Other (acquired / non-profit / stage unknown)"),
+]
+
+
+def load_stages():
+    """{company: stage key}; untagged companies fall under "other"."""
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    out = {}
+    for stage, names in (doc.get("stages") or {}).items():
+        for n in names or []:
+            out[n] = stage
+    return out
+
+
 def gather_matches(registry, workers=12, h1b_sponsors=()):
     matches = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
@@ -264,16 +289,33 @@ def gather_matches(registry, workers=12, h1b_sponsors=()):
 
 # --- email ------------------------------------------------------------------
 def render_email(new_jobs):
+    stages = load_stages()
     india = [j for j in new_jobs if not j.get("us_h1b")]
     us = [j for j in new_jobs if j.get("us_h1b")]
     lines = []
     if india:
         lines += [f"{len(india)} new engineering listing(s) (India + Remote):", ""]
-        lines += _render_section(india)
+        lines += _render_by_stage(india, stages)
     if us:
         lines += [f"{len(us)} new US engineering listing(s) at H-1B sponsors:", ""]
-        lines += _render_section(us)
+        lines += _render_by_stage(us, stages)
     return "\n".join(lines)
+
+
+def _render_by_stage(jobs, stages):
+    known = {key for key, _ in STAGE_ORDER}
+    by_stage = {}
+    for j in jobs:
+        stage = stages.get(j["company"], "other")
+        by_stage.setdefault(stage if stage in known else "other", []).append(j)
+
+    lines = []
+    for key, heading in STAGE_ORDER:
+        if key in by_stage:
+            group = by_stage[key]
+            lines += [f"######## {heading} ({len(group)}) ########", ""]
+            lines += _render_section(group)
+    return lines
 
 
 def _render_section(jobs):

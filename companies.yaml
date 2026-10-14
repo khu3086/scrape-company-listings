@@ -1086,3 +1086,470 @@ h1b_sponsors:
 - Waymo
 - xAI
 - Zoox
+
+# Funding stage per company, used to group the email digest. Best-effort as of
+# 2026-10 (public funding news); fix freely. Stages: research | public (big tech,
+# post-IPO, and established private firms like quant shops) | late (Series D+) |
+# series_c | series_b | series_a | seed | pre_seed | other (acquired/non-profit/unknown).
+# Companies not listed here are grouped under other.
+stages:
+  research:
+  - AI21 Labs
+  - AI4Bharat
+  - Anthropic
+  - Black Forest Labs
+  - Cohere
+  - Essential AI
+  - Google DeepMind
+  - Inflection AI
+  - Isomorphic Labs
+  - Krutrim
+  - Latent Labs
+  - Lila Sciences
+  - Lossfunk
+  - Magic.dev
+  - Midjourney
+  - Mistral AI
+  - OpenAI
+  - Periodic Labs
+  - Poolside
+  - Reflection AI
+  - Reka AI
+  - Safe Superintelligence
+  - Sakana AI
+  - Sarvam AI
+  - SkildAI
+  - Soket AI Labs
+  - Thinking Machines Lab
+  - World Labs
+  - xAI
+  public:
+  - Adobe
+  - Airbnb
+  - Amazon
+  - AMD
+  - American Express
+  - Apple
+  - Atlassian
+  - BlackRock
+  - Blinkit
+  - Block
+  - Buffer
+  - Capital One
+  - Citadel
+  - Citadel Securities
+  - Coinbase
+  - Confluent
+  - CoreWeave
+  - Coupang
+  - CrowdStrike
+  - Datadog
+  - DoorDash
+  - Dropbox
+  - Elastic
+  - EPAM Systems
+  - Figma
+  - Five Rings
+  - Flipkart
+  - Fractal Analytics
+  - GitLab
+  - Goldman Sachs
+  - Google
+  - Groww
+  - Haptik
+  - Headlands Technologies
+  - HSBC
+  - Hudson River Trading
+  - IBM
+  - Indeed
+  - Instacart
+  - Intel
+  - Intuit
+  - Jane Street
+  - JPMorgan Chase
+  - LTIMindtree
+  - Mandiant
+  - Meesho
+  - Meta
+  - Microsoft
+  - Morgan Stanley
+  - Netflix
+  - Nutanix
+  - NVIDIA
+  - Okta
+  - Palantir Technologies
+  - Palo Alto Networks
+  - PayPal
+  - Paytm
+  - PDT Partners
+  - Publicis Sapient
+  - Qualcomm
+  - Radix Trading
+  - Red Hat
+  - Renaissance Technologies
+  - Riot Games
+  - Rubrik
+  - Salesforce
+  - SAP
+  - ServiceNow
+  - Snowflake
+  - Swiggy
+  - Target
+  - Telegram
+  - Tesla
+  - TGS Management
+  - Thoughtworks
+  - Trail of Bits
+  - Turnitin
+  - Twilio
+  - Uber India
+  - UiPath
+  - Valve
+  - VMware
+  - Walmart Global Tech
+  - Waymo
+  - Workday
+  - Zomato
+  - Zoox
+  late:
+  - Abnormal Security
+  - Abridge
+  - Anduril Industries
+  - Anysphere
+  - Apollo
+  - Applied Intuition
+  - Baseten
+  - Brex
+  - BrowserStack
+  - Canva
+  - Cerebras Systems
+  - Chainguard
+  - Chargebee
+  - Checkout.com
+  - Cognition AI
+  - CRED
+  - Cresta
+  - Crusoe Energy
+  - Databricks
+  - Discord
+  - Eightfold AI
+  - ElevenLabs
+  - fal.ai
+  - Glean
+  - Groq
+  - Gupshup
+  - Harvey AI
+  - Headout
+  - Hugging Face
+  - Innovaccer
+  - Juspay
+  - Kore.ai
+  - Kraken
+  - Lambda Labs
+  - Neuralink
+  - Neysa
+  - Notion
+  - OpenEvidence
+  - Outlier
+  - Perplexity AI
+  - PhonePe
+  - Plaid
+  - PolyAI
+  - Porter
+  - Postman
+  - Qure.ai
+  - Ramp
+  - Razorpay
+  - Rippling
+  - Runway
+  - SambaNova Systems
+  - Scale AI
+  - Shield AI
+  - Sierra AI
+  - Sourcegraph
+  - SpaceX
+  - Stripe
+  - Superhuman
+  - Tenstorrent
+  - Uniphore
+  - Vercel
+  - WEKA
+  - Yotta Data Services
+  - Zepto
+  series_c:
+  - Abacus.AI
+  - Arize AI
+  - AssemblyAI
+  - Atlan
+  - Canary Technologies
+  - Cropin
+  - Decagon
+  - Deepgram
+  - Emergent
+  - Encord
+  - Fireworks AI
+  - Hippocratic AI
+  - Infinite Uptime
+  - Khatabook
+  - Linear
+  - Locus.sh
+  - Luma AI
+  - Mad Street Den
+  - Mercor
+  - Miko
+  - Observe.AI
+  - Pixis
+  - Render
+  - Replit
+  - Suno
+  - Writer
+  - Yellow.ai
+  series_b:
+  - Ambient.ai
+  - Basis
+  - Bland AI
+  - Braintrust
+  - Browserbase
+  - Cartesia
+  - Checkly
+  - Distyl AI
+  - Doppel
+  - Etched
+  - Exa AI
+  - Factory AI
+  - Framework
+  - Galileo
+  - Gamma
+  - Gnani.ai
+  - Granola
+  - Hebbia
+  - Hume AI
+  - Klarity
+  - LangChain
+  - Listen Labs
+  - Lovable
+  - Manus
+  - Modal Labs
+  - NanoNets
+  - Nscale
+  - OkCredit
+  - Otter.ai
+  - Oxide Computer
+  - Pika
+  - Pinecone
+  - Profound
+  - Q-CTRL
+  - Qdrant
+  - Rogo
+  - Seekho
+  - SigTuple
+  - Skit.ai
+  - SpotDraft
+  - Sprinto
+  - Together AI
+  - Vahan.ai
+  - Waabi
+  - Weaviate
+  - Wysa
+  - Zed Industries
+  series_a:
+  - AgNext Technologies
+  - Alaan
+  - Anima
+  - Applied Compute
+  - Arena
+  - Atomicwork
+  - Carbonfact
+  - Clinikally
+  - Codingal
+  - Composio
+  - Corgi Insurance
+  - David AI
+  - Deccan AI
+  - DeepInfra
+  - DeepJudge
+  - E2B
+  - Entropik
+  - Epsilon3
+  - Etleap
+  - Extend
+  - FamPay
+  - Firecrawl
+  - Flashbots
+  - Giga
+  - Higgsfield
+  - Hyperbolic
+  - Infisical
+  - Informed K12
+  - Inito
+  - Ivy Homes
+  - Juicebox
+  - Karbon Card
+  - LlamaIndex
+  - Lyzr AI
+  - Mihup AI
+  - Mintlify
+  - Monad
+  - Morphle Labs
+  - Mudrex
+  - Nexthop AI
+  - Niramai
+  - OpenArt
+  - OpenRouter
+  - P0 Security
+  - Parallel
+  - Patronus AI
+  - Portkey
+  - Positron
+  - QpiAI
+  - Recursive Intelligence
+  - Reface
+  - Resolve AI
+  - Retell AI
+  - Simplismart
+  - Spark Studio
+  - Sunday Robotics
+  - SuperAGI
+  - Tavily
+  - Triomics
+  - TrueFoundry
+  - Vapi
+  - WareIQ
+  - Wifi Dabba
+  - Wonderful
+  seed:
+  - Accend
+  - Adalat AI
+  - Adnoxy
+  - AgentCollect
+  - Alltius
+  - Alt Carbon
+  - Archestra AI
+  - Arrowhead
+  - Astraea
+  - Athina AI
+  - AuraML
+  - Auric AI Labs
+  - Banza
+  - BentoLabs AI
+  - BetterBasket
+  - Bolna
+  - Bree
+  - BusinessOnBot
+  - Cardboard
+  - Chasi
+  - Chroma
+  - ClaimSorted
+  - Clueso
+  - CoLoop
+  - Combinely
+  - CompUp
+  - Confluxe
+  - Consuma AI
+  - Coreworks AI
+  - Coulomb AI
+  - Coupl
+  - Coval
+  - Crustdata
+  - DocVita
+  - DrDroid
+  - Explorex
+  - farmtheory
+  - FlatX
+  - Floworks
+  - Flux Auto
+  - FrontPage
+  - GreyLabs AI
+  - Gullak Money
+  - Helicone
+  - HydraDB
+  - Inception Labs
+  - Infer
+  - Inferact
+  - Infinity
+  - Kailash Labs
+  - KOGO
+  - Koshex
+  - Langfuse
+  - Letta
+  - Main Func
+  - Mandrake Bio
+  - marketfeed
+  - Matters.AI
+  - Maya Labs
+  - Mercura
+  - Nextera Robotics
+  - Nurix AI
+  - Onyx
+  - OpenObserve
+  - OrbitShift
+  - PaleBlueDot AI
+  - Pareto AI
+  - Parrot
+  - Perseus
+  - PointOne
+  - Posh
+  - Proximal
+  - Quickchat AI
+  - Raven
+  - Reo.Dev
+  - Ressl AI
+  - Retape
+  - Rifa AI
+  - River Markets
+  - Rivia.AI
+  - Rollstack
+  - Rowboat Labs
+  - Runable
+  - SALT
+  - Sapling.ai
+  - ScaleKit
+  - SCIKIQ
+  - Shaped
+  - Simile
+  - Slidely AI
+  - Smallest.ai
+  - Steno
+  - Stownest
+  - SuperAPI
+  - SuperKalam
+  - SurgeGrowth
+  - Swif.ai
+  - Synthio Labs
+  - Terra API
+  - TurboML
+  - Turbopuffer
+  - Typesafe AI
+  - Unsiloed AI
+  - Upscale AI
+  - VectorShift
+  - Velvet
+  - Vibrium AI
+  - Vingo
+  - Vobiz.ai
+  - Vodex
+  - VOGIC AI
+  - Vooma
+  - Voosh
+  - Weekday
+  - xPay
+  - Yenmo
+  - ZOKO
+  - Zymbly
+  pre_seed: []
+  other:
+  - Atomic
+  - BharatX
+  - Blue Machines AI
+  - CheqUPI
+  - Codeium
+  - Ghost
+  - Panic
+  - Paradigm
+  - PLAUD
+  - Replicate
+  - Signal
+  - Speechify
+  - System76
+  - Teenage Engineering
+  - The Browser Company
