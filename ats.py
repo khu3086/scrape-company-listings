@@ -9,6 +9,9 @@ treat "no jobs" and "broken" identically. The registry of adapters is `ADAPTERS`
 """
 from __future__ import annotations
 
+import re
+import time
+
 import requests
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; job-watcher/1.0)"}
@@ -168,6 +171,12 @@ def workday(cfg):
         for j in postings:
             path = _s(j.get("externalPath"))
             loc = _s(j.get("locationsText"))
+            # Multi-location postings only say "3 Locations"; the path carries the
+            # primary one ("/job/Bengaluru-India/..."), so surface that for filtering.
+            m = re.match(r"(\d+) Locations$", loc)
+            pm = re.match(r"/job/([^/]+)/", path)
+            if m and pm:
+                loc = f"{pm.group(1).replace('-', ' ')} (+{int(m.group(1)) - 1} more)"
             out.append({
                 "id": _s(j.get("bulletFields", [None])[0] or path),
                 "title": _s(j.get("title")),
@@ -177,6 +186,46 @@ def workday(cfg):
             })
         offset += 20
         if offset >= total:
+            break
+    return out
+
+
+# --- Eightfold ---------------------------------------------------------------
+def eightfold(cfg):
+    """Eightfold PCS endpoint (e.g. Netflix). cfg needs: host, domain.
+
+    Pages 10 at a time (Eightfold's per-request cap).
+    """
+    host, domain = cfg.get("host"), cfg.get("domain")
+    if not (host and domain):
+        return []
+    out, start, total = [], 0, None
+    while start < 3000:  # safety cap
+        url = f"https://{host}/api/apply/v2/jobs?domain={domain}&start={start}&num=10"
+        for attempt in range(3):  # Eightfold intermittently fails mid-pagination
+            data = _get_json(url)
+            if isinstance(data, dict):
+                break
+            time.sleep(2 * (attempt + 1))
+        if not isinstance(data, dict):
+            break
+        if total is None:
+            total = data.get("count") or 0
+        postings = data.get("positions") or []
+        if not postings:
+            break
+        for j in postings:
+            locs = j.get("locations") or [j.get("location")]
+            loc = "; ".join(_s(x) for x in locs if x)
+            out.append({
+                "id": _s(j.get("ats_job_id") or j.get("id")),
+                "title": _s(j.get("name")),
+                "location": loc,
+                "remote": _s(j.get("work_location_option")) == "remote" or "remote" in loc.lower(),
+                "url": _s(j.get("canonicalPositionUrl")) or f"https://{host}/careers/job/{j.get('id')}",
+            })
+        start += 10
+        if start >= total:
             break
     return out
 
@@ -195,11 +244,14 @@ def fetch(cfg):
     """Fetch normalized jobs for one company config dict.
 
     cfg = {"ats": "greenhouse"|..., "slug": "..."}  for slug-based ATSes, or
-    cfg = {"ats": "workday", "tenant": ..., "dc": ..., "site": ...}.
+    cfg = {"ats": "workday", "tenant": ..., "dc": ..., "site": ...}, or
+    cfg = {"ats": "eightfold", "host": ..., "domain": ...}.
     """
     ats_name = cfg.get("ats")
     if ats_name == "workday":
         return workday(cfg)
+    if ats_name == "eightfold":
+        return eightfold(cfg)
     adapter = ADAPTERS.get(ats_name)
     if adapter is None:
         return []

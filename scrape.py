@@ -151,14 +151,23 @@ def load_state(path):
     return set(_read_state(path).get("seen", []))
 
 
+# Bump when a change makes many previously-hidden US roles visible at once (e.g.
+# better location parsing), so every sponsor's backlog is re-absorbed silently.
+US_SEED_VERSION = 2
+
+
 def load_us_seeded(path):
     """H-1B sponsors whose existing US listings have already been absorbed into state."""
-    return set(_read_state(path).get("us_seeded", []))
+    data = _read_state(path)
+    if data.get("us_seed_version", 1) != US_SEED_VERSION:
+        return set()
+    return set(data.get("us_seeded", []))
 
 
 def save_state(seen, path, us_seeded=()):
     with open(path, "w") as f:
-        json.dump({"seen": sorted(seen), "us_seeded": sorted(us_seeded)}, f, indent=0)
+        json.dump({"seen": sorted(seen), "us_seeded": sorted(us_seeded),
+                   "us_seed_version": US_SEED_VERSION}, f, indent=0)
 
 
 def job_key(company, job):
