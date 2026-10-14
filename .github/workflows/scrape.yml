@@ -31,6 +31,10 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      # Headless Chromium for careers pages that only render with JavaScript
+      # (Meta, Keka, Darwinbox, ...). Those boards return nothing if this fails.
+      - run: python -m playwright install --with-deps chromium
+
       - name: Scrape and email new listings
         env:
           SENDER_GMAIL: ${{ secrets.SENDER_GMAIL }}

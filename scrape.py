@@ -314,6 +314,10 @@ def _render_by_stage(jobs, stages):
         if key in by_stage:
             group = by_stage[key]
             lines += [f"######## {heading} ({len(group)}) ########", ""]
+            if key == "other":
+                untagged = sorted({j["company"] for j in group if j["company"] not in stages}, key=str.lower)
+                if untagged:
+                    lines += [f"(no stage tag yet in companies.yaml: {', '.join(untagged)})", ""]
             lines += _render_section(group)
     return lines
 
@@ -402,6 +406,10 @@ def main():
         registry = load_registry()
         print(f"Scanning {len(registry)} companies...", file=sys.stderr)
         sponsors = load_h1b_sponsors()
+        untagged = sorted((c for c in registry if c not in load_stages()), key=str.lower)
+        if untagged:
+            print(f"Note: {len(untagged)} companies have no stage tag (grouped under Other): "
+                  f"{', '.join(untagged)}", file=sys.stderr)
         matches = gather_matches(registry, workers=args.workers, h1b_sponsors=sponsors)
         n_us = sum(1 for j in matches if j.get("us_h1b"))
         print(f"Matched {len(matches) - n_us} engineering roles via ATS (India + Remote), "
