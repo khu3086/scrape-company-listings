@@ -449,3 +449,5 @@ Explorex
 Voosh
 farmtheory
 Vingo
+CheqUPI
+BharatX
