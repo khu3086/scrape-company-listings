@@ -2,7 +2,7 @@
 # Slug-based ATS:  {ats: greenhouse|ashby|lever|workable|smartrecruiters, slug: ...}
 # Workday:         {ats: workday, tenant: ..., dc: wd5, site: ...}
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
-# Resolved: 239  |  Unresolved: 211
+# Resolved: 240  |  Unresolved: 211
 
 companies:
   Abacus.AI:
@@ -159,6 +159,9 @@ companies:
   Corgi Insurance:
     ats: ashby
     slug: corgi
+  Coupang:
+    ats: greenhouse
+    slug: coupang
   CRED:
     ats: lever
     slug: cred
@@ -1046,6 +1049,7 @@ h1b_sponsors:
 - Cerebras Systems
 - Coinbase
 - CoreWeave
+- Coupang
 - CrowdStrike
 - Databricks
 - Datadog
