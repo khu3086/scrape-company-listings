@@ -310,11 +310,14 @@ def gather_matches(registry, workers=12, h1b_sponsors=()):
 
 
 # --- email ------------------------------------------------------------------
+EMAIL_TITLE = "Khushi's Awesome Job Scraper"
+
+
 def render_email(new_jobs):
     stages = load_stages()
     india = [j for j in new_jobs if not j.get("us_h1b")]
     us = [j for j in new_jobs if j.get("us_h1b")]
-    lines = []
+    lines = [EMAIL_TITLE, "=" * len(EMAIL_TITLE), ""]
     if india:
         lines += [f"{len(india)} new engineering listing(s) (India + Remote):", ""]
         lines += _render_by_stage(india, stages)
@@ -475,7 +478,7 @@ def main():
         print("First run: seeding state without emailing (use --email-first-run to email current snapshot).", file=sys.stderr)
 
     if should_email and new_jobs:
-        subject = f"{len(new_jobs)} new engineering listing(s)"
+        subject = f"{EMAIL_TITLE}: {len(new_jobs)} new engineering listing(s)"
         try:
             ok = send_email(subject, render_email(new_jobs))
         except Exception as e:  # noqa: BLE001

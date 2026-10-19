@@ -464,7 +464,7 @@ def json_list(cfg):
     """A custom careers API that returns a JSON list of jobs.
 
     cfg: url, items (dot path to the list; "" = root), id, title (field names),
-    location (field name, optional), default_location, link (template using
+    location (field name or dot path, optional), default_location, link (template using
     {field} placeholders, or a field name holding the URL).
     """
     data = _get_json(cfg.get("url", ""))
@@ -475,7 +475,7 @@ def json_list(cfg):
     for j in items:
         if not isinstance(j, dict):
             continue
-        loc = j.get(cfg["location"]) if cfg.get("location") else None
+        loc = _dig(j, cfg["location"]) if cfg.get("location") else None  # dot path ok
         loc = "; ".join(map(_s, loc)) if isinstance(loc, list) else _s(loc)
         loc = loc or _s(cfg.get("default_location"))
         link = cfg.get("link", "")

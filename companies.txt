@@ -453,3 +453,14 @@ Vingo
 CheqUPI
 BharatX
 Coupang
+# --- IPO-watch & AI-data list (added 2026-10-19) ---
+AlphaSense
+DAZN
+Huntress Labs
+ClickHouse
+PayJoy
+Stord
+Kalshi
+Capitolis
+Trajectory
+Protege

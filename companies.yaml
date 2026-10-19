@@ -4,7 +4,7 @@
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium)
-# Resolved: 323  |  Unresolved: 129
+# Resolved: 333  |  Unresolved: 129
 
 companies:
   Abacus.AI:
@@ -41,6 +41,9 @@ companies:
   Airbnb:
     ats: greenhouse
     slug: airbnb
+  AlphaSense:
+    ats: greenhouse
+    slug: alphasense
   Alt Carbon:
     ats: greenhouse
     slug: alt
@@ -151,6 +154,9 @@ companies:
     tenant: capitalone
     dc: wd12
     site: Capital_One
+  Capitolis:
+    ats: greenhouse
+    slug: capitolis
   Carbonfact:
     ats: feed
     url: https://careers.carbonfact.com/jobs.rss
@@ -178,6 +184,9 @@ companies:
   ClaimSorted:
     ats: ashby
     slug: claimsorted
+  ClickHouse:
+    ats: ashby
+    slug: clickhouse
   Cloudflare:
     ats: greenhouse
     slug: cloudflare
@@ -243,6 +252,14 @@ companies:
   David AI:
     ats: ashby
     slug: david-ai
+  DAZN:
+    ats: json
+    url: https://careers.dazn.com/postings.json
+    items: data
+    id: id
+    title: title
+    location: location.name
+    link: url
   Decagon:
     ats: ashby
     slug: decagon
@@ -409,6 +426,9 @@ companies:
   Hume AI:
     ats: greenhouse
     slug: humeai
+  Huntress Labs:
+    ats: greenhouse
+    slug: huntress
   Hyperbolic:
     ats: ashby
     slug: hyperbolic
@@ -470,6 +490,9 @@ companies:
   Juicebox:
     ats: ashby
     slug: juicebox
+  Kalshi:
+    ats: ashby
+    slug: kalshi
   Klarity:
     ats: ashby
     slug: klarity-ai
@@ -668,6 +691,9 @@ companies:
   Pareto AI:
     ats: ashby
     slug: pareto-ai
+  PayJoy:
+    ats: lever
+    slug: payjoy
   PayPal:
     ats: workday
     tenant: paypal
@@ -724,6 +750,9 @@ companies:
   Profound:
     ats: greenhouse
     slug: profound
+  Protege:
+    ats: ashby
+    slug: protege
   Proximal:
     ats: ashby
     slug: Proximal
@@ -877,6 +906,11 @@ companies:
   Sprinto:
     ats: lever
     slug: Sprinto
+  Stord:
+    ats: workday
+    tenant: stord
+    dc: wd503
+    site: Stord_External_Career
   Stripe:
     ats: greenhouse
     slug: stripe
@@ -939,6 +973,9 @@ companies:
   Trail of Bits:
     ats: workable
     slug: trailofbits
+  Trajectory:
+    ats: ashby
+    slug: trajectory
   Triomics:
     ats: ashby
     slug: triomics
@@ -1524,6 +1561,13 @@ stages:
   - Zomato
   - Zoox
   late:
+  - DAZN
+  - Stord
+  - Capitolis
+  - Kalshi
+  - ClickHouse
+  - Huntress Labs
+  - AlphaSense
   - Abnormal Security
   - Abridge
   - Anduril Industries
@@ -1589,6 +1633,7 @@ stages:
   - Yotta Data Services
   - Zepto
   series_c:
+  - PayJoy
   - Abacus.AI
   - Arize AI
   - AssemblyAI
@@ -1617,6 +1662,7 @@ stages:
   - Writer
   - Yellow.ai
   series_b:
+  - Patronus AI
   - Ambient.ai
   - Basis
   - Bland AI
@@ -1665,6 +1711,8 @@ stages:
   - Wysa
   - Zed Industries
   series_a:
+  - Protege
+  - Trajectory
   - AgNext Technologies
   - Alaan
   - Anima
@@ -1710,7 +1758,6 @@ stages:
   - OpenRouter
   - P0 Security
   - Parallel
-  - Patronus AI
   - Portkey
   - Positron
   - QpiAI
