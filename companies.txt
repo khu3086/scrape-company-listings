@@ -464,3 +464,105 @@ Kalshi
 Capitolis
 Trajectory
 Protege
+# --- companies list note: tier lists, ARR/talent charts, START HERE (added 2026-11-09) ---
+1Password
+1X Technologies
+Akuna Capital
+Alice & Bob
+AMI Labs
+Apex Space
+AQR
+Armadin
+Arq
+Asana
+Ashby
+Atoms
+Bank of America
+Blackstone
+Bloomberg
+Booking.com
+Booz Allen Hamilton
+ByteDance
+Chai Discovery
+Chai Research
+Chalk
+Citi
+Clari
+Clay
+Core Automation
+CuspAI
+Dataiku
+Deel
+DeepL
+Dirac
+DRW
+eBay
+Eventual
+General Matter
+Genspark
+GitHub
+Glow
+Goodfire
+Grafana Labs
+Hadrian
+HappyRobot
+Hark
+HashiCorp
+HeyGen
+Horizon3.ai
+HubSpot
+IMC Trading
+Jump Trading
+K2 Space
+Klaviyo
+Legora
+LinkedIn
+Lyft
+Mercury
+Meshy
+Meter
+Millennium
+Monarch Money
+n8n
+Neko Health
+Normal Computing
+Northwood Space
+Nourish
+Omnea
+Omni Analytics
+Optiver
+Oracle
+Physical Intelligence
+Pinterest
+Pogo
+Prime Intellect
+Project Prometheus
+Quadrature Capital
+Robinhood
+Roblox
+Runpod
+Savvy Wealth
+Shepherd
+Shopify
+Snap
+Snorkel AI
+Spotify
+Stuut
+Susquehanna (SIG)
+Temporal
+TikTok
+Tower Research Capital
+Traversal
+TRM Labs
+Twitch
+Two Sigma
+Varda Space
+VAST Data
+Vast Space
+Virtu Financial
+Voleon
+Wells Fargo
+Wispr Flow
+Wonder Studios
+WorldQuant
+XTX Markets

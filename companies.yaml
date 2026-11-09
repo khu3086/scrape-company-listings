@@ -4,9 +4,15 @@
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium)
-# Resolved: 333  |  Unresolved: 129
+# Resolved: 420  |  Unresolved: 143
 
 companies:
+  1Password:
+    ats: ashby
+    slug: 1password
+  1X Technologies:
+    ats: ashby
+    slug: 1x
   Abacus.AI:
     ats: greenhouse
     slug: abacus
@@ -41,6 +47,9 @@ companies:
   Airbnb:
     ats: greenhouse
     slug: airbnb
+  Akuna Capital:
+    ats: greenhouse
+    slug: akunacapital
   AlphaSense:
     ats: greenhouse
     slug: alphasense
@@ -50,6 +59,9 @@ companies:
   Ambient.ai:
     ats: ashby
     slug: ambient.ai
+  AMI Labs:
+    ats: ashby
+    slug: ami
   Anduril Industries:
     ats: greenhouse
     slug: andurilindustries
@@ -62,6 +74,9 @@ companies:
   Anysphere:
     ats: ashby
     slug: cursor
+  Apex Space:
+    ats: ashby
+    slug: apex-technology-inc
   Apollo:
     ats: greenhouse
     slug: apolloio
@@ -71,6 +86,9 @@ companies:
   Applied Intuition:
     ats: ashby
     slug: applied
+  AQR:
+    ats: greenhouse
+    slug: aqr
   Archestra AI:
     ats: page
     url: https://archestra.ai/careers
@@ -83,9 +101,21 @@ companies:
   Arize AI:
     ats: greenhouse
     slug: arizeai
+  Armadin:
+    ats: ashby
+    slug: armadin
+  Arq:
+    ats: ashby
+    slug: ARQ
   Arrowhead:
     ats: greenhouse
     slug: arrowheadpharmacareers
+  Asana:
+    ats: greenhouse
+    slug: asana
+  Ashby:
+    ats: ashby
+    slug: ashby
   AssemblyAI:
     ats: greenhouse
     slug: assemblyai
@@ -101,6 +131,9 @@ companies:
   Atomicwork:
     ats: greenhouse
     slug: atomicwork
+  Atoms:
+    ats: greenhouse
+    slug: atoms
   Banza:
     ats: greenhouse
     slug: banza
@@ -116,6 +149,11 @@ companies:
   Black Forest Labs:
     ats: greenhouse
     slug: blackforestlabs
+  Blackstone:
+    ats: workday
+    tenant: blackstone
+    dc: wd1
+    site: Blackstone_Careers
   Bland AI:
     ats: ashby
     slug: bland
@@ -169,9 +207,21 @@ companies:
   Cerebras Systems:
     ats: greenhouse
     slug: cerebrassystems
+  Chai Discovery:
+    ats: ashby
+    slug: chaidiscovery
+  Chai Research:
+    ats: page
+    url: https://www.chai-research.com/careers/
+    render: false
+    block: <span class="role-main">(.*?)</span>\s*</span>
+    default_location: Palo Alto, CA
   Chainguard:
     ats: greenhouse
     slug: chainguard
+  Chalk:
+    ats: ashby
+    slug: chalk
   Chasi:
     ats: gem
     slug: chasi-ai
@@ -184,6 +234,12 @@ companies:
   ClaimSorted:
     ats: ashby
     slug: claimsorted
+  Clari:
+    ats: greenhouse
+    slug: salesloft
+  Clay:
+    ats: ashby
+    slug: claylabs
   ClickHouse:
     ats: ashby
     slug: clickhouse
@@ -243,12 +299,18 @@ companies:
   Crusoe Energy:
     ats: ashby
     slug: crusoe
+  CuspAI:
+    ats: ashby
+    slug: cuspai
   Databricks:
     ats: greenhouse
     slug: databricks
   Datadog:
     ats: greenhouse
     slug: datadog
+  Dataiku:
+    ats: greenhouse
+    slug: dataiku
   David AI:
     ats: ashby
     slug: david-ai
@@ -272,6 +334,12 @@ companies:
   DeepJudge:
     ats: ashby
     slug: deepjudge
+  DeepL:
+    ats: ashby
+    slug: DeepL
+  Dirac:
+    ats: greenhouse
+    slug: diracinc
   Discord:
     ats: greenhouse
     slug: discord
@@ -287,9 +355,17 @@ companies:
   Dropbox:
     ats: greenhouse
     slug: dropbox
+  DRW:
+    ats: greenhouse
+    slug: drweng
   E2B:
     ats: ashby
     slug: e2b
+  eBay:
+    ats: workday
+    tenant: ebay
+    dc: wd5
+    site: apply
   Elastic:
     ats: greenhouse
     slug: elastic
@@ -317,6 +393,9 @@ companies:
   Etleap:
     ats: smartrecruiters
     slug: EtleapInc
+  Eventual:
+    ats: ashby
+    slug: eventualcomputing
   Exa AI:
     ats: ashby
     slug: exa
@@ -361,6 +440,12 @@ companies:
   Gamma:
     ats: ashby
     slug: gamma
+  General Matter:
+    ats: greenhouse
+    slug: generalmatter
+  Genspark:
+    ats: ashby
+    slug: genspark
   Ghost:
     ats: feed
     url: https://feed.homerun.co/ghost
@@ -368,12 +453,27 @@ companies:
   Giga:
     ats: ashby
     slug: gigaml
+  GitHub:
+    ats: json
+    url: https://www.github.careers/api/jobs?limit=100
+    page_param: page
+    items: jobs
+    id: data.req_id
+    title: data.title
+    location: data.full_location
+    link: https://www.github.careers/careers-home/jobs/{slug}
   GitLab:
     ats: greenhouse
     slug: gitlab
   Glean:
     ats: smartrecruiters
     slug: glean
+  Glow:
+    ats: ashby
+    slug: glow
+  Goodfire:
+    ats: greenhouse
+    slug: goodfire
   Google DeepMind:
     ats: greenhouse
     slug: deepmind
@@ -382,6 +482,9 @@ companies:
     queries:
     - location=India
     - location=United%20States&q=software%20engineer
+  Grafana Labs:
+    ats: greenhouse
+    slug: grafanalabs
   Granola:
     ats: ashby
     slug: granola
@@ -399,6 +502,15 @@ companies:
     title: name
     default_location: Bengaluru, India
     link: https://candid.hub.gullak.money/jobs/{id}/apply
+  Hadrian:
+    ats: ashby
+    slug: hadrian-automation
+  HappyRobot:
+    ats: ashby
+    slug: happyrobot.ai
+  Hark:
+    ats: greenhouse
+    slug: hark
   Harvey AI:
     ats: ashby
     slug: harvey
@@ -411,12 +523,21 @@ companies:
   Hebbia:
     ats: ashby
     slug: hebbia-ai
+  HeyGen:
+    ats: greenhouse
+    slug: heygen
   Higgsfield:
     ats: ashby
     slug: higgsfieldai
   Hippocratic AI:
     ats: ashby
     slug: Hippocratic AI
+  Horizon3.ai:
+    ats: ashby
+    slug: horizon3ai
+  HubSpot:
+    ats: greenhouse
+    slug: hubspotjobs
   Hudson River Trading:
     ats: greenhouse
     slug: wehrtyou
@@ -432,6 +553,9 @@ companies:
   Hyperbolic:
     ats: ashby
     slug: hyperbolic
+  IMC Trading:
+    ats: greenhouse
+    slug: imc
   Inception Labs:
     ats: gem
     slug: inception
@@ -490,12 +614,21 @@ companies:
   Juicebox:
     ats: ashby
     slug: juicebox
+  Jump Trading:
+    ats: greenhouse
+    slug: jumptrading
+  K2 Space:
+    ats: greenhouse
+    slug: k2spacecorporation
   Kalshi:
     ats: ashby
     slug: kalshi
   Klarity:
     ats: ashby
     slug: klarity-ai
+  Klaviyo:
+    ats: ashby
+    slug: klaviyo
   Kore.ai:
     ats: smartrecruiters
     slug: Koreai
@@ -517,6 +650,9 @@ companies:
   Latent Labs:
     ats: ashby
     slug: latentlabs
+  Legora:
+    ats: ashby
+    slug: legora
   Letta:
     ats: ashby
     slug: letta
@@ -538,6 +674,9 @@ companies:
   Luma AI:
     ats: ashby
     slug: lumaai
+  Lyft:
+    ats: greenhouse
+    slug: lyft
   Magic.dev:
     ats: ashby
     slug: magic.dev
@@ -569,6 +708,12 @@ companies:
   Mercura:
     ats: ashby
     slug: mercura
+  Mercury:
+    ats: greenhouse
+    slug: mercury
+  Meshy:
+    ats: ashby
+    slug: meshy
   Meta:
     ats: page
     url: https://www.metacareers.com/jobsearch/?offices[0]=Bangalore%2C%20India&offices[1]=Hyderabad%2C%20India&offices[2]=Gurgaon%2C%20India&offices[3]=Mumbai%2C%20India&offices[4]=New%20Delhi%2C%20India&offices[5]=Remote%2C%20India&page={page}
@@ -576,9 +721,16 @@ companies:
     render: true
     wait_ms: 3000
     link: /profile/job_details/\d+$
+  Meter:
+    ats: ashby
+    slug: meter
   Midjourney:
     ats: ashby
     slug: midjourney
+  Millennium:
+    ats: eightfold
+    host: mlp.eightfold.ai
+    domain: mlp.com
   Mintlify:
     ats: ashby
     slug: mintlify
@@ -591,6 +743,9 @@ companies:
   Monad:
     ats: ashby
     slug: category-labs
+  Monarch Money:
+    ats: ashby
+    slug: monarchmoney
   Morgan Stanley:
     ats: workday
     tenant: ms
@@ -604,9 +759,15 @@ companies:
     url: https://mudrex.careers-page.com/
     link: /jobs/[0-9a-f-]{36}$
     default_location: Bengaluru, India
+  n8n:
+    ats: ashby
+    slug: n8n
   NanoNets:
     ats: greenhouse
     slug: nanonets
+  Neko Health:
+    ats: ashby
+    slug: neko-health
   Netflix:
     ats: eightfold
     host: explore.jobs.netflix.net
@@ -626,9 +787,18 @@ companies:
     link: niramai\.com/career/[\w-]+/?$
     strip: \s*\|.*$
     default_location: Bengaluru, India
+  Normal Computing:
+    ats: ashby
+    slug: NormalComputing
+  Northwood Space:
+    ats: ashby
+    slug: northwoodspace
   Notion:
     ats: ashby
     slug: notion
+  Nourish:
+    ats: greenhouse
+    slug: usenourish
   Nscale:
     ats: greenhouse
     slug: nscaleoperationsukltd
@@ -646,6 +816,12 @@ companies:
   Okta:
     ats: greenhouse
     slug: okta
+  Omnea:
+    ats: ashby
+    slug: omnea
+  Omni Analytics:
+    ats: ashby
+    slug: omni
   Onyx:
     ats: ashby
     slug: onyx
@@ -664,6 +840,9 @@ companies:
   OpenRouter:
     ats: ashby
     slug: openrouter
+  Optiver:
+    ats: greenhouse
+    slug: optiverus
   Otter.ai:
     ats: greenhouse
     slug: otterai
@@ -714,18 +893,27 @@ companies:
   PhonePe:
     ats: greenhouse
     slug: phonepe
+  Physical Intelligence:
+    ats: ashby
+    slug: physicalintelligence
   Pika:
     ats: ashby
     slug: pika
   Pinecone:
     ats: ashby
     slug: pinecone
+  Pinterest:
+    ats: greenhouse
+    slug: pinterest
   Plaid:
     ats: ashby
     slug: plaid
   PLAUD:
     ats: ashby
     slug: plaud
+  Pogo:
+    ats: ashby
+    slug: joinpogo
   PointOne:
     ats: ashby
     slug: pointone
@@ -747,9 +935,15 @@ companies:
   Postman:
     ats: greenhouse
     slug: postman
+  Prime Intellect:
+    ats: ashby
+    slug: primeintellect
   Profound:
     ats: greenhouse
     slug: profound
+  Project Prometheus:
+    ats: ashby
+    slug: prometheus
   Protege:
     ats: ashby
     slug: protege
@@ -762,6 +956,9 @@ companies:
   Qdrant:
     ats: ashby
     slug: qdrant.tech
+  Quadrature Capital:
+    ats: greenhouse
+    slug: quadraturecapital
   Quickchat AI:
     ats: yc
     slug: quickchat-ai
@@ -826,6 +1023,12 @@ companies:
   Rivia.AI:
     ats: yc
     slug: rivia-ai
+  Robinhood:
+    ats: greenhouse
+    slug: robinhood
+  Roblox:
+    ats: greenhouse
+    slug: roblox
   Rogo:
     ats: ashby
     slug: rogo
@@ -835,6 +1038,9 @@ companies:
   Rubrik:
     ats: greenhouse
     slug: rubrik
+  Runpod:
+    ats: ashby
+    slug: runpod
   Runway:
     ats: ashby
     slug: runway
@@ -861,6 +1067,9 @@ companies:
   Sarvam AI:
     ats: ashby
     slug: sarvam
+  Savvy Wealth:
+    ats: ashby
+    slug: savvy
   Scale AI:
     ats: greenhouse
     slug: scaleai
@@ -870,9 +1079,17 @@ companies:
   Shaped:
     ats: smartrecruiters
     slug: shaped
+  Shepherd:
+    ats: ashby
+    slug: shepherd
   Shield AI:
     ats: lever
     slug: shieldai
+  Shopify:
+    ats: page
+    url: https://www.shopify.com/careers/search
+    render: false
+    link: /careers/[a-z0-9-]+_[0-9a-f-]{36}$
   Sierra AI:
     ats: ashby
     slug: sierra
@@ -888,6 +1105,14 @@ companies:
   Smallest.ai:
     ats: ashby
     slug: smallest
+  Snap:
+    ats: workday
+    tenant: snapchat
+    dc: wd1
+    site: snap
+  Snorkel AI:
+    ats: greenhouse
+    slug: snorkelai
   Snowflake:
     ats: ashby
     slug: snowflake
@@ -903,6 +1128,9 @@ companies:
   SpotDraft:
     ats: ashby
     slug: spotdraft
+  Spotify:
+    ats: lever
+    slug: spotify
   Sprinto:
     ats: lever
     slug: Sprinto
@@ -914,6 +1142,9 @@ companies:
   Stripe:
     ats: greenhouse
     slug: stripe
+  Stuut:
+    ats: ashby
+    slug: stuut-ai
   Sunday Robotics:
     ats: ashby
     slug: sunday
@@ -926,6 +1157,15 @@ companies:
   SuperKalam:
     ats: yc
     slug: superkalam
+  Susquehanna (SIG):
+    ats: json
+    url: https://careers.sig.com/api/jobs?limit=100
+    page_param: page
+    items: jobs
+    id: data.req_id
+    title: data.title
+    location: data.full_location
+    link: https://careers.sig.com/jobs/{slug}
   Swif.ai:
     ats: yc
     slug: swif-ai
@@ -949,6 +1189,9 @@ companies:
     tags: h3
     heading: ^(?!.*(jobs|telegram|how to apply|responsibilit|qualification)).{3,60}$
     default_location: Remote
+  Temporal:
+    ats: ashby
+    slug: temporal
   Tenstorrent:
     ats: greenhouse
     slug: tenstorrent
@@ -970,15 +1213,24 @@ companies:
   Together AI:
     ats: greenhouse
     slug: togetherai
+  Tower Research Capital:
+    ats: greenhouse
+    slug: towerresearchcapital
   Trail of Bits:
     ats: workable
     slug: trailofbits
   Trajectory:
     ats: ashby
     slug: trajectory
+  Traversal:
+    ats: ashby
+    slug: traversal
   Triomics:
     ats: ashby
     slug: triomics
+  TRM Labs:
+    ats: ashby
+    slug: trm-labs
   TrueFoundry:
     ats: greenhouse
     slug: truefoundry
@@ -988,6 +1240,9 @@ companies:
   Twilio:
     ats: greenhouse
     slug: twilio
+  Twitch:
+    ats: greenhouse
+    slug: twitch
   Typesafe AI:
     ats: ashby
     slug: typesafe-ai
@@ -1016,6 +1271,19 @@ companies:
   Vapi:
     ats: ashby
     slug: vapi
+  Varda Space:
+    ats: greenhouse
+    slug: vardaspace
+  VAST Data:
+    ats: page
+    url: https://www.vastdata.com/careers#open-positions
+    render: true
+    wait_ms: 6000
+    link: comeet\.com/jobs/vastdata/
+    default_location: San Jose, CA
+  Vast Space:
+    ats: greenhouse
+    slug: vast
   VectorShift:
     ats: ashby
     slug: vector
@@ -1028,6 +1296,9 @@ companies:
     render: true
     heading: engineer|developer|scientist|research|programmer|architect|devops|sre|ml|ai |designer|intern|lead|manager|analyst|head of
     default_location: Bengaluru, India
+  Virtu Financial:
+    ats: greenhouse
+    slug: virtu
   VMware:
     ats: workday
     tenant: broadcom
@@ -1046,6 +1317,9 @@ companies:
     render: true
     link: careers\.vodex\.ai/[\w-]+-\d+/?$
     default_location: Bengaluru, India
+  Voleon:
+    ats: ashby
+    slug: voleon
   Vooma:
     ats: ashby
     slug: vooma
@@ -1072,9 +1346,20 @@ companies:
   WEKA:
     ats: greenhouse
     slug: wekatest
+  Wells Fargo:
+    ats: workday
+    host: wd1.myworkdaysite.com
+    tenant: wf
+    site: WellsFargoJobs
   Wifi Dabba:
     ats: yc
     slug: wifi-dabba-inc
+  Wispr Flow:
+    ats: ashby
+    slug: wispr-flow
+  Wonder Studios:
+    ats: greenhouse
+    slug: wonderstudios
   Wonderful:
     ats: ashby
     slug: wonderful
@@ -1086,6 +1371,9 @@ companies:
   World Labs:
     ats: greenhouse
     slug: worldlabs
+  WorldQuant:
+    ats: greenhouse
+    slug: worldquant
   Writer:
     ats: ashby
     slug: writer
@@ -1104,6 +1392,9 @@ companies:
     url: https://www.xpaycheckout.com/careers
     link: /careers/[\w-]+$
     default_location: Bengaluru, India
+  XTX Markets:
+    ats: greenhouse
+    slug: xtxmarketstechnologies
   Yotta Data Services:
     ats: page
     url: https://yotta.darwinbox.in/ms/candidatev2/main/careers/allJobs
@@ -1126,6 +1417,7 @@ unresolved:
 - AgNext Technologies
 - AI21 Labs
 - Alaan
+- Alice & Bob
 - Alltius
 - Amazon
 - AMD
@@ -1135,28 +1427,36 @@ unresolved:
 - Atlassian
 - AuraML
 - Auric AI Labs
+- Bank of America
 - BentoLabs AI
 - BharatX
 - BlackRock
 - Blinkit
+- Bloomberg
+- Booking.com
+- Booz Allen Hamilton
 - BrowserStack
 - BusinessOnBot
+- ByteDance
 - Chargebee
 - Checkout.com
 - CheqUPI
 - Citadel
 - Citadel Securities
+- Citi
 - Clinikally
 - Codeium
 - Combinely
 - CompUp
 - Confluxe
 - Consuma AI
+- Core Automation
 - Coreworks AI
 - Coupl
 - Cropin
 - Crustdata
 - Deccan AI
+- Deel
 - DocVita
 - DrDroid
 - Eightfold AI
@@ -1173,6 +1473,7 @@ unresolved:
 - GreyLabs AI
 - Gupshup
 - Haptik
+- HashiCorp
 - Helicone
 - HSBC
 - HydraDB
@@ -1186,6 +1487,7 @@ unresolved:
 - Khatabook
 - KOGO
 - Krutrim
+- LinkedIn
 - Locus.sh
 - Lossfunk
 - LTIMindtree
@@ -1201,6 +1503,7 @@ unresolved:
 - Nextera Robotics
 - Nutanix
 - OkCredit
+- Oracle
 - OrbitShift
 - Outlier
 - P0 Security
@@ -1238,8 +1541,10 @@ unresolved:
 - System76
 - Teenage Engineering
 - Tesla
+- TikTok
 - TurboML
 - Turnitin
+- Two Sigma
 - Vahan.ai
 - Velvet
 - Vingo
@@ -1268,14 +1573,19 @@ linkedin_ids:
   Atlassian: 22688
   AuraML: 87405217
   Auric AI Labs: 105869371
+  Bank of America: 1123
   BentoLabs AI: 111544222
   BlackRock: 4764
+  Bloomberg: 2494
+  Booking.com: 11348
   BrowserStack: 2553488
   BusinessOnBot: 20463828
+  ByteDance: 6575553
   Chargebee: 2277385
   Checkout.com: 3110635
   Citadel Securities: 15259345
   Citadel: 163056
+  Citi: 11448
   Clinikally: 74489557
   Combinely: 101118340
   CompUp: 64267954
@@ -1285,6 +1595,7 @@ linkedin_ids:
   Cropin: 1711874
   Crustdata: 73854007
   Deccan AI: 104833915
+  Deel: 18922914
   DocVita: 14023863
   DrDroid: 82091964
   Eightfold AI: 28145130
@@ -1311,6 +1622,7 @@ linkedin_ids:
   Khatabook: 14606010
   KOGO: 26594722
   Krutrim: 109899936
+  LinkedIn: 1337
   Locus.sh: 10155969
   Lossfunk: 105651545
   LTIMindtree: 86813252
@@ -1323,6 +1635,7 @@ linkedin_ids:
   Nextera Robotics: 69047744
   Nutanix: 735085
   OkCredit: 20390536
+  Oracle: 1028
   OrbitShift: 89833601
   Outlier: 92583550
   P0 Security: 91352950
@@ -1357,7 +1670,9 @@ linkedin_ids:
   SuperAPI: 90412499
   Teenage Engineering: 1759467
   Tesla: 15564
+  TikTok: 33246798
   Turnitin: 233308
+  Two Sigma: 27915
   Vahan.ai: 10113453
   Velvet: 109589188
   Vingo: 110252664
@@ -1376,14 +1691,21 @@ linkedin_ids:
 # Renaissance Technologies and Valve sponsor only occasionally (a handful a
 # year) but post US-only roles, so they're listed to surface those at all.
 h1b_sponsors:
+- 1X Technologies
 - Airbnb
+- Akuna Capital
 - Anthropic
 - Anysphere
+- AQR
+- Armadin
+- Asana
 - Baseten
+- Blackstone
 - Block
 - Canva
 - Capital One
 - Cerebras Systems
+- Clay
 - Cloudflare
 - Coinbase
 - CoreWeave
@@ -1391,21 +1713,35 @@ h1b_sponsors:
 - CrowdStrike
 - Databricks
 - Datadog
+- Dataiku
 - Discord
 - DoorDash
+- DRW
+- eBay
 - Etched
 - Figma
 - Five Rings
+- GitHub
 - Google
 - Google DeepMind
 - Groq
+- HappyRobot
+- Hark
 - Headlands Technologies
+- HeyGen
+- HubSpot
 - Hudson River Trading
 - Intel
 - Jane Street
+- Jump Trading
+- Klaviyo
 - LangChain
+- Lyft
 - Mercor
+- Mercury
+- Meshy
 - Meta
+- Meter
 - Mistral AI
 - Morgan Stanley
 - Netflix
@@ -1413,25 +1749,43 @@ h1b_sponsors:
 - Notion
 - NVIDIA
 - OpenAI
+- Optiver
 - Otter.ai
 - Palo Alto Networks
 - PayPal
 - PDT Partners
 - Perplexity AI
+- Physical Intelligence
+- Pinterest
 - Plaid
 - PLAUD
+- Quadrature Capital
 - Radix Trading
 - Renaissance Technologies
 - Replit
+- Robinhood
+- Roblox
 - Rubrik
+- Shopify
+- Snap
+- Snorkel AI
 - Snowflake
+- Spotify
 - Stripe
 - Superhuman
+- Susquehanna (SIG)
+- Temporal
 - Tenstorrent
+- Tower Research Capital
+- Traversal
+- Twitch
 - Uber India
 - Valve
 - Vercel
+- Virtu Financial
 - Waymo
+- Wells Fargo
+- WorldQuant
 - xAI
 - Zoox
 
@@ -1442,6 +1796,10 @@ h1b_sponsors:
 # Companies not listed here are grouped under other.
 stages:
   research:
+  - Goodfire
+  - AMI Labs
+  - Project Prometheus
+  - Physical Intelligence
   - AI21 Labs
   - AI4Bharat
   - Anthropic
@@ -1472,6 +1830,46 @@ stages:
   - World Labs
   - xAI
   public:
+  - Booz Allen Hamilton
+  - HashiCorp
+  - Two Sigma
+  - TikTok
+  - Oracle
+  - LinkedIn
+  - Citi
+  - ByteDance
+  - Booking.com
+  - Bloomberg
+  - Bank of America
+  - Quadrature Capital
+  - WorldQuant
+  - AQR
+  - Tower Research Capital
+  - Millennium
+  - Virtu Financial
+  - Susquehanna (SIG)
+  - XTX Markets
+  - Voleon
+  - DRW
+  - Jump Trading
+  - Akuna Capital
+  - IMC Trading
+  - Optiver
+  - Wells Fargo
+  - Blackstone
+  - Twitch
+  - Lyft
+  - GitHub
+  - eBay
+  - Spotify
+  - Asana
+  - Roblox
+  - Snap
+  - Shopify
+  - Robinhood
+  - Pinterest
+  - Klaviyo
+  - HubSpot
   - Cloudflare
   - Adobe
   - Airbnb
@@ -1561,6 +1959,19 @@ stages:
   - Zomato
   - Zoox
   late:
+  - Legora
+  - Mercury
+  - Ashby
+  - VAST Data
+  - 1Password
+  - Grafana Labs
+  - Deel
+  - Dataiku
+  - DeepL
+  - Clari
+  - Horizon3.ai
+  - Temporal
+  - Snorkel AI
   - DAZN
   - Stord
   - Capitolis
@@ -1633,6 +2044,15 @@ stages:
   - Yotta Data Services
   - Zepto
   series_c:
+  - Meter
+  - n8n
+  - 1X Technologies
+  - K2 Space
+  - TRM Labs
+  - Varda Space
+  - Hadrian
+  - Clay
+  - Chai Discovery
   - PayJoy
   - Abacus.AI
   - Arize AI
@@ -1662,6 +2082,20 @@ stages:
   - Writer
   - Yellow.ai
   series_b:
+  - Meshy
+  - Vast Space
+  - Savvy Wealth
+  - Omni Analytics
+  - Nourish
+  - Shepherd
+  - HappyRobot
+  - Omnea
+  - Alice & Bob
+  - Apex Space
+  - Neko Health
+  - Monarch Money
+  - HeyGen
+  - Genspark
   - Patronus AI
   - Ambient.ai
   - Basis
@@ -1711,6 +2145,19 @@ stages:
   - Wysa
   - Zed Industries
   series_a:
+  - Stuut
+  - Armadin
+  - Glow
+  - General Matter
+  - Northwood Space
+  - Prime Intellect
+  - CuspAI
+  - Normal Computing
+  - Wispr Flow
+  - Runpod
+  - Eventual
+  - Chalk
+  - Traversal
   - Protege
   - Trajectory
   - AgNext Technologies
@@ -1777,6 +2224,10 @@ stages:
   - Wifi Dabba
   - Wonderful
   seed:
+  - Pogo
+  - Dirac
+  - Arq
+  - Wonder Studios
   - Accend
   - Adalat AI
   - Adnoxy
@@ -1897,6 +2348,10 @@ stages:
   - Zymbly
   pre_seed: []
   other:
+  - Atoms
+  - Hark
+  - Core Automation
+  - Chai Research
   - Atomic
   - BharatX
   - Blue Machines AI

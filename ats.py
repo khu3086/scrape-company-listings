@@ -157,10 +157,14 @@ def workday(cfg):
     Paginates by offset; normalizes the externalPath into an apply URL.
     """
     tenant, dc, site = cfg.get("tenant"), cfg.get("dc"), cfg.get("site")
-    if not (tenant and dc and site):
+    if not (tenant and site and (dc or cfg.get("host"))):
         return []
-    base = f"https://{tenant}.{dc}.myworkdayjobs.com"
-    api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
+    if cfg.get("host"):  # e.g. wd1.myworkdaysite.com/recruiting/<tenant>/<site> (Wells Fargo)
+        api = f"https://{cfg['host']}/wday/cxs/{tenant}/{site}/jobs"
+        base = f"https://{cfg['host']}/en-US/recruiting/{tenant}/{site}"
+    else:
+        base = f"https://{tenant}.{dc}.myworkdayjobs.com"
+        api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
     out, offset, total = [], 0, None
     while offset < 3000:  # safety cap
         data = _post_json(api, {"appliedFacets": {}, "limit": 20,
@@ -463,12 +467,22 @@ def _dig(obj, path):
 def json_list(cfg):
     """A custom careers API that returns a JSON list of jobs.
 
-    cfg: url, items (dot path to the list; "" = root), id, title (field names),
-    location (field name or dot path, optional), default_location, link (template using
+    cfg: url, items (dot path to the list; "" = root), id, title, location (field
+    names or dot paths; location optional), default_location, page_param (to
+    page through results: ?<page_param>=1,2,... until empty), link (template using
     {field} placeholders, or a field name holding the URL).
     """
-    data = _get_json(cfg.get("url", ""))
-    items = _dig(data, cfg.get("items", ""))
+    if cfg.get("page_param"):  # e.g. Jibe/iCIMS: ?limit=100&page=N until a page comes back empty
+        items, n = [], 1
+        while n <= 50:
+            sep = "&" if "?" in cfg["url"] else "?"
+            got = _dig(_get_json(f"{cfg['url']}{sep}{cfg['page_param']}={n}"), cfg.get("items", ""))
+            if not got:
+                break
+            items += got
+            n += 1
+    else:
+        items = _dig(_get_json(cfg.get("url", "")), cfg.get("items", ""))
     if not isinstance(items, list):
         return []
     out = []
@@ -479,10 +493,16 @@ def json_list(cfg):
         loc = "; ".join(map(_s, loc)) if isinstance(loc, list) else _s(loc)
         loc = loc or _s(cfg.get("default_location"))
         link = cfg.get("link", "")
-        url = link.format(**{k: _s(v) for k, v in j.items()}) if "{" in link else _s(j.get(link))
+        if "{" in link:
+            flat = {k: _s(v) for k, v in j.items()}
+            if isinstance(j.get("data"), dict):  # Jibe nests fields under "data"
+                flat.update({k: _s(v) for k, v in j["data"].items()})
+            url = link.format(**flat)
+        else:
+            url = _s(_dig(j, link))
         out.append({
-            "id": _s(j.get(cfg.get("id", "id"))),
-            "title": _s(j.get(cfg.get("title", "title"))),
+            "id": _s(_dig(j, cfg.get("id", "id"))),
+            "title": _s(_dig(j, cfg.get("title", "title"))),
             "location": loc,
             "remote": "remote" in loc.lower(),
             "url": url or cfg.get("url", ""),
