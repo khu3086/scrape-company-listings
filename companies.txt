@@ -566,3 +566,5 @@ Wispr Flow
 Wonder Studios
 WorldQuant
 XTX Markets
+Canonical
+Vultr

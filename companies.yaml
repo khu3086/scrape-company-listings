@@ -4,7 +4,7 @@
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium)
-# Resolved: 420  |  Unresolved: 143
+# Resolved: 422  |  Unresolved: 143
 
 companies:
   1Password:
@@ -184,6 +184,9 @@ companies:
   Canary Technologies:
     ats: lever
     slug: canarytechnologies
+  Canonical:
+    ats: greenhouse
+    slug: canonical
   Canva:
     ats: smartrecruiters
     slug: canva
@@ -1326,6 +1329,9 @@ companies:
   Voosh:
     ats: yc
     slug: voosh
+  Vultr:
+    ats: ashby
+    slug: Vultr
   Waabi:
     ats: lever
     slug: waabi
@@ -1830,6 +1836,7 @@ stages:
   - World Labs
   - xAI
   public:
+  - Canonical
   - Booz Allen Hamilton
   - HashiCorp
   - Two Sigma
@@ -1959,6 +1966,7 @@ stages:
   - Zomato
   - Zoox
   late:
+  - Vultr
   - Legora
   - Mercury
   - Ashby

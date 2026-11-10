@@ -73,6 +73,9 @@ GLOBAL_RE = re.compile(
 )
 
 
+HOME_BASED_RE = re.compile(r"\bhome[- ]based\b|\bwork from home\b|\bwfh\b", re.I)
+
+
 def is_engineering(title):
     return bool(ENGINEERING_RE.search(title or ""))
 
@@ -89,7 +92,8 @@ def is_india_or_remote(job):
     if INDIA_RE.search(low):
         return True
 
-    remote = bool(job.get("remote")) or "remote" in low
+    # "Home based - Worldwide" (Canonical) / "work from home" mean remote too.
+    remote = bool(job.get("remote")) or "remote" in low or bool(HOME_BASED_RE.search(low))
     if not remote:
         return False
 
@@ -97,7 +101,7 @@ def is_india_or_remote(job):
     if not loc or GLOBAL_RE.search(low):
         return True
     # Remote, but the only text is "remote" (no country) -> keep.
-    if not re.sub(r"[^a-z]", "", low.replace("remote", "")):
+    if not re.sub(r"[^a-z]", "", HOME_BASED_RE.sub("", low.replace("remote", ""))):
         return True
     # Remote, but scoped to a specific (non-India) location -> drop. This covers
     # named foreign geographies ("Remote - USA") and city offices flagged
