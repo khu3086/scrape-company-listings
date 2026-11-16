@@ -4,7 +4,7 @@
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium)
-# Resolved: 422  |  Unresolved: 143
+# Resolved: 428  |  Unresolved: 148
 
 companies:
   1Password:
@@ -181,6 +181,9 @@ companies:
   Buffer:
     ats: ashby
     slug: buffer
+  Callosum:
+    ats: ashby
+    slug: callosum
   Canary Technologies:
     ats: lever
     slug: canarytechnologies
@@ -302,6 +305,11 @@ companies:
   Crusoe Energy:
     ats: ashby
     slug: crusoe
+  Cursive:
+    ats: page
+    url: https://cursive.ai/careers
+    link: '/careers/(?!apply)[a-z0-9-]+$'
+    default_location: London
   CuspAI:
     ats: ashby
     slug: cuspai
@@ -443,9 +451,17 @@ companies:
   Gamma:
     ats: ashby
     slug: gamma
+  General Intuition:
+    ats: ashby
+    slug: generalintuition-medal
   General Matter:
     ats: greenhouse
     slug: generalmatter
+  General Reasoning:
+    ats: page
+    url: https://gr.inc/careers
+    link: '/careers/[a-z0-9-]+$'
+    default_location: London
   Genspark:
     ats: ashby
     slug: genspark
@@ -477,14 +493,14 @@ companies:
   Goodfire:
     ats: greenhouse
     slug: goodfire
-  Google DeepMind:
-    ats: greenhouse
-    slug: deepmind
   Google:
     ats: google
     queries:
     - location=India
     - location=United%20States&q=software%20engineer
+  Google DeepMind:
+    ats: greenhouse
+    slug: deepmind
   Grafana Labs:
     ats: greenhouse
     slug: grafanalabs
@@ -562,6 +578,9 @@ companies:
   Inception Labs:
     ats: gem
     slug: inception
+  Ineffable Intelligence:
+    ats: ashby
+    slug: ineffable
   Infer:
     ats: yc
     slug: infer
@@ -583,6 +602,9 @@ companies:
   Informed K12:
     ats: gem
     slug: informed-k12
+  Inherent:
+    ats: ashby
+    slug: inherent
   Inito:
     ats: page
     url: https://inito.keka.com/careers/
@@ -1466,6 +1488,7 @@ unresolved:
 - DocVita
 - DrDroid
 - Eightfold AI
+- Emulate
 - EPAM Systems
 - farmtheory
 - Flashbots
@@ -1498,11 +1521,13 @@ unresolved:
 - Lossfunk
 - LTIMindtree
 - Lyzr AI
+- Machenta
 - Mad Street Den
 - Main Func
 - Mandiant
 - Mandrake Bio
 - Maya Labs
+- Metis Reasoning
 - Microsoft
 - Mihup AI
 - Miko
@@ -1519,6 +1544,7 @@ unresolved:
 - Perseus
 - Pixis
 - Portkey
+- Potential Sciences
 - Publicis Sapient
 - QpiAI
 - Qualcomm
@@ -1558,6 +1584,7 @@ unresolved:
 - Walmart Global Tech
 - Yellow.ai
 - Yenmo
+- Zenithon
 - Zepto
 - ZOKO
 - Zomato
@@ -1835,6 +1862,16 @@ stages:
   - Thinking Machines Lab
   - World Labs
   - xAI
+  - General Reasoning
+  - General Intuition
+  - Ineffable Intelligence
+  - Inherent
+  - Cursive
+  - Emulate
+  - Machenta
+  - Metis Reasoning
+  - Potential Sciences
+  - Zenithon
   public:
   - Canonical
   - Booz Allen Hamilton
@@ -2354,6 +2391,7 @@ stages:
   - Yenmo
   - ZOKO
   - Zymbly
+  - Callosum
   pre_seed: []
   other:
   - Atoms

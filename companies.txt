@@ -568,3 +568,15 @@ WorldQuant
 XTX Markets
 Canonical
 Vultr
+# --- companies list note: "most AGI pilled labs" + London AI labs LinkedIn post (added 2026-11-16) ---
+General Reasoning
+General Intuition
+Ineffable Intelligence
+Emulate
+Inherent
+Machenta
+Zenithon
+Metis Reasoning
+Cursive
+Potential Sciences
+Callosum
