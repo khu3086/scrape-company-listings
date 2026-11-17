@@ -71,6 +71,10 @@ then other. Stages come from the hand-editable `stages:` section of
 
 ## Roles abroad and academic labs
 
+Companies listed under `academic:` in `companies.yaml` (AI4Bharat, CERN, IAIRO,
+MIT CSAIL) get their own "Academic & research institutions" section at the top
+of the email, which also carries the `lab_watch` updates.
+
 - `any_location: true` on a company keeps its roles wherever they are (used for
   CERN, where Indian nationals are eligible since India is an associate member).
   They go in an "abroad (visa-sponsoring / open to Indian nationals)" section;

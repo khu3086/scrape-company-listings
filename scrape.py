@@ -338,12 +338,34 @@ def gather_matches(registry, workers=12, h1b_sponsors=()):
 EMAIL_TITLE = "Khushi's Awesome Job Scraper"
 
 
+def load_academic():
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    return set(doc.get("academic", []) or [])
+
+
 def render_email(new_jobs, lab_updates=()):
     stages = load_stages()
-    india = [j for j in new_jobs if not (j.get("us_h1b") or j.get("abroad"))]
-    us = [j for j in new_jobs if j.get("us_h1b")]
-    abroad = [j for j in new_jobs if j.get("abroad")]
+    academic_names = load_academic()
+    academic = [j for j in new_jobs if j["company"] in academic_names]
+    rest = [j for j in new_jobs if j["company"] not in academic_names]
+    india = [j for j in rest if not (j.get("us_h1b") or j.get("abroad"))]
+    us = [j for j in rest if j.get("us_h1b")]
+    abroad = [j for j in rest if j.get("abroad")]
     lines = [EMAIL_TITLE, "=" * len(EMAIL_TITLE), ""]
+    if academic or lab_updates:
+        heading = "Academic & research institutions"
+        lines += [f"######## {heading} ########", ""]
+        if academic:
+            lines += [f"{len(academic)} new listing(s):", ""]
+            lines += _render_section(academic)
+        if lab_updates:
+            lines += [f"Lab / professor page hiring updates ({len(lab_updates)}):", ""]
+            for u in lab_updates:
+                lines.append(f"== {u['name']} ==")
+                lines.append(f"  {u['url']}")
+                lines += [f"  + {t}" for t in u["added"]] or ["  (hiring text changed or was removed)"]
+                lines.append("")
     if india:
         lines += [f"{len(india)} new engineering listing(s) (India + Remote):", ""]
         lines += _render_by_stage(india, stages)
@@ -353,13 +375,6 @@ def render_email(new_jobs, lab_updates=()):
     if abroad:
         lines += [f"{len(abroad)} new listing(s) abroad (visa-sponsoring / open to Indian nationals):", ""]
         lines += _render_section(abroad)
-    if lab_updates:
-        lines += [f"Academic lab hiring updates ({len(lab_updates)}):", ""]
-        for u in lab_updates:
-            lines.append(f"== {u['name']} ==")
-            lines.append(f"  {u['url']}")
-            lines += [f"  + {t}" for t in u["added"]] or ["  (hiring text changed or was removed)"]
-            lines.append("")
     return "\n".join(lines)
 
 

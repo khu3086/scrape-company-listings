@@ -1847,6 +1847,15 @@ h1b_sponsors:
 - xAI
 - Zoox
 
+# Universities, public research bodies and non-profit labs. Their listings
+# (wherever located) get their own "Academic & research institutions" section
+# at the top of the email, together with lab_watch updates below.
+academic:
+- AI4Bharat
+- CERN
+- IAIRO
+- MIT CSAIL
+
 # Academic labs with no job board: the lab page / head professor's homepage is
 # fetched every run, and hiring-related sentences (hiring, postdoc, research
 # engineer, openings...) are emailed when they change. LinkedIn/X profiles
