@@ -658,6 +658,41 @@ EXTRA_ADAPTERS = {
 }
 
 
+def peopleclick(cfg):
+    """PeopleClick career sites (e.g. MIT). The search criteria are stored in the
+    session by a form POST, then the results come from a JSON endpoint.
+
+    cfg: client (e.g. "mit"), departments (FLD_JP_DEPARTMENT codes from the
+    search form's department dropdown), keywords (optional), default_location.
+    """
+    client = cfg["client"]
+    base = f"https://careers.peopleclick.com/careerscp/client_{client}/external"
+    s = requests.Session()
+    s.headers["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+    s.get(f"{base}/search/search.html", timeout=TIMEOUT)
+    form = [("com.peopleclick.cp.formdata.FLD_JP_DEPARTMENT", str(d)) for d in cfg.get("departments", [])]
+    form += [("com.peopleclick.cp.formdata.SEARCHCRITERIA_KEYWORDS", cfg.get("keywords", "")),
+             ("com.peopleclick.cp.formdata.hitsPerPage", "200"),
+             ("com.peopleclick.cp.formdata.isAdvanced", "false")]
+    s.post(f"{base}/results/searchResult.html", data=form, timeout=TIMEOUT).raise_for_status()
+    r = s.get(f"https://careers.peopleclick.com/careerscp/api/client_{client}/external/site/getJobs",
+              timeout=TIMEOUT)
+    r.raise_for_status()
+    out = []
+    default_loc = _s(cfg.get("default_location"))
+    for j in r.json().get("jobList") or []:
+        a = j.get("attributes") or {}
+        jid = j.get("jobPostId")
+        title = _s(a.get("JPM_TITLE")) or _s(a.get("FLD_JP_POSTING_TITLE"))
+        if not (jid and title):
+            continue
+        loc = _s(a.get("JPM_LOCATION")) or default_loc
+        out.append({"id": str(jid), "title": title, "location": loc,
+                    "remote": "remote" in loc.lower(),
+                    "url": f"{base}/jobDetails/jobDetail.html?jobPostId={jid}&localeCode=en-us"})
+    return out
+
+
 def fetch(cfg):
     """Fetch normalized jobs for one company config dict.
 
@@ -678,6 +713,8 @@ def fetch(cfg):
         return json_list(cfg)
     if ats_name == "page":
         return page(cfg)
+    if ats_name == "peopleclick":
+        return peopleclick(cfg)
     adapter = ADAPTERS.get(ats_name) or EXTRA_ADAPTERS.get(ats_name)
     if adapter is None:
         return []

@@ -3,8 +3,9 @@
 # Workday:         {ats: workday, tenant: ..., dc: wd5, site: ...}
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
-#                  page (careers HTML: link/heading/block regex; render: true = headless Chromium)
-# Resolved: 430  |  Unresolved: 148
+#                  page (careers HTML: link/heading/block regex; render: true = headless Chromium),
+#                  peopleclick (client + department codes, e.g. MIT)
+# Resolved: 431  |  Unresolved: 148
 
 companies:
   1Password:
@@ -771,6 +772,14 @@ companies:
   Mistral AI:
     ats: lever
     slug: mistral
+  MIT CSAIL:
+    ats: peopleclick
+    client: mit
+    departments: [46, 47]  # CSAIL HQ, CSAIL (codes from MIT's PeopleClick department dropdown)
+    default_location: Cambridge, MA
+    any_location: true  # US university: cap-exempt H-1B sponsor
+    include_titles: 'research scientist|research engineer|postdoc|technical associate'
+    title_filter: 'research|software|developer|engineer|scientist|technical|postdoc|data'
   Modal Labs:
     ats: ashby
     slug: modal
@@ -1838,6 +1847,8 @@ h1b_sponsors:
 lab_watch:
   MIT OASYS (Omar Khattab):
     urls: [https://omarkhattab.com/]
+  MIT CSAIL jobs page:
+    urls: [https://www.csail.mit.edu/about/jobs-csail]
 
 # Funding stage per company, used to group the email digest. Best-effort as of
 # 2026-10 (public funding news); fix freely. Stages: research | public (big tech,
@@ -1891,6 +1902,7 @@ stages:
   - Zenithon
   - CERN
   - IAIRO
+  - MIT CSAIL
   public:
   - Canonical
   - Booz Allen Hamilton

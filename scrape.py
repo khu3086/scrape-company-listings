@@ -311,8 +311,14 @@ def gather_matches(registry, workers=12, h1b_sponsors=()):
             # civil/mechanical roles) to software-adjacent ones.
             only = registry[company].get("title_filter")
             only = re.compile(only, re.I) if only else None
+            # Optional per-company regex of extra titles to keep even if they don't
+            # look like engineering (e.g. "Research Scientist" at academic labs).
+            extra = registry[company].get("include_titles")
+            extra = re.compile(extra, re.I) if extra else None
             for j in jobs:
-                if not (j.get("id") and is_engineering(j["title"])):
+                if not j.get("id"):
+                    continue
+                if not (is_engineering(j["title"]) or (extra and extra.search(j["title"]))):
                     continue
                 if only and not only.search(j["title"]):
                     continue
@@ -378,6 +384,8 @@ def _hiring_lines(url):
         "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")})
     r.raise_for_status()
     body = re.sub(r"<(script|style)\b.*?</\1>", " ", r.text, flags=re.S | re.I)
+    # Inline tags (links, emphasis) sit inside sentences; only block tags break lines.
+    body = re.sub(r"</?(?:a|strong|em|b|i|span|code|abbr|small|sup|sub)\b[^>]*>", "", body, flags=re.I)
     text = html.unescape(re.sub(r"<[^>]+>", "\n", body))
     out = []
     for block in text.split("\n"):

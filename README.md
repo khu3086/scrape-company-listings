@@ -75,6 +75,11 @@ then other. Stages come from the hand-editable `stages:` section of
   CERN, where Indian nationals are eligible since India is an associate member).
   They go in an "abroad, open to Indian nationals" section. `title_filter:` (a
   regex) narrows a broad board to the roles you want.
+  `include_titles:` (a regex) keeps extra titles the engineering filter would
+  drop, such as "Research Scientist" at academic labs.
+- MIT CSAIL is read from MIT's PeopleClick job site (`ats: peopleclick`,
+  filtered to CSAIL's department codes). As a US university it sponsors H-1Bs
+  outside the lottery, so its roles go in the "abroad" section too.
 - `lab_watch:` lists academic labs that have no job board. Each run fetches the
   given pages (lab site, head professor's homepage) and pulls out sentences
   about hiring (hiring, postdoc, research engineer, openings, ...). When those
