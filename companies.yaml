@@ -5,7 +5,7 @@
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium),
 #                  peopleclick (client + department codes, e.g. MIT)
-# Resolved: 431  |  Unresolved: 148
+# Resolved: 433  |  Unresolved: 148
 
 companies:
   1Password:
@@ -737,6 +737,13 @@ companies:
   Meesho:
     ats: lever
     slug: meesho
+  Mercari:
+    ats: workable
+    slug: mercari
+    any_location: true  # Tokyo roles; Mercari sponsors work visas for overseas hires
+  Mercari India:
+    ats: workable
+    slug: mercari-india
   Mercor:
     ats: ashby
     slug: mercor
@@ -2033,6 +2040,8 @@ stages:
   - Workday
   - Zomato
   - Zoox
+  - Mercari
+  - Mercari India
   late:
   - Vultr
   - Legora

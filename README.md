@@ -73,7 +73,8 @@ then other. Stages come from the hand-editable `stages:` section of
 
 - `any_location: true` on a company keeps its roles wherever they are (used for
   CERN, where Indian nationals are eligible since India is an associate member).
-  They go in an "abroad, open to Indian nationals" section. `title_filter:` (a
+  They go in an "abroad (visa-sponsoring / open to Indian nationals)" section;
+  Mercari's Tokyo board is tracked the same way. `title_filter:` (a
   regex) narrows a broad board to the roles you want.
   `include_titles:` (a regex) keeps extra titles the engineering filter would
   drop, such as "Research Scientist" at academic labs.

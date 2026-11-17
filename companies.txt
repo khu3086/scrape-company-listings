@@ -584,3 +584,5 @@ Callosum
 CERN
 IAIRO
 MIT CSAIL
+Mercari
+Mercari India

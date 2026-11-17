@@ -351,7 +351,7 @@ def render_email(new_jobs, lab_updates=()):
         lines += [f"{len(us)} new US engineering listing(s) at H-1B sponsors:", ""]
         lines += _render_by_stage(us, stages)
     if abroad:
-        lines += [f"{len(abroad)} new listing(s) abroad, open to Indian nationals:", ""]
+        lines += [f"{len(abroad)} new listing(s) abroad (visa-sponsoring / open to Indian nationals):", ""]
         lines += _render_section(abroad)
     if lab_updates:
         lines += [f"Academic lab hiring updates ({len(lab_updates)}):", ""]
