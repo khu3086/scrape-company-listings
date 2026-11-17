@@ -580,3 +580,6 @@ Metis Reasoning
 Cursive
 Potential Sciences
 Callosum
+# --- research orgs (added 2026-11-17) ---
+CERN
+IAIRO

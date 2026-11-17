@@ -4,7 +4,7 @@
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium)
-# Resolved: 428  |  Unresolved: 148
+# Resolved: 430  |  Unresolved: 148
 
 companies:
   1Password:
@@ -213,6 +213,11 @@ companies:
   Cerebras Systems:
     ats: greenhouse
     slug: cerebrassystems
+  CERN:
+    ats: smartrecruiters
+    slug: CERN
+    any_location: true  # Geneva roles; India is an associate member state
+    title_filter: 'software|data|devops|machine learning|\bml\b|\bai\b|comput|firmware|fpga|control|automation|storage|cloud|platform|security|electronics|\(IT-'
   Chai Discovery:
     ats: ashby
     slug: chaidiscovery
@@ -572,6 +577,10 @@ companies:
   Hyperbolic:
     ats: ashby
     slug: hyperbolic
+  IAIRO:
+    ats: page
+    url: https://www.iairo.ai/career
+    block: '<h3 class="heading-style-five">(.*?</h3>.*?<p class="job-meta">.*?</p>)'
   IMC Trading:
     ats: greenhouse
     slug: imc
@@ -1822,6 +1831,14 @@ h1b_sponsors:
 - xAI
 - Zoox
 
+# Academic labs with no job board: the lab page / head professor's homepage is
+# fetched every run, and hiring-related sentences (hiring, postdoc, research
+# engineer, openings...) are emailed when they change. LinkedIn/X profiles
+# need a login, so personal homepages are used instead.
+lab_watch:
+  MIT OASYS (Omar Khattab):
+    urls: [https://omarkhattab.com/]
+
 # Funding stage per company, used to group the email digest. Best-effort as of
 # 2026-10 (public funding news); fix freely. Stages: research | public (big tech,
 # post-IPO, and established private firms like quant shops) | late (Series D+) |
@@ -1872,6 +1889,8 @@ stages:
   - Metis Reasoning
   - Potential Sciences
   - Zenithon
+  - CERN
+  - IAIRO
   public:
   - Canonical
   - Booz Allen Hamilton

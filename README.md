@@ -69,6 +69,19 @@ public & established, late-stage (Series D+), Series C, B, A, seed, pre-seed,
 then other. Stages come from the hand-editable `stages:` section of
 `companies.yaml`; an untagged company lands in "Other".
 
+## Roles abroad and academic labs
+
+- `any_location: true` on a company keeps its roles wherever they are (used for
+  CERN, where Indian nationals are eligible since India is an associate member).
+  They go in an "abroad, open to Indian nationals" section. `title_filter:` (a
+  regex) narrows a broad board to the roles you want.
+- `lab_watch:` lists academic labs that have no job board. Each run fetches the
+  given pages (lab site, head professor's homepage) and pulls out sentences
+  about hiring (hiring, postdoc, research engineer, openings, ...). When those
+  change, the new sentences are emailed under "Academic lab hiring updates".
+  The first check of a page is stored silently. LinkedIn and X profiles need a
+  login, so they can't be watched this way.
+
 ## US roles at H-1B sponsors
 
 Companies listed under `h1b_sponsors:` in `companies.yaml` (employers with

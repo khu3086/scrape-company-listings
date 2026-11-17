@@ -12,6 +12,7 @@ from the environment (see config.example.env).
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -45,7 +46,7 @@ ENGINEERING_RE = re.compile(
 INDIA_RE = re.compile(
     r"\b("
     r"india|bangalore|bengaluru|mumbai|new delhi|delhi|hyderabad|pune|chennai|"
-    r"gurgaon|gurugram|noida|kolkata|ahmedabad|kochi|cochin|jaipur|indore"
+    r"gurgaon|gurugram|noida|kolkata|ahmedabad|gandhinagar|gift city|kochi|cochin|jaipur|indore"
     r")\b",
     re.I,
 )
@@ -168,10 +169,13 @@ def load_us_seeded(path):
     return set(data.get("us_seeded", []))
 
 
-def save_state(seen, path, us_seeded=()):
+def save_state(seen, path, us_seeded=(), lab_watch=None):
+    data = {"seen": sorted(seen), "us_seeded": sorted(us_seeded),
+            "us_seed_version": US_SEED_VERSION}
+    if lab_watch is not None:
+        data["lab_watch"] = lab_watch
     with open(path, "w") as f:
-        json.dump({"seen": sorted(seen), "us_seeded": sorted(us_seeded),
-                   "us_seed_version": US_SEED_VERSION}, f, indent=0)
+        json.dump(data, f, indent=0)
 
 
 def job_key(company, job):
@@ -302,10 +306,21 @@ def gather_matches(registry, workers=12, h1b_sponsors=()):
             except Exception as e:  # noqa: BLE001 - never let one board kill the run
                 print(f"  ! {company}: {e}", file=sys.stderr)
                 continue
+            anywhere = bool(registry[company].get("any_location"))
+            # Optional per-company title regex, narrowing broad boards (e.g. CERN's
+            # civil/mechanical roles) to software-adjacent ones.
+            only = registry[company].get("title_filter")
+            only = re.compile(only, re.I) if only else None
             for j in jobs:
                 if not (j.get("id") and is_engineering(j["title"])):
                     continue
+                if only and not only.search(j["title"]):
+                    continue
                 if is_india_or_remote(j):
+                    matches.append(j)
+                elif anywhere:
+                    # e.g. CERN: roles abroad that Indian nationals are eligible for
+                    j["abroad"] = True
                     matches.append(j)
                 elif company in h1b_sponsors and is_us(j):
                     j["us_h1b"] = True
@@ -317,10 +332,11 @@ def gather_matches(registry, workers=12, h1b_sponsors=()):
 EMAIL_TITLE = "Khushi's Awesome Job Scraper"
 
 
-def render_email(new_jobs):
+def render_email(new_jobs, lab_updates=()):
     stages = load_stages()
-    india = [j for j in new_jobs if not j.get("us_h1b")]
+    india = [j for j in new_jobs if not (j.get("us_h1b") or j.get("abroad"))]
     us = [j for j in new_jobs if j.get("us_h1b")]
+    abroad = [j for j in new_jobs if j.get("abroad")]
     lines = [EMAIL_TITLE, "=" * len(EMAIL_TITLE), ""]
     if india:
         lines += [f"{len(india)} new engineering listing(s) (India + Remote):", ""]
@@ -328,7 +344,68 @@ def render_email(new_jobs):
     if us:
         lines += [f"{len(us)} new US engineering listing(s) at H-1B sponsors:", ""]
         lines += _render_by_stage(us, stages)
+    if abroad:
+        lines += [f"{len(abroad)} new listing(s) abroad, open to Indian nationals:", ""]
+        lines += _render_section(abroad)
+    if lab_updates:
+        lines += [f"Academic lab hiring updates ({len(lab_updates)}):", ""]
+        for u in lab_updates:
+            lines.append(f"== {u['name']} ==")
+            lines.append(f"  {u['url']}")
+            lines += [f"  + {t}" for t in u["added"]] or ["  (hiring text changed or was removed)"]
+            lines.append("")
     return "\n".join(lines)
+
+
+# --- academic lab watch -----------------------------------------------------
+# Labs without a job board: watch the lab page / professor's homepage for
+# hiring-related sentences and report when they change.
+HIRING_RE = re.compile(
+    r"hiring|recruit|openings?|open positions?|vacanc|postdoc|post-doc|research (?:engineer|assistant|"
+    r"scientist|fellow|intern)|internships?|prospective (?:students|postdocs)|join (?:us|our|the) "
+    r"(?:lab|group|team)|looking for|we are seeking|apply", re.I)
+
+
+def load_lab_watch():
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    return doc.get("lab_watch", {}) or {}
+
+
+def _hiring_lines(url):
+    r = requests.get(url, timeout=20, headers={"User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")})
+    r.raise_for_status()
+    body = re.sub(r"<(script|style)\b.*?</\1>", " ", r.text, flags=re.S | re.I)
+    text = html.unescape(re.sub(r"<[^>]+>", "\n", body))
+    out = []
+    for block in text.split("\n"):
+        for sent in re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", block).strip()):
+            if 15 <= len(sent) <= 300 and HIRING_RE.search(sent) and sent not in out:
+                out.append(sent)
+    return out
+
+
+def check_labs(labs, prev):
+    """Return (updates, new_state). First sighting of a page is stored silently."""
+    updates, state = [], {}
+    for name, cfg in labs.items():
+        urls = cfg.get("urls") or [cfg["url"]]
+        for url in urls:
+            key = f"{name}|{url}"
+            try:
+                lines = _hiring_lines(url)
+            except Exception as e:  # noqa: BLE001
+                print(f"  ! lab {name} {url}: {e}", file=sys.stderr)
+                if key in prev:
+                    state[key] = prev[key]
+                continue
+            state[key] = lines
+            if key in prev and lines != prev[key]:
+                added = [l for l in lines if l not in prev[key]]
+                updates.append({"name": name, "url": url, "added": added})
+    return updates, state
 
 
 def _render_by_stage(jobs, stages):
@@ -443,8 +520,10 @@ def main():
                   f"{', '.join(untagged)}", file=sys.stderr)
         matches = gather_matches(registry, workers=args.workers, h1b_sponsors=sponsors)
         n_us = sum(1 for j in matches if j.get("us_h1b"))
-        print(f"Matched {len(matches) - n_us} engineering roles via ATS (India + Remote), "
-              f"plus {n_us} US roles at {len(sponsors)} H-1B sponsors.", file=sys.stderr)
+        n_abroad = sum(1 for j in matches if j.get("abroad"))
+        print(f"Matched {len(matches) - n_us - n_abroad} engineering roles via ATS (India + Remote), "
+              f"plus {n_us} US roles at {len(sponsors)} H-1B sponsors and {n_abroad} abroad "
+              f"(any_location boards).", file=sys.stderr)
 
     if args.linkedin:
         unresolved = load_unresolved()
@@ -469,22 +548,34 @@ def main():
     us_seeded |= sponsors
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
 
+    lab_updates, lab_state = [], None
+    if not args.no_ats:
+        labs = load_lab_watch()
+        if labs:
+            lab_updates, lab_state = check_labs(labs, _read_state(args.state).get("lab_watch", {}))
+            print(f"Watched {len(labs)} academic lab page set(s); {len(lab_updates)} changed.", file=sys.stderr)
+
     if args.dry_run:
-        print(render_email(new_jobs or matches))
+        print(render_email(new_jobs or matches, lab_updates))
+        if lab_state:
+            for k, v in lab_state.items():
+                print(f"[lab] {k}: {len(v)} hiring line(s)", *(f"\n    - {l}" for l in v[:5]), file=sys.stderr)
         print(f"\n[dry-run] {len(new_jobs)} new / {len(matches)} total matching. No email, no state change.", file=sys.stderr)
         return
 
     # Decide whether to email.
-    should_email = bool(new_jobs)
+    should_email = bool(new_jobs or lab_updates)
     if fresh_state and not args.email_first_run:
         # First ever run: seed state silently, don't blast every existing listing.
         should_email = False
         print("First run: seeding state without emailing (use --email-first-run to email current snapshot).", file=sys.stderr)
 
-    if should_email and new_jobs:
+    if should_email:
         subject = f"{EMAIL_TITLE}: {len(new_jobs)} new engineering listing(s)"
+        if lab_updates:
+            subject += f", {len(lab_updates)} lab hiring update(s)"
         try:
-            ok = send_email(subject, render_email(new_jobs))
+            ok = send_email(subject, render_email(new_jobs, lab_updates))
         except Exception as e:  # noqa: BLE001
             print(f"ERROR sending email: {e}", file=sys.stderr)
             ok = False
@@ -498,7 +589,9 @@ def main():
     # Update state with everything currently matching.
     for j in matches:
         seen.add(job_key(j["company"], j))
-    save_state(seen, args.state, us_seeded)
+    if lab_state is None and not args.no_ats:
+        lab_state = _read_state(args.state).get("lab_watch")
+    save_state(seen, args.state, us_seeded, lab_state)
     print(f"State now tracks {len(seen)} job ids.", file=sys.stderr)
 
 
