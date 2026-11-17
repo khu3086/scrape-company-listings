@@ -95,6 +95,10 @@ of the email, which also carries the `lab_watch` updates.
 - MIT CSAIL is read from MIT's PeopleClick job site (`ats: peopleclick`,
   filtered to CSAIL's department codes). As a US university it sponsors H-1Bs
   outside the lottery, so its roles go in the "abroad" section too.
+- Caltech's staff and research job board is on Taleo Business Edition
+  (`ats: taleo`) and is handled the same way. `lab_watch:` also covers several
+  Caltech labs: Anandkumar, Yue, Bouman, Gkioxari, Perona, Wierman, Ames,
+  Chung, CAST and IQIM.
 - `lab_watch:` lists academic labs that have no job board. Each run fetches the
   given pages (lab site, head professor's homepage) and pulls out sentences
   about hiring (hiring, postdoc, research engineer, openings, ...). When those

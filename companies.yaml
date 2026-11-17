@@ -5,8 +5,9 @@
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium),
 #                  peopleclick (client + department codes, e.g. MIT),
-#                  oracle (Oracle Recruiting Cloud: host, site, careers URL)
-# Resolved: 456  |  Unresolved: 150
+#                  oracle (Oracle Recruiting Cloud: host, site, careers URL),
+#                  taleo (Taleo Business Edition: host, path, org, cws, e.g. Caltech)
+# Resolved: 457  |  Unresolved: 150
 
 companies:
   1Password:
@@ -198,6 +199,15 @@ companies:
   Callosum:
     ats: ashby
     slug: callosum
+  Caltech:
+    ats: taleo
+    host: phf.tbe.taleo.net
+    path: phf03
+    org: CALTECH
+    cws: 37
+    any_location: true  # US university: cap-exempt H-1B sponsor
+    include_titles: 'research scientist|research engineer|postdoc|scientist'
+    title_filter: 'software|develop|data|\bai\b|machine learning|research scientist|research engineer|postdoc|comput|network|electronic|electrical|detector|automation|scientist'
   Canary Technologies:
     ats: lever
     slug: canarytechnologies
@@ -1945,6 +1955,7 @@ us_hubs:
 # at the top of the email, together with lab_watch updates below.
 academic:
 - AI4Bharat
+- Caltech
 - CERN
 - IAIRO
 - MIT CSAIL
@@ -1958,6 +1969,26 @@ lab_watch:
     urls: [https://omarkhattab.com/]
   MIT CSAIL jobs page:
     urls: [https://www.csail.mit.edu/about/jobs-csail]
+  Caltech - Anima Anandkumar (AI for science):
+    urls: [https://tensorlab.cms.caltech.edu/users/anima/]
+  Caltech - Yisong Yue (ML):
+    urls: [https://www.yisongyue.com/]
+  Caltech - Katie Bouman (computational imaging):
+    urls: [https://users.cms.caltech.edu/~klbouman/]
+  Caltech - Georgia Gkioxari (3D vision):
+    urls: [https://georgiagkioxari.com/]
+  Caltech - Pietro Perona (Vision Lab):
+    urls: [https://www.vision.caltech.edu/openings/]
+  Caltech - Adam Wierman (networks / sustainable computing):
+    urls: [https://adamwierman.com/, https://adamwierman.com/join/]
+  Caltech - Aaron Ames (AMBER bipedal robotics):
+    urls: [http://ames.caltech.edu/]
+  Caltech - Soon-Jo Chung (aerospace robotics):
+    urls: [https://aerospacerobotics.caltech.edu/]
+  Caltech - CAST (autonomous systems):
+    urls: [https://cast.caltech.edu/]
+  Caltech - IQIM (quantum):
+    urls: [https://iqim.caltech.edu/]
 
 # Funding stage per company, used to group the email digest. Best-effort as of
 # 2026-10 (public funding news); fix freely. Stages: research | public (big tech,
@@ -1966,6 +1997,7 @@ lab_watch:
 # Companies not listed here are grouped under other.
 stages:
   research:
+  - Caltech
   - Goodfire
   - AMI Labs
   - Project Prometheus

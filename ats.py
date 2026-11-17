@@ -732,6 +732,38 @@ def oracle(cfg):
     return out
 
 
+def taleo(cfg):
+    """Taleo Business Edition career sites (e.g. Caltech). Results come 10-40 at a
+    time; later pages are "next" links tied to the session cookie.
+
+    cfg: host (e.g. "phf.tbe.taleo.net"), path (e.g. "phf03"), org, cws.
+    """
+    base = f"https://{cfg['host']}/{cfg['path']}/ats/careers/v2"
+    s = requests.Session()
+    s.headers["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+    url = f"{base}/searchResults?org={cfg['org']}&cws={cfg['cws']}"
+    row_re = re.compile(r'href="([^"]*viewRequisition[^"]*?rid=(\d+))"[^>]*>([^<]+)</a>\s*</h4>'
+                        r'\s*<div[^>]*>([^<]*)</div>')
+    out, seen = [], set()
+    for _ in range(50):
+        r = s.get(url, timeout=TIMEOUT)
+        r.raise_for_status()
+        added = 0
+        for link, rid, title, loc in row_re.findall(r.text):
+            if rid in seen:
+                continue
+            seen.add(rid)
+            added += 1
+            loc = html.unescape(loc).strip()
+            out.append({"id": rid, "title": html.unescape(title).strip(), "location": loc,
+                        "remote": "remote" in loc.lower(), "url": html.unescape(link)})
+        m = re.search(r'href="([^"]*searchResults\?next[^"]*)"', r.text)
+        if not (m and added):
+            break
+        url = urljoin(url, html.unescape(m.group(1)))
+    return out
+
+
 def fetch(cfg):
     """Fetch normalized jobs for one company config dict.
 
@@ -756,6 +788,8 @@ def fetch(cfg):
         return peopleclick(cfg)
     if ats_name == "oracle":
         return oracle(cfg)
+    if ats_name == "taleo":
+        return taleo(cfg)
     adapter = ADAPTERS.get(ats_name) or EXTRA_ADAPTERS.get(ats_name)
     if adapter is None:
         return []
