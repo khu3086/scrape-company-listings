@@ -275,6 +275,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 .empty{color:var(--muted);text-align:center;padding:40px 0}
 .mode{font-size:12px;color:var(--muted)}
 .mode a{color:var(--accent)}
+.found{font-size:12px}
 @media (max-width:640px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}
 .card{grid-template-columns:40px 1fr}.acts{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;min-width:0}
 .acts>*{flex:1}.score{width:38px;height:38px;font-size:13px}}
@@ -349,6 +350,10 @@ function filtered(ignoreRegion, ignoreKind) {
 }
 function color(s) { return s >= 65 ? "var(--hi)" : s >= 45 ? "var(--mid)" : "var(--lo)"; }
 
+function fmtDate(d) {
+  const x = new Date(d + "T00:00:00");
+  return isNaN(x) ? d : x.toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"});
+}
 function card(j) {
   const s = st(j), a = apps[j.key] || {};
   const locs = j.locations.slice(0,3).join(" · ") + (j.locations.length > 3 ? ` +${j.locations.length-3} more` : "");
@@ -362,6 +367,7 @@ function card(j) {
     <div class="score" style="color:${color(j.score)}" title="Match score">${j.score}</div>
     <div><div class="t"><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></div>
       <div class="sub">${esc(j.company)}${locs ? " — " + esc(locs) : ""}</div>
+      <div class="sub found" title="${j.first_seen === DATA.meta.first_build ? "Already listed when the board was first built, so it may be older" : "First scraped on this date"}">Scraped ${j.first_seen === DATA.meta.first_build ? "on or before " : ""}${fmtDate(j.first_seen)}</div>
       <div class="chips">${chips}</div>
       ${s && s !== "hidden" || a.note ? `<input class="note" data-act="note" placeholder="Notes (referral, contact, date applied…)" value="${esc(a.note||"")}">` : ""}
     </div>
