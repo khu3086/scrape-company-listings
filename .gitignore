@@ -8,3 +8,7 @@ linkedin-cron.log
 linkedin_review.jsonl
 linkedin_review.md
 state.linkedin.cursor
+board.html
+board_jobs.json
+board_seen.json
+applications.json*

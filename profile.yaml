@@ -1,0 +1,57 @@
+# Profile used by board.py to rank openings (built from Khushi's resume, 2026-11).
+# Each rule is a regex matched against the job title (case-insensitive) with a
+# weight. Positive = fits the profile, negative = poor fit. Score = sum of the
+# matching skill weights (capped at skill_cap), plus seniority / off-profile
+# penalties and the location bonus, clamped to 0-100. Edit freely and
+# rerun `python board.py --no-scan` to re-rank without re-scanning.
+
+name: Khushi Nigam
+summary: >-
+  ~3.5 yrs: AI agent governance (UiPath), ML inference / GPU serving (Oracle),
+  LLM products (Konverz AI), Azure backend (Microsoft). vLLM / llm-d contributor.
+years_experience: 3.5
+skill_cap: 70     # stops many keyword hits from outweighing a seniority mismatch
+
+skills:
+  # Core: what the resume is strongest in
+  - {label: LLM / GenAI, weight: 30, re: '\bllms?\b|gen ?ai|generative|large language|foundation model'}
+  - {label: AI agents, weight: 30, re: '\bagent(s|ic)?\b|agentic|autonomous ai'}
+  - {label: Inference / serving, weight: 30, re: 'inference|serving|model server|vllm|triton|kv.?cache|throughput'}
+  - {label: ML platform / MLOps, weight: 30, re: 'ml ?ops|llm ?ops|ml platform|ml infra|ai infra|machine learning (platform|infra)|model (platform|deployment)'}
+  - {label: AI / ML engineer, weight: 35, re: '\b(ai|ml)\b.{0,20}engineer|machine learning|applied (ai|ml)|\bai\b|\bml\b'}
+  - {label: AI safety / governance, weight: 25, re: 'governance|guardrail|safety|trust|responsible ai|policy|privacy|\bpii\b'}
+  - {label: Evals, weight: 20, re: '\bevals?\b|evaluation|benchmark'}
+  - {label: GPU / performance, weight: 20, re: '\bgpu\b|cuda|performance|optimi[sz]ation|kernel|accelerat'}
+  - {label: Computer vision, weight: 15, re: 'computer vision|\bvision\b|perception|video|multimodal|multi-modal'}
+  - {label: RAG / NLP / search, weight: 25, re: '\brag\b|retrieval|\bnlp\b|(?<!re)search|ranking|recommend'}
+  - {label: Research eng / FDE / MTS, weight: 15, re: 'research engineer|member of technical staff|\bmts\b|forward deployed'}
+  # Solid general fit
+  - {label: Backend / distributed, weight: 15, re: 'backend|back-end|distributed|infrastructure|\binfra\b|platform|systems|cloud|kubernetes|devops|\bsre\b|reliability'}
+  - {label: Software engineer, weight: 12, re: 'software (development )?engineer|\bsde\b|\bswe\b|developer|full.?stack|engineer'}
+  - {label: Data / pipelines, weight: 8, re: 'data engineer|data platform|pipeline|\betl\b'}
+  - {label: Python / Go / TS, weight: 5, re: 'python|golang|\bgo\b|typescript|node'}
+
+seniority:
+  # About 3.5 years in: mid-level and Senior-at-startups are the sweet spot.
+  - {label: Mid-level, weight: 10, re: '\b(ii|2|iii|3)\b|sde ?(2|ii)|mid'}
+  - {label: Senior, weight: 0, re: '\bsenior\b|\bsr\.?\b'}
+  - {label: Too senior, weight: -55, re: '\bstaff\b(?! accountant)|principal|distinguished|director|head of|\bvp\b|vice president|\bfellow\b|manager|architect'}
+  - {label: Lead role, weight: -15, re: '\blead\b|tech lead'}
+  - {label: Intern / new grad, weight: -50, re: 'intern\b|internship|new grad|graduate|fresher|trainee|apprentice|campus|university grad'}
+  - {label: Junior, weight: -10, re: '\bjunior\b|\bjr\.?\b|entry.level|\b(i|1)\b$'}
+
+off_profile:
+  - {label: Mobile, weight: -30, re: '\bios\b|android|mobile|flutter|react native'}
+  - {label: Frontend-only, weight: -20, re: 'front.?end|\bui\b|web developer|design engineer'}
+  - {label: Hardware, weight: -45, re: 'hardware|embedded|firmware|fpga|asic|\brtl\b|verification|analog|silicon|physical design|electrical|mechanical|layout|\bdft\b|\bsoc\b|circuit|thermal|manufactur'}
+  - {label: Non-eng / support, weight: -45, re: 'sales|account|support engineer|customer|solutions consultant|recruit|marketing|\bqa\b|test engineer|\bsdet\b|quality|technician|it support|helpdesk|salesforce|\bsap\b|servicenow developer|mainframe|cobol'}
+  - {label: Security ops, weight: -10, re: 'security operations|\bsoc analyst|penetration|red team'}
+
+# Bonus by where the role is (visa effort).
+location_bonus:
+  india: 15        # India or remote: no visa needed
+  bengaluru: 5     # extra on top of india for Bengaluru
+  us_h1b: 0        # US company with an H-1B track record
+  academic: 0
+  abroad: 0
+  us_hub: -5       # startup with no H-1B history; sponsorship uncertain

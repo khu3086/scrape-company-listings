@@ -178,3 +178,21 @@ repo so dedup memory survives between runs:
 - Custom/Workday career sites (Google, Apple, Amazon, Microsoft, Meta, NVIDIA,
   Uber, DoorDash, …) have no simple public API and are left unresolved. They'd
   need bespoke adapters or a Google-Jobs aggregator.
+
+## Personal job board (apply + track)
+
+`python board.py` scans every tracked board (about 8 minutes), ranks each opening
+against `profile.yaml` and opens a page at http://localhost:8765 with:
+
+- a match score (0-100) and the reasons behind it (green: skills that match;
+  orange: penalties such as "Too senior" or "Hardware")
+- filters by region (India & Remote, US H-1B sponsors, SF/CA/NYC startups,
+  abroad, academic), funding stage, minimum score and search, plus a "New since
+  last build" toggle
+- an Apply button for each opening, plus Save / Applied / Hide and a status
+  (Interviewing, Offer, Rejected) with notes, all saved to `applications.json`
+
+`python board.py --no-scan` re-ranks the last scan instantly. Use it after
+editing the keyword weights in `profile.yaml`. The page, its cache and
+`applications.json` are personal and git-ignored.
+
