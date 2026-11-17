@@ -593,3 +593,22 @@ AlphaGrep
 DevRev
 Arista Networks
 Texas Instruments
+# --- companies list note: Cosign fundraises Nov 9-13 (added 2026-11-17) ---
+Mirendil
+Fractile
+Nominal
+Imprint
+Rox
+Mavria
+Daylight Security
+Clara
+Alta
+Garage
+Dreeze
+Tendrils Compute
+SE3 Labs
+General Translation
+Luminal
+Luminoah
+ancep
+Inkbox

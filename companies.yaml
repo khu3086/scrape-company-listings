@@ -6,7 +6,7 @@
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium),
 #                  peopleclick (client + department codes, e.g. MIT),
 #                  oracle (Oracle Recruiting Cloud: host, site, careers URL)
-# Resolved: 440  |  Unresolved: 148
+# Resolved: 456  |  Unresolved: 150
 
 companies:
   1Password:
@@ -61,12 +61,18 @@ companies:
   Alt Carbon:
     ats: greenhouse
     slug: alt
+  Alta:
+    ats: ashby
+    slug: alta  # tokenized-finance blockchain (SF), not the Israeli GTM startup on greenhouse:alta
   Ambient.ai:
     ats: ashby
     slug: ambient.ai
   AMI Labs:
     ats: ashby
     slug: ami
+  ancep:
+    ats: ashby
+    slug: ancep
   Anduril Industries:
     ats: greenhouse
     slug: andurilindustries
@@ -253,6 +259,9 @@ companies:
   ClaimSorted:
     ats: ashby
     slug: claimsorted
+  Clara:
+    ats: greenhouse
+    slug: clara
   Clari:
     ats: greenhouse
     slug: salesloft
@@ -338,6 +347,9 @@ companies:
   David AI:
     ats: ashby
     slug: david-ai
+  Daylight Security:
+    ats: greenhouse
+    slug: daylightsecurity
   DAZN:
     ats: json
     url: https://careers.dazn.com/postings.json
@@ -379,6 +391,9 @@ companies:
   Doppel:
     ats: greenhouse
     slug: doppel
+  Dreeze:
+    ats: feed
+    url: https://careers.dreeze.com/jobs.rss
   Dropbox:
     ats: greenhouse
     slug: dropbox
@@ -458,6 +473,9 @@ companies:
     tenant: fractal
     dc: wd1
     site: Careers
+  Fractile:
+    ats: ashby
+    slug: fractile
   Framework:
     ats: rippling
     slug: framework
@@ -467,6 +485,9 @@ companies:
   Gamma:
     ats: ashby
     slug: gamma
+  Garage:
+    ats: ashby
+    slug: garage
   General Intuition:
     ats: ashby
     slug: generalintuition-medal
@@ -478,6 +499,9 @@ companies:
     url: https://gr.inc/careers
     link: '/careers/[a-z0-9-]+$'
     default_location: London
+  General Translation:
+    ats: ashby
+    slug: generaltranslation
   Genspark:
     ats: ashby
     slug: genspark
@@ -598,6 +622,9 @@ companies:
   IMC Trading:
     ats: greenhouse
     slug: imc
+  Imprint:
+    ats: ashby
+    slug: imprint
   Inception Labs:
     ats: gem
     slug: inception
@@ -634,6 +661,9 @@ companies:
     render: true
     link: /careers/jobdetails/\d+$
     default_location: Bengaluru, India
+  Inkbox:
+    ats: yc
+    slug: inkbox
   Innovaccer:
     ats: workable
     slug: innovaccer-analytics
@@ -722,6 +752,9 @@ companies:
   Luma AI:
     ats: ashby
     slug: lumaai
+  Luminal:
+    ats: ashby
+    slug: luminal
   Lyft:
     ats: greenhouse
     slug: lyft
@@ -747,6 +780,9 @@ companies:
     render: true
     heading: engineer|developer|scientist|research|programmer|architect|devops|sre|ml|ai |designer|intern|lead|manager|analyst|head of
     default_location: Bengaluru, India
+  Mavria:
+    ats: ashby
+    slug: mavria
   Meesho:
     ats: lever
     slug: meesho
@@ -789,6 +825,9 @@ companies:
   Mintlify:
     ats: ashby
     slug: mintlify
+  Mirendil:
+    ats: ashby
+    slug: mirendil
   Mistral AI:
     ats: lever
     slug: mistral
@@ -850,6 +889,9 @@ companies:
     link: niramai\.com/career/[\w-]+/?$
     strip: \s*\|.*$
     default_location: Bengaluru, India
+  Nominal:
+    ats: gem
+    slug: nominal
   Normal Computing:
     ats: ashby
     slug: NormalComputing
@@ -1098,6 +1140,9 @@ companies:
   Rollstack:
     ats: ashby
     slug: rollstack
+  Rox:
+    ats: ashby
+    slug: Rox-Data-Corp
   Rubrik:
     ats: greenhouse
     slug: rubrik
@@ -1136,6 +1181,9 @@ companies:
   Scale AI:
     ats: greenhouse
     slug: scaleai
+  SE3 Labs:
+    ats: ashby
+    slug: se3
   ServiceNow:
     ats: smartrecruiters
     slug: servicenow
@@ -1574,6 +1622,7 @@ unresolved:
 - Locus.sh
 - Lossfunk
 - LTIMindtree
+- Luminoah
 - Lyzr AI
 - Machenta
 - Mad Street Den
@@ -1626,6 +1675,7 @@ unresolved:
 - SurgeGrowth
 - System76
 - Teenage Engineering
+- Tendrils Compute
 - Tesla
 - TikTok
 - TurboML
@@ -1950,6 +2000,7 @@ stages:
   - CERN
   - IAIRO
   - MIT CSAIL
+  - Mirendil
   public:
   - Canonical
   - Booz Allen Hamilton
@@ -2210,6 +2261,9 @@ stages:
   - Suno
   - Writer
   - Yellow.ai
+  - Fractile
+  - Nominal
+  - Clara
   series_b:
   - Meshy
   - Vast Space
@@ -2273,6 +2327,10 @@ stages:
   - Weaviate
   - Wysa
   - Zed Industries
+  - Rox
+  - Daylight Security
+  - Garage
+  - Luminoah
   series_a:
   - Stuut
   - Armadin
@@ -2354,6 +2412,10 @@ stages:
   - Wonderful
   - DevRev
   - Skan AI
+  - Alta
+  - SE3 Labs
+  - General Translation
+  - Luminal
   seed:
   - Pogo
   - Dirac
@@ -2478,7 +2540,12 @@ stages:
   - ZOKO
   - Zymbly
   - Callosum
-  pre_seed: []
+  - Mavria
+  - Dreeze
+  - Tendrils Compute
+  - Inkbox
+  pre_seed:
+  - ancep
   other:
   - Atoms
   - Hark
