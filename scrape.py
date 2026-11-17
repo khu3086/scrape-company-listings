@@ -26,6 +26,7 @@ import requests
 import yaml
 
 import ats as ats_mod
+import contracts
 
 HERE = __file__.rsplit("/", 1)[0]
 COMPANIES_YAML = f"{HERE}/companies.yaml"
@@ -234,12 +235,19 @@ def load_role_seeded(path):
     return set(data.get("role_seeded", ["engineering"] if data else []))
 
 
-def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None,
+def load_contract_seeded(path):
+    """Contract platforms whose existing listings have already been absorbed into state."""
+    return set(_read_state(path).get("contract_seeded", []))
+
+
+def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None, contract_seeded=None,
                role_seeded=ROLE_TYPES):
     data = {"seen": sorted(seen), "us_seeded": sorted(us_seeded),
             "us_seed_version": US_SEED_VERSION, "role_seeded": sorted(role_seeded)}
     if hub_seeded is not None:
         data["hub_seeded"] = sorted(hub_seeded)
+    if contract_seeded is not None:
+        data["contract_seeded"] = sorted(contract_seeded)
     if lab_watch is not None:
         data["lab_watch"] = lab_watch
     with open(path, "w") as f:
@@ -248,6 +256,11 @@ def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None,
 
 def job_key(company, job):
     return f"{company}:{job['id']}"
+
+
+def contract_key(job):
+    # Prefixed so a platform's contract ids never collide with its full-time ATS board.
+    return f"contract:{job['company']}:{job['id']}"
 
 
 # --- fetch ------------------------------------------------------------------
@@ -421,7 +434,7 @@ def load_academic():
     return set(doc.get("academic", []) or [])
 
 
-def render_email(new_jobs, lab_updates=()):
+def render_email(new_jobs, lab_updates=(), contract_jobs=()):
     stages = load_stages()
     academic_names = load_academic()
     academic = [j for j in new_jobs if j["company"] in academic_names]
@@ -431,6 +444,10 @@ def render_email(new_jobs, lab_updates=()):
     hub = [j for j in rest if j.get("us_hub")]
     abroad = [j for j in rest if j.get("abroad")]
     lines = [EMAIL_TITLE, "=" * len(EMAIL_TITLE), ""]
+    if contract_jobs:
+        lines += ["######## Contract openings (AI training platforms) ########", "",
+                  f"{len(contract_jobs)} new software / ML / data / AI contract(s):", ""]
+        lines += _render_section(contract_jobs)
     if academic or lab_updates:
         heading = "Academic & research institutions"
         lines += [f"######## {heading} ########", ""]
@@ -543,8 +560,9 @@ def _render_section(jobs):
         lines.append(f"== {company} ==")
         for j in sorted(by_company[company], key=lambda x: x["title"].lower()):
             loc = j["location"] or ("Remote" if j["remote"] else "—")
+            pay = f"  {j['pay']}" if j.get("pay") else ""
             tag = {"product": "[PM] ", "science": "[Science] "}.get(j.get("role"), "")
-            lines.append(f"  • {tag}{j['title']}  [{loc}]")
+            lines.append(f"  • {tag}{j['title']}  [{loc}]{pay}")
             lines.append(f"    {j['url']}")
         lines.append("")
     return lines
@@ -675,10 +693,25 @@ def main():
         seen.update(job_key(j["company"], j) for j in backlog)
         print(f"Seeding {len(backlog)} existing {'/'.join(sorted(role_new))} roles without emailing.",
               file=sys.stderr)
-    if args.dump_matches:
-        with open(args.dump_matches, "w") as f:
-            json.dump(matches, f)
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
+
+    # Contract platforms (Mercor, micro1, ...): absorb each one's current listings
+    # silently the first time it answers, then email only new postings.
+    contract_jobs, contract_seeded = [], load_contract_seeded(args.state)
+    if not args.no_ats:
+        contract_jobs, answered, _failed = contracts.gather()
+        new_platforms = set(answered) - contract_seeded
+        if new_platforms and not fresh_state:
+            backlog = [j for j in contract_jobs if j["company"] in new_platforms]
+            seen.update(contract_key(j) for j in backlog)
+            print(f"Seeding {len(backlog)} existing contract openings for {len(new_platforms)} newly "
+                  f"tracked platform(s) without emailing.", file=sys.stderr)
+        contract_seeded |= set(answered)
+    new_contracts = [j for j in contract_jobs if contract_key(j) not in seen]
+    if args.dump_matches:
+        # board.py builds the hosted board from this file; contract=True puts them in their own section.
+        with open(args.dump_matches, "w") as f:
+            json.dump(matches + [{**j, "contract": True} for j in contract_jobs], f)
 
     lab_updates, lab_state = [], None
     if not args.no_ats:
@@ -688,26 +721,30 @@ def main():
             print(f"Watched {len(labs)} academic lab page set(s); {len(lab_updates)} changed.", file=sys.stderr)
 
     if args.dry_run:
-        print(render_email(new_jobs or matches, lab_updates))
+        print(render_email(new_jobs or matches, lab_updates, new_contracts or contract_jobs))
         if lab_state:
             for k, v in lab_state.items():
                 print(f"[lab] {k}: {len(v)} hiring line(s)", *(f"\n    - {l}" for l in v[:5]), file=sys.stderr)
-        print(f"\n[dry-run] {len(new_jobs)} new / {len(matches)} total matching. No email, no state change.", file=sys.stderr)
+        print(f"\n[dry-run] {len(new_jobs)} new / {len(matches)} total matching, {len(new_contracts)} new / "
+              f"{len(contract_jobs)} contract openings. No email, no state change.", file=sys.stderr)
         return
 
     # Decide whether to email.
-    should_email = bool(new_jobs or lab_updates)
+    should_email = bool(new_jobs or lab_updates or new_contracts)
     if fresh_state and not args.email_first_run:
         # First ever run: seed state silently, don't blast every existing listing.
         should_email = False
         print("First run: seeding state without emailing (use --email-first-run to email current snapshot).", file=sys.stderr)
 
     if should_email:
-        subject = f"{EMAIL_TITLE}: {len(new_jobs)} new engineering listing(s)"
+        parts = [f"{len(new_jobs)} new listing(s)"] if new_jobs or not new_contracts else []
+        if new_contracts:
+            parts.append(f"{len(new_contracts)} contract opening(s)")
         if lab_updates:
-            subject += f", {len(lab_updates)} lab hiring update(s)"
+            parts.append(f"{len(lab_updates)} lab hiring update(s)")
+        subject = f"{EMAIL_TITLE}: {', '.join(parts)}"
         try:
-            ok = send_email(subject, render_email(new_jobs, lab_updates))
+            ok = send_email(subject, render_email(new_jobs, lab_updates, new_contracts))
         except Exception as e:  # noqa: BLE001
             print(f"ERROR sending email: {e}", file=sys.stderr)
             ok = False
@@ -721,10 +758,11 @@ def main():
     # Update state with everything currently matching.
     for j in matches:
         seen.add(job_key(j["company"], j))
+    seen.update(contract_key(j) for j in contract_jobs)
     if lab_state is None and not args.no_ats:
         lab_state = _read_state(args.state).get("lab_watch")
     save_state(seen, args.state, us_seeded, lab_state,
-               hub_seeded if not args.no_ats else load_hub_seeded(args.state))
+               hub_seeded if not args.no_ats else load_hub_seeded(args.state), contract_seeded)
     print(f"State now tracks {len(seen)} job ids.", file=sys.stderr)
 
 

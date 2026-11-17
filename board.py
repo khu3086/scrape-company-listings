@@ -25,6 +25,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import yaml
 
+import contracts
 import scrape
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -42,6 +43,8 @@ def scan():
     print(f"Scanning {len(reg)} companies (takes several minutes)...", file=sys.stderr)
     jobs = scrape.gather_matches(reg, h1b_sponsors=scrape.load_h1b_sponsors(),
                                  hub_companies=scrape.load_us_hub_companies(reg))
+    contract_jobs, _, _ = contracts.gather()
+    jobs += [{**j, "contract": True} for j in contract_jobs]
     with open(JOBS_CACHE, "w") as f:
         json.dump(jobs, f)
     return jobs
@@ -92,17 +95,19 @@ def build(jobs, out=OUT, seen_path=SEEN):
     groups = {}
     for j in jobs:
         c = j["company"]
-        region = ("academic" if c in academic else "us_h1b" if j.get("us_h1b") else
-                  "us_hub" if j.get("us_hub") else "abroad" if j.get("abroad") else "india")
+        region = ("contract" if j.get("contract") else "academic" if c in academic else
+                  "us_h1b" if j.get("us_h1b") else "us_hub" if j.get("us_hub") else
+                  "abroad" if j.get("abroad") else "india")
         key = f"{c}|{j['title'].strip().lower()}|{region}"
         g = groups.setdefault(key, {"key": key, "company": c, "title": j["title"].strip(),
-                                    "region": region, "stage": stages.get(c, "other"),
-                                    "url": j["url"], "locations": [], "ids": []})
+                                    "region": region,
+                                    "stage": "contract" if j.get("contract") else stages.get(c, "other"),
+                                    "url": j["url"], "pay": j.get("pay", ""), "locations": [], "ids": []})
         g.setdefault("kind", kind_of(j))
         loc = (j.get("location") or "").strip() or ("Remote" if j.get("remote") else "")
         if loc and loc not in g["locations"]:
             g["locations"].append(loc)
-        g["ids"].append(scrape.job_key(c, j))
+        g["ids"].append(scrape.contract_key(j) if j.get("contract") else scrape.job_key(c, j))
 
     today = dt.date.today().isoformat()
     seen = {}
@@ -301,8 +306,8 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 </div>
 <script>
 const DATA = /*DATA*/null;
-const REGIONS = {india:"India & Remote", us_h1b:"US · H-1B sponsors", us_hub:"SF / CA / NYC startups", abroad:"Abroad", academic:"Academic"};
-const STAGES = {research:"Research lab", public:"Public / big co", late:"Late stage", series_c:"Series C", series_b:"Series B", series_a:"Series A", seed:"Seed", pre_seed:"Pre-seed", other:"Other"};
+const REGIONS = {contract:"Contract openings", india:"India & Remote", us_h1b:"US · H-1B sponsors", us_hub:"SF / CA / NYC startups", abroad:"Abroad", academic:"Academic"};
+const STAGES = {research:"Research lab", public:"Public / big co", late:"Late stage", series_c:"Series C", series_b:"Series B", series_a:"Series A", seed:"Seed", pre_seed:"Pre-seed", contract:"Contract platform", other:"Other"};
 const STATUS = {saved:"Saved", applied:"Applied", interview:"Interviewing", offer:"Offer", rejected:"Rejected", hidden:"Hidden"};
 const KINDS = {engineering:"Engineering", fde:"Forward deployed", science:"Scientist", product:"Product management"};
 const TABS = [["review","To review"],["saved","Saved"],["applied","Applied"],["hidden","Hidden"]];
@@ -350,6 +355,7 @@ function card(j) {
   const chips = [isNew(j) ? '<span class="chip new">New</span>' : "",
     j.kind !== "engineering" ? `<span class="chip new">${esc(KINDS[j.kind])}</span>` : "",
     `<span class="chip">${esc(REGIONS[j.region])}</span>`, `<span class="chip">${esc(STAGES[j.stage]||j.stage)}</span>`,
+    j.pay ? `<span class="chip">${esc(j.pay)}</span>` : "",
     ...j.why.map(w => `<span class="chip g">${esc(w)}</span>`), ...j.warn.map(w => `<span class="chip w">${esc(w)}</span>`)].join("");
   const opts = ['<option value="">Status…</option>', ...Object.entries(STATUS).map(([k,v]) => `<option value="${k}"${s===k?" selected":""}>${v}</option>`)].join("");
   return `<article class="card" data-key="${esc(j.key)}">

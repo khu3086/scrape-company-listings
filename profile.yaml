@@ -60,3 +60,4 @@ location_bonus:
   academic: 0
   abroad: 0
   us_hub: -5       # startup with no H-1B history; sponsorship uncertain
+  contract: 15     # remote contract on an AI-training platform; no visa needed

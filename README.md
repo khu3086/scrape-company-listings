@@ -106,6 +106,18 @@ of the email, which also carries the `lab_watch` updates.
   The first check of a page is stored silently. LinkedIn and X profiles need a
   login, so they can't be watched this way.
 
+## Contract openings (AI training platforms)
+
+`contracts.py` reads the paid-contract listings on Mercor, micro1, Ethos
+(askethos.com, via General Catalyst's job board), DataAnnotation, Terac,
+Handshake AI and Turing, and keeps only software / ML / data / AI roles
+(`ROLE_RE` / `EXCLUDE_RE`). Terac, Handshake and Turing boards also carry staff
+jobs, so only their contract roles are kept. New ones are emailed at the top of
+the digest under "Contract openings", with the hourly pay where the platform
+shows it, and get their own "Contract openings" filter on the job board. Each
+platform's existing listings are recorded silently the first time it answers
+(`contract_seeded` in `state.json`). Outlier isn't covered.
+
 ## US roles at H-1B sponsors
 
 Companies listed under `h1b_sponsors:` in `companies.yaml` (employers with
