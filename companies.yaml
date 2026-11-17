@@ -1928,6 +1928,18 @@ h1b_sponsors:
 - xAI
 - Zoox
 
+# Startups whose SF / Bay Area / California / NYC engineering roles are emailed
+# too (own section), even without an H-1B filing history. Each company's
+# existing roles are absorbed silently the first time; only new ones are sent.
+# Excluded: defense/space firms whose roles need US-person status (ITAR).
+us_hubs:
+  stages: [research, late, series_c, series_b, series_a, seed, pre_seed]
+  exclude: [SpaceX, Anduril Industries, Shield AI, Hadrian, K2 Space, Northwood Space,
+            Apex Space, Varda Space, Vast Space, General Matter]
+  # Their current roles are emailed once (not seeded silently): Cosign Nov 9-13 batch.
+  email_backlog: [Mirendil, Fractile, Nominal, Imprint, Rox, Mavria, Daylight Security, Clara,
+                  Alta, Garage, Dreeze, SE3 Labs, General Translation, Luminal, ancep, Inkbox]
+
 # Universities, public research bodies and non-profit labs. Their listings
 # (wherever located) get their own "Academic & research institutions" section
 # at the top of the email, together with lab_watch updates below.

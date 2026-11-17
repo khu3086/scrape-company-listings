@@ -143,6 +143,37 @@ def is_us(job):
     return bool(US_RE.search(loc) or US_STATE_CODE_RE.search(loc))
 
 
+# US startup hubs: roles here are emailed for the startups selected by `us_hubs:`
+# in companies.yaml, whether or not the company has an H-1B filing history.
+US_HUB_RE = re.compile(
+    r"san francisco|\bsf\b|bay area|silicon valley|palo alto|mountain view|menlo park|redwood city|"
+    r"san mateo|san jose|sunnyvale|santa clara|cupertino|berkeley|oakland|los angeles|santa monica|"
+    r"el segundo|san diego|irvine|california|, ?ca\b|new york|\bnyc\b|brooklyn|manhattan|, ?ny\b",
+    re.I)
+
+
+def is_us_hub(job):
+    return bool(US_HUB_RE.search(job.get("location") or ""))
+
+
+def load_hub_email_backlog():
+    """Startups whose CURRENT SF/CA/NYC roles should be emailed once, not seeded."""
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    return set((doc.get("us_hubs") or {}).get("email_backlog") or [])
+
+
+def load_us_hub_companies(registry):
+    """Companies whose SF / California / NYC roles are emailed (us_hubs: in companies.yaml)."""
+    with open(COMPANIES_YAML) as f:
+        doc = yaml.safe_load(f) or {}
+    cfg = doc.get("us_hubs") or {}
+    stages = set(cfg.get("stages") or [])
+    exclude = set(cfg.get("exclude") or [])
+    tagged = load_stages()
+    return {c for c in registry if tagged.get(c) in stages and c not in exclude}
+
+
 # --- state ------------------------------------------------------------------
 def _read_state(path):
     try:
@@ -169,9 +200,16 @@ def load_us_seeded(path):
     return set(data.get("us_seeded", []))
 
 
-def save_state(seen, path, us_seeded=(), lab_watch=None):
+def load_hub_seeded(path):
+    """Startups whose existing SF / CA / NYC roles have already been absorbed into state."""
+    return set(_read_state(path).get("hub_seeded", []))
+
+
+def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None):
     data = {"seen": sorted(seen), "us_seeded": sorted(us_seeded),
             "us_seed_version": US_SEED_VERSION}
+    if hub_seeded is not None:
+        data["hub_seeded"] = sorted(hub_seeded)
     if lab_watch is not None:
         data["lab_watch"] = lab_watch
     with open(path, "w") as f:
@@ -295,7 +333,7 @@ def load_stages():
     return out
 
 
-def gather_matches(registry, workers=12, h1b_sponsors=()):
+def gather_matches(registry, workers=12, h1b_sponsors=(), hub_companies=()):
     matches = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs = {ex.submit(fetch_company, c, cfg): c for c, cfg in registry.items()}
@@ -331,6 +369,9 @@ def gather_matches(registry, workers=12, h1b_sponsors=()):
                 elif company in h1b_sponsors and is_us(j):
                     j["us_h1b"] = True
                     matches.append(j)
+                elif company in hub_companies and is_us_hub(j):
+                    j["us_hub"] = True
+                    matches.append(j)
     return matches
 
 
@@ -349,8 +390,9 @@ def render_email(new_jobs, lab_updates=()):
     academic_names = load_academic()
     academic = [j for j in new_jobs if j["company"] in academic_names]
     rest = [j for j in new_jobs if j["company"] not in academic_names]
-    india = [j for j in rest if not (j.get("us_h1b") or j.get("abroad"))]
+    india = [j for j in rest if not (j.get("us_h1b") or j.get("us_hub") or j.get("abroad"))]
     us = [j for j in rest if j.get("us_h1b")]
+    hub = [j for j in rest if j.get("us_hub")]
     abroad = [j for j in rest if j.get("abroad")]
     lines = [EMAIL_TITLE, "=" * len(EMAIL_TITLE), ""]
     if academic or lab_updates:
@@ -372,6 +414,10 @@ def render_email(new_jobs, lab_updates=()):
     if us:
         lines += [f"{len(us)} new US engineering listing(s) at H-1B sponsors:", ""]
         lines += _render_by_stage(us, stages)
+    if hub:
+        lines += [f"{len(hub)} new startup listing(s) in SF / California / NYC "
+                  f"(no H-1B history; check sponsorship):", ""]
+        lines += _render_by_stage(hub, stages)
     if abroad:
         lines += [f"{len(abroad)} new listing(s) abroad (visa-sponsoring / open to Indian nationals):", ""]
         lines += _render_section(abroad)
@@ -533,6 +579,7 @@ def main():
 
     matches = []
     sponsors = set()
+    hubs = set()
     if not args.no_ats:
         registry = load_registry()
         print(f"Scanning {len(registry)} companies...", file=sys.stderr)
@@ -541,11 +588,15 @@ def main():
         if untagged:
             print(f"Note: {len(untagged)} companies have no stage tag (grouped under Other): "
                   f"{', '.join(untagged)}", file=sys.stderr)
-        matches = gather_matches(registry, workers=args.workers, h1b_sponsors=sponsors)
+        hubs = load_us_hub_companies(registry)
+        matches = gather_matches(registry, workers=args.workers, h1b_sponsors=sponsors,
+                                 hub_companies=hubs)
         n_us = sum(1 for j in matches if j.get("us_h1b"))
+        n_hub = sum(1 for j in matches if j.get("us_hub"))
         n_abroad = sum(1 for j in matches if j.get("abroad"))
-        print(f"Matched {len(matches) - n_us - n_abroad} engineering roles via ATS (India + Remote), "
-              f"plus {n_us} US roles at {len(sponsors)} H-1B sponsors and {n_abroad} abroad "
+        print(f"Matched {len(matches) - n_us - n_hub - n_abroad} engineering roles via ATS "
+              f"(India + Remote), plus {n_us} US roles at {len(sponsors)} H-1B sponsors, "
+              f"{n_hub} SF/CA/NYC roles at {len(hubs)} startups and {n_abroad} abroad "
               f"(any_location boards).", file=sys.stderr)
 
     if args.linkedin:
@@ -569,6 +620,15 @@ def main():
         print(f"Seeding {len(backlog)} existing US roles for {len(unseeded)} newly listed "
               f"H-1B sponsor(s) without emailing.", file=sys.stderr)
     us_seeded |= sponsors
+    # Same for startups newly in us_hubs scope: absorb current SF/CA/NYC roles silently.
+    hub_seeded = load_hub_seeded(args.state)
+    hub_new = hubs - hub_seeded - load_hub_email_backlog()
+    if hub_new and not fresh_state:
+        backlog = [j for j in matches if j.get("us_hub") and j["company"] in hub_new]
+        seen.update(job_key(j["company"], j) for j in backlog)
+        print(f"Seeding {len(backlog)} existing SF/CA/NYC roles for {len(hub_new)} startup(s) "
+              f"without emailing.", file=sys.stderr)
+    hub_seeded |= hubs
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
 
     lab_updates, lab_state = [], None
@@ -614,7 +674,8 @@ def main():
         seen.add(job_key(j["company"], j))
     if lab_state is None and not args.no_ats:
         lab_state = _read_state(args.state).get("lab_watch")
-    save_state(seen, args.state, us_seeded, lab_state)
+    save_state(seen, args.state, us_seeded, lab_state,
+               hub_seeded if not args.no_ats else load_hub_seeded(args.state))
     print(f"State now tracks {len(seen)} job ids.", file=sys.stderr)
 
 

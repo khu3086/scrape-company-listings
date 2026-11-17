@@ -69,6 +69,16 @@ public & established, late-stage (Series D+), Series C, B, A, seed, pre-seed,
 then other. Stages come from the hand-editable `stages:` section of
 `companies.yaml`; an untagged company lands in "Other".
 
+## SF / California / NYC roles at startups
+
+`us_hubs:` in `companies.yaml` picks startups by stage (research labs through
+pre-seed) whose engineering roles in SF / the Bay Area / California / NYC are
+emailed in their own section, even without an H-1B filing history (check
+sponsorship before applying). Each startup's existing roles are recorded
+silently the first time, so only new postings are sent, except for companies
+listed under `email_backlog:`. Defense/space firms that need US-person status
+(SpaceX, Anduril, ...) are excluded.
+
 ## Roles abroad and academic labs
 
 Companies listed under `academic:` in `companies.yaml` (AI4Bharat, CERN, IAIRO,
