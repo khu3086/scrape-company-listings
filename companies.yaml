@@ -4,8 +4,9 @@
 # Eightfold:       {ats: eightfold, host: ..., domain: ...}
 # Others:         feed (RSS/Atom url), google (queries), json (custom API, field map),
 #                  page (careers HTML: link/heading/block regex; render: true = headless Chromium),
-#                  peopleclick (client + department codes, e.g. MIT)
-# Resolved: 433  |  Unresolved: 148
+#                  peopleclick (client + department codes, e.g. MIT),
+#                  oracle (Oracle Recruiting Cloud: host, site, careers URL)
+# Resolved: 440  |  Unresolved: 148
 
 companies:
   1Password:
@@ -51,6 +52,9 @@ companies:
   Akuna Capital:
     ats: greenhouse
     slug: akunacapital
+  AlphaGrep:
+    ats: greenhouse
+    slug: alphagrepsecurities
   AlphaSense:
     ats: greenhouse
     slug: alphasense
@@ -99,6 +103,9 @@ companies:
   Arena:
     ats: ashby
     slug: arena
+  Arista Networks:
+    ats: smartrecruiters
+    slug: aristanetworks
   Arize AI:
     ats: greenhouse
     slug: arizeai
@@ -354,6 +361,9 @@ companies:
   DeepL:
     ats: ashby
     slug: DeepL
+  DevRev:
+    ats: greenhouse
+    slug: devrev
   Dirac:
     ats: greenhouse
     slug: diracinc
@@ -513,6 +523,9 @@ companies:
   Granola:
     ats: ashby
     slug: granola
+  Graviton Research Capital:
+    ats: greenhouse
+    slug: gravitonresearchcapital
   Groq:
     ats: gem
     slug: groq
@@ -1146,6 +1159,14 @@ companies:
   Simile:
     ats: ashby
     slug: simile
+  Skan AI:
+    ats: json
+    url: https://skanai.keka.com/careers/api/embedjobs/default/active/d83629ac-cbae-4575-a5b0-a6e0e556f459
+    items: ''
+    id: id
+    title: title
+    location: jobLocations.0.name
+    link: 'https://skanai.keka.com/careers/jobdetails/{id}'
   SkildAI:
     ats: greenhouse
     slug: skildai-careers
@@ -1248,6 +1269,11 @@ companies:
   Terra API:
     ats: yc
     slug: terra-api
+  Texas Instruments:
+    ats: oracle
+    host: edbz.fa.us2.oraclecloud.com
+    site: CX
+    careers: https://careers.ti.com/en/sites/CX
   TGS Management:
     ats: lever
     slug: tgsmc
@@ -1407,6 +1433,9 @@ companies:
   Wifi Dabba:
     ats: yc
     slug: wifi-dabba-inc
+  Wish:
+    ats: smartrecruiters
+    slug: Wish  # no openings since the marketplace was sold; kept in case it posts again
   Wispr Flow:
     ats: ashby
     slug: wispr-flow
@@ -1755,6 +1784,7 @@ h1b_sponsors:
 - Anthropic
 - Anysphere
 - AQR
+- Arista Networks
 - Armadin
 - Asana
 - Baseten
@@ -1834,6 +1864,7 @@ h1b_sponsors:
 - Susquehanna (SIG)
 - Temporal
 - Tenstorrent
+- Texas Instruments
 - Tower Research Capital
 - Traversal
 - Twitch
@@ -2051,6 +2082,10 @@ stages:
   - Zoox
   - Mercari
   - Mercari India
+  - Graviton Research Capital
+  - AlphaGrep
+  - Arista Networks
+  - Texas Instruments
   late:
   - Vultr
   - Legora
@@ -2317,6 +2352,8 @@ stages:
   - WareIQ
   - Wifi Dabba
   - Wonderful
+  - DevRev
+  - Skan AI
   seed:
   - Pogo
   - Dirac
@@ -2462,3 +2499,4 @@ stages:
   - System76
   - Teenage Engineering
   - The Browser Company
+  - Wish

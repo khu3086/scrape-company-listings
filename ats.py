@@ -129,13 +129,21 @@ def workable(slug):
 
 # --- SmartRecruiters --------------------------------------------------------
 def smartrecruiters(slug):
-    data = _get_json(
-        f"https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=100"
-    )
-    if not isinstance(data, dict):
-        return []
+    # The API returns at most 100 postings per call; page with offset.
+    postings, offset = [], 0
+    while True:
+        data = _get_json(
+            f"https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=100&offset={offset}"
+        )
+        if not isinstance(data, dict):
+            break
+        batch = data.get("content", []) or []
+        postings += batch
+        offset += len(batch)
+        if not batch or offset >= int(data.get("totalFound") or 0) or offset >= 5000:
+            break
     out = []
-    for j in data.get("content", []) or []:
+    for j in postings:
         loc = j.get("location") or {}
         parts = [loc.get("city"), loc.get("region"), loc.get("country")]
         loc_str = ", ".join(_s(p) for p in parts if _s(p))
@@ -693,6 +701,37 @@ def peopleclick(cfg):
     return out
 
 
+def oracle(cfg):
+    """Oracle Recruiting Cloud (Candidate Experience), e.g. Texas Instruments.
+
+    cfg: host (the *.oraclecloud.com host), site (siteNumber, e.g. "CX"),
+    careers (public careers URL used for job links, e.g.
+    "https://careers.ti.com/en/sites/CX").
+    """
+    host, site = cfg["host"], cfg.get("site", "CX")
+    careers = cfg.get("careers") or f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}"
+    api = f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+    out, offset, total = [], 0, None
+    while total is None or offset < total:
+        url = (f"{api}?onlyData=true&expand=requisitionList.secondaryLocations"
+               f"&finder=findReqs;siteNumber={site},limit=200,offset={offset},sortBy=POSTING_DATES_DESC")
+        r = requests.get(url, headers=HEADERS, timeout=40)
+        r.raise_for_status()
+        items = r.json().get("items") or [{}]
+        reqs = items[0].get("requisitionList") or []
+        total = int(items[0].get("TotalJobsCount") or 0)
+        if not reqs:
+            break
+        for q in reqs:
+            locs = [_s(q.get("PrimaryLocation"))] + [_s(s.get("Name")) for s in q.get("secondaryLocations") or []]
+            loc = "; ".join(l for l in locs if l)
+            out.append({"id": str(q["Id"]), "title": _s(q.get("Title")), "location": loc,
+                        "remote": "remote" in loc.lower() or q.get("WorkplaceTypeCode") == "ORA_REMOTE",
+                        "url": f"{careers}/job/{q['Id']}"})
+        offset += len(reqs)
+    return out
+
+
 def fetch(cfg):
     """Fetch normalized jobs for one company config dict.
 
@@ -715,6 +754,8 @@ def fetch(cfg):
         return page(cfg)
     if ats_name == "peopleclick":
         return peopleclick(cfg)
+    if ats_name == "oracle":
+        return oracle(cfg)
     adapter = ADAPTERS.get(ats_name) or EXTRA_ADAPTERS.get(ats_name)
     if adapter is None:
         return []
