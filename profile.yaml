@@ -24,6 +24,9 @@ skills:
   - {label: GPU / performance, weight: 20, re: '\bgpu\b|cuda|performance|optimi[sz]ation|kernel|accelerat'}
   - {label: Computer vision, weight: 15, re: 'computer vision|\bvision\b|perception|video|multimodal|multi-modal'}
   - {label: RAG / NLP / search, weight: 25, re: '\brag\b|retrieval|\bnlp\b|(?<!re)search|ranking|recommend'}
+  - {label: Product manager, weight: 25, re: 'product (manager|management|owner|lead)|\bapm\b'}
+  - {label: AI product, weight: 15, re: 'product.{0,40}\b(ai|ml|llm|genai|agents?|platform|developer|infra)|(ai|ml|llm|agent|platform|developer).{0,30}product'}
+  - {label: Scientist, weight: 20, re: 'scientist|deployment strategist'}
   - {label: Research eng / FDE / MTS, weight: 15, re: 'research engineer|member of technical staff|\bmts\b|forward deployed'}
   # Solid general fit
   - {label: Backend / distributed, weight: 15, re: 'backend|back-end|distributed|infrastructure|\binfra\b|platform|systems|cloud|kubernetes|devops|\bsre\b|reliability'}
@@ -32,19 +35,21 @@ skills:
   - {label: Python / Go / TS, weight: 5, re: 'python|golang|\bgo\b|typescript|node'}
 
 seniority:
-  # About 3.5 years in: mid-level and Senior-at-startups are the sweet spot.
-  - {label: Mid-level, weight: 10, re: '\b(ii|2|iii|3)\b|sde ?(2|ii)|mid'}
-  - {label: Senior, weight: 0, re: '\bsenior\b|\bsr\.?\b'}
-  - {label: Too senior, weight: -55, re: '\bstaff\b(?! accountant)|principal|distinguished|director|head of|\bvp\b|vice president|\bfellow\b|manager|architect'}
-  - {label: Lead role, weight: -15, re: '\blead\b|tech lead'}
-  - {label: Intern / new grad, weight: -50, re: 'intern\b|internship|new grad|graduate|fresher|trainee|apprentice|campus|university grad'}
-  - {label: Junior, weight: -10, re: '\bjunior\b|\bjr\.?\b|entry.level|\b(i|1)\b$'}
+  # Target: roles for 1 to 3.5 years of experience.
+  - {label: 1-3.5 yrs level, weight: 15, re: '\b(ii|iii|2|3)\b|sde ?(2|ii)|\bmid\b|associate product|\bapm\b|\bassociate\b|early.career'}
+  - {label: Entry level, weight: 5, re: '\bjunior\b|\bjr\.?\b|entry.level|\b(i|1)\b'}
+  - {label: Senior (often 5+ yrs), weight: -25, re: '\bsenior\b|\bsr\.?\b|\b(iv|v|4|5)\b'}
+  - {label: Too senior, weight: -55, re: '\bstaff\b|principal|distinguished|director|head of|\bvp\b|vice president|\bfellow\b|(?<!product )(?<!program )manager|architect|group product'}
+  - {label: Lead role, weight: -20, re: '\blead\b|tech lead'}
+  - {label: New grad (0 yrs), weight: -15, re: 'new grad|college grad|graduate|fresher|campus|university grad'}
+  - {label: Needs PhD, weight: -30, re: '\bph\.?d\b'}
+  - {label: Intern, weight: -60, re: '\bintern\b|internship|trainee|apprentice'}
 
 off_profile:
   - {label: Mobile, weight: -30, re: '\bios\b|android|mobile|flutter|react native'}
   - {label: Frontend-only, weight: -20, re: 'front.?end|\bui\b|web developer|design engineer'}
   - {label: Hardware, weight: -45, re: 'hardware|embedded|firmware|fpga|asic|\brtl\b|verification|analog|silicon|physical design|electrical|mechanical|layout|\bdft\b|\bsoc\b|circuit|thermal|manufactur'}
-  - {label: Non-eng / support, weight: -45, re: 'sales|account|support engineer|customer|solutions consultant|recruit|marketing|\bqa\b|test engineer|\bsdet\b|quality|technician|it support|helpdesk|salesforce|\bsap\b|servicenow developer|mainframe|cobol'}
+  - {label: Non-eng / support, weight: -45, re: '\bsales\b|account executive|account manag|support engineer|customer (success|support|service)|solutions consultant|recruit|marketing|\bqa\b|test engineer|\bsdet\b|quality|technician|it support|helpdesk|salesforce|\bsap\b|servicenow developer|mainframe|cobol'}
   - {label: Security ops, weight: -10, re: 'security operations|\bsoc analyst|penetration|red team'}
 
 # Bonus by where the role is (visa effort).

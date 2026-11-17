@@ -81,6 +81,25 @@ def is_engineering(title):
     return bool(ENGINEERING_RE.search(title or ""))
 
 
+PRODUCT_RE = re.compile(
+    r"\b(product manager|product management|product owner|product lead|head of product|"
+    r"director,? (of )?product|vp,? (of )?product|\bapm\b|product strategist)\b", re.I)
+NOT_PRODUCT_RE = re.compile(r"product (marketing|design|analyst|support|specialist)", re.I)
+SCIENCE_RE = re.compile(r"\b(scientists?|deployment strategist)\b", re.I)
+
+
+def role_type(title):
+    """"product" | "science" | "engineering" | None (not a role we track)."""
+    t = title or ""
+    if PRODUCT_RE.search(t) and not NOT_PRODUCT_RE.search(t):
+        return "product"
+    if SCIENCE_RE.search(t):
+        return "science"
+    if ENGINEERING_RE.search(t):
+        return "engineering"
+    return None
+
+
 def is_india_or_remote(job):
     """Keep India-located roles, plus genuinely-open remote roles.
 
@@ -205,9 +224,20 @@ def load_hub_seeded(path):
     return set(_read_state(path).get("hub_seeded", []))
 
 
-def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None):
+# Role types whose existing listings have been absorbed into state. Product and
+# science roles were added 2026-11; their backlog is recorded silently once.
+ROLE_TYPES = ("engineering", "science", "product")
+
+
+def load_role_seeded(path):
+    data = _read_state(path)
+    return set(data.get("role_seeded", ["engineering"] if data else []))
+
+
+def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None,
+               role_seeded=ROLE_TYPES):
     data = {"seen": sorted(seen), "us_seeded": sorted(us_seeded),
-            "us_seed_version": US_SEED_VERSION}
+            "us_seed_version": US_SEED_VERSION, "role_seeded": sorted(role_seeded)}
     if hub_seeded is not None:
         data["hub_seeded"] = sorted(hub_seeded)
     if lab_watch is not None:
@@ -285,7 +315,9 @@ def gather_linkedin(companies, location="India", ids=None, rotate=False):
             print(f"  ! LinkedIn {company}: {e}", file=sys.stderr)
             continue
         for j in jobs:
-            if is_engineering(j["title"]) and is_india_or_remote(j):
+            role = role_type(j["title"])
+            if role and is_india_or_remote(j):
+                j["role"] = role
                 matches.append(j)
     if rotate and companies:
         with open(LINKEDIN_CURSOR, "w") as f:
@@ -356,8 +388,12 @@ def gather_matches(registry, workers=12, h1b_sponsors=(), hub_companies=()):
             for j in jobs:
                 if not j.get("id"):
                     continue
-                if not (is_engineering(j["title"]) or (extra and extra.search(j["title"]))):
+                role = role_type(j["title"])
+                if not role and extra and extra.search(j["title"]):
+                    role = "science"
+                if not role:
                     continue
+                j["role"] = role
                 if only and not only.search(j["title"]):
                     continue
                 if is_india_or_remote(j):
@@ -409,7 +445,7 @@ def render_email(new_jobs, lab_updates=()):
                 lines += [f"  + {t}" for t in u["added"]] or ["  (hiring text changed or was removed)"]
                 lines.append("")
     if india:
-        lines += [f"{len(india)} new engineering listing(s) (India + Remote):", ""]
+        lines += [f"{len(india)} new listing(s) (India + Remote):", ""]
         lines += _render_by_stage(india, stages)
     if us:
         lines += [f"{len(us)} new US engineering listing(s) at H-1B sponsors:", ""]
@@ -507,7 +543,8 @@ def _render_section(jobs):
         lines.append(f"== {company} ==")
         for j in sorted(by_company[company], key=lambda x: x["title"].lower()):
             loc = j["location"] or ("Remote" if j["remote"] else "—")
-            lines.append(f"  • {j['title']}  [{loc}]")
+            tag = {"product": "[PM] ", "science": "[Science] "}.get(j.get("role"), "")
+            lines.append(f"  • {tag}{j['title']}  [{loc}]")
             lines.append(f"    {j['url']}")
         lines.append("")
     return lines
@@ -575,6 +612,8 @@ def main():
                     help="skip the ATS pass (e.g. LinkedIn-only local runs while the cloud cron handles ATS)")
     ap.add_argument("--state", default=STATE_JSON,
                     help="path to the dedup state file (use a separate file for local LinkedIn runs)")
+    ap.add_argument("--dump-matches", metavar="PATH",
+                    help="also write every current match to PATH (input for board.py --jobs)")
     args = ap.parse_args()
 
     matches = []
@@ -629,6 +668,16 @@ def main():
         print(f"Seeding {len(backlog)} existing SF/CA/NYC roles for {len(hub_new)} startup(s) "
               f"without emailing.", file=sys.stderr)
     hub_seeded |= hubs
+    # Role types newly tracked (e.g. product management): absorb their backlog silently.
+    role_new = set(ROLE_TYPES) - load_role_seeded(args.state)
+    if role_new and not fresh_state and not args.no_ats:
+        backlog = [j for j in matches if j.get("role") in role_new]
+        seen.update(job_key(j["company"], j) for j in backlog)
+        print(f"Seeding {len(backlog)} existing {'/'.join(sorted(role_new))} roles without emailing.",
+              file=sys.stderr)
+    if args.dump_matches:
+        with open(args.dump_matches, "w") as f:
+            json.dump(matches, f)
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
 
     lab_updates, lab_state = [], None

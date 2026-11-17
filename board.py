@@ -73,7 +73,16 @@ def score(title, region, locations, profile, rules):
     return max(0, min(100, pts)), why, warn
 
 
-def build(jobs):
+FDE_RE = re.compile(r"forward[- ]?deployed|deployment (engineer|strategist)|\bfde\b", re.I)
+
+
+def kind_of(j):
+    """engineering | fde | science | product (board filter)."""
+    role = j.get("role") or scrape.role_type(j["title"]) or "engineering"
+    return "fde" if FDE_RE.search(j["title"]) else role
+
+
+def build(jobs, out=OUT, seen_path=SEEN):
     with open(PROFILE) as f:
         profile = yaml.safe_load(f)
     rules = {s: _rules(profile, s) for s in ("skills", "seniority", "off_profile")}
@@ -89,6 +98,7 @@ def build(jobs):
         g = groups.setdefault(key, {"key": key, "company": c, "title": j["title"].strip(),
                                     "region": region, "stage": stages.get(c, "other"),
                                     "url": j["url"], "locations": [], "ids": []})
+        g.setdefault("kind", kind_of(j))
         loc = (j.get("location") or "").strip() or ("Remote" if j.get("remote") else "")
         if loc and loc not in g["locations"]:
             g["locations"].append(loc)
@@ -96,8 +106,8 @@ def build(jobs):
 
     today = dt.date.today().isoformat()
     seen = {}
-    if os.path.exists(SEEN):
-        with open(SEEN) as f:
+    if os.path.exists(seen_path):
+        with open(seen_path) as f:
             seen = json.load(f)
     first_build = seen.get("_first_build") or today
     known = seen.get("jobs", {})
@@ -105,8 +115,8 @@ def build(jobs):
         g["first_seen"] = known.setdefault(key, today)
         g["score"], g["why"], g["warn"] = score(g["title"], g["region"], g["locations"],
                                                 profile, rules)
-    with open(SEEN, "w") as f:
-        json.dump({"_first_build": first_build, "jobs": known}, f)
+    with open(seen_path, "w") as f:
+        json.dump({"_first_build": first_build, "jobs": {k: known[k] for k in groups}}, f)
 
     rows = sorted(groups.values(), key=lambda g: (-g["score"], g["company"].lower()))
     meta = {"name": profile.get("name", ""), "summary": profile.get("summary", ""),
@@ -115,9 +125,9 @@ def build(jobs):
     data = json.dumps({"meta": meta, "jobs": rows}, separators=(",", ":"))
     page = TEMPLATE.replace("/*DATA*/null", data.replace("</", "<\\/"))
     page = page.replace("{{NAME}}", html.escape(meta["name"]))
-    with open(OUT, "w") as f:
+    with open(out, "w") as f:
         f.write(page)
-    print(f"Wrote {OUT}: {len(rows)} openings ({len(jobs)} postings), "
+    print(f"Wrote {out}: {len(rows)} openings ({len(jobs)} postings), "
           f"{sum(1 for r in rows if r['score'] >= 50)} scoring 50+.", file=sys.stderr)
 
 
@@ -180,6 +190,8 @@ def main():
     ap.add_argument("--no-scan", action="store_true", help="re-rank the last scan (board_jobs.json)")
     ap.add_argument("--no-serve", action="store_true", help="only write board.html")
     ap.add_argument("--jobs", help="build from this matches JSON instead of scanning")
+    ap.add_argument("--out", default=OUT, help="where to write the page (default board.html)")
+    ap.add_argument("--seen", default=SEEN, help="first-seen dates file (default board_seen.json)")
     args = ap.parse_args()
 
     if args.jobs or args.no_scan:
@@ -190,7 +202,7 @@ def main():
             jobs = json.load(f)
     else:
         jobs = scan()
-    build(jobs)
+    build(jobs, args.out, args.seen)
     if args.no_serve:
         return
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
@@ -257,6 +269,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 .more{display:block;margin:14px auto;padding:8px 18px}
 .empty{color:var(--muted);text-align:center;padding:40px 0}
 .mode{font-size:12px;color:var(--muted)}
+.mode a{color:var(--accent)}
 @media (max-width:640px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}
 .card{grid-template-columns:40px 1fr}.acts{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;min-width:0}
 .acts>*{flex:1}.score{width:38px;height:38px;font-size:13px}}
@@ -267,7 +280,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 <header>
   <h1>Openings for {{NAME}}</h1>
   <p id="summary"></p>
-  <p class="mode" id="mode"></p>
+  <p class="mode"><span id="mode"></span> · <a href="#" id="export">Export tracking</a> · <a href="#" id="import">Import</a><input type="file" id="importf" accept=".json,application/json" hidden></p>
 </header>
 <nav class="tabs" id="tabs"></nav>
 <div class="controls">
@@ -276,6 +289,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
   <select id="sort"><option value="score">Best match</option><option value="new">Newest</option><option value="company">Company A–Z</option></select>
   <select id="theme" title="Theme"><option value="">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select>
 </div>
+<div class="regions" id="kinds"></div>
 <div class="regions" id="regions"></div>
 <div class="row2">
   <label>Min match <input type="range" id="min" min="0" max="90" step="5" value="40"> <b id="minv">40</b></label>
@@ -290,9 +304,10 @@ const DATA = /*DATA*/null;
 const REGIONS = {india:"India & Remote", us_h1b:"US · H-1B sponsors", us_hub:"SF / CA / NYC startups", abroad:"Abroad", academic:"Academic"};
 const STAGES = {research:"Research lab", public:"Public / big co", late:"Late stage", series_c:"Series C", series_b:"Series B", series_a:"Series A", seed:"Seed", pre_seed:"Pre-seed", other:"Other"};
 const STATUS = {saved:"Saved", applied:"Applied", interview:"Interviewing", offer:"Offer", rejected:"Rejected", hidden:"Hidden"};
+const KINDS = {engineering:"Engineering", fde:"Forward deployed", science:"Scientist", product:"Product management"};
 const TABS = [["review","To review"],["saved","Saved"],["applied","Applied"],["hidden","Hidden"]];
 const PAGE = 60;
-let apps = {}, server = false, tab = "review", region = "", shown = PAGE;
+let apps = {}, server = false, tab = "review", region = "", kind = "", shown = PAGE;
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const lsGet = k => { try { return localStorage.getItem(k) } catch(e) { return null } };
@@ -301,7 +316,7 @@ const lsSet = (k,v) => { try { localStorage.setItem(k,v) } catch(e) {} };
 async function loadApps() {
   try { const r = await fetch("/api/status"); if (r.ok) { apps = await r.json(); server = true; } } catch(e) {}
   if (!server) { try { apps = JSON.parse(lsGet("board-apps") || "{}") } catch(e) { apps = {} } }
-  $("mode").textContent = server ? "Tracking saved to applications.json" : "Opened as a file: tracking is saved in this browser only (run python board.py to save to applications.json)";
+  $("mode").textContent = server ? "Tracking saved to applications.json" : "Tracking is saved in this browser; use Export / Import to move it to another device";
 }
 function setStatus(job, status, note) {
   const cur = apps[job.key] || {};
@@ -317,10 +332,11 @@ const inTab = (j, t) => { const s = st(j);
   return t === "review" ? (!s || s === "note") : t === "saved" ? s === "saved" : t === "hidden" ? s === "hidden" : ["applied","interview","offer","rejected"].includes(s); };
 const isNew = j => j.first_seen > DATA.meta.first_build && j.first_seen === DATA.meta.today;
 
-function filtered(ignoreRegion) {
+function filtered(ignoreRegion, ignoreKind) {
   const q = $("q").value.trim().toLowerCase(), stage = $("stage").value, min = +$("min").value, nw = $("newonly").checked;
   return DATA.jobs.filter(j => inTab(j, tab)
     && (ignoreRegion || !region || j.region === region)
+    && (ignoreKind || !kind || j.kind === kind)
     && (!stage || j.stage === stage)
     && (tab !== "review" || j.score >= min)
     && (!nw || isNew(j))
@@ -332,6 +348,7 @@ function card(j) {
   const s = st(j), a = apps[j.key] || {};
   const locs = j.locations.slice(0,3).join(" · ") + (j.locations.length > 3 ? ` +${j.locations.length-3} more` : "");
   const chips = [isNew(j) ? '<span class="chip new">New</span>' : "",
+    j.kind !== "engineering" ? `<span class="chip new">${esc(KINDS[j.kind])}</span>` : "",
     `<span class="chip">${esc(REGIONS[j.region])}</span>`, `<span class="chip">${esc(STAGES[j.stage]||j.stage)}</span>`,
     ...j.why.map(w => `<span class="chip g">${esc(w)}</span>`), ...j.warn.map(w => `<span class="chip w">${esc(w)}</span>`)].join("");
   const opts = ['<option value="">Status…</option>', ...Object.entries(STATUS).map(([k,v]) => `<option value="${k}"${s===k?" selected":""}>${v}</option>`)].join("");
@@ -358,6 +375,10 @@ function render(keep) {
   base.forEach(j => counts[j.region] = (counts[j.region]||0) + 1);
   $("regions").innerHTML = `<button class="pill${!region?" on":""}" data-region="">All<span>${base.length}</span></button>` +
     Object.entries(REGIONS).map(([k,v]) => `<button class="pill${region===k?" on":""}" data-region="${k}">${v}<span>${counts[k]||0}</span></button>`).join("");
+  const kb = filtered(false, true), kc = {};
+  kb.forEach(j => kc[j.kind] = (kc[j.kind]||0) + 1);
+  $("kinds").innerHTML = `<button class="pill${!kind?" on":""}" data-kind="">All roles<span>${kb.length}</span></button>` +
+    Object.entries(KINDS).map(([k,v]) => `<button class="pill${kind===k?" on":""}" data-kind="${k}">${v}<span>${kc[k]||0}</span></button>`).join("");
   let rows = filtered(false);
   const sort = $("sort").value;
   if (sort === "new") rows.sort((a,b) => b.first_seen.localeCompare(a.first_seen) || b.score - a.score);
@@ -385,6 +406,19 @@ $("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab
 $("regions").addEventListener("click", e => { const b = e.target.closest("[data-region]"); if (b) { region = b.dataset.region; render(); } });
 ["q","stage","sort","newonly"].forEach(id => $(id).addEventListener("input", () => render()));
 $("min").addEventListener("input", () => { $("minv").textContent = $("min").value; render(); });
+$("kinds").addEventListener("click", e => { const b = e.target.closest("[data-kind]"); if (b) { kind = b.dataset.kind; render(); } });
+$("export").addEventListener("click", e => { e.preventDefault();
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(apps, null, 1)], {type: "application/json"}));
+  a.download = "applications.json"; a.click(); });
+$("import").addEventListener("click", e => { e.preventDefault(); $("importf").click(); });
+$("importf").addEventListener("change", async () => {
+  const f = $("importf").files[0]; if (!f) return;
+  let got; try { got = JSON.parse(await f.text()); } catch(e) { alert("Not a valid applications.json"); return; }
+  Object.entries(got).forEach(([k, v]) => { if (!v || typeof v !== "object") return; apps[k] = v;
+    if (server) fetch("/api/status", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({key: k, ...v})}); });
+  if (!server) lsSet("board-apps", JSON.stringify(apps));
+  $("importf").value = ""; render(); });
 $("more").addEventListener("click", () => { shown += PAGE; render(true); });
 $("theme").addEventListener("change", () => { const v = $("theme").value; v ? document.documentElement.dataset.theme = v : delete document.documentElement.dataset.theme; lsSet("board-theme", v); });
 const th = lsGet("board-theme"); if (th) { $("theme").value = th; document.documentElement.dataset.theme = th; }

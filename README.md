@@ -196,3 +196,18 @@ against `profile.yaml` and opens a page at http://localhost:8765 with:
 editing the keyword weights in `profile.yaml`. The page, its cache and
 `applications.json` are personal and git-ignored.
 
+## Role types, hosting
+
+Besides engineering, the watcher now tracks scientist roles (Research / Applied /
+Data Scientist, deployment strategist) and product management (PM, APM, product
+owner / lead). Their existing listings were recorded silently once
+(`role_seeded` in `state.json`); new ones are emailed with a `[PM]` or
+`[Science]` tag. Forward-deployed roles count as engineering in email and have
+their own filter on the board.
+
+The board is also published on GitHub Pages by the 3-hourly workflow
+(`scrape.py --dump-matches`, then `board.py --jobs ... --out site/index.html`).
+Enable it once in the repo: Settings → Pages → Source: GitHub Actions. On the
+hosted page, tracking lives in the browser; use Export / Import to move it
+between devices or into `applications.json` for the local server. The repo is
+public, so the hosted page is too.
