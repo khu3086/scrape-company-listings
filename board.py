@@ -104,6 +104,9 @@ def build(jobs, out=OUT, seen_path=SEEN):
                                     "stage": "contract" if j.get("contract") else stages.get(c, "other"),
                                     "url": j["url"], "pay": j.get("pay", ""), "locations": [], "ids": []})
         g.setdefault("kind", kind_of(j))
+        # A title posted in several places: keep the most recent posting date.
+        if (j.get("posted") or "") > g.get("posted", ""):
+            g["posted"] = j["posted"]
         loc = (j.get("location") or "").strip() or ("Remote" if j.get("remote") else "")
         if loc and loc not in g["locations"]:
             g["locations"].append(loc)
@@ -299,6 +302,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 <div class="regions" id="regions"></div>
 <div class="row2">
   <label>Min match <input type="range" id="min" min="0" max="90" step="5" value="40"> <b id="minv">40</b></label>
+  <label>Posted <select id="age"><option value="">Any time</option><option value="1">Past 24 hours</option><option value="3">Past 3 days</option><option value="7">Past week</option></select></label>
   <label><input type="checkbox" id="newonly"> New since last build</label>
   <span class="count" id="count"></span>
 </div>
@@ -336,16 +340,34 @@ function setStatus(job, status, note) {
 const st = j => (apps[j.key] || {}).status || "";
 const inTab = (j, t) => { const s = st(j);
   return t === "review" ? (!s || s === "note") : t === "saved" ? s === "saved" : t === "hidden" ? s === "hidden" : ["applied","interview","offer","rejected"].includes(s); };
+// When the opening went up: the board's posting date if it gives one, else the day
+// it was first scraped (unless it was already listed at the first build: unknown).
+const when = j => j.posted ? Date.parse(j.posted)
+  : j.first_seen > DATA.meta.first_build ? Date.parse(j.first_seen + "T00:00:00") : 0;
+const DAY = 864e5;
+// Posting dates are full timestamps, or a bare "YYYY-MM-DD" when the board only gives the day.
+function ago(posted) {
+  if (posted.length === 10) {
+    const d = Math.round((Date.parse(new Date().toISOString().slice(0, 10)) - Date.parse(posted)) / DAY);
+    return d <= 0 ? "today" : d === 1 ? "yesterday" : d < 31 ? `${d} days ago` : "on " + fmtDate(posted);
+  }
+  const t = Date.parse(posted), h = (Date.now() - t) / 36e5;
+  if (h < 1) return "less than an hour ago";
+  if (h < 24) return `${Math.floor(h)} hour${h < 2 ? "" : "s"} ago`;
+  const d = Math.floor(h / 24);
+  return d < 31 ? `${d} day${d === 1 ? "" : "s"} ago` : "on " + new Date(t).toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"});
+}
 const isNew = j => j.first_seen > DATA.meta.first_build && j.first_seen === DATA.meta.today;
 
 function filtered(ignoreRegion, ignoreKind) {
-  const q = $("q").value.trim().toLowerCase(), stage = $("stage").value, min = +$("min").value, nw = $("newonly").checked;
+  const q = $("q").value.trim().toLowerCase(), stage = $("stage").value, min = +$("min").value, nw = $("newonly").checked, age = +$("age").value;
   return DATA.jobs.filter(j => inTab(j, tab)
     && (ignoreRegion || !region || j.region === region)
     && (ignoreKind || !kind || j.kind === kind)
     && (!stage || j.stage === stage)
     && (tab !== "review" || j.score >= min)
     && (!nw || isNew(j))
+    && (!age || when(j) >= Date.now() - age * DAY)
     && (!q || (j.title + " " + j.company + " " + j.locations.join(" ")).toLowerCase().includes(q)));
 }
 function color(s) { return s >= 65 ? "var(--hi)" : s >= 45 ? "var(--mid)" : "var(--lo)"; }
@@ -367,7 +389,9 @@ function card(j) {
     <div class="score" style="color:${color(j.score)}" title="Match score">${j.score}</div>
     <div><div class="t"><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></div>
       <div class="sub">${esc(j.company)}${locs ? " — " + esc(locs) : ""}</div>
-      <div class="sub found" title="${j.first_seen === DATA.meta.first_build ? "Already listed when the board was first built, so it may be older" : "First scraped on this date"}">Scraped ${j.first_seen === DATA.meta.first_build ? "on or before " : ""}${fmtDate(j.first_seen)}</div>
+      <div class="sub found">${[j.posted ? `<b>Posted ${ago(j.posted)}</b>` : "",
+        j.first_seen > DATA.meta.first_build ? `Scraped ${fmtDate(j.first_seen)}`
+        : j.posted ? "" : `<span title="Already listed when the board was first built, so it may be older">Scraped on or before ${fmtDate(j.first_seen)}</span>`].filter(Boolean).join(" · ")}</div>
       <div class="chips">${chips}</div>
       ${s && s !== "hidden" || a.note ? `<input class="note" data-act="note" placeholder="Notes (referral, contact, date applied…)" value="${esc(a.note||"")}">` : ""}
     </div>
@@ -393,7 +417,7 @@ function render(keep) {
     Object.entries(KINDS).map(([k,v]) => `<button class="pill${kind===k?" on":""}" data-kind="${k}">${v}<span>${kc[k]||0}</span></button>`).join("");
   let rows = filtered(false);
   const sort = $("sort").value;
-  if (sort === "new") rows.sort((a,b) => b.first_seen.localeCompare(a.first_seen) || b.score - a.score);
+  if (sort === "new") rows.sort((a,b) => when(b) - when(a) || b.first_seen.localeCompare(a.first_seen) || b.score - a.score);
   else if (sort === "company") rows.sort((a,b) => a.company.localeCompare(b.company) || b.score - a.score);
   $("count").textContent = `${rows.length} opening${rows.length===1?"":"s"}`;
   $("list").innerHTML = rows.length ? rows.slice(0, shown).map(card).join("") : '<p class="empty">Nothing here with these filters.</p>';
@@ -416,7 +440,7 @@ $("list").addEventListener("change", e => {
 });
 $("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) { tab = b.dataset.tab; render(); } });
 $("regions").addEventListener("click", e => { const b = e.target.closest("[data-region]"); if (b) { region = b.dataset.region; render(); } });
-["q","stage","sort","newonly"].forEach(id => $(id).addEventListener("input", () => render()));
+["q","stage","sort","newonly","age"].forEach(id => $(id).addEventListener("input", () => render()));
 $("min").addEventListener("input", () => { $("minv").textContent = $("min").value; render(); });
 $("kinds").addEventListener("click", e => { const b = e.target.closest("[data-kind]"); if (b) { kind = b.dataset.kind; render(); } });
 $("export").addEventListener("click", e => { e.preventDefault();

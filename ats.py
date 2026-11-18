@@ -9,6 +9,8 @@ treat "no jobs" and "broken" identically. The registry of adapters is `ADAPTERS`
 """
 from __future__ import annotations
 
+import datetime as dt
+import email.utils
 import html
 import json
 import re
@@ -48,6 +50,40 @@ def _s(v):
     return "" if v is None else str(v).strip()
 
 
+_REL_RE = re.compile(r"posted (today|yesterday|(\d+)\+? days? ago)", re.I)
+
+
+def _posted(v):
+    """A posting date as ISO-8601 UTC ("2026-11-17T18:11:33Z"), a bare day
+    ("2026-11-17") when the board only gives the day, or "" if unknown.
+    Accepts epoch seconds/ms, ISO strings, RSS dates and Workday's "Posted 3 Days Ago"."""
+    if v in (None, ""):
+        return ""
+    try:
+        if isinstance(v, (int, float)) or (isinstance(v, str) and v.strip().isdigit()):
+            t = float(v)
+            d = dt.datetime.fromtimestamp(t / 1000 if t > 1e11 else t, dt.timezone.utc)
+        else:
+            text = str(v).strip()
+            m = _REL_RE.match(text)
+            if m:
+                word = m.group(1).lower()
+                days = 0 if word == "today" else 1 if word == "yesterday" else int(m.group(2))
+                return (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).strftime("%Y-%m-%d")
+            elif re.fullmatch(r"\d{4}-\d{2}-\d{2}", text):
+                return text
+            else:
+                try:
+                    d = email.utils.parsedate_to_datetime(text)
+                except (TypeError, ValueError):
+                    d = dt.datetime.fromisoformat(text.replace("Z", "+00:00"))
+                if d.tzinfo is None:
+                    d = d.replace(tzinfo=dt.timezone.utc)
+        return d.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    except (ValueError, OverflowError, OSError, TypeError):
+        return ""
+
+
 # --- Greenhouse -------------------------------------------------------------
 def greenhouse(slug):
     data = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs")
@@ -62,6 +98,7 @@ def greenhouse(slug):
             "location": loc,
             "remote": "remote" in loc.lower(),
             "url": _s(j.get("absolute_url")),
+            "posted": _posted(j.get("first_published")),
         })
     return out
 
@@ -82,6 +119,7 @@ def ashby(slug):
             "location": loc,
             "remote": bool(j.get("isRemote")) or "remote" in loc.lower(),
             "url": _s(j.get("jobUrl") or j.get("applyUrl")),
+            "posted": _posted(j.get("publishedAt")),
         })
     return out
 
@@ -102,6 +140,7 @@ def lever(slug):
             "location": loc,
             "remote": wt == "remote" or "remote" in loc.lower(),
             "url": _s(j.get("hostedUrl") or j.get("applyUrl")),
+            "posted": _posted(j.get("createdAt")),
         })
     return out
 
@@ -123,6 +162,7 @@ def workable(slug):
             "location": loc,
             "remote": bool(j.get("remote")) or "remote" in loc.lower(),
             "url": _s(j.get("url") or j.get("application_url")),
+            "posted": _posted(j.get("published_on") or j.get("created_at")),
         })
     return out
 
@@ -154,6 +194,7 @@ def smartrecruiters(slug):
             "location": loc_str,
             "remote": bool(loc.get("remote")) or "remote" in loc_str.lower(),
             "url": f"https://jobs.smartrecruiters.com/{slug}/{jid}",
+            "posted": _posted(j.get("releasedDate")),
         })
     return out
 
@@ -199,6 +240,7 @@ def workday(cfg):
                 "location": loc,
                 "remote": "remote" in loc.lower(),
                 "url": f"{base}{path}" if path else base,
+                "posted": _posted(j.get("postedOn")),
             })
         offset += 20
         if offset >= total:
@@ -239,6 +281,7 @@ def eightfold(cfg):
                 "location": loc,
                 "remote": _s(j.get("work_location_option")) == "remote" or "remote" in loc.lower(),
                 "url": _s(j.get("canonicalPositionUrl")) or f"https://{host}/careers/job/{j.get('id')}",
+                "posted": _posted(j.get("t_create")),
             })
         start += 10
         if start >= total:
@@ -260,6 +303,7 @@ def gem(slug):
             "location": loc,
             "remote": _s(j.get("location_type")) == "remote" or "remote" in loc.lower(),
             "url": _s(j.get("absolute_url")),
+            "posted": _posted(j.get("first_published_at")),
         })
     return out
 
@@ -401,6 +445,7 @@ def feed(cfg):
             loc = ", ".join(_s(e.text) for e in it.iter()
                             if e.tag.endswith("}city") or e.tag.endswith("}country") and _s(e.text))
             remote = _s(it.findtext("remoteStatus")) in ("fully", "remote")
+            posted = _posted(it.findtext("pubDate"))
         elif it.tag == _ATOM + "entry":
             title = _s(it.findtext(_ATOM + "title"))
             le = it.find(_ATOM + "link")
@@ -408,6 +453,7 @@ def feed(cfg):
             jid = _s(it.findtext(_ATOM + "id")) or link
             loc = _s(it.findtext(_ATOM + "location"))
             remote = False
+            posted = _posted(it.findtext(_ATOM + "published") or it.findtext(_ATOM + "updated"))
         else:
             continue
         loc = loc or default_loc
@@ -417,6 +463,7 @@ def feed(cfg):
             "location": loc,
             "remote": remote or "remote" in loc.lower(),
             "url": link,
+            "posted": posted,
         })
     return out
 
@@ -727,7 +774,7 @@ def oracle(cfg):
             loc = "; ".join(l for l in locs if l)
             out.append({"id": str(q["Id"]), "title": _s(q.get("Title")), "location": loc,
                         "remote": "remote" in loc.lower() or q.get("WorkplaceTypeCode") == "ORA_REMOTE",
-                        "url": f"{careers}/job/{q['Id']}"})
+                        "url": f"{careers}/job/{q['Id']}", "posted": _posted(q.get("PostedDate"))})
         offset += len(reqs)
     return out
 

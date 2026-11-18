@@ -201,6 +201,10 @@ against `profile.yaml` and opens a page at http://localhost:8765 with:
 - filters by region (India & Remote, US H-1B sponsors, SF/CA/NYC startups,
   abroad, academic), funding stage, minimum score and search, plus a "New since
   last build" toggle
+- a "Posted" filter (past 24 hours / 3 days / week) and a Newest sort. Most
+  boards give a posting date (Greenhouse, Ashby, Lever, Workday, Oracle, ...);
+  for the rest (Google, custom pages, YC) the date the board first scraped the
+  opening is used
 - an Apply button for each opening, plus Save / Applied / Hide and a status
   (Interviewing, Offer, Rejected) with notes, all saved to `applications.json`
 
