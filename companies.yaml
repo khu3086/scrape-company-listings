@@ -311,6 +311,9 @@ companies:
   CoreWeave:
     ats: greenhouse
     slug: coreweave
+  Coram AI:
+    ats: ashby
+    slug: coram-ai
   Corgi Insurance:
     ats: ashby
     slug: corgi
@@ -2313,6 +2316,7 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - Coram AI
   - Meshy
   - Vast Space
   - Savvy Wealth
