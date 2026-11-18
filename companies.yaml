@@ -28,6 +28,15 @@ companies:
   Accend:
     ats: yc
     slug: accend
+  Adalat AI:
+    ats: json
+    url: https://api.manatal.com/open/v3/career-page/adalat/jobs/?page_size=100
+    items: results
+    id: hash
+    title: position_name
+    location: location_display
+    default_location: Remote, India
+    link: https://www.careers-page.com/adalat/job/{hash}
   Adobe:
     ats: workday
     tenant: adobe
@@ -39,6 +48,11 @@ companies:
     render: true
     heading: engineer|developer|scientist|research|programmer|architect|devops|sre|ml|ai |designer|intern|lead|manager|analyst|head of
     default_location: San Francisco, CA
+  AI21 Labs:
+    ats: page
+    url: https://www.ai21.com/careers/
+    link: ai21\.com/careers/[^/]+/[0-9A-F]{2}\.[0-9A-F]{3}/
+    default_location: Tel Aviv, Israel
   AI4Bharat:
     ats: json
     url: https://admin.models.ai4bharat.org/careers/
@@ -53,6 +67,22 @@ companies:
   Akuna Capital:
     ats: greenhouse
     slug: akunacapital
+  Alaan:
+    ats: page
+    url: https://careers.kula.ai/alaan
+    render: false
+    link: careers\.kula\.ai/alaan/\d+
+    strip: ^\d+\s+
+    default_location: Dubai, UAE
+  Alice & Bob:
+    ats: lever
+    slug: alice-bob
+  Alltius:
+    ats: page
+    url: https://www.alltius.ai/company/careers
+    render: false
+    link: alltius\.ai/(company/)?careers?/[a-z0-9-]+/?$
+    default_location: Bengaluru, India
   AlphaGrep:
     ats: greenhouse
     slug: alphagrepsecurities
@@ -65,9 +95,31 @@ companies:
   Alta:
     ats: ashby
     slug: alta  # tokenized-finance blockchain (SF), not the Israeli GTM startup on greenhouse:alta
+  Amazon:
+    ats: json
+    url: https://www.amazon.jobs/en/search.json?country=IND&category%5B%5D=software-development&category%5B%5D=machine-learning-science&result_limit=100&offset=0&sort=recent
+    items: jobs
+    id: id_icims
+    title: title
+    location: normalized_location
+    link: https://www.amazon.jobs{job_path}
   Ambient.ai:
     ats: ashby
     slug: ambient.ai
+  AMD:
+    ats: json
+    url: https://careers.amd.com/api/jobs?limit=100
+    page_param: page
+    items: jobs
+    id: data.req_id
+    title: data.title
+    location: data.full_location
+    link: https://careers.amd.com/careers-home/jobs/{slug}
+  American Express:
+    ats: oracle
+    host: egug.fa.us2.oraclecloud.com
+    site: CX_1
+    careers: https://careers.americanexpress.com/en/sites/CX_1
   AMI Labs:
     ats: ashby
     slug: ami
@@ -92,6 +144,12 @@ companies:
   Apollo:
     ats: greenhouse
     slug: apolloio
+  Apple:
+    ats: page
+    url: https://jobs.apple.com/en-in/search?location=india-INDC&page={page}
+    pages: 15
+    link: /en-in/details/[0-9-]+/[^/?]+\?team=
+    default_location: India
   Applied Compute:
     ats: ashby
     slug: Applied Compute
@@ -137,9 +195,20 @@ companies:
   Astraea:
     ats: yc
     slug: astraea
+  Athina AI:
+    ats: yc
+    slug: gooseworks
   Atlan:
     ats: ashby
     slug: atlan
+  Atlassian:
+    ats: json
+    url: https://www.atlassian.com/endpoint/careers/listings
+    items: ''
+    id: id
+    title: title
+    location: locations
+    link: https://www.atlassian.com/company/careers/details/{id}
   Atomic:
     ats: ashby
     slug: atomic
@@ -158,6 +227,9 @@ companies:
   Basis:
     ats: lever
     slug: basis
+  BentoLabs AI:
+    ats: yc
+    slug: bentolabs-ai
   BetterBasket:
     ats: yc
     slug: betterbasket
@@ -167,6 +239,11 @@ companies:
   Black Forest Labs:
     ats: greenhouse
     slug: blackforestlabs
+  BlackRock:
+    ats: workday
+    tenant: blackrock
+    dc: wd1
+    site: BlackRock_Professional
   Blackstone:
     ats: workday
     tenant: blackstone
@@ -184,6 +261,15 @@ companies:
   Bolna:
     ats: ashby
     slug: bolna
+  Booking.com:
+    ats: json
+    url: https://jobs.booking.com/api/jobs?limit=100
+    page_param: page
+    items: jobs
+    id: data.req_id
+    title: data.title
+    location: data.full_location
+    link: https://jobs.booking.com/booking/jobs/{slug}
   Braintrust:
     ats: ashby
     slug: braintrust
@@ -204,6 +290,9 @@ companies:
   Buffer:
     ats: ashby
     slug: buffer
+  BusinessOnBot:
+    ats: yc
+    slug: businessonbot
   Callosum:
     ats: ashby
     slug: callosum
@@ -265,12 +354,19 @@ companies:
   Chalk:
     ats: ashby
     slug: chalk
+  Chargebee:
+    ats: page
+    url: https://jobs.chargebee.com/search/?q=&sortColumn=referencedate&sortDirection=desc
+    block: class="jobTitle visible-phone">(.*?)</span></span>
   Chasi:
     ats: gem
     slug: chasi-ai
   Checkly:
     ats: ashby
     slug: checkly
+  Checkout.com:
+    ats: ashby
+    slug: checkout.com
   Chroma:
     ats: ashby
     slug: trychroma
@@ -289,6 +385,9 @@ companies:
   ClickHouse:
     ats: ashby
     slug: clickhouse
+  Clinikally:
+    ats: yc
+    slug: clinikally
   Cloudflare:
     ats: greenhouse
     slug: cloudflare
@@ -310,9 +409,15 @@ companies:
   CoLoop:
     ats: yc
     slug: coloop
+  Combinely:
+    ats: yc
+    slug: combinely
   Composio:
     ats: ashby
     slug: composio
+  CompUp:
+    ats: yc
+    slug: compup
   Confluent:
     ats: ashby
     slug: confluent
@@ -331,6 +436,9 @@ companies:
   Coupang:
     ats: greenhouse
     slug: coupang
+  Coupl:
+    ats: yc
+    slug: coupl
   Coval:
     ats: yc
     slug: coval
@@ -340,6 +448,15 @@ companies:
   Cresta:
     ats: greenhouse
     slug: cresta
+  Cropin:
+    ats: json
+    url: https://cropinhrms.keka.com/careers/api/embedjobs/default/active/953bbd12-8a46-443b-8c3e-a6fdf7bbd11e
+    items: ''
+    id: id
+    title: title
+    location: jobLocations.0.name
+    default_location: Bengaluru, India
+    link: https://cropinhrms.keka.com/careers/jobdetails/{id}
   CrowdStrike:
     ats: workday
     tenant: crowdstrike
@@ -348,6 +465,9 @@ companies:
   Crusoe Energy:
     ats: ashby
     slug: crusoe
+  Crustdata:
+    ats: yc
+    slug: crustdata
   Cursive:
     ats: page
     url: https://cursive.ai/careers
@@ -382,6 +502,9 @@ companies:
   Decagon:
     ats: ashby
     slug: decagon
+  Deccan AI:
+    ats: dover
+    slug: 67f2878a-67d0-4fdf-8a05-f59915f790d9
   Deepgram:
     ats: ashby
     slug: deepgram
@@ -406,12 +529,18 @@ companies:
   Distyl AI:
     ats: ashby
     slug: distyl
+  DocVita:
+    ats: yc
+    slug: docvita
   DoorDash:
     ats: greenhouse
     slug: doordashusa
   Doppel:
     ats: greenhouse
     slug: doppel
+  DrDroid:
+    ats: yc
+    slug: drdroid
   Dreeze:
     ats: feed
     url: https://careers.dreeze.com/jobs.rss
@@ -438,12 +567,24 @@ companies:
   Emergent:
     ats: greenhouse
     slug: emergentlabsinc
+  Emulate:
+    ats: ashby
+    slug: emulate
   Encord:
     ats: ashby
     slug: encord
   Entropik:
     ats: smartrecruiters
     slug: entropik
+  EPAM Systems:
+    ats: json
+    url: https://careers.epam.com/api/jobs/v2/search/careers-i18n?facets=country%3D4060741400035606931&lang=en&size=50&from=0&sortBy=newest&websiteLocale=en-us
+    items: data.jobs
+    id: uid
+    title: name
+    location: city.0.name
+    default_location: India
+    link: https://careers.epam.com/en/vacancy/{uid}_en
   Epsilon3:
     ats: lever
     slug: epsilon3
@@ -477,6 +618,9 @@ companies:
   FamPay:
     ats: lever
     slug: fampay
+  farmtheory:
+    ats: yc
+    slug: farmtheory
   Figma:
     ats: greenhouse
     slug: figma
@@ -489,6 +633,12 @@ companies:
   Five Rings:
     ats: greenhouse
     slug: fiveringsllc
+  FlatX:
+    ats: yc
+    slug: flatx
+  Floworks:
+    ats: yc
+    slug: floworks
   Fractal Analytics:
     ats: workday
     tenant: fractal
@@ -500,6 +650,9 @@ companies:
   Framework:
     ats: rippling
     slug: framework
+  FrontPage:
+    ats: yc
+    slug: frontpage
   Galileo:
     ats: greenhouse
     slug: galileo
@@ -551,6 +704,15 @@ companies:
   Glow:
     ats: ashby
     slug: glow
+  Gnani.ai:
+    ats: json
+    url: https://careers.gnani.ai/api/jobs
+    items: data.jobs
+    id: code
+    title: title
+    location: location
+    default_location: Bengaluru, India
+    link: https://careers.gnani.ai/apply/{code}
   Goodfire:
     ats: greenhouse
     slug: goodfire
@@ -571,6 +733,13 @@ companies:
   Graviton Research Capital:
     ats: greenhouse
     slug: gravitonresearchcapital
+  GreyLabs AI:
+    ats: page
+    url: https://careers.kula.ai/greylabs
+    render: false
+    link: careers\.kula\.ai/greylabs/\d+
+    strip: ^\d+\s+
+    default_location: Bengaluru, India
   Groq:
     ats: gem
     slug: groq
@@ -591,6 +760,11 @@ companies:
   HappyRobot:
     ats: ashby
     slug: happyrobot.ai
+  Haptik:
+    ats: page
+    url: https://haptik.freshteam.com/jobs
+    link: haptik\.freshteam\.com/jobs/[A-Za-z0-9]+/
+    default_location: Mumbai, India
   Hark:
     ats: greenhouse
     slug: hark
@@ -618,6 +792,10 @@ companies:
   Horizon3.ai:
     ats: ashby
     slug: horizon3ai
+  HSBC:
+    ats: eightfold
+    host: portal.careers.hsbc.com
+    domain: hsbc.com
   HubSpot:
     ats: greenhouse
     slug: hubspotjobs
@@ -696,6 +874,11 @@ companies:
     tenant: intel
     dc: wd1
     site: External
+  Intuit:
+    ats: page
+    url: https://jobs.intuit.com/search-jobs/India/27595/2/1269750/22/79/50/2?p={page}
+    pages: 6
+    link: /job/[^/]+/[^/]+/27595/\d+
   Isomorphic Labs:
     ats: greenhouse
     slug: isomorphiclabs
@@ -710,18 +893,47 @@ companies:
   Jane Street:
     ats: greenhouse
     slug: janestreet
+  JPMorgan Chase:
+    ats: oracle
+    host: jpmc.fa.oraclecloud.com
+    site: CX_1001
+    careers: https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001
   Juicebox:
     ats: ashby
     slug: juicebox
   Jump Trading:
     ats: greenhouse
     slug: jumptrading
+  Juspay:
+    ats: json
+    url: https://joinus.juspay.in/api/careerJobOpening?limit=1000
+    items: allJobs
+    id: job_id
+    title: job_title
+    location: job_location
+    link: https://juspay.io/careers/{job_id}
+    default_location: Bangalore, India
   K2 Space:
     ats: greenhouse
     slug: k2spacecorporation
+  Kailash Labs:
+    ats: yc
+    slug: kailash-labs
   Kalshi:
     ats: ashby
     slug: kalshi
+  Karbon Card:
+    ats: yc
+    slug: karbon-card
+  Khatabook:
+    ats: json
+    url: https://khatabook.com/hiring/recruiter/list?category=Technology
+    items: data.Jobs
+    id: JobId
+    title: JobTitle
+    location: Location
+    link: ApplyUrl
+    default_location: Bengaluru, India
   Klarity:
     ats: ashby
     slug: klarity-ai
@@ -767,6 +979,13 @@ companies:
   LlamaIndex:
     ats: ashby
     slug: llamaindex
+  Locus.sh:
+    ats: page
+    url: https://locus.darwinbox.in/ms/candidatev2/main/careers/allJobs
+    render: true
+    wait_ms: 4000
+    block: class="title-section"[^>]*>(.*?)View and Apply
+    default_location: Bengaluru, India
   Lovable:
     ats: greenhouse
     slug: lovable
@@ -779,9 +998,22 @@ companies:
   Lyft:
     ats: greenhouse
     slug: lyft
+  Lyzr AI:
+    ats: feed
+    url: https://careers.lyzr.ai/jobs.rss
+  Mad Street Den:
+    ats: page
+    url: https://msd.darwinbox.in/ms/candidatev2/main/careers/allJobs
+    render: true
+    wait_ms: 4000
+    block: class="title-section"[^>]*>(.*?)View and Apply
+    default_location: Chennai, India
   Magic.dev:
     ats: ashby
     slug: magic.dev
+  Main Func:
+    ats: ashby
+    slug: genspark
   Manus:
     ats: json
     url: https://careers.manus.im/api/trpc/applications.publicJobs?batch=1&input=%7B%220%22%3A%7B%22json%22%3A%7B%22locale%22%3A%22en%22%7D%7D%7D
@@ -804,6 +1036,9 @@ companies:
   Mavria:
     ats: ashby
     slug: mavria
+  Maya Labs:
+    ats: yc
+    slug: maya-labs
   Meesho:
     ats: lever
     slug: meesho
@@ -839,6 +1074,18 @@ companies:
   Midjourney:
     ats: ashby
     slug: midjourney
+  Mihup AI:
+    ats: page
+    url: https://mihup.keka.com/careers/
+    render: true
+    link: /careers/jobdetails/\d+$
+    default_location: Kolkata, India
+  Miko:
+    ats: page
+    url: https://rnc.keka.com/careers/
+    render: true
+    link: /careers/jobdetails/\d+$
+    default_location: Mumbai, India
   Millennium:
     ats: eightfold
     host: mlp.eightfold.ai
@@ -898,6 +1145,9 @@ companies:
   Neuralink:
     ats: greenhouse
     slug: neuralink
+  Nextera Robotics:
+    ats: yc
+    slug: nextera-robotics-didgeai
   Nexthop AI:
     ats: bamboohr
     slug: nexthopai
@@ -931,6 +1181,10 @@ companies:
   Nurix AI:
     ats: greenhouse
     slug: nurix
+  Nutanix:
+    ats: page
+    url: https://jobs.jobvite.com/nutanix/jobs
+    block: <tr>\s*(<td class="jv-job-list-name">.*?)</tr>
   NVIDIA:
     ats: workday
     tenant: nvidia
@@ -939,6 +1193,9 @@ companies:
   Observe.AI:
     ats: greenhouse
     slug: observeai
+  OkCredit:
+    ats: yc
+    slug: okcredit
   Okta:
     ats: greenhouse
     slug: okta
@@ -969,6 +1226,18 @@ companies:
   Optiver:
     ats: greenhouse
     slug: optiverus
+  Oracle:
+    ats: oracle
+    host: eeho.fa.us2.oraclecloud.com
+    site: CX_45001
+    careers: https://careers.oracle.com/en/sites/jobsearch
+  OrbitShift:
+    ats: page
+    url: https://orbitshift.ai/careers
+    render: true
+    wait_ms: 5000
+    link: zohorecruit\.in/jobs/Careers/\d+
+    default_location: Bengaluru, India
   Otter.ai:
     ats: greenhouse
     slug: otterai
@@ -1082,18 +1351,38 @@ companies:
   Proximal:
     ats: ashby
     slug: Proximal
+  Publicis Sapient:
+    ats: json
+    url: https://careers.publicissapient.com/bin/ps-redesign/careersJobsearch?searchType=%2Fsearch&lang=en&q=&start=0&rows=1000
+    items: response.docs
+    id: id
+    title: name
+    location: displayLocation
+    link: https://careers.publicissapient.com{jobDetailUrl}
   Q-CTRL:
     ats: lever
     slug: q-ctrl
   Qdrant:
     ats: ashby
     slug: qdrant.tech
+  QpiAI:
+    ats: page
+    url: https://www.qpiai.tech/careers
+    block: <h2 class="text-\[30px\][^"]*">(.*?)</h2>
+    default_location: Bengaluru, India
   Quadrature Capital:
     ats: greenhouse
     slug: quadraturecapital
   Quickchat AI:
     ats: yc
     slug: quickchat-ai
+  Qure.ai:
+    ats: page
+    url: https://career.qure.ai/jobs/Careers
+    render: true
+    wait_ms: 5000
+    link: career\.qure\.ai/jobs/Careers/\d+
+    default_location: Mumbai, India
   Radix Trading:
     ats: greenhouse
     slug: radixexperienced
@@ -1131,6 +1420,9 @@ companies:
   Render:
     ats: ashby
     slug: render
+  Reo.Dev:
+    ats: ashby
+    slug: reo-dev
   Replit:
     ats: ashby
     slug: replit
@@ -1140,6 +1432,9 @@ companies:
   Ressl AI:
     ats: yc
     slug: ressl-ai
+  Retape:
+    ats: yc
+    slug: retape
   Retell AI:
     ats: ashby
     slug: retell-ai
@@ -1149,6 +1444,9 @@ companies:
   Riot Games:
     ats: greenhouse
     slug: riotgames
+  Rippling:
+    ats: rippling
+    slug: rippling
   River Markets:
     ats: ashby
     slug: river
@@ -1167,12 +1465,20 @@ companies:
   Rollstack:
     ats: ashby
     slug: rollstack
+  Rowboat Labs:
+    ats: yc
+    slug: rowboat-labs
   Rox:
     ats: ashby
     slug: Rox-Data-Corp
   Rubrik:
     ats: greenhouse
     slug: rubrik
+  Runable:
+    ats: page
+    url: https://runable.com/careers
+    link: runable.com/careers/[a-z0-9-]+$
+    default_location: Bengaluru, India
   Runpod:
     ats: ashby
     slug: runpod
@@ -1208,9 +1514,19 @@ companies:
   Scale AI:
     ats: greenhouse
     slug: scaleai
+  SCIKIQ:
+    ats: page
+    url: https://scikiqdata.greythr.com/hire/jobs/
+    render: true
+    wait_ms: 4000
+    link: greythr\.com/hire/jobs/[a-z0-9-]+$
+    default_location: Gurugram, India
   SE3 Labs:
     ats: ashby
     slug: se3
+  Seekho:
+    ats: workable
+    slug: seekho
   ServiceNow:
     ats: smartrecruiters
     slug: servicenow
@@ -1234,6 +1550,16 @@ companies:
   Simile:
     ats: ashby
     slug: simile
+  Simplismart:
+    ats: json
+    url: https://api.pyjamahr.com/api/career/jobs/?company_slug=simplismart
+    page_param: page
+    items: results
+    id: id
+    title: title
+    location: location
+    default_location: Bengaluru, India
+    link: https://jobs.pyjamahr.com/simplismart?job_uuid={slug}-{id}
   Skan AI:
     ats: json
     url: https://skanai.keka.com/careers/api/embedjobs/default/active/d83629ac-cbae-4575-a5b0-a6e0e556f459
@@ -1245,6 +1571,14 @@ companies:
   SkildAI:
     ats: greenhouse
     slug: skildai-careers
+  Skit.ai:
+    ats: json
+    url: https://skit.keka.com/careers/api/embedjobs/default/active/e19d0982-9c9d-4bf6-8908-d71528107801
+    items: ''
+    id: id
+    title: title
+    location: jobLocations.0.name
+    link: https://skit.keka.com/careers/jobdetails/{id}
   Slidely AI:
     ats: yc
     slug: slidely-ai
@@ -1262,12 +1596,20 @@ companies:
   Snowflake:
     ats: ashby
     slug: snowflake
+  Soket AI Labs:
+    ats: page
+    url: https://soket.ai/careers/jobs
+    link: soket.ai/careers/jobs/[a-z0-9_]+$
+    default_location: Gurugram, India
   Sourcegraph:
     ats: greenhouse
     slug: sourcegraph91
   SpaceX:
     ats: greenhouse
     slug: spacex
+  Spark Studio:
+    ats: yc
+    slug: spark-studio
   Speechify:
     ats: greenhouse
     slug: speechify
@@ -1285,6 +1627,9 @@ companies:
     tenant: stord
     dc: wd503
     site: Stord_External_Career
+  Stownest:
+    ats: yc
+    slug: stownest
   Stripe:
     ats: greenhouse
     slug: stripe
@@ -1297,6 +1642,9 @@ companies:
   Suno:
     ats: ashby
     slug: suno
+  SuperAPI:
+    ats: yc
+    slug: superapi
   Superhuman:
     ats: ashby
     slug: Superhuman Platform Inc
@@ -1321,6 +1669,12 @@ companies:
   Synthio Labs:
     ats: gem
     slug: synthio-labs
+  System76:
+    ats: page
+    url: https://system76.com/careers/
+    tags: h3(?=[^>]*class="m-0 heading")
+    heading: .
+    default_location: Denver, CO
   Target:
     ats: workday
     tenant: target
@@ -1329,6 +1683,10 @@ companies:
   Tavily:
     ats: greenhouse
     slug: tavily
+  Teenage Engineering:
+    ats: feed
+    url: https://careers.teenage.engineering/jobs.rss
+    location: Stockholm, Sweden
   Telegram:
     ats: page
     url: https://telegram.org/jobs
@@ -1388,6 +1746,9 @@ companies:
   Turbopuffer:
     ats: ashby
     slug: turbopuffer
+  Turnitin:
+    ats: smartrecruiters
+    slug: TurnitinLLC
   Twilio:
     ats: greenhouse
     slug: twilio
@@ -1414,6 +1775,11 @@ companies:
   Upscale AI:
     ats: lever
     slug: upscale-ai
+  Vahan.ai:
+    ats: page
+    url: https://vahan.ai/careers/
+    link: vahan.ai(:443)?/careers/[a-z0-9-]+/$
+    default_location: Bengaluru, India
   Valve:
     ats: page
     url: https://www.valvesoftware.com/en/jobs
@@ -1438,6 +1804,9 @@ companies:
   VectorShift:
     ats: ashby
     slug: vector
+  Velvet:
+    ats: yc
+    slug: velvet
   Vercel:
     ats: greenhouse
     slug: vercel
@@ -1552,6 +1921,15 @@ companies:
   XTX Markets:
     ats: greenhouse
     slug: xtxmarketstechnologies
+  Yellow.ai:
+    ats: page
+    url: https://careers.yellow.ai/jobs/Careers
+    render: true
+    link: careers\.yellow\.ai/jobs/Careers/\d+/
+    default_location: Bengaluru, India
+  Yenmo:
+    ats: yc
+    slug: yenmo
   Yotta Data Services:
     ats: page
     url: https://yotta.darwinbox.in/ms/candidatev2/main/careers/allJobs
@@ -1562,6 +1940,16 @@ companies:
   Zed Industries:
     ats: ashby
     slug: zed
+  Zepto:
+    ats: page
+    url: https://zepto.darwinbox.in/ms/candidatev2/main/careers/allJobs
+    render: true
+    wait_ms: 4000
+    block: class="title-section"[^>]*>(.*?)View and Apply
+    default_location: Bengaluru, India
+  ZOKO:
+    ats: yc
+    slug: zoko
   Zoox:
     ats: lever
     slug: zoox
@@ -1569,101 +1957,47 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
-- Adalat AI
 - Adnoxy
 - AgNext Technologies
-- AI21 Labs
-- Alaan
-- Alice & Bob
-- Alltius
-- Amazon
-- AMD
-- American Express
-- Apple
-- Athina AI
-- Atlassian
 - AuraML
 - Auric AI Labs
 - Bank of America
-- BentoLabs AI
-- BlackRock
 - Blinkit
 - Bloomberg
-- Booking.com
 - Booz Allen Hamilton
-- BusinessOnBot
 - ByteDance
-- Chargebee
-- Checkout.com
 - CheqUPI
 - Citadel
 - Citadel Securities
 - Citi
-- Clinikally
 - Codeium
-- Combinely
-- CompUp
 - Confluxe
 - Consuma AI
 - Core Automation
 - Coreworks AI
-- Coupl
-- Cropin
-- Crustdata
-- Deccan AI
 - Deel
-- DocVita
-- DrDroid
 - Eightfold AI
-- Emulate
-- EPAM Systems
-- farmtheory
 - Flashbots
-- FlatX
 - Flipkart
-- Floworks
 - Flux Auto
-- FrontPage
-- Gnani.ai
 - Goldman Sachs
-- GreyLabs AI
 - Gupshup
-- Haptik
 - HashiCorp
 - Helicone
-- HSBC
 - HydraDB
 - IBM
 - Indeed
-- Intuit
-- JPMorgan Chase
-- Juspay
-- Kailash Labs
-- Karbon Card
-- Khatabook
 - KOGO
 - Krutrim
 - LinkedIn
-- Locus.sh
 - Lossfunk
 - LTIMindtree
 - Luminoah
-- Lyzr AI
 - Machenta
-- Mad Street Den
-- Main Func
 - Mandiant
 - Mandrake Bio
-- Maya Labs
 - Metis Reasoning
 - Microsoft
-- Mihup AI
-- Miko
-- Nextera Robotics
-- Nutanix
-- OkCredit
-- Oracle
-- OrbitShift
 - Outlier
 - P0 Security
 - PaleBlueDot AI
@@ -1672,49 +2006,24 @@ unresolved:
 - Pixis
 - Portkey
 - Potential Sciences
-- Publicis Sapient
-- QpiAI
 - Qualcomm
-- Qure.ai
-- Reo.Dev
 - Replicate
-- Retape
-- Rippling
-- Rowboat Labs
-- Runable
 - SAP
 - ScaleKit
-- SCIKIQ
-- Seekho
 - Signal
 - SigTuple
-- Simplismart
-- Skit.ai
-- Soket AI Labs
-- Spark Studio
 - Steno
-- Stownest
 - SuperAGI
-- SuperAPI
 - SurgeGrowth
-- System76
-- Teenage Engineering
 - Tendrils Compute
 - Tesla
 - TikTok
 - TurboML
-- Turnitin
 - Two Sigma
-- Vahan.ai
-- Velvet
 - Vingo
 - VOGIC AI
 - Walmart Global Tech
-- Yellow.ai
-- Yenmo
 - Zenithon
-- Zepto
-- ZOKO
 - Zomato
 
 # LinkedIn numeric company ids (the f_C facet) for entity-scoped job search.

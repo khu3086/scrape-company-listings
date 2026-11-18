@@ -25,6 +25,9 @@ state.json       set of job ids already seen (so you only get NEW listings)
    open/remote role (foreign-only remote like "Remote – USA" is excluded).
 3. New roles (not in `state.json`) are emailed as a single digest; `state.json`
    is then updated so the next run only reports deltas.
+   A company newly added to `companies.yaml` has its current roles recorded
+   silently the first time its board returns any (`company_seeded`), so only
+   roles posted after that are emailed.
 
 ## Setup
 ```bash

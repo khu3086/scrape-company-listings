@@ -235,6 +235,15 @@ def load_role_seeded(path):
     return set(data.get("role_seeded", ["engineering"] if data else []))
 
 
+def load_company_seeded(path, seen):
+    """Companies whose existing listings have already been absorbed into state. Older state
+    files have no list, so any company that already has a job id in `seen` counts."""
+    data = _read_state(path)
+    if "company_seeded" in data:
+        return set(data["company_seeded"])
+    return {k.split(":", 1)[0] for k in seen if not k.startswith("contract:")}
+
+
 def load_contract_seeded(path):
     """Contract platforms whose existing listings have already been absorbed into state."""
     data = _read_state(path)
@@ -243,13 +252,15 @@ def load_contract_seeded(path):
 
 
 def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None, contract_seeded=None,
-               role_seeded=ROLE_TYPES):
+               role_seeded=ROLE_TYPES, company_seeded=None):
     data = {"seen": sorted(seen), "us_seeded": sorted(us_seeded),
             "us_seed_version": US_SEED_VERSION, "role_seeded": sorted(role_seeded)}
     if hub_seeded is not None:
         data["hub_seeded"] = sorted(hub_seeded)
     if contract_seeded is not None:
         data["contract_seeded"] = sorted(contract_seeded)
+    if company_seeded is not None:
+        data["company_seeded"] = sorted(company_seeded)
     if contracts.MICRO1_TITLES:
         data["micro1_titles"] = dict(sorted(contracts.MICRO1_TITLES.items()))
     if lab_watch is not None:
@@ -670,6 +681,7 @@ def main():
         print(f"Total matched: {len(matches)}.", file=sys.stderr)
 
     seen = load_state(args.state)
+    company_seeded = load_company_seeded(args.state, seen)  # before any backlog is added below
     fresh_state = len(seen) == 0
     # The first time a sponsor's US roles are scanned, absorb its existing backlog
     # silently (thousands of roles across big boards) and only email new postings after.
@@ -697,6 +709,18 @@ def main():
         seen.update(job_key(j["company"], j) for j in backlog)
         print(f"Seeding {len(backlog)} existing {'/'.join(sorted(role_new))} roles without emailing.",
               file=sys.stderr)
+    # Companies newly added to companies.yaml: absorb their current roles silently too,
+    # so adding a big board (Amazon, Oracle, ...) doesn't email hundreds of old listings.
+    if not args.no_ats:
+        company_new = set(registry) - company_seeded
+        if company_new and not fresh_state:
+            backlog = [j for j in matches if j["company"] in company_new]
+            seen.update(job_key(j["company"], j) for j in backlog)
+            print(f"Seeding {len(backlog)} existing roles for {len(company_new)} newly added "
+                  f"company board(s) without emailing.", file=sys.stderr)
+        # Only once a board actually returned roles: a flaky board (Apple) that comes back empty
+        # on its first scan would otherwise have its whole backlog emailed on the next run.
+        company_seeded |= {j["company"] for j in matches if j["company"] in registry}
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
 
     # Contract platforms (Mercor, micro1, ...): absorb each one's current listings
@@ -766,7 +790,8 @@ def main():
     if lab_state is None and not args.no_ats:
         lab_state = _read_state(args.state).get("lab_watch")
     save_state(seen, args.state, us_seeded, lab_state,
-               hub_seeded if not args.no_ats else load_hub_seeded(args.state), contract_seeded)
+               hub_seeded if not args.no_ats else load_hub_seeded(args.state), contract_seeded,
+               company_seeded=company_seeded)
     print(f"State now tracks {len(seen)} job ids.", file=sys.stderr)
 
 
