@@ -341,9 +341,8 @@ const st = j => (apps[j.key] || {}).status || "";
 const inTab = (j, t) => { const s = st(j);
   return t === "review" ? (!s || s === "note") : t === "saved" ? s === "saved" : t === "hidden" ? s === "hidden" : ["applied","interview","offer","rejected"].includes(s); };
 // When the opening went up: the board's posting date if it gives one, else the day
-// it was first scraped (unless it was already listed at the first build: unknown).
-const when = j => j.posted ? Date.parse(j.posted)
-  : j.first_seen > DATA.meta.first_build ? Date.parse(j.first_seen + "T00:00:00") : 0;
+// it was first scraped.
+const when = j => Date.parse(j.posted || j.first_seen + "T00:00:00");
 const DAY = 864e5;
 // Posting dates are full timestamps, or a bare "YYYY-MM-DD" when the board only gives the day.
 function ago(posted) {
@@ -390,8 +389,7 @@ function card(j) {
     <div><div class="t"><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></div>
       <div class="sub">${esc(j.company)}${locs ? " — " + esc(locs) : ""}</div>
       <div class="sub found">${[j.posted ? `<b>Posted ${ago(j.posted)}</b>` : "",
-        j.first_seen > DATA.meta.first_build ? `Scraped ${fmtDate(j.first_seen)}`
-        : j.posted ? "" : `<span title="Already listed when the board was first built, so it may be older">Scraped on or before ${fmtDate(j.first_seen)}</span>`].filter(Boolean).join(" · ")}</div>
+        j.posted ? "" : `<b title="This board gives no posting date; this is when the watcher first found it">Scraped ${ago(j.first_seen)}</b>`].filter(Boolean).join(" · ")}</div>
       <div class="chips">${chips}</div>
       ${s && s !== "hidden" || a.note ? `<input class="note" data-act="note" placeholder="Notes (referral, contact, date applied…)" value="${esc(a.note||"")}">` : ""}
     </div>

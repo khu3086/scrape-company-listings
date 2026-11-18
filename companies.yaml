@@ -7,7 +7,7 @@
 #                  peopleclick (client + department codes, e.g. MIT),
 #                  oracle (Oracle Recruiting Cloud: host, site, careers URL),
 #                  taleo (Taleo Business Edition: host, path, org, cws, e.g. Caltech)
-# Resolved: 457  |  Unresolved: 150
+# Resolved: 458  |  Unresolved: 150
 
 companies:
   1Password:
@@ -1047,6 +1047,9 @@ companies:
   Positron:
     ats: rippling
     slug: positron
+  PostHog:
+    ats: ashby
+    slug: posthog
   Postman:
     ats: greenhouse
     slug: postman
@@ -2182,6 +2185,7 @@ stages:
   - Arista Networks
   - Texas Instruments
   late:
+  - PostHog
   - Vultr
   - Legora
   - Mercury
