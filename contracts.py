@@ -9,6 +9,7 @@ Outlier is not covered: its listings need an account.
 """
 from __future__ import annotations
 
+import html
 import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -92,7 +93,48 @@ def mercor():
     return out
 
 
+# micro1 job id -> title, read from job pages when the API is blocked. scrape.py keeps
+# it in state.json so each run only fetches pages for newly posted jobs.
+MICRO1_TITLES = {}
+
+
 def micro1():
+    try:
+        return micro1_api()
+    except requests.HTTPError as e:
+        # The API answers 403 to cloud servers such as GitHub Actions runners.
+        if e.response is None or e.response.status_code != 403:
+            raise
+        print("[contracts] micro1 API returned 403; reading the sitemap and job pages instead", file=sys.stderr)
+        return micro1_pages()
+
+
+def micro1_pages():
+    ids = sorted(set(re.findall(r"jobs\.micro1\.ai/post/([0-9a-f-]{36})",
+                                _get("https://jobs.micro1.ai/sitemap.xml").text)))
+
+    def title(id_):
+        """Job title, or "" for micro1's own full-time staff jobs (the API leaves those out)."""
+        page = _get(f"https://jobs.micro1.ai/post/{id_}").text
+        if re.search(r"full[- ]time", page, re.I) and not re.search(r"\bcontract", page, re.I):
+            return ""
+        m = re.search(r"<title>(.*?)</title>", page, re.S)
+        return html.unescape(re.sub(r"\s*\|\s*Apply on Job\s*$", "", m.group(1))).strip() if m else ""
+
+    missing = [i for i in ids if i not in MICRO1_TITLES]
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for id_, fut in [(i, pool.submit(title, i)) for i in missing]:
+            try:
+                MICRO1_TITLES[id_] = fut.result()
+            except requests.RequestException:
+                pass  # retried next run
+    for stale in set(MICRO1_TITLES) - set(ids):
+        del MICRO1_TITLES[stale]
+    return [_job("micro1", i, MICRO1_TITLES[i], f"https://jobs.micro1.ai/post/{i}", "Remote")
+            for i in ids if MICRO1_TITLES.get(i)]
+
+
+def micro1_api():
     out, page = [], 1
     while page <= 20:
         data = _post(f"https://prod-api.micro1.ai/api/v1/job/portal?page={page}&limit=100&keyword=",

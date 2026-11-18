@@ -237,7 +237,9 @@ def load_role_seeded(path):
 
 def load_contract_seeded(path):
     """Contract platforms whose existing listings have already been absorbed into state."""
-    return set(_read_state(path).get("contract_seeded", []))
+    data = _read_state(path)
+    contracts.MICRO1_TITLES.update(data.get("micro1_titles", {}))
+    return set(data.get("contract_seeded", []))
 
 
 def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None, contract_seeded=None,
@@ -248,6 +250,8 @@ def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None, contra
         data["hub_seeded"] = sorted(hub_seeded)
     if contract_seeded is not None:
         data["contract_seeded"] = sorted(contract_seeded)
+    if contracts.MICRO1_TITLES:
+        data["micro1_titles"] = dict(sorted(contracts.MICRO1_TITLES.items()))
     if lab_watch is not None:
         data["lab_watch"] = lab_watch
     with open(path, "w") as f:
