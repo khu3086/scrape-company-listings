@@ -116,7 +116,10 @@ jobs, so only their contract roles are kept. New ones are emailed at the top of
 the digest under "Contract openings", with the hourly pay where the platform
 shows it, and get their own "Contract openings" filter on the job board. Each
 platform's existing listings are recorded silently the first time it answers
-(`contract_seeded` in `state.json`). Outlier isn't covered.
+(`contract_seeded` in `state.json`). micro1's API refuses GitHub's servers (403),
+so there it falls back to its sitemap and job pages (no pay shown); titles are
+cached in `state.json` (`micro1_titles`) so only new postings are fetched.
+Outlier isn't covered.
 
 ## US roles at H-1B sponsors
 
