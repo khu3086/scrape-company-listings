@@ -161,6 +161,9 @@ companies:
   BetterBasket:
     ats: yc
     slug: betterbasket
+  BharatX:
+    ats: workable
+    slug: bharatx
   Black Forest Labs:
     ats: greenhouse
     slug: blackforestlabs
@@ -193,6 +196,11 @@ companies:
   Browserbase:
     ats: ashby
     slug: browserbase
+  BrowserStack:
+    ats: workday
+    tenant: browserstack
+    dc: wd3
+    site: External
   Buffer:
     ats: ashby
     slug: buffer
@@ -1578,13 +1586,11 @@ unresolved:
 - Auric AI Labs
 - Bank of America
 - BentoLabs AI
-- BharatX
 - BlackRock
 - Blinkit
 - Bloomberg
 - Booking.com
 - Booz Allen Hamilton
-- BrowserStack
 - BusinessOnBot
 - ByteDance
 - Chargebee
@@ -2190,6 +2196,7 @@ stages:
   - Arista Networks
   - Texas Instruments
   late:
+  - BrowserStack
   - PostHog
   - Vultr
   - Legora
@@ -2471,6 +2478,7 @@ stages:
   - General Translation
   - Luminal
   seed:
+  - BharatX
   - Pogo
   - Dirac
   - Arq
