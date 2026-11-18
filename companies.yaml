@@ -988,6 +988,9 @@ companies:
   Pareto AI:
     ats: ashby
     slug: pareto-ai
+  Patronus AI:
+    ats: greenhouse
+    slug: patronusaiinc
   PayJoy:
     ats: lever
     slug: payjoy
@@ -1659,7 +1662,6 @@ unresolved:
 - P0 Security
 - PaleBlueDot AI
 - Parrot
-- Patronus AI
 - Perseus
 - Pixis
 - Portkey

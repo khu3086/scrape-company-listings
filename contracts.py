@@ -198,6 +198,7 @@ PLATFORMS = {
     "Terac": ashby_contracts("Terac", "terac"),
     "Handshake AI": ashby_contracts("Handshake AI", "handshake"),
     "Turing": greenhouse_contracts("Turing", "turing"),
+    "Patronus AI": greenhouse_contracts("Patronus AI", "patronusaiinc"),
 }
 
 
