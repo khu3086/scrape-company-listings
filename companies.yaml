@@ -418,6 +418,9 @@ companies:
   CompUp:
     ats: yc
     slug: compup
+  Conduit AI:
+    ats: ashby
+    slug: Conduit
   Confluent:
     ats: ashby
     slug: confluent
@@ -613,8 +616,8 @@ companies:
     ats: ashby
     slug: factory
   fal.ai:
-    ats: greenhouse
-    slug: fal
+    ats: ashby
+    slug: fal-ai
   FamPay:
     ats: lever
     slug: fampay
@@ -1957,6 +1960,7 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
+- Chorus AI
 - Adnoxy
 - AgNext Technologies
 - AuraML

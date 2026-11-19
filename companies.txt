@@ -614,3 +614,5 @@ Luminoah
 ancep
 Inkbox
 Coram AI
+Conduit AI
+Chorus AI
