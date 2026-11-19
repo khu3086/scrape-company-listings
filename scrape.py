@@ -439,6 +439,30 @@ def gather_matches(registry, workers=12, h1b_sponsors=(), hub_companies=()):
     return matches
 
 
+YC_BOARD = "(YC jobs board)"
+
+
+def gather_yc_board(registry):
+    """Roles from YC's public jobs board at YC companies not already tracked directly.
+    India / remote roles match like any board; SF / NYC roles go in the startups section,
+    except those YC marks "US citizen/visa only" (no sponsorship)."""
+    tracked = {c.lower() for c in registry}
+    out = []
+    for j in ats_mod.yc_board():
+        if j["company"].lower() in tracked:
+            continue
+        role = role_type(j["title"])
+        if not role:
+            continue
+        j["role"], j["yc_board"] = role, True
+        if is_india_or_remote(j):
+            out.append(j)
+        elif is_us_hub(j) and "citizen" not in j.get("visa", "").lower():
+            j["us_hub"] = True
+            out.append(j)
+    return out
+
+
 # --- email ------------------------------------------------------------------
 EMAIL_TITLE = "Khushi's Awesome Job Scraper"
 
@@ -663,6 +687,10 @@ def main():
         hubs = load_us_hub_companies(registry)
         matches = gather_matches(registry, workers=args.workers, h1b_sponsors=sponsors,
                                  hub_companies=hubs)
+        yc = gather_yc_board(registry)
+        print(f"YC jobs board: {len(yc)} matching roles at YC companies not tracked directly.",
+              file=sys.stderr)
+        matches += yc
         n_us = sum(1 for j in matches if j.get("us_h1b"))
         n_hub = sum(1 for j in matches if j.get("us_hub"))
         n_abroad = sum(1 for j in matches if j.get("abroad"))
@@ -721,6 +749,13 @@ def main():
         # Only once a board actually returned roles: a flaky board (Apple) that comes back empty
         # on its first scan would otherwise have its whole backlog emailed on the next run.
         company_seeded |= {j["company"] for j in matches if j["company"] in registry}
+        # The YC board counts as one source: its current roles are recorded silently once.
+        if YC_BOARD not in company_seeded and not fresh_state:
+            backlog = [j for j in matches if j.get("yc_board")]
+            seen.update(job_key(j["company"], j) for j in backlog)
+            print(f"Seeding {len(backlog)} existing YC jobs-board roles without emailing.", file=sys.stderr)
+        if any(j.get("yc_board") for j in matches):
+            company_seeded.add(YC_BOARD)
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
 
     # Contract platforms (Mercor, micro1, ...): absorb each one's current listings

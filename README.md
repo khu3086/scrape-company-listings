@@ -109,6 +109,15 @@ of the email, which also carries the `lab_watch` updates.
   The first check of a page is stored silently. LinkedIn and X profiles need a
   login, so they can't be watched this way.
 
+## YC jobs board
+
+Each run also reads YC's public jobs board (ycombinator.com/jobs: software, science
+and product roles in India, remote, SF and NYC, about 200 postings across 20 pages)
+and keeps roles at YC companies that aren't tracked directly. India / remote roles
+match as usual; SF / NYC roles go in the startups section unless YC marks them
+"US citizen/visa only". Its current roles were recorded silently the first time.
+The full YC list (Work at a Startup) needs a login, so it isn't used.
+
 ## Contract openings (AI training platforms)
 
 `contracts.py` reads the paid-contract listings on Mercor, micro1, Ethos

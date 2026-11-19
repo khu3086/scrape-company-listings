@@ -927,6 +927,43 @@ def goldman(cfg):
     return out
 
 
+# --- YC public jobs board (ycombinator.com/jobs) --------------------------------
+YC_BOARD_PAGES = [f"/jobs/role/{r}/{l}" for r in ("software-engineer", "science", "product-manager")
+                  for l in ("india", "remote", "san-francisco", "new-york")] + \
+                 ["/jobs/role/software-engineer", "/jobs/role/science", "/jobs/role/product-manager",
+                  "/jobs/location/india", "/jobs/location/remote", "/jobs/location/san-francisco",
+                  "/jobs/location/new-york", "/jobs"]
+
+
+def yc_board(pages=YC_BOARD_PAGES, pause=1.5):
+    """Jobs from YC's public board, across all YC companies. Each page embeds up to
+    ~50 postings (no paging), so several role/location pages are combined. Returns
+    jobs carrying their own `company`, plus YC's `visa` note."""
+    out, ids = [], set()
+    ua = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                        "(KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
+    for i, path in enumerate(pages):
+        if i:
+            time.sleep(pause)
+        try:
+            r = requests.get("https://www.ycombinator.com" + path, headers=ua, timeout=TIMEOUT)
+            m = re.search(r'data-page="([^"]*)"', r.text) if r.status_code == 200 else None
+            posts = json.loads(html.unescape(m.group(1)))["props"]["jobPostings"] if m else []
+        except (requests.RequestException, ValueError, KeyError):
+            continue
+        for j in posts:
+            jid = _s(j.get("id"))
+            if not jid or jid in ids or not j.get("companyName"):
+                continue
+            ids.add(jid)
+            # YC writes India as the bare code "IN" ("Bengaluru, KA, IN", "US / IN / SG").
+            loc = re.sub(r"(?<![A-Za-z])IN(?![A-Za-z])", "India", _s(j.get("location")))
+            out.append({"company": _s(j["companyName"]), "id": jid, "title": _s(j.get("title")),
+                        "location": loc, "remote": "remote" in loc.lower(),
+                        "url": "https://www.ycombinator.com" + _s(j.get("url")), "visa": _s(j.get("visa"))})
+    return out
+
+
 CFG_ADAPTERS = {"eightfold_pcsx": eightfold_pcsx, "ibm": ibm, "goldman": goldman}
 
 
