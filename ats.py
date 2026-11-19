@@ -661,7 +661,14 @@ def _page_once(cfg):
         out.append({"id": jid, "title": title, "location": loc,
                     "remote": "remote" in loc.lower(), "url": link})
 
-    if cfg.get("link"):
+    if cfg.get("embedded"):
+        # Jobs embedded as (often escaped) JSON in the page, e.g. a Next.js payload (Deel).
+        # Regex named groups: id, title, optional loc and url.
+        for m in re.finditer(cfg["embedded"], body, re.S):
+            g = {k: html.unescape(v.replace('\\"', '"').replace("\\/", "/")) if v else ""
+                 for k, v in m.groupdict().items()}
+            add(g.get("id") or g.get("url"), g.get("title", ""), g.get("loc", ""), g.get("url") or url)
+    elif cfg.get("link"):
         pat = re.compile(cfg["link"])
         for href, inner in _ANCHOR_RE.findall(body):
             full = urljoin(url, html.unescape(href))
@@ -811,6 +818,118 @@ def taleo(cfg):
     return out
 
 
+# --- Eightfold PCSX (Microsoft, Qualcomm, Citi, Eightfold) -----------------------
+def eightfold_pcsx(cfg):
+    """Eightfold's newer search API, used where /api/apply/v2/jobs answers
+    "Not authorized for PCSX". cfg: host, domain, optional location (e.g. India).
+    Fixed 10 per page and strict rate limits, so it paces itself and backs off on 429."""
+    host, domain = cfg.get("host"), cfg.get("domain")
+    if not (host and domain):
+        return []
+    loc_q = requests.utils.quote(_s(cfg.get("location")))
+    out, start, total = [], 0, None
+    while start < int(cfg.get("max", 1500)):
+        url = (f"https://{host}/api/pcsx/search?domain={domain}&query=&location={loc_q}"
+               f"&start={start}&sort_by=timestamp")
+        data = None
+        for attempt in range(4):
+            try:
+                r = requests.get(url, headers={**HEADERS, "Accept": "application/json"}, timeout=TIMEOUT)
+            except requests.RequestException:
+                r = None
+            if r is not None and r.status_code == 200:
+                try:
+                    data = r.json().get("data") or {}
+                except ValueError:
+                    data = None
+                break
+            time.sleep(10 * (attempt + 1) if r is not None and r.status_code == 429 else 3)
+        if data is None:
+            break  # keep what we have; ids are stable, so a short run only delays new roles
+        if total is None:
+            total = data.get("count") or 0
+        positions = data.get("positions") or []
+        if not positions:
+            break
+        for j in positions:
+            loc = "; ".join(_s(x) for x in (j.get("locations") or j.get("standardizedLocations") or []) if x)
+            out.append({
+                "id": _s(j.get("displayJobId") or j.get("atsJobId") or j.get("id")),
+                "title": _s(j.get("name")),
+                "location": loc,
+                "remote": _s(j.get("workLocationOption")).lower() == "remote" or "remote" in loc.lower(),
+                "url": f"https://{host}{j.get('positionUrl') or '/careers/job/' + _s(j.get('id'))}",
+                "posted": _posted(j.get("postedTs")),
+            })
+        start += 10
+        if start >= total:
+            break
+        time.sleep(float(cfg.get("pause", 2)))
+    return out
+
+
+# --- IBM careers search (IBM, HashiCorp) ----------------------------------------
+def ibm(cfg):
+    """IBM's careers search API. cfg: optional country (e.g. India), optional query
+    (e.g. hashicorp), optional max."""
+    must = []
+    if cfg.get("query"):
+        must.append({"simple_query_string": {"query": cfg["query"], "fields": [
+            "keywords^1", "body^1", "url^2", "description^2", "h1s_content^2", "title^3", "field_text_01"]}})
+    out, frm, size = [], 0, 100
+    while frm < int(cfg.get("max", 3000)):
+        payload = {"appId": "careers", "scopes": ["careers2"], "query": {"bool": {"must": must}},
+                   "size": size, "from": frm, "sort": [{"dcdate": "desc"}], "lang": "zz",
+                   "localeSelector": {}, "sm": {"query": cfg.get("query", ""), "lang": "zz"},
+                   "_source": ["_id", "title", "url", "field_keyword_19", "dcdate"]}
+        if cfg.get("country"):
+            payload["post_filter"] = {"term": {"field_keyword_05": cfg["country"]}}
+        data = _post_json("https://www-api.ibm.com/search/api/v2", payload)
+        hits = ((data or {}).get("hits") or {})
+        items = hits.get("hits") or []
+        for h in items:
+            s = h.get("_source") or {}
+            loc = re.sub(r",\s*IN$", ", India", _s(s.get("field_keyword_19")))
+            out.append({"id": _s(h.get("_id")), "title": _s(s.get("title")), "location": loc,
+                        "remote": "remote" in loc.lower(), "url": _s(s.get("url")),
+                        "posted": _posted(s.get("dcdate"))})
+        frm += size
+        total = (hits.get("total") or {}).get("value", 0)
+        if not items or frm >= total:
+            break
+    return out
+
+
+# --- Goldman Sachs (higher.gs.com GraphQL) ---------------------------------------
+_GS_QUERY = ("query GetRoles($searchQueryInput: RoleSearchQueryInput!) { roleSearch(searchQueryInput: "
+             "$searchQueryInput) { totalCount items { roleId jobTitle locations { city state country } "
+             "externalSource { sourceId } } } }")
+
+
+def goldman(cfg):
+    out, n = [], 0
+    while n < 30:
+        payload = {"operationName": "GetRoles", "query": _GS_QUERY, "variables": {"searchQueryInput": {
+            "page": {"pageSize": 100, "pageNumber": n}, "sort": {"sortStrategy": "POSTED_DATE", "sortOrder": "DESC"},
+            "filters": [], "experiences": ["EARLY_CAREER", "PROFESSIONAL"], "searchTerm": ""}}}
+        data = (((_post_json("https://api-higher.gs.com/gateway/api/v1/graphql", payload) or {})
+                 .get("data") or {}).get("roleSearch") or {})
+        items = data.get("items") or []
+        for j in items:
+            locs = j.get("locations") or []
+            loc = "; ".join(", ".join(_s(x.get(k)) for k in ("city", "state", "country") if x.get(k)) for x in locs)
+            src = (j.get("externalSource") or {}).get("sourceId") or j.get("roleId")
+            out.append({"id": _s(j.get("roleId")), "title": _s(j.get("jobTitle")), "location": loc,
+                        "remote": "remote" in loc.lower(), "url": f"https://higher.gs.com/roles/{src}"})
+        n += 1
+        if not items or n * 100 >= (data.get("totalCount") or 0):
+            break
+    return out
+
+
+CFG_ADAPTERS = {"eightfold_pcsx": eightfold_pcsx, "ibm": ibm, "goldman": goldman}
+
+
 def fetch(cfg):
     """Fetch normalized jobs for one company config dict.
 
@@ -837,6 +956,8 @@ def fetch(cfg):
         return oracle(cfg)
     if ats_name == "taleo":
         return taleo(cfg)
+    if ats_name in CFG_ADAPTERS:
+        return CFG_ADAPTERS[ats_name](cfg)
     adapter = ADAPTERS.get(ats_name) or EXTRA_ADAPTERS.get(ats_name)
     if adapter is None:
         return []
