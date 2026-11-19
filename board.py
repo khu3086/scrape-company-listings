@@ -301,7 +301,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 <div class="regions" id="kinds"></div>
 <div class="regions" id="regions"></div>
 <div class="row2">
-  <label>Min match <input type="range" id="min" min="0" max="90" step="5" value="40"> <b id="minv">40</b></label>
+  <label>Min match <input type="range" id="min" min="0" max="90" step="5" value="0"> <b id="minv">0</b></label>
   <label>Posted <select id="age"><option value="">Any time</option><option value="1">Past 24 hours</option><option value="3">Past 3 days</option><option value="7">Past week</option></select></label>
   <label><input type="checkbox" id="newonly"> New since last build</label>
   <span class="count" id="count"></span>
