@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 458  |  Unresolved: 150
+# Resolved: 485  |  Unresolved: 160
 
 companies:
   1Password:
@@ -45,6 +45,9 @@ companies:
     tenant: adobe
     dc: wd5
     site: external_experienced
+  AfterQuery:
+    ats: ashby
+    slug: afterquery
   AgentCollect:
     ats: page
     url: https://www.agentcollect.com/careers
@@ -171,6 +174,9 @@ companies:
   Arena:
     ats: ashby
     slug: arena
+  Arga Labs:
+    ats: yc
+    slug: arga-labs
   Arista Networks:
     ats: smartrecruiters
     slug: aristanetworks
@@ -186,6 +192,9 @@ companies:
   Arrowhead:
     ats: greenhouse
     slug: arrowheadpharmacareers
+  Artificial Analysis:
+    ats: ashby
+    slug: artificialanalysis
   Asana:
     ats: greenhouse
     slug: asana
@@ -233,6 +242,9 @@ companies:
   BentoLabs AI:
     ats: yc
     slug: bentolabs-ai
+  Bespoke Labs:
+    ats: ashby
+    slug: bespokelabs
   BetterBasket:
     ats: yc
     slug: betterbasket
@@ -334,6 +346,9 @@ companies:
   Cartesia:
     ats: ashby
     slug: cartesia
+  Cekura:
+    ats: yc
+    slug: vocera
   Cerebras Systems:
     ats: greenhouse
     slug: cerebrassystems
@@ -421,6 +436,9 @@ companies:
   Combinely:
     ats: yc
     slug: combinely
+  Comet:
+    ats: greenhouse
+    slug: comet
   Composio:
     ats: ashby
     slug: composio
@@ -430,6 +448,9 @@ companies:
   Conduit AI:
     ats: ashby
     slug: Conduit
+  Confident AI:
+    ats: yc
+    slug: confident-ai
   Confluent:
     ats: ashby
     slug: confluent
@@ -656,6 +677,11 @@ companies:
   FlatX:
     ats: yc
     slug: flatx
+  Fleet AI:
+    ats: page
+    url: 'https://fleetai.com/careers'
+    default_location: 'San Francisco, CA'
+    embedded: '<a[^>]*href="(?P<url>/careers/[a-z0-9-]+)"[^>]*>(?:\s*<[^>]+>)*\s*(?P<loc>[^<]+?)\s*(?:<[^>]+>\s*)+[^<]+?(?:\s*<[^>]+>)+\s*(?P<title>[^<]+?)\s*<'
   Floworks:
     ats: yc
     slug: floworks
@@ -682,6 +708,11 @@ companies:
   Garage:
     ats: ashby
     slug: garage
+  General Analysis:
+    ats: page
+    url: 'https://generalanalysis.com/about/careers'
+    link: 'generalanalysis\.com/about/careers/[a-z0-9-]+/?$'
+    default_location: 'San Francisco, CA'
   General Intuition:
     ats: ashby
     slug: generalintuition-medal
@@ -706,6 +737,9 @@ companies:
   Giga:
     ats: ashby
     slug: gigaml
+  Giskard:
+    ats: workable
+    slug: giskard
   GitHub:
     ats: json
     url: https://www.github.careers/api/jobs?limit=100
@@ -755,6 +789,9 @@ companies:
   Graviton Research Capital:
     ats: greenhouse
     slug: gravitonresearchcapital
+  Gray Swan:
+    ats: ashby
+    slug: 'Gray Swan AI'
   GreyLabs AI:
     ats: page
     url: https://careers.kula.ai/greylabs
@@ -779,6 +816,15 @@ companies:
   Hadrian:
     ats: ashby
     slug: hadrian-automation
+  Haize Labs:
+    ats: greenhouse
+    slug: haizelabs
+  Halluminate:
+    ats: ashby
+    slug: halluminate
+  Hamming AI:
+    ats: yc
+    slug: hamming-ai
   HappyRobot:
     ats: ashby
     slug: happyrobot.ai
@@ -814,6 +860,11 @@ companies:
   Hippocratic AI:
     ats: ashby
     slug: Hippocratic AI
+  HoneyHive:
+    ats: page
+    url: 'https://careers.honeyhive.ai/'
+    link: 'careers\.honeyhive\.ai/\d+'
+    default_location: 'New York, NY / San Francisco, CA'
   Horizon3.ai:
     ats: ashby
     slug: horizon3ai
@@ -824,6 +875,9 @@ companies:
   HubSpot:
     ats: greenhouse
     slug: hubspotjobs
+  hud:
+    ats: ashby
+    slug: hud
   Hudson River Trading:
     ats: greenhouse
     slug: wehrtyou
@@ -926,6 +980,9 @@ companies:
     host: jpmc.fa.oraclecloud.com
     site: CX_1001
     careers: https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001
+  Judgment Labs:
+    ats: ashby
+    slug: judgmentlabs
   Juicebox:
     ats: ashby
     slug: juicebox
@@ -1007,6 +1064,9 @@ companies:
   LlamaIndex:
     ats: ashby
     slug: llamaindex
+  LMArena:
+    ats: ashby
+    slug: arena
   Locus.sh:
     ats: page
     url: https://locus.darwinbox.in/ms/candidatev2/main/careers/allJobs
@@ -1426,6 +1486,9 @@ companies:
   Radix Trading:
     ats: greenhouse
     slug: radixexperienced
+  Raindrop:
+    ats: ashby
+    slug: raindrop
   Ramp:
     ats: ashby
     slug: ramp
@@ -1469,6 +1532,9 @@ companies:
   Resolve AI:
     ats: ashby
     slug: Resolve AI
+  Respan:
+    ats: yc
+    slug: respan
   Ressl AI:
     ats: yc
     slug: ressl-ai
@@ -1493,6 +1559,9 @@ companies:
   Rivia.AI:
     ats: yc
     slug: rivia-ai
+  Roark:
+    ats: yc
+    slug: roark
   Robinhood:
     ats: greenhouse
     slug: robinhood
@@ -1539,6 +1608,9 @@ companies:
   SALT:
     ats: dover
     slug: 0c9aa34c-4593-4046-a73e-fe900a3c0c5a
+  Salus:
+    ats: yc
+    slug: salus
   SambaNova Systems:
     ats: greenhouse
     slug: sambanovasystems
@@ -1561,6 +1633,11 @@ companies:
     wait_ms: 4000
     link: greythr\.com/hire/jobs/[a-z0-9-]+$
     default_location: Gurugram, India
+  Scorecard:
+    ats: page
+    url: 'https://www.scorecard.io/careers'
+    link: 'scorecard\.io/careers/[a-z0-9-]+/?$'
+    default_location: 'San Francisco, CA'
   SE3 Labs:
     ats: ashby
     slug: se3
@@ -1691,6 +1768,9 @@ companies:
   SuperKalam:
     ats: yc
     slug: superkalam
+  Surge AI:
+    ats: ashby
+    slug: surge-ai
   Susquehanna (SIG):
     ats: json
     url: https://careers.sig.com/api/jobs?limit=100
@@ -1762,6 +1842,9 @@ companies:
   Together AI:
     ats: greenhouse
     slug: togetherai
+  Toloka:
+    ats: greenhouse
+    slug: toloka
   Tower Research Capital:
     ats: greenhouse
     slug: towerresearchcapital
@@ -1820,6 +1903,9 @@ companies:
     url: https://vahan.ai/careers/
     link: vahan.ai(:443)?/careers/[a-z0-9-]+/$
     default_location: Bengaluru, India
+  Vals AI:
+    ats: ashby
+    slug: vals-ai
   Valve:
     ats: page
     url: https://www.valvesoftware.com/en/jobs
@@ -1859,6 +1945,9 @@ companies:
   Virtu Financial:
     ats: greenhouse
     slug: virtu
+  VMax:
+    ats: greenhouse
+    slug: vmax
   VMware:
     ats: workday
     tenant: broadcom
@@ -1997,6 +2086,16 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
+- Latitude
+- Maxim AI
+- Future AGI
+- Okareo
+- Freeplay
+- Gentrace
+- Dreadnode
+- Galtea
+- Plato
+- Trismik
 - Chorus AI
 - Adnoxy
 - AgNext Technologies
@@ -2353,6 +2452,7 @@ lab_watch:
 # Companies not listed here are grouped under other.
 stages:
   research:
+  - VMax
   - Caltech
   - Goodfire
   - AMI Labs
@@ -2538,6 +2638,8 @@ stages:
   - Arista Networks
   - Texas Instruments
   late:
+  - Surge AI
+  - Toloka
   - BrowserStack
   - PostHog
   - Vultr
@@ -2667,6 +2769,7 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - Comet
   - Coram AI
   - Meshy
   - Vast Space
@@ -2735,6 +2838,17 @@ stages:
   - Garage
   - Luminoah
   series_a:
+  - LMArena
+  - Artificial Analysis
+  - Haize Labs
+  - Raindrop
+  - Judgment Labs
+  - HoneyHive
+  - Giskard
+  - hud
+  - Bespoke Labs
+  - Halluminate
+  - Gray Swan
   - Stuut
   - Armadin
   - Glow
@@ -2820,6 +2934,18 @@ stages:
   - General Translation
   - Luminal
   seed:
+  - AfterQuery
+  - Arga Labs
+  - Cekura
+  - Confident AI
+  - Fleet AI
+  - General Analysis
+  - Hamming AI
+  - Respan
+  - Roark
+  - Salus
+  - Scorecard
+  - Vals AI
   - BharatX
   - Pogo
   - Dirac

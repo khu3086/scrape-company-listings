@@ -667,7 +667,8 @@ def _page_once(cfg):
         for m in re.finditer(cfg["embedded"], body, re.S):
             g = {k: html.unescape(v.replace('\\"', '"').replace("\\/", "/")) if v else ""
                  for k, v in m.groupdict().items()}
-            add(g.get("id") or g.get("url"), g.get("title", ""), g.get("loc", ""), g.get("url") or url)
+            link = urljoin(url, g["url"]) if g.get("url") else url
+            add(g.get("id") or link, g.get("title", ""), g.get("loc", ""), link)
     elif cfg.get("link"):
         pat = re.compile(cfg["link"])
         for href, inner in _ANCHOR_RE.findall(body):

@@ -44,6 +44,9 @@ ENGINEERING_RE = re.compile(
     re.I,
 )
 
+# YC writes India as the bare country code: "IN / Remote (IN)". Case-sensitive, and
+# not after a comma, so "Indianapolis, IN" (Indiana) doesn't count.
+INDIA_CODE_RE = re.compile(r"(^|\()IN(\)|\s*/|$)")
 INDIA_RE = re.compile(
     r"\b("
     r"india|bangalore|bengaluru|mumbai|new delhi|delhi|hyderabad|pune|chennai|"
@@ -110,7 +113,7 @@ def is_india_or_remote(job):
     loc = (job.get("location") or "").strip()
     low = loc.lower()
 
-    if INDIA_RE.search(low):
+    if INDIA_RE.search(low) or INDIA_CODE_RE.search(loc):
         return True
 
     # "Home based - Worldwide" (Canonical) / "work from home" mean remote too.
