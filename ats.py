@@ -214,6 +214,8 @@ def workday(cfg):
     else:
         base = f"https://{tenant}.{dc}.myworkdayjobs.com"
         api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
+    # Job pages live under the site: <base>/<site>/job/... (without it Workday 404s).
+    link_base = base if cfg.get("host") else f"{base}/{site}"
     out, offset, total = [], 0, None
     while offset < 3000:  # safety cap
         data = _post_json(api, {"appliedFacets": {}, "limit": 20,
@@ -239,7 +241,7 @@ def workday(cfg):
                 "title": _s(j.get("title")),
                 "location": loc,
                 "remote": "remote" in loc.lower(),
-                "url": f"{base}{path}" if path else base,
+                "url": f"{link_base}{path}" if path else link_base,
                 "posted": _posted(j.get("postedOn")),
             })
         offset += 20
@@ -969,6 +971,16 @@ CFG_ADAPTERS = {"eightfold_pcsx": eightfold_pcsx, "ibm": ibm, "goldman": goldman
 
 
 def fetch(cfg):
+    """Fetch normalized jobs for one company config dict. With `careers_url`, every
+    job links there instead (for boards whose hosted job pages are switched off)."""
+    jobs = _fetch(cfg)
+    if cfg.get("careers_url"):
+        for j in jobs:
+            j["url"] = cfg["careers_url"]
+    return jobs
+
+
+def _fetch(cfg):
     """Fetch normalized jobs for one company config dict.
 
     cfg = {"ats": "greenhouse"|..., "slug": "..."}  for slug-based ATSes, or

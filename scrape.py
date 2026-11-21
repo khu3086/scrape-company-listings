@@ -175,6 +175,15 @@ US_HUB_RE = re.compile(
     re.I)
 
 
+# London roles go on the job board (own section) but are not emailed.
+# Not London, Ontario or New London, CT.
+LONDON_RE = re.compile(r"(?<!new )\blondon\b(?!,?\s*(on\b|ontario|canada|ky\b|kentucky|oh\b|ohio))", re.I)
+
+
+def is_london(job):
+    return bool(LONDON_RE.search(job.get("location") or ""))
+
+
 def is_us_hub(job):
     return bool(US_HUB_RE.search(job.get("location") or ""))
 
@@ -429,6 +438,9 @@ def gather_matches(registry, workers=12, h1b_sponsors=(), hub_companies=()):
                     continue
                 if is_india_or_remote(j):
                     matches.append(j)
+                elif is_london(j):
+                    j["london"] = True  # board only, not emailed
+                    matches.append(j)
                 elif anywhere:
                     # e.g. CERN: roles abroad that Indian nationals are eligible for
                     j["abroad"] = True
@@ -459,6 +471,9 @@ def gather_yc_board(registry):
             continue
         j["role"], j["yc_board"] = role, True
         if is_india_or_remote(j):
+            out.append(j)
+        elif is_london(j):
+            j["london"] = True
             out.append(j)
         elif is_us_hub(j) and "citizen" not in j.get("visa", "").lower():
             j["us_hub"] = True
@@ -759,7 +774,7 @@ def main():
             print(f"Seeding {len(backlog)} existing YC jobs-board roles without emailing.", file=sys.stderr)
         if any(j.get("yc_board") for j in matches):
             company_seeded.add(YC_BOARD)
-    new_jobs = [j for j in matches if job_key(j["company"], j) not in seen]
+    new_jobs = [j for j in matches if job_key(j["company"], j) not in seen and not j.get("london")]
 
     # Contract platforms (Mercor, micro1, ...): absorb each one's current listings
     # silently the first time it answers, then email only new postings.

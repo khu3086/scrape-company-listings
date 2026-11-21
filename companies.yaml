@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 485  |  Unresolved: 160
+# Resolved: 499  |  Unresolved: 163
 
 companies:
   1Password:
@@ -19,6 +19,9 @@ companies:
   1X Technologies:
     ats: ashby
     slug: 1x
+  Aaru:
+    ats: ashby
+    slug: aaru
   Abacus.AI:
     ats: greenhouse
     slug: abacus
@@ -144,6 +147,7 @@ companies:
   Anysphere:
     ats: ashby
     slug: cursor
+    careers_url: https://cursor.com/careers   # Ashby's hosted job pages are switched off (404)
   Apex Space:
     ats: ashby
     slug: apex-technology-inc
@@ -233,12 +237,18 @@ companies:
   Banza:
     ats: greenhouse
     slug: banza
+  Base Power:
+    ats: ashby
+    slug: base-power
   Baseten:
     ats: ashby
     slug: baseten
   Basis:
-    ats: lever
-    slug: basis
+    ats: ashby
+    slug: basis-ai   # getbasis.ai, AI accounting (lever 'basis' is Basis Technologies, ad media)
+  Bedrock Robotics:
+    ats: ashby
+    slug: bedrock-robotics
   BentoLabs AI:
     ats: yc
     slug: bentolabs-ai
@@ -252,8 +262,8 @@ companies:
     ats: workable
     slug: bharatx
   Black Forest Labs:
-    ats: greenhouse
-    slug: blackforestlabs
+    ats: ashby
+    slug: black-forest-labs
   BlackRock:
     ats: workday
     tenant: blackrock
@@ -295,8 +305,8 @@ companies:
     ats: greenhouse
     slug: brex
   Browserbase:
-    ats: ashby
-    slug: browserbase
+    ats: greenhouse
+    slug: browserbaseinc
   BrowserStack:
     ats: workday
     tenant: browserstack
@@ -350,8 +360,8 @@ companies:
     ats: yc
     slug: vocera
   Cerebras Systems:
-    ats: greenhouse
-    slug: cerebrassystems
+    ats: ashby
+    slug: cerebras
   CERN:
     ats: smartrecruiters
     slug: CERN
@@ -641,6 +651,9 @@ companies:
   Eventual:
     ats: ashby
     slug: eventualcomputing
+  Exa:
+    ats: ashby
+    slug: exa
   Exa AI:
     ats: ashby
     slug: exa
@@ -665,12 +678,15 @@ companies:
   Figma:
     ats: greenhouse
     slug: figma
+  Figure AI:
+    ats: greenhouse
+    slug: figureai
   Firecrawl:
     ats: ashby
     slug: firecrawl
   Fireworks AI:
-    ats: greenhouse
-    slug: fireworksai
+    ats: ashby
+    slug: fireworks
   Five Rings:
     ats: greenhouse
     slug: fiveringsllc
@@ -685,6 +701,9 @@ companies:
   Floworks:
     ats: yc
     slug: floworks
+  Fluidstack:
+    ats: ashby
+    slug: fluidstack
   Fractal Analytics:
     ats: workday
     tenant: fractal
@@ -778,8 +797,9 @@ companies:
     - location=India
     - location=United%20States&q=software%20engineer
   Google DeepMind:
-    ats: greenhouse
-    slug: deepmind
+    ats: google   # DeepMind now hires through Google's careers site
+    queries:
+    - company=DeepMind
   Grafana Labs:
     ats: greenhouse
     slug: grafanalabs
@@ -813,6 +833,7 @@ companies:
     title: name
     default_location: Bengaluru, India
     link: https://candid.hub.gullak.money/jobs/{id}/apply
+    careers_url: https://gullak.money/careers/   # per-job links 404
   Hadrian:
     ats: ashby
     slug: hadrian-automation
@@ -846,11 +867,14 @@ companies:
     ats: greenhouse
     slug: headlandstechnologiesllc
   Headout:
-    ats: greenhouse
-    slug: headoutcareers
+    ats: ashby
+    slug: headout
   Hebbia:
     ats: ashby
     slug: hebbia-ai
+  Helsing:
+    ats: greenhouse
+    slug: helsing
   HeyGen:
     ats: greenhouse
     slug: heygen
@@ -972,6 +996,7 @@ companies:
     title: position_name
     default_location: Bengaluru, India
     link: https://ivy.homes/career/{position_key}
+    careers_url: https://ivy.homes/career   # per-job links 404
   Jane Street:
     ats: greenhouse
     slug: janestreet
@@ -998,6 +1023,7 @@ companies:
     location: job_location
     link: https://juspay.io/careers/{job_id}
     default_location: Bangalore, India
+    careers_url: https://juspay.io/careers   # per-job links 404
   K2 Space:
     ats: greenhouse
     slug: k2spacecorporation
@@ -1021,9 +1047,9 @@ companies:
     default_location: Bengaluru, India
   Klarity:
     ats: ashby
-    slug: klarity-ai
+    slug: within.ai   # Klarity's careers page now links to this board
   Klaviyo:
-    ats: ashby
+    ats: greenhouse
     slug: klaviyo
   Kore.ai:
     ats: smartrecruiters
@@ -1058,6 +1084,9 @@ companies:
   Linear:
     ats: ashby
     slug: linear
+  Liquid AI:
+    ats: ashby
+    slug: liquid-ai
   Listen Labs:
     ats: ashby
     slug: listenlabs
@@ -1191,8 +1220,8 @@ companies:
     ats: ashby
     slug: mirendil
   Mistral AI:
-    ats: lever
-    slug: mistral
+    ats: ashby
+    slug: mistral.ai
   MIT CSAIL:
     ats: peopleclick
     client: mit
@@ -1227,7 +1256,7 @@ companies:
     ats: ashby
     slug: n8n
   NanoNets:
-    ats: greenhouse
+    ats: ashby
     slug: nanonets
   Neko Health:
     ats: ashby
@@ -1349,13 +1378,13 @@ companies:
     site: panwexternalcareers
   Panic:
     ats: breezy
-    slug: panic-inc
+    slug: panic
   Paradigm:
     ats: ashby
     slug: paradigm
   Parallel:
-    ats: greenhouse
-    slug: parallel
+    ats: ashby
+    slug: parallel   # parallel.ai, web search API (greenhouse 'parallel' is Parallel Systems, rail)
   Pareto AI:
     ats: ashby
     slug: pareto-ai
@@ -1427,6 +1456,7 @@ companies:
   PostHog:
     ats: ashby
     slug: posthog
+    careers_url: https://posthog.com/careers   # Ashby's hosted job pages are switched off (404)
   Postman:
     ats: greenhouse
     slug: postman
@@ -1531,7 +1561,7 @@ companies:
     slug: replit
   Resolve AI:
     ats: ashby
-    slug: Resolve AI
+    slug: resolveai
   Respan:
     ats: yc
     slug: respan
@@ -1597,6 +1627,9 @@ companies:
   Safe Superintelligence:
     ats: ashby
     slug: safe
+  Sail Research:
+    ats: ashby
+    slug: sail
   Sakana AI:
     ats: workable
     slug: sakana-ai
@@ -1617,6 +1650,9 @@ companies:
   Sapling.ai:
     ats: lever
     slug: sapling
+  Saronic:
+    ats: ashby
+    slug: saronic
   Sarvam AI:
     ats: ashby
     slug: sarvam
@@ -1644,6 +1680,9 @@ companies:
   Seekho:
     ats: workable
     slug: seekho
+  Serval:
+    ats: ashby
+    slug: serval
   ServiceNow:
     ats: smartrecruiters
     slug: servicenow
@@ -1759,6 +1798,9 @@ companies:
   Suno:
     ats: ashby
     slug: suno
+  Supabase:
+    ats: ashby
+    slug: supabase
   SuperAPI:
     ats: yc
     slug: superapi
@@ -1834,11 +1876,12 @@ companies:
     ats: ashby
     slug: The Browser Company
   Thinking Machines Lab:
-    ats: greenhouse
+    ats: ashby
     slug: thinkingmachines
   Thoughtworks:
     ats: greenhouse
     slug: thoughtworks
+    careers_url: https://www.thoughtworks.com/careers/jobs   # per-job links 404
   Together AI:
     ats: greenhouse
     slug: togetherai
@@ -1872,6 +1915,9 @@ companies:
   Turnitin:
     ats: smartrecruiters
     slug: TurnitinLLC
+  Twenty:
+    ats: ashby
+    slug: twenty
   Twilio:
     ats: greenhouse
     slug: twilio
@@ -1986,6 +2032,9 @@ companies:
     url: https://wareiq.com/careers/
     link: wareiq\.com/careers/(?!category)[\w-]+/?$
     default_location: Bengaluru, India
+  Warp:
+    ats: ashby
+    slug: warp   # joinwarp.com, AI-run payroll / HR (not warp.dev, the terminal, on Greenhouse 'warp')
   Waymo:
     ats: greenhouse
     slug: waymo
@@ -2024,7 +2073,7 @@ companies:
     dc: wd5
     site: Workday
   World Labs:
-    ats: greenhouse
+    ats: ashby
     slug: worldlabs
   WorldQuant:
     ats: greenhouse
@@ -2086,6 +2135,9 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
+- DeepSeek
+- Moonshot AI
+- Kling AI
 - Latitude
 - Maxim AI
 - Future AGI
@@ -2638,6 +2690,12 @@ stages:
   - Arista Networks
   - Texas Instruments
   late:
+  - Supabase
+  - Saronic
+  - Base Power
+  - Figure AI
+  - Helsing
+  - Fluidstack
   - Surge AI
   - Toloka
   - BrowserStack
@@ -2769,6 +2827,11 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - Liquid AI
+  - Bedrock Robotics
+  - Warp
+  - Exa
+  - Serval
   - Comet
   - Coram AI
   - Meshy
@@ -2838,6 +2901,8 @@ stages:
   - Garage
   - Luminoah
   series_a:
+  - Aaru
+  - Twenty
   - LMArena
   - Artificial Analysis
   - Haize Labs
@@ -2934,6 +2999,7 @@ stages:
   - General Translation
   - Luminal
   seed:
+  - Sail Research
   - AfterQuery
   - Arga Labs
   - Cekura

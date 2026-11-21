@@ -60,5 +60,6 @@ location_bonus:
   us_h1b: 0        # US company with an H-1B track record
   academic: 0
   abroad: 0
+  london: 0        # UK Skilled Worker visa; most large tech firms sponsor
   us_hub: -5       # startup with no H-1B history; sponsorship uncertain
   contract: 15     # remote contract on an AI-training platform; no visa needed

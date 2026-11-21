@@ -98,7 +98,7 @@ def build(jobs, out=OUT, seen_path=SEEN):
         c = j["company"]
         region = ("contract" if j.get("contract") else "academic" if c in academic else
                   "us_h1b" if j.get("us_h1b") else "us_hub" if j.get("us_hub") else
-                  "abroad" if j.get("abroad") else "india")
+                  "london" if j.get("london") else "abroad" if j.get("abroad") else "india")
         key = f"{c}|{j['title'].strip().lower()}|{region}"
         g = groups.setdefault(key, {"key": key, "company": c, "title": j["title"].strip(),
                                     "region": region,
@@ -312,7 +312,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 </div>
 <script>
 const DATA = /*DATA*/null;
-const REGIONS = {contract:"Contract openings", india:"India & Remote", us_h1b:"US · H-1B sponsors", us_hub:"SF / CA / NYC startups", abroad:"Abroad", academic:"Academic"};
+const REGIONS = {contract:"Contract openings", india:"India & Remote", us_h1b:"US · H-1B sponsors", us_hub:"SF / CA / NYC startups", london:"London", abroad:"Abroad", academic:"Academic"};
 const STAGES = {research:"Research lab", public:"Public / big co", late:"Late stage", series_c:"Series C", series_b:"Series B", series_a:"Series A", seed:"Seed", pre_seed:"Pre-seed", contract:"Contract platform", other:"Other"};
 const STATUS = {saved:"Saved", applied:"Applied", interview:"Interviewing", offer:"Offer", rejected:"Rejected", hidden:"Hidden"};
 const KINDS = {engineering:"Engineering", fde:"Forward deployed", science:"Scientist", product:"Product management"};
