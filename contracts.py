@@ -33,7 +33,10 @@ ROLE_RE = re.compile(
     r"ai engineer\w*|ai develop\w*|ai research\w*|applied ai|ai/ml|ml/ai|ai red team\w*|"
     r"ai agents?|agentic|agent engineer|prompt engineer\w*|applied engineer|"
     r"data scien\w*|data engineer\w*|data analy\w*|kaggle|"
-    r"cyber ?security|cyber|security engineer\w*|red team\w*|"
+    r"cyber ?security|cyber|security engineer\w*|red team\w*|infosec|information security|"
+    r"appsec|application security|devsecops|soc analyst|penetration test\w*|pen ?test\w*|"
+    r"ethical hack\w*|malware|reverse engineer\w*|threat (intel\w*|hunt\w*)|vulnerability|"
+    r"exploit\w*|incident respon\w*|digital forensics?|ctf|bug bounty|"
     # GPU work, AI safety / governance, formal-proof languages, competitive programming, PM
     r"cuda|gpu|jailbreak\w*|prompt[- ]injection|ai safety|responsible ai|ai governance|data privacy|"
     r"coq|isabelle|mathlib|lean ?4|codeforces|leetcode|product manag\w*"

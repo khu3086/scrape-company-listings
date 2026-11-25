@@ -81,7 +81,7 @@ FDE_RE = re.compile(r"forward[- ]?deployed|deployment (engineer|strategist)|\bfd
 
 
 def kind_of(j):
-    """engineering | fde | science | product (board filter)."""
+    """engineering | fde | science | security | product (board filter)."""
     role = j.get("role") or scrape.role_type(j["title"]) or "engineering"
     return "fde" if FDE_RE.search(j["title"]) else role
 
@@ -345,7 +345,7 @@ const DATA = /*DATA*/null;
 const REGIONS = {contract:"Contract openings", india:"India & Remote", us_h1b:"US · H-1B sponsors", us_hub:"SF / CA / NYC startups", london:"London", abroad:"Abroad", academic:"Academic"};
 const STAGES = {research:"Research lab", public:"Public / big co", late:"Late stage", series_c:"Series C", series_b:"Series B", series_a:"Series A", seed:"Seed", pre_seed:"Pre-seed", contract:"Contract platform", other:"Other"};
 const STATUS = {saved:"Saved", applied:"Applied", interview:"Interviewing", offer:"Offer", rejected:"Rejected", hidden:"Hidden"};
-const KINDS = {engineering:"Engineering", fde:"Forward deployed", science:"Scientist", product:"Product management"};
+const KINDS = {engineering:"Engineering", fde:"Forward deployed", science:"Scientist", security:"Security", product:"Product management"};
 const TABS = [["review","To review"],["saved","Saved"],["applied","Applied"],["hidden","Hidden"],["funded","Recently funded"]];
 const ROUND = {"pre-seed":"Pre-seed", seed:"Seed", "series a":"Series A", "series b":"Series B", "series c":"Series C"};
 DATA.funded = DATA.funded || [];

@@ -1,4 +1,4 @@
-# Profile used by board.py to rank openings (built from Khushi's resume, 2026-11).
+# Profile used by board.py to rank openings (built from Khushi's MLE and SWE resumes, 2026-11).
 # Each rule is a regex matched against the job title (case-insensitive) with a
 # weight. Positive = fits the profile, negative = poor fit. Score = sum of the
 # matching skill weights (capped at skill_cap), plus seniority / off-profile
@@ -7,33 +7,38 @@
 
 name: Khushi Nigam
 summary: >-
-  ~3.5 yrs: AI agent governance (UiPath), ML inference / GPU serving (Oracle),
-  LLM products (Konverz AI), Azure backend (Microsoft). vLLM / llm-d contributor.
+  ~3.5 yrs. MLE: AI agent governance (UiPath), ML inference / GPU serving with
+  TensorRT + Triton (Oracle), LLM / speech products (Konverz AI). SWE: agentic
+  e-invoice processing (UiPath, Office of the CFO), OCI control-plane microservices
+  (Oracle), Azure backend (Microsoft). vLLM / llm-d contributor.
 years_experience: 3.5
 skill_cap: 70     # stops many keyword hits from outweighing a seniority mismatch
 
 skills:
   # Core: what the resume is strongest in
-  - {label: LLM / GenAI, weight: 30, re: '\bllms?\b|gen ?ai|generative|large language|foundation model'}
+  - {label: LLM / GenAI, weight: 30, re: '\bllms?\b|gen ?ai|generative|large language|foundation model|fine.?tun|post.?training|lora|rlhf'}
   - {label: AI agents, weight: 30, re: '\bagent(s|ic)?\b|agentic|autonomous ai'}
-  - {label: Inference / serving, weight: 30, re: 'inference|serving|model server|vllm|triton|kv.?cache|throughput'}
+  - {label: Inference / serving, weight: 30, re: 'inference|serving|model server|vllm|triton|tensorrt|onnx|kv.?cache|throughput|edge ai|on.?device'}
   - {label: ML platform / MLOps, weight: 30, re: 'ml ?ops|llm ?ops|ml platform|ml infra|ai infra|machine learning (platform|infra)|model (platform|deployment)'}
   - {label: AI / ML engineer, weight: 35, re: '\b(ai|ml)\b.{0,20}engineer|machine learning|applied (ai|ml)|\bai\b|\bml\b'}
-  - {label: AI safety / governance, weight: 25, re: 'governance|guardrail|safety|trust|responsible ai|policy|privacy|\bpii\b'}
+  - {label: AI safety / governance, weight: 25, re: 'governance|guardrail|safety|trust|responsible ai|policy|privacy|\bpii\b|compliance|\bgrc\b|iso 27001|iso 42001|(ai|llm|model|agent) security|prompt injection'}
   - {label: Evals, weight: 20, re: '\bevals?\b|evaluation|benchmark'}
   - {label: GPU / performance, weight: 20, re: '\bgpu\b|cuda|performance|optimi[sz]ation|kernel|accelerat'}
-  - {label: Computer vision, weight: 15, re: 'computer vision|\bvision\b|perception|video|multimodal|multi-modal'}
+  - {label: Vision / speech / multimodal, weight: 25, re: 'computer vision|\bvision\b|perception|video|multimodal|multi-modal|speech|\basr\b|audio|voice'}
   - {label: RAG / NLP / search, weight: 25, re: '\brag\b|retrieval|\bnlp\b|(?<!re)search|ranking|recommend'}
   - {label: Product manager, weight: 25, re: 'product (manager|management|owner|lead)|\bapm\b'}
   - {label: AI product, weight: 15, re: 'product.{0,40}\b(ai|ml|llm|genai|agents?|platform|developer|infra)|(ai|ml|llm|agent|platform|developer).{0,30}product'}
   - {label: Scientist, weight: 20, re: 'scientist|deployment strategist'}
   - {label: Research eng / FDE / MTS, weight: 15, re: 'research engineer|member of technical staff|\bmts\b|forward deployed'}
   # General fit: weighted the same as the core ML skills
-  - {label: Backend / distributed, weight: 30, re: 'backend|back-end|distributed|infrastructure|\binfra\b|platform|systems|cloud|kubernetes|devops|\bsre\b|reliability'}
+  - {label: Backend / distributed, weight: 30, re: 'backend|back-end|distributed|infrastructure|\binfra\b|platform|systems|cloud|kubernetes|devops|\bsre\b|reliability|control plane|micro.?services?|\bapis?\b|multi.?tenant|server.?side'}
   - {label: Software engineer, weight: 30, re: 'software (development )?engineer|\bsde\b|\bswe\b|developer|full.?stack'}
   - {label: Engineer (any), weight: 12, re: 'engineer'}
   - {label: Data / pipelines, weight: 30, re: 'data engineer|data platform|pipeline|\betl\b'}
-  - {label: Python / Go / TS, weight: 30, re: 'python|golang|\bgo\b|typescript|node'}
+  - {label: Python / Go / TS / Java, weight: 30, re: 'python|golang|\bgo\b|typescript|node|java(?!script)|spring|\bc#|\.net|c\+\+'}
+  # SWE resume: agentic e-invoice / finance automation at UiPath (Office of the CFO)
+  - {label: Fintech / finance automation, weight: 15, re: 'fintech|payments?|invoic|billing|finance|financial|accounting|procure|\berp\b|treasury|banking|tax\b'}
+  - {label: Workflow / enterprise automation, weight: 15, re: 'automation|\brpa\b|workflow|orchestrat|integration'}
 
 seniority:
   # Target: roles for 1 to 3.5 years of experience.
@@ -50,8 +55,10 @@ off_profile:
   - {label: Mobile, weight: -30, re: '\bios\b|android|mobile|flutter|react native'}
   - {label: Frontend-only, weight: -20, re: 'front.?end|\bui\b|web developer|design engineer'}
   - {label: Hardware, weight: -45, re: 'hardware|embedded|firmware|fpga|asic|\brtl\b|verification|analog|silicon|physical design|electrical|mechanical|layout|\bdft\b|\bsoc\b|circuit|thermal|manufactur'}
-  - {label: Non-eng / support, weight: -45, re: '\bsales\b|account executive|account manag|support engineer|customer (success|support|service)|solutions consultant|recruit|marketing|\bqa\b|test engineer|\bsdet\b|quality|technician|it support|helpdesk|salesforce|\bsap\b|servicenow developer|mainframe|cobol'}
-  - {label: Security ops, weight: -10, re: 'security operations|\bsoc analyst|penetration|red team'}
+  - {label: Non-eng / support, weight: -45, re: '\bsales\b|account executive|account manag|support engineer|customer (success|support|service)|solutions consultant|recruit|marketing|\bqa\b|test engineer|test automation|automation test|\bsdet\b|quality|technician|it support|helpdesk|salesforce|\bsap\b|servicenow developer|mainframe|cobol'}
+  # Security roles are scraped for everyone (shared scraper); pure security-ops work is
+  # off-profile here. AI / LLM security and compliance still score via "AI safety / governance".
+  - {label: Security ops, weight: -30, re: 'security operations|\bsoc\b|\bsiem\b|penetration|pen ?test|vapt|ethical hack|red team|blue team|threat (intel|hunt)|incident respon|forensic|malware|security analyst|cyber ?security analyst|network security|endpoint security|firewall'}
   # Needs fluency in a language other than English / Hindi ("Bilingual Spanish ... AI Safety").
   - {label: Needs another language, weight: -60, re: '^(?!.*\bhindi\b).*\b(bilingual|spanish|chinese|mandarin|cantonese|japanese|korean|german|french|portuguese|italian|arabic|russian|turkish|vietnamese|thai|indonesian|malay|tagalog|filipino|dutch|polish|hebrew|swedish|norwegian|danish|finnish|greek|czech(?! republic)|romanian|ukrainian|hungarian|farsi|persian|swahili|bangla|bengali|urdu|tamil|telugu|kannada|malayalam|marathi|gujarati|punjabi|native speaker|linguist\w*)\b'}
 

@@ -91,15 +91,44 @@ PRODUCT_RE = re.compile(
     r"director,? (of )?product|vp,? (of )?product|\bapm\b|product strategist)\b", re.I)
 NOT_PRODUCT_RE = re.compile(r"product (marketing|design|analyst|support|specialist)", re.I)
 SCIENCE_RE = re.compile(r"\b(scientists?|deployment strategist)\b", re.I)
+# Cybersecurity and related fields, including non-"engineer" titles (analyst, pentester,
+# SOC, GRC, threat intel, ...). Kept broad: the scrape is shared and each board ranks by its
+# own profile.
+SECURITY_RE = re.compile(
+    r"\b("
+    r"cyber ?security|cyber|infosec|information security|it security|security engineer\w*|"
+    r"security (analyst|architect|researcher|consultant|specialist|operations|engineering|"
+    r"software engineer|developer|lead|manager|director|officer|auditor|assessor|tester|"
+    r"administrator|champion|automation|compliance|assurance|risk)|"
+    r"(application|product|cloud|network|platform|infrastructure|data|endpoint|mobile|web|"
+    r"offensive|defensive|ai|llm|identity|enterprise|ot|ics|iot|hardware) security|"
+    r"appsec|prodsec|devsecops|secops|soc|siem|soar|edr|xdr|vapt|"
+    r"penetration test\w*|pen ?test\w*|ethical hack\w*|bug bounty|"
+    r"red team\w*|blue team\w*|purple team\w*|"
+    r"threat (intel\w*|hunt\w*|research\w*|detection|analyst|model\w*)|"
+    r"detection (engineer\w*|and response|& response)|incident respon\w*|dfir|"
+    r"digital forensics?|forensic analyst|malware|reverse engineer\w*|"
+    r"vulnerability (research\w*|analyst|management|engineer\w*)|exploit\w*|"
+    r"identity (and|&) access|iam (engineer|analyst|architect)|zero trust|"
+    r"grc|governance,? risk|cryptograph\w*|ciso|head of security"
+    r")\b",
+    re.I,
+)
+# Physical security and security-company sales/marketing jobs aren't tech roles.
+NOT_SECURITY_RE = re.compile(
+    r"\b(security (guard|supervisor|patrol)|loss prevention|armed|unarmed|"
+    r"sales|account (executive|manager)|business development|marketing|recruit\w*)\b", re.I)
 
 
 def role_type(title):
-    """"product" | "science" | "engineering" | None (not a role we track)."""
+    """"product" | "science" | "security" | "engineering" | None (not a role we track)."""
     t = title or ""
     if PRODUCT_RE.search(t) and not NOT_PRODUCT_RE.search(t):
         return "product"
     if SCIENCE_RE.search(t):
         return "science"
+    if SECURITY_RE.search(t) and not NOT_SECURITY_RE.search(t):
+        return "security"
     if ENGINEERING_RE.search(t):
         return "engineering"
     return None
@@ -239,8 +268,9 @@ def load_hub_seeded(path):
 
 
 # Role types whose existing listings have been absorbed into state. Product and
-# science roles were added 2026-11; their backlog is recorded silently once.
-ROLE_TYPES = ("engineering", "science", "product")
+# science roles were added 2026-11 (security later that month); their backlog is
+# recorded silently once.
+ROLE_TYPES = ("engineering", "science", "product", "security")
 
 
 def load_role_seeded(path):
@@ -624,7 +654,7 @@ def _render_section(jobs):
         for j in sorted(by_company[company], key=lambda x: x["title"].lower()):
             loc = j["location"] or ("Remote" if j["remote"] else "—")
             pay = f"  {j['pay']}" if j.get("pay") else ""
-            tag = {"product": "[PM] ", "science": "[Science] "}.get(j.get("role"), "")
+            tag = {"product": "[PM] ", "science": "[Science] ", "security": "[Security] "}.get(j.get("role"), "")
             lines.append(f"  • {tag}{j['title']}  [{loc}]{pay}")
             lines.append(f"    {j['url']}")
         lines.append("")
