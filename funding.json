@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T10:55+00:00",
+ "updated": "2026-11-25T11:49+00:00",
  "rounds": {
   "lemonpeel": {
    "company": "Lemonpeel",
@@ -292,11 +292,14 @@
    "source": "Tech Funding News",
    "first_seen": "2026-11-25",
    "tracked": "",
-   "board": null,
+   "board": {
+    "url": "https://jobs.ashbyhq.com/genesis",
+    "jobs": 67
+   },
    "links": {
-    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Nvidia-backed%20Genesis%20AI%20founder",
-    "x": "https://x.com/search?q=Nvidia-backed%20Genesis%20AI%20founder&f=user",
-    "web": "https://www.google.com/search?q=Nvidia-backed%20Genesis%20AI%20startup"
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Genesis%20AI%20founder",
+    "x": "https://x.com/search?q=Genesis%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Genesis%20AI%20startup"
    }
   },
   "humynlabs": {
@@ -1197,9 +1200,9 @@
    "tracked": "",
    "board": null,
    "links": {
-    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Insurtech%20Eight%20by%20Zero%20%288/0%29%20founder",
-    "x": "https://x.com/search?q=Insurtech%20Eight%20by%20Zero%20%288/0%29%20founder&f=user",
-    "web": "https://www.google.com/search?q=Insurtech%20Eight%20by%20Zero%20%288/0%29%20startup"
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Eight%20by%20Zero%20%288/0%29%20founder",
+    "x": "https://x.com/search?q=Eight%20by%20Zero%20%288/0%29%20founder&f=user",
+    "web": "https://www.google.com/search?q=Eight%20by%20Zero%20%288/0%29%20startup"
    }
   },
   "stepsecurity": {
@@ -1467,7 +1470,8 @@
    "round_guessed": false,
    "founders": [],
    "sources": [
-    "https://news.google.com/rss/articles/CBMie0FVX3lxTFBROThJOG41MDVLeEU1RC1kNVpNY0FSY25Ick1BZzJqWUtxZkYxRkRQcU83dGVWYzA3aUZpYzZPYlVxNElhS08zbDU4VmFzRUZsdjZBdTBuZkZsUG5CN01LNnB4Y3ZfQUxKWTduU3hkT1VwemtpM2lZYUdyUQ?oc=5"
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTFBROThJOG41MDVLeEU1RC1kNVpNY0FSY25Ick1BZzJqWUtxZkYxRkRQcU83dGVWYzA3aUZpYzZPYlVxNElhS08zbDU4VmFzRUZsdjZBdTBuZkZsUG5CN01LNnB4Y3ZfQUxKWTduU3hkT1VwemtpM2lZYUdyUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdER0RGJzbTRhcEdSenZyc2NTMWxHQmJNV1l6VVhZXzlGc1I5UGs3a1hpbS11MnJiWkJqeG5RRDVoRFk0T0NaSEFCQjh6MWY5N1dhWkUtaTQtenhfMENvUjF0VUtVX2pvNzJNTzZHZmxYSi04QnIwa3hqbk1yT1pCajNKVVk2S1QzV0piVnM3T29ZMmZva0Zod1VyWFpMZS1KZldyQ0FZWQ?oc=5"
    ],
    "source": "TechCabal",
    "first_seen": "2026-11-25",
@@ -1906,17 +1910,17 @@
   },
   "zipher": {
    "company": "Zipher",
-   "round": "series a",
-   "amount_m": 45.0,
+   "round": "seed",
+   "amount_m": 53.0,
    "date": "2026-11-24",
-   "headline": "Israeli startup Zipher raises $45 million Series A to automate corporate data infrastructure",
+   "headline": "Zipher Raises $53M Across Seed and Series A Rounds to Automate Data Workloads",
    "india": false,
    "round_guessed": false,
    "founders": [],
    "sources": [
-    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FeGpnb1o4T2FObkRpV0VtV0xxTUZjLWZzZVozUTJfZUR4QWRIbnc1MkRQVXFuWllsSHYwUkk1ZDZ2WVZnWEttN2VtdjdvYVdXNjBWZmUyYVJuaHM5YUliQnlpUk1lbHBX?oc=5"
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNnh3aXdLNl91NFAycDQxcjlqSHA0TFF5UHpQS2JKZzlVSGFxRXFObDMycjBlYkFOZ09GdEJqWHlaVHZ2di1ZQlJsUS11Unh1a1M1VmVlN0Q4a3dFamR4Z1pOTTFtZUcwamNxc3MyVHdjWWszYlR0SnhSbXlfbE04VW96cTBsQlFjR2dXbUtqNHNvQ0k?oc=5"
    ],
-   "source": "CTech",
+   "source": "Unite.AI",
    "first_seen": "2026-11-25",
    "tracked": "",
    "board": null,
@@ -2192,6 +2196,28 @@
     "x": "https://x.com/search?q=Lakshya%20Aerotech%20founder&f=user",
     "web": "https://www.google.com/search?q=Lakshya%20Aerotech%20startup"
    }
+  },
+  "protectingwheresoftware": {
+   "company": "Protecting where software",
+   "round": "series a",
+   "amount_m": 20.0,
+   "date": "2026-11-18",
+   "headline": "Protecting where software gets built: StepSecurity’s $20 million Series A",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE0wSzk5a1U0enpubGJ6N0FrbkpoNkptS0ZsTTVxZG1sbG50VjBMd0VLYmVCNk8xakZGZEVGQVR6ald3ZDlFN3cxbThFUTNuM0dUeExqRFVLZ19Xckg5aW9Jb0ZHNHdoRWJsbHg2SFh4cExKQVk?oc=5"
+   ],
+   "source": "Step Security",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Protecting%20where%20software%20founder",
+    "x": "https://x.com/search?q=Protecting%20where%20software%20founder&f=user",
+    "web": "https://www.google.com/search?q=Protecting%20where%20software%20startup"
+   }
   }
  },
  "probes": {
@@ -2323,7 +2349,9 @@
   "genesisai": {
    "url": "https://jobs.ashbyhq.com/genesis",
    "jobs": 67
-  }
+  },
+  "eightbyzero80": null,
+  "protectingwheresoftware": null
  },
  "sec_seen": []
 }
