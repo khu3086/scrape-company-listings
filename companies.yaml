@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 499  |  Unresolved: 163
+# Resolved: 504  |  Unresolved: 163
 
 companies:
   1Password:
@@ -908,6 +908,9 @@ companies:
   Hugging Face:
     ats: workable
     slug: huggingface
+  Humanoid:
+    ats: ashby
+    slug: humanoid
   Hume AI:
     ats: greenhouse
     slug: humeai
@@ -1322,6 +1325,9 @@ companies:
   Okta:
     ats: greenhouse
     slug: okta
+  OLIX:
+    ats: ashby
+    slug: olix
   Omnea:
     ats: ashby
     slug: omnea
@@ -1417,6 +1423,9 @@ companies:
   Physical Intelligence:
     ats: ashby
     slug: physicalintelligence
+  PhysicsX:
+    ats: greenhouse
+    slug: physicsx
   Pika:
     ats: ashby
     slug: pika
@@ -1828,6 +1837,9 @@ companies:
   Swiggy:
     ats: smartrecruiters
     slug: swiggy
+  Synthesia:
+    ats: ashby
+    slug: synthesia
   Synthio Labs:
     ats: gem
     slug: synthio-labs
@@ -2038,6 +2050,9 @@ companies:
   Waymo:
     ats: greenhouse
     slug: waymo
+  Wayve:
+    ats: ashby
+    slug: wayve
   Weaviate:
     ats: ashby
     slug: weaviate
@@ -2690,6 +2705,8 @@ stages:
   - Arista Networks
   - Texas Instruments
   late:
+  - Wayve
+  - Synthesia
   - Supabase
   - Saronic
   - Base Power
@@ -2827,6 +2844,7 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - PhysicsX
   - Liquid AI
   - Bedrock Robotics
   - Warp
@@ -2901,6 +2919,8 @@ stages:
   - Garage
   - Luminoah
   series_a:
+  - Humanoid
+  - OLIX
   - Aaru
   - Twenty
   - LMArena
