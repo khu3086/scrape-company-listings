@@ -63,3 +63,14 @@ location_bonus:
   london: 0        # UK Skilled Worker visa; most large tech firms sponsor
   us_hub: -5       # startup with no H-1B history; sponsorship uncertain
   contract: 15     # remote contract on an AI-training platform; no visa needed
+
+# "Recently funded" tab: which areas of your experience a startup's announcement
+# touches (matched against the company name + headline). Board-only filter;
+# the email lists every round regardless.
+funding_fit:
+  - {label: Enterprise AI, re: 'enterprise|b2b|workflow|automat|copilot|back[- ]office|procurement|compliance|operations|erp|crm'}
+  - {label: AI agents, re: '\bagents?\b|agentic|autonomous'}
+  - {label: MLOps / inference / GPU, re: 'mlops|ml ops|inference|serving|\bgpu|compute|infra|model (deployment|training)|fine-?tun|training data|world models?'}
+  - {label: LLM / GenAI, re: '\bllms?\b|genai|gen ai|generative|language models?|foundation models?'}
+  - {label: AI governance / safety / security, re: 'governance|guardrail|safety|security|secure|trust|risk|privacy|polic(y|ies)|regulat|\bevals?\b|evaluation|red[- ]team'}
+  - {label: Dev tools / data platform, re: 'developer|devtools?|coding|\bcode\b|\bapis?\b|open[- ]source|observability|database|data platform|data infra|documents?|search'}

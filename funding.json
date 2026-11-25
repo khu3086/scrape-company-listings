@@ -1,0 +1,2241 @@
+{
+ "updated": "2026-11-25T08:14+00:00",
+ "rounds": {
+  "reversa": {
+   "company": "Reversa",
+   "round": "pre-seed",
+   "amount_m": 0.81,
+   "date": "2026-11-24",
+   "headline": "Agentic AI regulatory startup Reversa raises €750k in pre-seed funding",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNTAyZWdEUVNnSWU5UXJLNk5FX1NDNWR0d29DYWppVC1EbGJvWlVCRDNmdjdBb09YaS1OVjkwSFRHNzRZZmp0WWQ4SWFBa3dtYzFfRi00WGRhTW55WklhSFpMZFJ4dWdZaFJpeW1GTmNySEN6cHhpRjdMYnlDZk9aYUZ1WElseEkxM3M0Um8xbmVtWVlSeWhGY05NSlIzQmFp?oc=5"
+   ],
+   "source": "Legal IT Insider",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Reversa%20founder",
+    "x": "https://x.com/search?q=Reversa%20founder&f=user",
+    "web": "https://www.google.com/search?q=Reversa%20startup"
+   }
+  },
+  "originframe": {
+   "company": "Origin Frame",
+   "round": "pre-seed",
+   "amount_m": null,
+   "date": "2026-11-20",
+   "headline": "Origin Frame raises pre-seed from Z Venture Capital for AI anime 3D tool",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbDd2SXc5OE1MMDRRVHVvMzJHc3poeEZsQVR1R1YzRTdnb2xQMmZjcGo1T0dycHFNRXVCMEg5ZmZqU1J5RC1VZHBPa3dsVFVmdGJxM1lESzZmaHVwTW1fRDJJa3BKTThCWDJ6LThzaTZpTkUxRWIycC1WbFFWcmZwUXg3a3VnaWpHUEZITl9JTTd6SzIxdHVlcTBfNmVKVjlOaUdhN01sRzNJdw?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Origin%20Frame%20founder",
+    "x": "https://x.com/search?q=Origin%20Frame%20founder&f=user",
+    "web": "https://www.google.com/search?q=Origin%20Frame%20startup"
+   }
+  },
+  "chipverse": {
+   "company": "Chipverse",
+   "round": "pre-seed",
+   "amount_m": null,
+   "date": "2026-11-19",
+   "headline": "Chipverse raises pre-seed funding to add AI computing capacity and develop creative tools",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU1lmUlVDNVhrVTYwYThRcnlQckxjTkRyamgzZzVWQlY5RG1aX2NFQ2x6bXdwSWozaFlqNkZKUjVXOTFaeUZVNlh0NjJsZWRhOEtLRDNxbVcyM2E2Uk5NblBiWmRUTVZ5b2NwaUlTY2cza0lFcXJsVDcxVWU3bnRTZUpFLWtscTV2bEdBMVBHNUN4U0dpTEo1Qi1aVE5DYVpTS0laWjZncC1sZ2JHNFBxbzdFTVoyMzdpSUUzV2kyNk4?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE53WVA2NXFBUGZrUWNFYm5PdjEtQ01OOVJfVVVCT0FKc1l3UE1pcks5bFRvaHlwcExSU0FOaVYzTVJZaGlSUEFwVEN1RDlGLUdtUFlJNlY1MWc0VmdiRVlqMl9iTVRMRjc4Q0VmOG9KUGRDOU1yZG84?oc=5",
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOWFFJakF2aW9PQzlCcVlRWkV2STIta2RLNW81SjJQcmxodHZuYjc4bzJBQ1dMV1VleGRrekdzNmN6bWZIZzZZRmJxTjZUUi1kRlRvQV91MV93YzFKUEJuLWdkdmJzdEJkMWFvMHFXam9zV19WcFdnYzFNOFV4TFZTS181OU9hY3lsRlRncHhUbDhmUUR2Y2R2RkFNMWlZTmxoVkVGS3FQTnc3VVdnUDZBeFU4ZUxfQ1N4N0FIVVZhNWFCcVJzYzNqTlBSQk9NU0hKTnBz?oc=5",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeC1rTHI4RUxhVUVPdEpXMXhLNXZfT3R3dHdFeHV0bEhWTkNVLUtlLUNWWW4yaERQYjNEWUdfcHl3QUlEcHlJLTBqNTZ5S0xfRjNZWWl2VHdfb1BsMGFTMVZuUDhTQ1VpNTYtOGZnT0k4VUo5M21hVXpMRmV4QlNfLWZzdjU1TXk0MUNybS1vLWRCb19La00w?oc=5",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxPYzFzMDRKVVJDQUFVX1c4bGtORGNlanpOWXo0UlE2eGVFZ0NXTC1SY0JRdFZkem05SXRxUDBMQ2s1MUd5d20tUzdjeWRaWnh4LXFfdGQ4NlNzUTZhM2Vjbmdxc3F3ZnY0QW8yaU5nV0RCaUw2dFJiS1ZXY3RHY2hqUEJ1b0FNby1SZnk2WDFWS2lINjUtUERlRVRoTWJwTXg0TEdBMHk3V1l3dFo5LXFmNWZmdWp5QW9KTUwzZThCMjRnTkdQdHFieHRQeG9vQQ?oc=5"
+   ],
+   "source": "Superpower Daily",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Chipverse%20founder",
+    "x": "https://x.com/search?q=Chipverse%20founder&f=user",
+    "web": "https://www.google.com/search?q=Chipverse%20startup"
+   }
+  },
+  "wepinioninc": {
+   "company": "Wepinion Inc.",
+   "round": "pre-seed",
+   "amount_m": 0.5,
+   "date": "2026-11-18",
+   "headline": "Wepinion Inc. Raises $500K Pre-Seed Round After Solo Founder Builds Platform With 30,000 AI Prompts",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQdkhFT0ppVHFWS3gxUXRYUWFzaEJIemI3dkJqVFZpdUkzQnZIQWpqU3VhSjVwSWt0M1lzczZXQV8xTTFjRnd4TGlWcHM2ZlhaTHJrNzhOSTJDeXdXcW1nWFNVaWRhYXhmS3IzS21jeDJhTE5hSGlLYzJESDh0Skd4WHlRNXJXNkdydlJWTzJuckR2UFVrQ205YnU3UHA2UUFjOUtOYm9XZ0tldFhBc203Vlh5TFVGWV9DS3FRLWtSNFJ5b3VJeXNUVzlRMjl4eS00a0lRTmZkVlZjSGg0MHdBd2d6TXp4UEFBb0hkLXp3Zw?oc=5",
+    "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPZnFHM2ZYbDhvYUxyMHBIVW94TW1ZV3k4VGR0aV9sbS1DRXJMUUhXQXJRNXozVjBUXzZLS0pIWVFlTDcwU1YzeGh6cUtpWmNGQzdHU3FvRGpwX0JmLTRhRDVJbXkyU3pZbXZReGU5T0NHWHFLZzFwQW1idGxfY01fQldudld6b2x4VF92QTBhclRFbnU0LXpXbmVrNTZ3ZnUxa2FMU00xc3FFbFB5MkxoSC1WNXBxYjRXRlZodmVFOVN1OTB2Z0V1eFZac01PMGNRcjN4d2NXRlZnVWQxT2NhaXl1REk0Ukw2MUo0aVln?oc=5"
+   ],
+   "source": "Morningstar",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Wepinion%20Inc.%20founder",
+    "x": "https://x.com/search?q=Wepinion%20Inc.%20founder&f=user",
+    "web": "https://www.google.com/search?q=Wepinion%20Inc.%20startup"
+   }
+  },
+  "coprod": {
+   "company": "Coprod",
+   "round": "pre-seed",
+   "amount_m": 6.0,
+   "date": "2026-11-23",
+   "headline": "Coprod Raises $6M Pre-Seed to Bring Modular Robot Hardware to Market",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbERBY1o2dHAtOGhQUnhKdWdyMFJnbWdaWjFZTnMyTUFBV0U3VVQ2YzdxNVQ1Qm9JdVJTdUU0QmpzSVFMSmpEYmtoYzE4clczN1VBblpkX0tPT3FlUG9jOThQRE9ZYWJJaTY3RnRmVjM2SzJqMk1LOVgyWW1hX1l0ZENGNnV4dXpkOFJhS3JzU0hEelk?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/coprod",
+    "jobs": 11
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Coprod%20founder",
+    "x": "https://x.com/search?q=Coprod%20founder&f=user",
+    "web": "https://www.google.com/search?q=Coprod%20startup"
+   }
+  },
+  "rcoast": {
+   "company": "RCOAST",
+   "round": "pre-seed",
+   "amount_m": 0.94,
+   "date": "2026-11-24",
+   "headline": "Coastal data startup RCOAST raises $945K pre-seed as revenue grows fivefold",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxPLTlXb21jaHEzT3hmOENBeHpqem5sSFl1WlVMTUNYbUIyckpmbkpYcDFycHJoSjNVUzlFU0hOanZwSjlLTXBpTHNxeDJDYWduUUxGYUZyZE1YU1lEQU1yVDRkRjBkWk9rUVpEd1gyQlN0dVN2WFkzMXB0S012elltWTllcjhsOE0xRE1jOXJBMmJESkVReWhZQjZCQm9nODQ1UEZVOHZpc2ZaT0U5?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=RCOAST%20founder",
+    "x": "https://x.com/search?q=RCOAST%20founder&f=user",
+    "web": "https://www.google.com/search?q=RCOAST%20startup"
+   }
+  },
+  "009": {
+   "company": "009",
+   "round": "pre-seed",
+   "amount_m": 1.4,
+   "date": "2026-11-24",
+   "headline": "Riyadh's 009 raises $1.4M pre-seed for AI \"agent twins",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRGljR3l3Vk0zWHFhLWVxR2VzZGZQX2M2ZEU3Z05McHNyWjRQUTNOWkxTRUloUmVSSkZtVGtfSFp0MnA5TktzNExtckgxS2gzOE5RdkJwM0otMUxZX3JNSTkwbjVOUTl4VW01U2RQQXh6VDhWSUNLdnRhdDBxLVBhR1JkQ2Z0allrc3V6M2Jnbw?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=009%20founder",
+    "x": "https://x.com/search?q=009%20founder&f=user",
+    "web": "https://www.google.com/search?q=009%20startup"
+   }
+  },
+  "zippy": {
+   "company": "Zippy",
+   "round": "pre-seed",
+   "amount_m": 0.49,
+   "date": "2026-11-24",
+   "headline": "Zippy raises $490K pre-seed for AI child-safety app",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUFVCLXBEc3RKaFYwUnZVbmViRW5iMWxNMVRPRHk2S2RNZUJmdW50aVRiRnFFcVBNd1pWZEhUWEZxY0Zza29FYVoxQVZiMnpxdExzU0FBUmdvTV92SV9OeFJfTDZVSk90VTJhWEozYWlGS3BFZjdHMTJWZUgzTWFVb08yZ2oycU9ZSk9OMw?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Zippy%20founder",
+    "x": "https://x.com/search?q=Zippy%20founder&f=user",
+    "web": "https://www.google.com/search?q=Zippy%20startup"
+   }
+  },
+  "clace": {
+   "company": "Clace",
+   "round": "pre-seed",
+   "amount_m": 0.2,
+   "date": "2026-11-18",
+   "headline": "Clace raises $200K pre-seed to build the \"Moody's of AI infrastructure",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMC1aOEU3UG9pS3UtUHBzYi1UTUd4bzdkck5uT2s4MnZhaFBISDZWRzdvckxpclJudFN0NllQWFpiSEkxeWtsbmZRd3pVUlBYN2hoTWZyMWFIRzBzdEhQOXluWmxDbGNCb0N2T2hlTF9NMlJpZ01oSUhENnBNWlVmZ2liRTllWnRKd3RnejA5T3oyRkJCdjl4eXpqMEJhVDhSWmdjSg?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Clace%20founder",
+    "x": "https://x.com/search?q=Clace%20founder&f=user",
+    "web": "https://www.google.com/search?q=Clace%20startup"
+   }
+  },
+  "nilocas": {
+   "company": "Nilocas",
+   "round": "pre-seed",
+   "amount_m": 1.09,
+   "date": "2026-11-24",
+   "headline": "Nilocas raises £860K pre-seed for AI patch to detect heart disease",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWjVUMl9TUEdOejJHbkZVandPU2dyZm9rbzliVjJLUm1JajFlb3VXMGd5TGZYN2hISXgwY19IOUNGb05kczVrSWpFNHB6UzQ2S3o1SWYxOC0tWWtfNm1FWW1GbTM2d3VZYjdUMERvZXgzX2lqNmtMRzg2WDZPR0REQW41b0hCODZydUVlVUpDN25kRzA4aC1ZRVBLYUJxLS1l?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Nilocas%20founder",
+    "x": "https://x.com/search?q=Nilocas%20founder&f=user",
+    "web": "https://www.google.com/search?q=Nilocas%20startup"
+   }
+  },
+  "khaime": {
+   "company": "Khaime",
+   "round": "pre-seed",
+   "amount_m": 0.5,
+   "date": "2026-11-19",
+   "headline": "Nigerian AI Startup Khaime Raises USD 500 K Pre-Seed Funding Led By Launch Africa Ventures",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxONGtCU0RHSGE1eFN4V2M4aklENlEzM3hmaEdEN1ZLaldpbHd2Q3VRakkwWHNlcWZuRnFwTFZqTFZDYlB5TDhnZjhTY1liWDd3UmYxR0xGRlpNbDd0SE9CV1BJSnI5TGFnbDRLTndHWHYtcEozTnUzeUpuRlQyNmlUMjFhbUl6YzNDaHI1WVJR?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbnN0OURDUjBSMlpzRy03UFJ2YWk5c1BuU1FkMUJtTTRLc1otQ3ZnbTZ6bGpfcWQ3TU1aNzhxS2dpQVpuX1VjMU1KNllKZXRFMlFfWWNtSW5NemZmU0hzZ0phRnhnb3R2Ykw4Wm42UkdBZjFyYkpIV2Z6N3B5N2NTX01TLUlwX3FUd1VwaHU3TW5BbGdYbFNURkJEbjFuVnlqV1FYSkN3WFdmRWJZOUVIbkVB?oc=5"
+   ],
+   "source": "WeeTracker",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Khaime%20founder",
+    "x": "https://x.com/search?q=Khaime%20founder&f=user",
+    "web": "https://www.google.com/search?q=Khaime%20startup"
+   }
+  },
+  "null": {
+   "company": "Null",
+   "round": "pre-seed",
+   "amount_m": 1.7,
+   "date": "2026-11-19",
+   "headline": "Ethereum derivatives protocol Null raises $1.7M pre-seed led by cyber Fund and Nethermind",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE43OHh6VF9FYjVyc2pYSWFENXFhU3JGdzljUWdjVWxSbXBsT3hMNEs2d3BaYS1NVjNNU3oxbWdKNmZDemNDZ0tjdXlRa01yczhJeVY0RzlzUGtpYWU4Rk5salloUk1hVksybEthLXhUcTlLcUw5ckp0Z1dvZw?oc=5"
+   ],
+   "source": "CryptoRank",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Null%20founder",
+    "x": "https://x.com/search?q=Null%20founder&f=user",
+    "web": "https://www.google.com/search?q=Null%20startup"
+   }
+  },
+  "verosecurity": {
+   "company": "Vero Security",
+   "round": "seed",
+   "amount_m": 11.0,
+   "date": "2026-11-18",
+   "headline": "Vero Security Raises $11 Million Seed Round to Enforce Policies Across AI Agents",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxPM3RKdnBycUl3VHdqZ0lxX0VkZlU3ZFgwWFgwcWFQV0Z1MklkQlA0WmpmNGs5MFpqVTNIeEpjZHM3d3VDNVhWTmpLZnRwQTdrYVpQT0N1bkxmQ0xSUmZNZ2ZuZ09zeV9fTl8yNkRCeDVmd2diZ1RpSkZqWWU5NEItNg?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTFAxTk9KaTBlSUMzMXBBZ0ZTY1d1MmpyUWJlYkxZSHBGQ2l0OElnNlJQMzJrcXJ2aEpWdkZCQ25RT0o3M2pZTW0wNzE4RTNITTMwcUk0V0tWeUtTRkduN1k1eHdiWmhIMFZ0UmlFWm1NNVhHbVJSOWRteW1HejNuMzg?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxOS3dyZFl0NVlTSFQ5Sy1KYUxZM0dxTHNyV3Fick8zaXBYVmVleFlSclFrMURkaTN0QkxpM3RpNm9VNTNQNnVWUDN2bHVhdTEyMk52T1J3NURGN004aHlPY3R5Y2dTamZ0MGd2WGc1ME5lZ1pJdFkwLWMyRVlKM0xSRWRZRQ?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Vero%20Security%20founder",
+    "x": "https://x.com/search?q=Vero%20Security%20founder&f=user",
+    "web": "https://www.google.com/search?q=Vero%20Security%20startup"
+   }
+  },
+  "pulmogate": {
+   "company": "PulmoGate",
+   "round": "seed",
+   "amount_m": 3.3,
+   "date": "2026-11-18",
+   "headline": "Nagoya University AI spinout PulmoGate raises $3.3M seed round",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxQejN5eTJfTUxwRi1Eb2lHRHJtWlZfakJBajFZRDJtbHY4d0M4LWZRTHdCamE5OFk1UXYyVGRTYXhGdGMwVGZIbFNzMXAycVRseUo2eDlMa0pYcGFCZVRPOEFRMXhfSEJUUUt6UTNKR0FDOFptOV9hUlVYYzNjZ3drQ3hVZnpkZEE2M2ZWSi1HRmd4WGY2VV9VWEFrcw?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=PulmoGate%20founder",
+    "x": "https://x.com/search?q=PulmoGate%20founder&f=user",
+    "web": "https://www.google.com/search?q=PulmoGate%20startup"
+   }
+  },
+  "wilgot": {
+   "company": "Wilgot",
+   "round": "seed",
+   "amount_m": 3.0,
+   "date": "2026-11-19",
+   "headline": "Wilgot raises $3 million seed round to increase product visibility in shoppers’ AI search results",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQQ0w2dzk4N3JkMlY5QnlQVlRTeDFjZmo5clEzN050dXlsR0dUbEtpcjhtMWhyNENvN0Y3X1o4c1VtRVZnRmVfX0tUSDMxSHl1SEN4dlJuQmg4NmN1VGZ0ckdrcHM2MHlSOHVZMWFNR2NVZUVJUmlTNDhJSmtJOHNjTlFPYWVTSHhTbmEyUUF0c0pwVE9yb0J3QkMxamt6Sm94Q0tqUTExT29Hcml4d1ZrTkhjZGZ1dVZxb0hsc2p4U1RpbnpkeGtFb1lVSVV0N3A0SnRvN3g0aXFNRlhodE1GeGZadw?oc=5",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE5kWEJUVnRDaW83VjI1clFBQmxaRHB5anJod0hDdmRRSXZ4SV9kY1dkbGpxSlRBSjF3ZUEycEpFQXNZQ2h5dDJ0Rlo3SXZ2R3Z0WHR3YlJCclFua0h0SFRIYTFVNzBXd09NX2hiblNrRS1PRk1SRnNJZGM2UHdGZW8?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQUXNFMUF3Y1loMklfRF9VdW5yWkJWVzJyRDVqaDBvTW90RkUxd3dQczBhcGlnQVJuTlNyTDV6dzdWVXFBVGlVeHdtNFhyTDgtZnlVUGxfMU1kcEIwSW95MWZ5WV9rZWdDRTRjdzA1cnk3TUEtOXc3aW91WUdYdXQ1c0ZCWEl2cEs4OFBQYUJXVEpuVjllcksyTzZTc2hlZw?oc=5",
+    "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZUtGR3FvVkppWTdGU25qbmZHM0pFamhkeFd0TWpDRTdoVS00VjRtdThCQmY4VWdVempyX3ZfVDNLY3JEdi1lSGNoSHhQUEFWSGhjdzAwaUpfeHBDSVZUdk1kN2toZDVXcnlPRlRVbjRwakVxZGVUVzRvTVNRemQ4WjdMenl1clI5dWE1WHJ3U1JhT2Fnc2lOT28yUXhEVmFuQjVxLWxBbmpZYjVIRG5IWGhUWWZ5ODNVTUU2cENlNWhJN3lWbDJiZEFKQW43SnliWWpiN2dma3VfTlUyUHJhVEhKVDN1QUlv?oc=5"
+   ],
+   "source": "Arctic Today",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Wilgot%20founder",
+    "x": "https://x.com/search?q=Wilgot%20founder&f=user",
+    "web": "https://www.google.com/search?q=Wilgot%20startup"
+   }
+  },
+  "embo": {
+   "company": "Embo",
+   "round": "seed",
+   "amount_m": 110.0,
+   "date": "2026-11-23",
+   "headline": "Embo Raises $110M Seed Round to Develop World Models for Robots",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQkFqZXhjUTZBMkEzZUlOU21vbEJQeWxtOTByeG11NlQ5RkExSnpZcXFYbmlxVE9nbVAtZFdYNzVENS1KNW5CRWRuTlJlQks5VjN5dURtN3FWT2h5SlIwMnVOak14clF2TTNMLXdSMnlkOGJQaE9PUExYbmdjN2xIdUMxdm1NWWNQTVN3NHdGX2pycmpuZlVpVm1fajZwa1Zncmc?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5OamFjNC03YUdwODJ5MEcydGd0VUxraFJwM0I2eDBUSnVvd1Y5NFFKYkdlcmdZQVd5eWl2UWlubWQxcGZJTm1La0NhcHMwdnludE1N?oc=5",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTFA0Q1YtNmczblk5aEFvemEyTnRIUHZ6SzBtbkk2QjZ5MldDLVBwbVg3UmNfRFVON0lPdVdxUmNGOHFabmJOLUZrbzIzYzk4MnV3TW1vX052cXpqazhfVTI4UkRWRlFRcGJzci1xQjdheDFGbmxu?oc=5"
+   ],
+   "source": "AI Insider",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/embo",
+    "jobs": 9
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Embo%20founder",
+    "x": "https://x.com/search?q=Embo%20founder&f=user",
+    "web": "https://www.google.com/search?q=Embo%20startup"
+   }
+  },
+  "tesorai": {
+   "company": "Tesorai",
+   "round": "seed",
+   "amount_m": 5.3,
+   "date": "2026-11-18",
+   "headline": "Tesorai Raises $5.3 Million Seed Round to Expand AI-Powered Life Sciences Research Platform",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUWZ0OWtRYmNlZktfbTd5SzJPMFFwOWRjV1M0YXM4UTcweEkyNm1QdlN3dVEycVhGS3dNNzhMOTQyejFWbzRhenUwLVlla3dmamhxS1Z1UzRwVXJSVktZdm44MGRldk56cTlsOEVBVDFOZ3ZRczA0R1hxVEpCbFlxWXc5cVJwM3F5R0Vka2NrTG9YY3ptN1NIWVloYUt1ektCYUZkZ3BhQ1k2NFYxVXAycWtBYXdwR3RMWnVTQzdBSmUwMnZNWXYxTg?oc=5",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYjJrY1ZqNS1IZUpkSnVwTHRJT1N5MnpSXzlQTTJ2Z1lNMF9SWUdiWVpQMkhuMjlRZHd1SWZia2o2TEI5TXQwZjYyUzRweUx4YURZbTB3VjFkX3lwT2NMOExOeC0yTFVDRW82X3dNLUNhYlF1RW5RdlhLZlNZaENnLVlobzAyOVFEY2d5eU9FanI4NHQwM1k5T0pMX3RhR1RwUXpISy1wQmFKSWFHTkJJMlZnRXNxbFR3cW9Z?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Tesorai%20founder",
+    "x": "https://x.com/search?q=Tesorai%20founder&f=user",
+    "web": "https://www.google.com/search?q=Tesorai%20startup"
+   }
+  },
+  "huver": {
+   "company": "Huver",
+   "round": "seed",
+   "amount_m": null,
+   "date": "2026-11-25",
+   "headline": "Medical AI startup Huver raises seed round from DHP for US push",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOMlpvRmlnaTl1eXpUU3dKMzNnVC1CRGhLX3JTVjduMnU3V1NxdE50WUlQXzJkWFVXMTNKaUt3SmJKNFYtblM0TnQwWjdCMzVybWdWRDZqOUtsb1cyMVdWbGlFWTh6UDJkeTFrU05rRDNBbXRQdm93YjNYVk5iSUVoYndfaWRyc1pjaFA5Z2FXRjVZTzMwMUI0QVdrZ09Ddw?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Huver%20founder",
+    "x": "https://x.com/search?q=Huver%20founder&f=user",
+    "web": "https://www.google.com/search?q=Huver%20startup"
+   }
+  },
+  "unsiloedai": {
+   "company": "Unsiloed AI",
+   "round": "seed",
+   "amount_m": 7.5,
+   "date": "2026-11-18",
+   "headline": "Unsiloed AI Raises $7.5M Seed Round to Process Documents for AI Agents",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQRS1MVUNxWTA0ckltM2JaVlhuZVVWZW9CMDJZZEZGcm02NWdYUzBCVnppTVFIMFpVUVhYRkRwRTBWREM3S2F3X0hDWld3SWFxVEpBcW8wcnlpT18wVkRGX20tdVdJcWUyRU5wOURTdnY2dm5JWUFPSUwxTDBPZEFlMVRYMXNKUXlNUG5YaUhxd2ZoVi13M0VhSDFQQVZDQ1lHaGx6TjFsb3F5dlNG?oc=5",
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdXhsOXdEcDhITGpXSU5TNzlNaTFkX2lSRUlBRlJXR05lcFd5cWhHU0dZVFVua2tpVy0wZnlGcWR2ZDV0cUtkeF9qYjVWOFE5MDJRTXROV18xT0RLMVI3UXd1U1dCSGhzTWc5NjRrQVJQa0FQZV9JSDA0dHVrQ2R6ZGhlVGh0VDJZZGRhYV9B?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQN0JLdTVQaFdPQkEycFNIQ0xXZnJ5cnVOVGNnN2c3U01PZjZ5cDZsczdScWo0UlZUdm5NRlVLcFFXa3d6Q2FRREpaQktFcTFuWTh1MXc0bGJJRWdiZTNlZkNYeWZWaHFYQlVIVGZTdzE2MWgzUzUzNWhOZGtiajRLU3VacHRaNE96U3IwY1hhSXdJM0FTTUxPOFVsdzUycFktYnVPRGd3?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVlNZdXNMNmxUYm91Z09EQzRMSjlqemd0di1haV9HZkZ2TzJ6VFE4MUFxdlJ0TUZRTGQwZ09WYm9ncFh2V1dGMktVdndJRE9rM0pZZGlwQ0VoUWxYSi1udmVHRkRPT3U0aWRTOXJLQUxDdGpHa1U5eFlqOFJNOG1Ec3FXYmhtck5iTWNOTDI4S2tvN2c?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xclhCMnFrQURnclRuT1RUOTF1dGpPTXpVRUFpczhmeTBOQ3F0VDhOVGVtRWpmamtHeTkzaW41OHB6NDQwQmJCbU9WM2lId05OT3RR?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "Unsiloed AI",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Unsiloed%20AI%20founder",
+    "x": "https://x.com/search?q=Unsiloed%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Unsiloed%20AI%20startup"
+   }
+  },
+  "kara": {
+   "company": "Kara",
+   "round": "seed",
+   "amount_m": null,
+   "date": "2026-11-18",
+   "headline": "Kara raises seed round from Tekedia, Rebel Fund, YC for diamond chips",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYy1ZUnY5b2ltLU95MGlIWjRpRlA3N1B6VGRkOHRObkJjaTN5UmlzRFduQnQ0ejRHOE50YlNZbnliUjZlakJWUUNqTzdqWGNuX3ZVMWxTbTUwMVI4UWQydFpFYkt5ZGFfY1lLRTIza2NfZjN2NGpjSjRKemNwaGhYalBVNnNRREJzTml1dnVEN1VDU1lKd1RtazRiVjNOY1NocjlN?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Kara%20founder",
+    "x": "https://x.com/search?q=Kara%20founder&f=user",
+    "web": "https://www.google.com/search?q=Kara%20startup"
+   }
+  },
+  "nodalnetworks": {
+   "company": "Nodal Networks",
+   "round": "seed",
+   "amount_m": 11.3,
+   "date": "2026-11-20",
+   "headline": "Nodal Networks Raises $11.3M Seed Round to Expand AI Platform for Global Freight Operations",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbGJiaFBlV2tuZHlHdnlWa2hBYWpjMDJ1cHp1X28tQTFIMkNIaDhuYlI0ZVA5Q1N6emZfc25BdjFDd05JSFFhR2NlUTJicHp4Q0dwQlRoMnp2R2tqeWNVc2pkamJWeTRHMEl1LWd5cFdWd1BCOUZhUm0teUNIdk1TMjZVNWQxUXBfT1d6dURLY0VCS2M1bmMtc1ItYVBuQXdUZWdabjJwODZISWNnckNoN0NFMmV0TnNYdlZ1VHZqNUZNN09Pb0NXcw?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxQUlI0b2lTS2FxVGs5a2p4VmtPQjZESmd1LXdmdTVfN3hldUpHbEoyNkotSGJtOFYtSVlXNFFPWmhMTU1fMHpGLVVFUWlUTlFiSm1tUWxyeDBsLXRrdWNwZ2pfbzJwV1M4cklOSzd4S3hWN2FYRVBTQW5URGlGdHd2TlhyT2UzZUFrTjZZVktscm1QUUc4WUpYQUYwS1U4VFZVLVdVNWl4Q3FWQTZ6cVQwU1ltMU0xUWVYdmVKcGRkWERPT21qSjlyTjUxd0lUNEk?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.lever.co/nodal-networks",
+    "jobs": 9
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Nodal%20Networks%20founder",
+    "x": "https://x.com/search?q=Nodal%20Networks%20founder&f=user",
+    "web": "https://www.google.com/search?q=Nodal%20Networks%20startup"
+   }
+  },
+  "sona": {
+   "company": "Sona",
+   "round": "seed",
+   "amount_m": 1.27,
+   "date": "2026-11-19",
+   "headline": "MindSpire's Sona raises £1 million Seed round for AI neurotech",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNVBpQWJBS0JwR0NtZlhLNGw4T3VJbnJNWGRuQzBYWjZRajdrWEpFV01teUw0eS1XY2VvbDRnaWFKUHc3Qm5HSDRXQTh3OTYtWDdQa2hsTmZ2VVdCWlhXdndpZUVBVU5ZYU1ocE1NWmlEd2RzMjNFS19WVjY4dENLYUpXVkxRRTdVWXhhazRWcWZobXJXSkhOamRwUQ?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/sona",
+    "jobs": 15
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Sona%20founder",
+    "x": "https://x.com/search?q=Sona%20founder&f=user",
+    "web": "https://www.google.com/search?q=Sona%20startup"
+   }
+  },
+  "lato": {
+   "company": "LATO",
+   "round": "seed",
+   "amount_m": 4.7,
+   "date": "2026-11-19",
+   "headline": "LATO raises $4.7M seed to run customer interviews with AI",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxNX0ZJNC11cVh2bFJPWXpGRHlEaGhDb2d2VURtNTlkakhrVlJNWl9Bcm50VGtqSU9wVjRLMnpqaTFGYm1XV1JVTGJSNDA5dFJzYlZsT1kyUmJ2cmJFVGdZdlhqSzZieGpGSUhqb0lIT3JobTV0Ykc5T25LZE42Y0JlaXZXRFFNV0ctdTdzdTU3Q1NCSG9f?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=LATO%20founder",
+    "x": "https://x.com/search?q=LATO%20founder&f=user",
+    "web": "https://www.google.com/search?q=LATO%20startup"
+   }
+  },
+  "maple": {
+   "company": "Maple",
+   "round": "seed",
+   "amount_m": 5.3,
+   "date": "2026-11-25",
+   "headline": "Maple Raises $5.3 Million Seed To Build Privacy-Focused Cloud AI Agent: 5 outlets compared",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPTWd3TWFReVVOQUxyU3VnTThUQkxyUjNIVUtWU0tPRm91bmdkVmVkV0NUUXdzcm1vNzY5UUFpVkN5Z2FDRnozVW5pRldnY1dDWDhBaWVoa1MxMkxqTkFDcTIycFBPYnlORDUzN1RDODU3blllaTU2dGtmQmZ1LW5nOV9qY2ZqSVB6X01xZ05aZEc0bjZ1S04wSTIxc1FmeENKcGxubUNkLXJfdU1DUnVqVVJ5WGJMT29tY29ZcXp1WER5OVRJVW1UTnkwdWVIaExRc1BjTmtPZGd0Zw?oc=5"
+   ],
+   "source": "NewsCord",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Maple%20founder",
+    "x": "https://x.com/search?q=Maple%20founder&f=user",
+    "web": "https://www.google.com/search?q=Maple%20startup"
+   }
+  },
+  "minicor": {
+   "company": "Minicor",
+   "round": "seed",
+   "amount_m": 3.8,
+   "date": "2026-11-20",
+   "headline": "Minicor Raises $3.8M Seed for AI Desktop Agents [2026]",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQY3VTS01sMDVwcldHUlRfLThyd0NHMmUxUHJkaWt2ZDVyY2xtRXRGaEhoc3NHWlpDZGJuMkFVNzB5TS1lVGZQZkU3ZHFpUmM0cHJURUVHQmNEWFVKcUYxN3Jib1FmQjNkSHB4VE9MS3oyV19BamZWcGVMWWZTdnJBMlhNekxJWTZnRFBV?oc=5"
+   ],
+   "source": "shattered.io",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Minicor%20founder",
+    "x": "https://x.com/search?q=Minicor%20founder&f=user",
+    "web": "https://www.google.com/search?q=Minicor%20startup"
+   }
+  },
+  "agroreply": {
+   "company": "Agro Reply",
+   "round": "seed",
+   "amount_m": 0.5,
+   "date": "2026-11-19",
+   "headline": "Agro Reply Raises $500,000 Seed Round Led by TurboStart to Develop AI Crop Advisory Platform",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSnRzTWUtSU5XZDdWUFVFYTZHdnFtYl9ISUFvOHpWRWJVTTF6Vk5qUTFtUjRTLS1ma2RsM2lPeHFvYkI5ZWlNZXhKYVVkM0JlRzV0ZDRqWjI4ZGgxemVKUW11b3FWcW44MjNPYlRPaU9TQnRwcXJjVi1tNHVrZUFXSy1RNkhJZ2NJaFlNS3czVUZvU1c0aTlUVkV4SlFBY2dXTXlfT2wtZWtDWUtLS2JYMllTM2xETFp2M0NfQ1FtSVJaS3RRX3RQOQ?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Agro%20Reply%20founder",
+    "x": "https://x.com/search?q=Agro%20Reply%20founder&f=user",
+    "web": "https://www.google.com/search?q=Agro%20Reply%20startup"
+   }
+  },
+  "semanta": {
+   "company": "Semanta",
+   "round": "seed",
+   "amount_m": 1.5,
+   "date": "2026-11-19",
+   "headline": "Semanta raises $1.5M seed to bring AI to materials R&D",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOaGpkZlZDcm5Qb0sxT3M0ZWJoZERIbVlzSlRkRlp0V2hjM0NyRktNRlRncU9wRHpJT1VhTDlKRXZiR2ZiWTM5OWp2a2NlT3YtcXhJbkVjQTBIQmlJSkoyMnlpNldpMXkzYjZMbnlxRlJleTE2SDBhUkRtM2U1aHUzeEJzb2cxWmdGZmpXbEpadzE?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Semanta%20founder",
+    "x": "https://x.com/search?q=Semanta%20founder&f=user",
+    "web": "https://www.google.com/search?q=Semanta%20startup"
+   }
+  },
+  "omenx": {
+   "company": "OmenX",
+   "round": "seed",
+   "amount_m": 2.0,
+   "date": "2026-11-23",
+   "headline": "Prediction market platform OmenX raises $2M seed round led by Informed Ventures",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1SM3dCaWdnUFhwMEc2UU01Q0xNNlpmRHE0X1RfX2J0ZzNBQlRTTm9BbzNub3dEMkQxclZJOFlrZE5MckVVWF9lOWwxc0ZwaVFMNmtMNTNxdTBaYmwxSkw2YnBmT2NIZUw3ZHZQdVV0NEdPX0RyRUE?oc=5"
+   ],
+   "source": "CryptoRank",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=OmenX%20founder",
+    "x": "https://x.com/search?q=OmenX%20founder&f=user",
+    "web": "https://www.google.com/search?q=OmenX%20startup"
+   }
+  },
+  "rialto": {
+   "company": "Rialto",
+   "round": "seed",
+   "amount_m": 5.0,
+   "date": "2026-11-24",
+   "headline": "Onchain trading platform Rialto raises $5 million seed co-led by Robinhood and Tandem: The Block",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE8tVHNKZ3ZzOHZqNUdJdVhGZEZ5SUJNb1luSV81eUNLdmZKc3FTMnc3T0g3X3FWMkotVGg4OW8tRnI3cUxlMi1GNTk3cDRxYVJYZkIzWGcwU19CLWxlZEM0aWFRZ204MEFNdHdjUkNoWEY3cFJIanJr?oc=5"
+   ],
+   "source": "CryptoRank",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Rialto%20founder",
+    "x": "https://x.com/search?q=Rialto%20founder&f=user",
+    "web": "https://www.google.com/search?q=Rialto%20startup"
+   }
+  },
+  "marlowe": {
+   "company": "Marlowe",
+   "round": "seed",
+   "amount_m": 277.0,
+   "date": "2026-11-23",
+   "headline": "Marlowe raises a $277 million seed round led by Accel to run AI inference on non-Nvidia chips",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG5lT0p5ZTNLbnEzMTI4SzE2Mm9SSGFzcWVvQlE5UWg5X253NDMwSEZlSGFod2RnQm9HbU9DME53NmpmNmNrWlJzNVBZRzVicy1mdV95NmZrOHVydERVVjFkTVJUUGQ4UVFpMmliTmVTMG5QSXR4a25DMldKQldyX1NLMVNobzJlRHdRVHVLMXUwNGRwWWhqRDJrS1ZCYWZfSDdNSHFFNGd4bGs2WktTck81UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxNQ3drWktyc2cwWHR2d1QzV1NRTDgwMDNrSWdTMGxlRGpaWlEwXzBraEw0WlZuRldTQjY0MW15bVAtOUEyelA5WnkxOTg1dmZWeGxiRjNhWmhXVW8yUHQ1UTU3WWkzRTJZREE2bDZ2UFNKVk1MUmdjbl80QS1rRUQ2UDZxNjNQUmZzbWc?oc=5"
+   ],
+   "source": "MLQ.ai",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Marlowe%20founder",
+    "x": "https://x.com/search?q=Marlowe%20founder&f=user",
+    "web": "https://www.google.com/search?q=Marlowe%20startup"
+   }
+  },
+  "dulo": {
+   "company": "Dulo",
+   "round": "seed",
+   "amount_m": 130.0,
+   "date": "2026-11-24",
+   "headline": "Sebastian Thrun’s Dulo Raises $130M Seed for Hardware Design AI",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1rTjFOV0FPUGdDZEwwc3E0bHRSSUY2UDZZeHA3ZklaaTlqSTZ4UHRNOC0yR0hGaXpkbUFhZXBlVWZ3cEx5MktzNU94N1E0Q1R0ZFZr?oc=5"
+   ],
+   "source": "Wowtale",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Dulo%20founder",
+    "x": "https://x.com/search?q=Dulo%20founder&f=user",
+    "web": "https://www.google.com/search?q=Dulo%20startup"
+   }
+  },
+  "aevius": {
+   "company": "Aevius",
+   "round": "seed",
+   "amount_m": 22.0,
+   "date": "2026-11-23",
+   "headline": "Aevius Raises $22M Seed Round for Clinical AI",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxNYXlYQkdrVHdQUkkzYzd3RmxoTEgxcWVwb2xYeng4N0VNR01XZXNEcUI3RldjVlJWX09RRU1zQTV2dDFlbVBVNUFCZzRnWWxwYjdWRnBrcXRrdUtiNWtuam1ZRFZycFExQmwyZDFEUERHeFZPYTZUUFRFYi1pRHBud3RVUVJ0X3c4TFo5ZXJYUQ?oc=5"
+   ],
+   "source": "Wisevoter",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Aevius%20founder",
+    "x": "https://x.com/search?q=Aevius%20founder&f=user",
+    "web": "https://www.google.com/search?q=Aevius%20startup"
+   }
+  },
+  "globalkiwilabs": {
+   "company": "Global Kiwi Labs",
+   "round": "seed",
+   "amount_m": 4.0,
+   "date": "2026-11-19",
+   "headline": "Global Kiwi Labs Raises $4M Seed Round Led by Valor Capital to Build the Physical Infrastructure Layer for Institutional Digital Asset Markets",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWlFZNDNZZ2EySlBId1NNZ0xIVXF1UVJ2MnRvcFNZWGkxelBqLUNyY2k5ZnVscWV6dVRzLXBqNEU2bEhGSnZweU1RN3lNb1B0TlZ4ZzRVT3NxSUhDcnl0amZXNEhHOENDczBsWmViaGw2cWZ3U3U0NS01Y3NzclpvSXhKSmxBc1VnQi15Zk1QemdMZ212ajhZ?oc=5"
+   ],
+   "source": "Crypto Reporter",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Global%20Kiwi%20Labs%20founder",
+    "x": "https://x.com/search?q=Global%20Kiwi%20Labs%20founder&f=user",
+    "web": "https://www.google.com/search?q=Global%20Kiwi%20Labs%20startup"
+   }
+  },
+  "supertake": {
+   "company": "Supertake",
+   "round": "seed",
+   "amount_m": 20.0,
+   "date": "2026-11-24",
+   "headline": "Supertake raises $20M seed led by Adjacent to let AI agents turn your market views into stock portfolios",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE93ZVRZcjhoOS04SlJHaGM2OFc5c1NkeS1QWVIzbndOVG16ckJ2RkdIczE3czJwelAyYUotM0hCNm9hc0FvempBazcyOFdzZFhBOTRsbzFqY2lJMEUwbkhCM3dUS3RNVFpvWFlfaENKQ0MtTWt1N0FkWVln?oc=5",
+    "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQWTJUS2JlcjVReHVOLU5LR1dva05fV2VqSVV2ZTczQk1ZT1JHSXE1U0FpWGUyRW1tSjZQQ3BWbThCUVJJZFgtS19BeXpJV05wdjR6ZTVSR0U5QV9iMF9sNkM1aW9nMUE4bXRYbUJ3Q2VNVFBxazlHVk9RLWZZUE95ME83azVjbldWMDlOV3YzZ3NRT2pZbjFJVnRsSmlRYUFBV21NaE1GcmZWSVg5YVdyeTJsNTlydUtZYTlRVnVCTHVBSFJqd01VN3N4UElzdV9vbXpIMmFWTFpDSTBZR0tBeHo0eXpvUWpEU1E?oc=5"
+   ],
+   "source": "Next Unicorn Ventures",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Supertake%20founder",
+    "x": "https://x.com/search?q=Supertake%20founder&f=user",
+    "web": "https://www.google.com/search?q=Supertake%20startup"
+   }
+  },
+  "perryai": {
+   "company": "Perry AI",
+   "round": "seed",
+   "amount_m": 2.2,
+   "date": "2026-11-18",
+   "headline": "UK AI-powered legal software start-up Perry AI raises $2.2m in seed funding round",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNS1RETHRhZW1Rd2stS2Z2UzRrOEd0QTlIaVAxWDAtdmNJb0dwYXFtRHl5SDdpa2VHUmVTLXVVdHdyRDQ0Rm5Vd1pVN1RQTDRRMG1vOV9xWmNhMHRaZVp5RzJSU1QzQWVXQlRsOXduN2czZkVsLW5LTzNVMUJNNTJsWXBOakxwV1ZnX2hNQWgzTjZwejd6T0swMF9GMFNCOFJ4a1hyUUlDT1JVMnBkYXpreUc3UUxvLVJqMFhjTGdPWDlkY1E?oc=5",
+    "https://news.google.com/rss/articles/CBMifkFVX3lxTE42VEZXT3o0Z05xRFBCQVozNjhHS0dxR2MzWGIza283QWg0NExwZzAyeGU2b1ZCeWhUWEpjMHJTUmN6bkFWUFNBVjhuekhiczc1MEltZmFRM1ZsNEtKWnpTWjc1cDFyeXVxZXBMWG1YSzZjQUZpRkNLRVlpRjI2QQ?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWUFRSF82b0hKYl93Szhza0tKQXFHZ1B1dmVhdVpTNkhnZlR1WXV5R3VkeXA1d0UyWG9KZzVTbUV5SWhENEg0VjNqSFhyZDFKZGtJVXNITExpR2VpenNxVk03bWhodGplUEVZMGZKUjFmT0dYVTlCM011OXlWZ00yXzEzYkZtUUN1d1RfQnZYdVNGZ0ZlamlyRG53cXk5LWZ4c2k4ekZWQ3JrQTc4Tm41RzhkV0xFRnZSSGl4SDR4aW11MkZqbEHSAdMBQVVfeXFMUHFmMUdob3NvV2s1WmxycFFwRGhhd3NRdk5VWG9jYW9mQjNTTGhoZ09WYjRSNzBna25tREthdXdtLXdCbEhBN1FiMS13ZTZCUzQtY1FvQmYteHZudDBYTGVkMG1odmo2NGRKMEFWck9VUURaSVNIbHJWTDlFS1k4OWlqd1ZUY1k4QVprMzZUdWREVXlPc2loWkdTazA5eTdtWFZQbWVVUTRYUnltMlZVeWVyUWZqMUZqWGJjOVZadXk1Tm1hTXBvbnp0VW9TdWpKVEhwbw?oc=5"
+   ],
+   "source": "The Global Legal Post",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Perry%20AI%20founder",
+    "x": "https://x.com/search?q=Perry%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Perry%20AI%20startup"
+   }
+  },
+  "verra": {
+   "company": "Verra",
+   "round": "seed",
+   "amount_m": 5.0,
+   "date": "2026-11-24",
+   "headline": "Verra Raises $5 Million in Seed Funding Led by Kearny Jackson to Scale AI Platform for Consulting Firms",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVkp5MDliWWpQeXBSTXlpS1NhYV9QVmkxZ3hhUEFZUGNJNVN4OE8zTjhkQ3FtMzZEUDkxeXpHUldUdERpVjhzNU92TV9Va2V4LWpKMG4zdzB1am9ETjlJenUtTFc0YjQtNk9ob3g3Z01UaDR2SjdublhkQjVrczlTd004WXRrX1JDbXN4dkhMYkhsUFItNElycUJ4RFlnQWNONjFCZ1BjYjN6bEhCZzdlUmZSZkpLV3MtTWs3bjVBLTFIWHNneThKWkk2ZmcwQ0VJYmFPNFVESjE?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Verra%20founder",
+    "x": "https://x.com/search?q=Verra%20founder&f=user",
+    "web": "https://www.google.com/search?q=Verra%20startup"
+   }
+  },
+  "commitbiologics": {
+   "company": "Commit Biologics",
+   "round": "seed",
+   "amount_m": 58.32,
+   "date": "2026-11-19",
+   "headline": "Commit Biologics raises €54 million Seed funding",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbG42TjA3TmQ4MW9VRE9DRHotcFduS3dVOEYwZW02cEJ6T0xCa0Ixd0JtdmxhZ0NGSzY5cFpWa0Zob0hDMGxST1VzenNwQVlZcTA5QkE1TmVoOG5nbUVqM0FudUY3UTRDTzY0QlphN3RWRlh4eW5BcE9RcVJ4Z0gycm81bl9UV0tMNUtQaHd0eEJUSjA?oc=5"
+   ],
+   "source": "Health Tech World",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Commit%20Biologics%20founder",
+    "x": "https://x.com/search?q=Commit%20Biologics%20founder&f=user",
+    "web": "https://www.google.com/search?q=Commit%20Biologics%20startup"
+   }
+  },
+  "insurtecheightbyzero80": {
+   "company": "Insurtech Eight by Zero (8/0)",
+   "round": "seed",
+   "amount_m": 3.0,
+   "date": "2026-11-20",
+   "headline": "Insurtech Eight by Zero (8/0) raises $3 mn in seed funding led by Diagram",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1WLTBUSUZMV0NBNF93LWo0QmdXNndyNm1jRVhPWjZpUlJPdUxuOWtNd04zdHM0dEdLR09NWk9MOEJlNXF1Q0lJdXNuVVhpdlFIRV9zYW94WjQ3LS1rU1F5QmkzTGZaRnZ4Rks2TkZaR1pGNHRZ?oc=5"
+   ],
+   "source": "Beinsure",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Insurtech%20Eight%20by%20Zero%20%288/0%29%20founder",
+    "x": "https://x.com/search?q=Insurtech%20Eight%20by%20Zero%20%288/0%29%20founder&f=user",
+    "web": "https://www.google.com/search?q=Insurtech%20Eight%20by%20Zero%20%288/0%29%20startup"
+   }
+  },
+  "qsecurity": {
+   "company": "Q.security",
+   "round": "seed",
+   "amount_m": 11.5,
+   "date": "2026-11-23",
+   "headline": "Q.security Raises $11.5M in Seed Funding",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZFNSQ1l2X29IM2d4MUFna09VSDAtbEZnMVh5SjJ3d2FvVVdGZ0ZZMWxuZVNRdkUyN1Q5VXBGQ2hMb3FLRzd4UWN0algxVTEwRFRyb3dxU0I4SXFEazVMVXEzNkZTNGl4dl93UEUzSEVwUk13V3FnRVBUVE5IOF9yT0lB?oc=5"
+   ],
+   "source": "FinSMEs",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Q.security%20founder",
+    "x": "https://x.com/search?q=Q.security%20founder&f=user",
+    "web": "https://www.google.com/search?q=Q.security%20startup"
+   }
+  },
+  "alecto": {
+   "company": "Alecto",
+   "round": "seed",
+   "amount_m": 20.0,
+   "date": "2026-11-19",
+   "headline": "UK AI-native property-focused law firm Alecto raises $20m in seed funding round",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVM3LWRYR0FCTm1yLXpyNE5tM2xWamRBQ0poVU9qeVJXckx3ZlgxZzFxdGFtSWtmdTVndXVnQ1pmWHUwdGtwbEtjWHk3Z3NjY0lrOS10TDh0MHNkNjVIb1Y2emM1SkV3d21ZUGpqNjdNLTBZQ1B5YW5ZQlVkREU1OXZBSnZnMTI5SnpGQVhjVlQwS25OVHFOT1o5SjRpRzJ6a21tRFNRTnhYVEc3c1BXSmxjUWRqTVh0RWRLTXVPUXBUVlk?oc=5"
+   ],
+   "source": "The Global Legal Post",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/alecto",
+    "jobs": 2
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Alecto%20founder",
+    "x": "https://x.com/search?q=Alecto%20founder&f=user",
+    "web": "https://www.google.com/search?q=Alecto%20startup"
+   }
+  },
+  "protegey": {
+   "company": "PROTEGEY",
+   "round": "seed",
+   "amount_m": null,
+   "date": "2026-11-18",
+   "headline": "Fintech Startup PROTEGEY Raises Seed Funding for AI-Powered Compliance Platform",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNRzhpdDFROF80YzFKaG10RlFSemtlUDB3dzVHQmRNYVY1R2VYWGduU2lmQ3hkdWZydTZ2b2drVVpTc0ZkVGMxOE55THVXaDFFeWk1QkxLUWhOQm5nU2tRZGFRM0xCbkV6VkpHQ2V0VzMtaGsyMGNERXdILW5hUURzWW9JRW05LW5CdmhIV3ZMQ2pNS05HM3dnRTVZc1BxQVFiNWFET1E3Qk1MVkExREVZc1BuVVB2QmF0bzRfaVZJZ1g5UHp2TEg0S1ptX19NY052TmVUOQ?oc=5"
+   ],
+   "source": "We are Tech",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=PROTEGEY%20founder",
+    "x": "https://x.com/search?q=PROTEGEY%20founder&f=user",
+    "web": "https://www.google.com/search?q=PROTEGEY%20startup"
+   }
+  },
+  "luparobotics": {
+   "company": "Lupa Robotics",
+   "round": "seed",
+   "amount_m": 1.67,
+   "date": "2026-11-23",
+   "headline": "Lupa Robotics raises $1.67 million seed funding",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTFBROThJOG41MDVLeEU1RC1kNVpNY0FSY25Ick1BZzJqWUtxZkYxRkRQcU83dGVWYzA3aUZpYzZPYlVxNElhS08zbDU4VmFzRUZsdjZBdTBuZkZsUG5CN01LNnB4Y3ZfQUxKWTduU3hkT1VwemtpM2lZYUdyUQ?oc=5"
+   ],
+   "source": "TechCabal",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Lupa%20Robotics%20founder",
+    "x": "https://x.com/search?q=Lupa%20Robotics%20founder&f=user",
+    "web": "https://www.google.com/search?q=Lupa%20Robotics%20startup"
+   }
+  },
+  "verkkorobotics": {
+   "company": "Verkko Robotics",
+   "round": "seed",
+   "amount_m": null,
+   "date": "2026-11-18",
+   "headline": "Verkko Robotics Raises Seed Funding to Accelerate AI-Powered Enterprise Solutions",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOdmxQX0lUM09BWUVTTUllSUw4aVFIRkQxYVAxalAyXzh3d1lCSk1naklqMXdBNVlXMHJWOENPUHV2bnR3RHMyVWEwUXQtOVhvbWMwekVRV01CWW1MRFBiY0toaHBTTWF2MkZEX240Tmx5Sk52QklEZzdlRUpXSDQ1YUN1R29xMWZBU2UyRmFiZVdraDFvdDRnenhueG82blBhNjh5OGxNTW5lR3FtUmczdkRHR0UyRGdYOHFCREU4cExNLUhNUGx5cXhLNVZZLWNfUndPdVFnNjY3T2E5Ykc0?oc=5"
+   ],
+   "source": "Pressat.co.uk",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Verkko%20Robotics%20founder",
+    "x": "https://x.com/search?q=Verkko%20Robotics%20founder&f=user",
+    "web": "https://www.google.com/search?q=Verkko%20Robotics%20startup"
+   }
+  },
+  "dawadose": {
+   "company": "DawaDose",
+   "round": "seed",
+   "amount_m": null,
+   "date": "2026-11-19",
+   "headline": "DawaDose Raises Seed Funding to Expand Its Digital Pharmacy Platform in Saudi Arabia and the Gulf",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWlZTUUYxcm9WOGUxaGo3a0hhT1Q2N3dwWlNYOVR0S3JNRVd0UEZqQ0VDNG1rdDliOEpyWW8yVnQ3T0Z6NTl5MnI2a29tRkFDNUJSblRlNTY2c3ZKYS05YVN6ZjhlVm5CUk1WZ0puOF9WSG1LbnRZNDNKTl9OV3p3OW8tbi1ocGx1RXN5NjVQLVlRRUxyT2VFMHRVYjVGQ0xMeDNiTXUwNA?oc=5"
+   ],
+   "source": "entARABI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=DawaDose%20founder",
+    "x": "https://x.com/search?q=DawaDose%20founder&f=user",
+    "web": "https://www.google.com/search?q=DawaDose%20startup"
+   }
+  },
+  "soketai": {
+   "company": "Soket AI",
+   "round": "seed",
+   "amount_m": null,
+   "date": "2026-11-18",
+   "headline": "Soket AI Raises Seed Funding From Bajaj Finserv, Pennant, Finvolve & Others",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxPajhiM3ktOGhQbDR3V19nU25yOXZ3UE5ka1Z3UjBZN2lKRlF1eVZRbEdyZE9wdmRURTVtVHBFY19GV3NLeWdqVVF1X3o0TlJXTGQ5QUxpeXdmVE1McXozWlJRSUNIMVU5WFlZd0dDcEs1cGE2M2Zuai1OaTFWWEpDYlVmX24xRk9WbWRaUE9kczhxOTJzSzlWYzlOSGFTazRQeEhnU3VacnBuN0VEVFZaV1B3?oc=5"
+   ],
+   "source": "BW Disrupt",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Soket%20AI%20founder",
+    "x": "https://x.com/search?q=Soket%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Soket%20AI%20startup"
+   }
+  },
+  "modernindustrials": {
+   "company": "Modern Industrials",
+   "round": "seed",
+   "amount_m": 6.0,
+   "date": "2026-11-19",
+   "headline": "Modern Industrials Raises $6M Seed to Expand Custom AI Agents",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQm1IenVZb1Y1dlNDbTR4VFB4c05HaFQ2bHpCZUlab2UwOW96bHJrdlFGd2pHWlJyZW1YVWhfRG9aaHlNTW5keEp5TlVJSFAzUUY1Q1dpMlNWdUtRSndTY2U4V3RCT3cwMzZOMENzblZBREhJTEJlZU5EdWQzalRJX1ZqZFM5MTc2SGc?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Modern%20Industrials%20founder",
+    "x": "https://x.com/search?q=Modern%20Industrials%20founder&f=user",
+    "web": "https://www.google.com/search?q=Modern%20Industrials%20startup"
+   }
+  },
+  "ycbackedlato": {
+   "company": "YC-backed LATO",
+   "round": "seed",
+   "amount_m": 4.7,
+   "date": "2026-11-19",
+   "headline": "YC-backed LATO raises $4.7M seed to put AI agents on private equity’s due diligence calls",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQWNmVVBmYUlzelM4aEttNlZzRURVNVBiRnF3YUo0NHE0ZzctN2N2czJZMTNVNnc1S1BkZXpPbml4d2taNmRvUEsyOGxNck9WaFFLcmxOTnBHZnAyNnZzZHAzeTdFN0s1VjJfb1RSOGxpM0MyUlU0VkxTenpvbF9ERlkzc0tjcXZ4YVNUQXUySXBhc3BCTnlaMUFsVG4wUnZzM21ZWFh4cnpFX2pGaWhWdHRVVVB2NWM?oc=5"
+   ],
+   "source": "Tech Funding News",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=YC-backed%20LATO%20founder",
+    "x": "https://x.com/search?q=YC-backed%20LATO%20founder&f=user",
+    "web": "https://www.google.com/search?q=YC-backed%20LATO%20startup"
+   }
+  },
+  "metano": {
+   "company": "Metano",
+   "round": "seed",
+   "amount_m": 12.0,
+   "date": "2026-11-19",
+   "headline": "Metano Raises $12M Seed to Secure AI Agents Across the Enterprise",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxNVktfdHpQcUhRSEdVWDh0Ym5KcG9kQU5TR2J5UWNhTG5TaEhBTnJhTm9nc1NYYzBTUk9RQ1hFTTlGaGc3TTExd09KTnJSY1JGTUpjQTBGUjVhQVlucGFDeTlmN1doa2tSVkF3QnRHR1p3eERtLWlpWEZVMTdvRDhyNFJxZ1pzNXd6RmRNMEtfcw?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Metano%20founder",
+    "x": "https://x.com/search?q=Metano%20founder&f=user",
+    "web": "https://www.google.com/search?q=Metano%20startup"
+   }
+  },
+  "codex": {
+   "company": "Codex",
+   "round": "series a",
+   "amount_m": 30.0,
+   "date": "2026-11-19",
+   "headline": "Paytech start-up Codex raises $30m in Series A funding",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdFRFelFaa1NnNUJpVThWWXdlVzNMQVlFSjhUN3BRel9QMXJacU1kVnhBUFk3clRoMm40Vkk5Q0xpcHlCOEpLbDcxbm4wN0lxNXVfMWFJMmlwTE1MLTVMeGludkF4dVFod3RnSGNiWVZpSXhTQmYzSThDUHU4REFuQVpwcXJPd00?oc=5"
+   ],
+   "source": "FinTech Futures",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/codex",
+    "jobs": 6
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Codex%20founder",
+    "x": "https://x.com/search?q=Codex%20founder&f=user",
+    "web": "https://www.google.com/search?q=Codex%20startup"
+   }
+  },
+  "nvidiabackedgenesisai": {
+   "company": "Nvidia-backed Genesis AI",
+   "round": "series a",
+   "amount_m": 500.0,
+   "date": "2026-11-18",
+   "headline": "Nvidia-backed Genesis AI raises $500M Series A at $3.5B valuation to build general-purpose robots",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVEJtTWdJTlJaclZSZktGejlaOEhRa1RLckZITF9PclVYcTRrX1hTR29tSXphX1JnbDRqNDlUeG16ejFWTXJQNE9aMDhqYW9WelhXOWpCbDhqV2pQdHNXUmRwLXdjQ1NIaXBfdWwxTloxeEVLMVhtS2JlU1p3T29odHpWeGpScWE4VHQ1ZTJ4SXMtMGVFaTlUMnd3SVBiUl80Yi1UdjB4bWF4U00tSDF1TGJlUXgwVnpibXZaRURUdjNmZw?oc=5"
+   ],
+   "source": "Tech Funding News",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Nvidia-backed%20Genesis%20AI%20founder",
+    "x": "https://x.com/search?q=Nvidia-backed%20Genesis%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Nvidia-backed%20Genesis%20AI%20startup"
+   }
+  },
+  "zipher": {
+   "company": "Zipher",
+   "round": "seed",
+   "amount_m": 53.0,
+   "date": "2026-11-24",
+   "headline": "Zipher Raises $53M Across Seed and Series A Rounds to Automate Data Workloads",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNnh3aXdLNl91NFAycDQxcjlqSHA0TFF5UHpQS2JKZzlVSGFxRXFObDMycjBlYkFOZ09GdEJqWHlaVHZ2di1ZQlJsUS11Unh1a1M1VmVlN0Q4a3dFamR4Z1pOTTFtZUcwamNxc3MyVHdjWWszYlR0SnhSbXlfbE04VW96cTBsQlFjR2dXbUtqNHNvQ0k?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Zipher%20founder",
+    "x": "https://x.com/search?q=Zipher%20founder&f=user",
+    "web": "https://www.google.com/search?q=Zipher%20startup"
+   }
+  },
+  "agon": {
+   "company": "Agon",
+   "round": "series a",
+   "amount_m": 70.0,
+   "date": "2026-11-23",
+   "headline": "Agon raises $70 million in Series A round to build Europe's defence AI lab",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOdklnd1V0aWVfS0xTUkdiM0FXak1LR2czTG5vYXA2OGFQendfaFRza0hpR1djaDlaX3Z6a0VQSkRtZjBwd0RCR3Y5UW5BRC1UbVcwM0F6UHZoZlg4UWY5S0RwMmhKak02OXVDMDNtWGdUT01UZTl5WTlWWW1YR09HdWpVb1ZZNVlIM1pVcXdPVThCQzRtWHpDTWpobHQzWFRrLTJ6dnBVYzhJUi0wZ0ZmdQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVkFjSVY4d1hsX2dWcUN6LTdVZG9BN3pFclZUaVZ3QnVScE12Ni0xb1NoNXNSblZ2VTJUa0RfTXRqd0thNTYwVWVrX0xaQnh5T2pCTFNGR1RGekxpS0tIZjE0UF9tSXByWkN0d3QzdlBOX0pmWDJ6c3B5NWJGMVRNT1BoZzlvYl9YaXVjQ2dhTC1GQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTGlPTFpOQTRmazJCa1hxa1FMSk5odV9iTV9qOUtfQzQwLXFPeHp5eFhtcW9LTVZES2tRXzUxZFhORTRvUjgyM2RFOXJycVdVcmFQMEhfM3dKdUdnNXBXWG1ianFiNTRmRF91STJPZFlaRXRHTkFNOU9oTUlweXRvY1plekVUTGE3YThvVmJyVmhHSXZGOXY1MG9GSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNbV9pVVJjcDRtZkFpdzlRWmRZekdESlNIS2M4Y294bjl1Y3Q0Y2F1U0hEbk9IUGlCUmROdEJjWlgwaEdoc0hwZWt2aXJTNzQzS3B3V2Y0cnNoUm45czJrT01zX2pfdUF1aGtBU0dheUpGYWZXZmZhdGJ0a3dhalgySlA2RlEwMk9qRHhfWEd3amRIWkxaaUF5V0ZUM2RNRUsxdE5MYWhiUVpvRm9lLTJ2a1IwN3RfZlVtQ3p4aklrT3hid192ZVd1UnRieGc4bldZNkpId2ZQTkhndw?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQVHVlSEdnYWdkNENZMlgzSXlXbUpIWmhpSEIzckNBejQyVE9EQjZjR3VqcXoyRE9objdpMnNpZEV0SEpFWmd2THVMS3oxY2EwTUljMVk2aWNIZjhXWGd5ZFJvNjVmZkVQWDhuLWJ4NHJjUldSOGx5SEM5VkF0TkNPS1VWNnpYQW93Mk9ZQTR3RXlBdVItXzdxclJRMlBmSnJmaVRscGktVnJfZTZUOUVCRjZ3RTF4Q25FbEdZYk1tRVdqd2RhRk45cjZsa1g2V1pmYzBtZjBETE1VdGZ5czlTT0s3a2FSckd6MFR5b3JHWVFTUGVHbkIwbE1kbmFQbUhTbWVLMGhMRXhyZDg?oc=5",
+    "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNWXVZTTRDc2NwcjBZZE1ZclhfUW9ra2g1aVpreXJEakotdnhzSVFpNi1rbklSZ0xzZTEyYnZXbXU3Y1BlSmJNVUkzblA2TnRlbHpsc3VQVFdTZFRna083M09qRG1rVWdvR1VFMGx1MHg5d2JDTFhkYkxaSy14OUZZWDg0ODlmUGpfTWJtNGJnUjZMOFMtQncxcE16T2dkQVZSdUlEeFc3VzNGMVZ4TjRadHJLbFR6WlB3cXQ0WFZaVlk5MkozNHhGRkdGZHVHMks5V2hUZ1gtQmRSc3Eya21RQnZnLTZOZWJJVnFZWnY3cw?oc=5"
+   ],
+   "source": "AFP.com",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/agon",
+    "jobs": 5
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Agon%20founder",
+    "x": "https://x.com/search?q=Agon%20founder&f=user",
+    "web": "https://www.google.com/search?q=Agon%20startup"
+   }
+  },
+  "aidenai": {
+   "company": "AidenAI",
+   "round": "series a",
+   "amount_m": 32.0,
+   "date": "2026-11-23",
+   "headline": "AidenAI Raises $32 Million in Series A Funding Led by A91 Partners to Scale Enterprise AI Deployment",
+   "india": true,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPeUFjTTRqRFJ2MnBwaGZfWVdBb05NUHFvUDBST0hGcEJvMXExbXk4TTB1UVdfYjJuWTdreXNFSmFHQkNKZ0JrbWlaUjlOSWZOMHJwZVVHNDR2ZWhiY3lUUmNOM2lVVno4V2VTakZKdXVlZTdJV1hBWTJtTnVUNUZXX0J3UVhmUnZJVEZ1M3lTR3NaOVA5VzZ2RklrbGtxcG5mQUlSWi14QW5jdXJqZ2xmZFRBUVdPeU5NOE9lMjN6OVJSTHl0M3YtYU43Z3V0Qmo3bTNRaQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE81aElKdmxoY01aeWtTZTJ6aHhueE9naGVObEw2bXU1RVJ6THN6MHlxMUY4UXJ2ZTZLc2dmY0NkbGR3WVcwR2FuallnM1k2RU1mN0Y2Y2ZjOC1jWlEtMDdkcVdlMjVYblk?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdVJGSXRXcngwWlU5enh2a3hJeXZldFlMY2p3MnNXZ2p3YjROa3ZPWDlLY21aUkhncUxaU2dTSGZpRjdIM3VpQmFXbzdzN3NTcjV0VEFMZTVjMS1VUVNHc01la1JKcFJHb0stOWVXLUc2b2VtamZLSlVzTG53SUJaczVhb3BKRmk3ZU14OVNEY3J1QWVMNlVUb0xfMzZfdDNk?oc=5",
+    "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNeF9ZVjg4SEJVcm5sZ0NSSG1LVl8wcEVMd0tjWXBoMTBBdUZKWHNraTlwWW1fbVlsNTB2Zmp0TWlOVjY5dG02S1FlaXo5ODlHV0Z5SFRBWmY1UUhRTUVMMk1QWkdnZXM0eUFnamZrMEFUTmFZOVc4U2dJUGlsenYxeXUwWWZZNnZWMllsbVdxYUNmZVdCSFk3VWxvN2xXS3A3SHhkTlB5eWJ2VnB0QnhCenlfaDA0YV84MHpUM2tMVmJ1UmJDekZ6RE1qbVNrSVBSX3ZjRlIwVm0yNjlq?oc=5",
+    "https://inc42.com/buzz/aidenai-nets-32-mn-to-scale-enterprise-ai-workflows/"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=AidenAI%20founder",
+    "x": "https://x.com/search?q=AidenAI%20founder&f=user",
+    "web": "https://www.google.com/search?q=AidenAI%20startup"
+   }
+  },
+  "hatzai": {
+   "company": "Hatz AI",
+   "round": "series a",
+   "amount_m": 24.0,
+   "date": "2026-11-19",
+   "headline": "Hatz AI Raises $24 Million in Series A Bonds to Solidify Its Position as the AI Platform for MSPs and SMBs - The Cannata Report -",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE1mcG0xdHpQdDJxZjM4el81a0xiQk96U0NNd3NweDV1cjdrLXBfSXVBMGoxcEFHVkxjaHBJQnhMV1UzQTNFZ00zSzBDSlRaY2xOaFFpNWE0ZEtodnhXOUo4aUZGalNQWG1VeVpRTmVqdEpxTG9rRlNTTS1VYzc1eWM?oc=5"
+   ],
+   "source": "The Cannata Report -",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Hatz%20AI%20founder",
+    "x": "https://x.com/search?q=Hatz%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Hatz%20AI%20startup"
+   }
+  },
+  "chenghengwei": {
+   "company": "Chenghengwei",
+   "round": "series a",
+   "amount_m": 30.0,
+   "date": "2026-11-19",
+   "headline": "Chenghengwei Raises Nearly RMB 200M Series A to Scale Edge AI SoC Output",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbGNSYkc1UU96TkJqbHhLRERCeXZkSllhX0wybmRiYmhBY3FoR1NOc1h5N1FMMUNDQl9tZm9ZRXo5dGxXOXVtZWxPcm5xa3R0VlVWcUdUQ3hqS3VKTGVvS2w1NjltanNXa09DMlMyRklBNkJ6aGdQY19qQWx1ck5adHZ2THRCd2NwWHNPQXZjRG9yZXljNElNWmFB?oc=5",
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMFp2UnpwcHJxRmViQkFOUVZKbzBUeDZra3NNSVM1YTJGUjdzTzBfMnBIYV82SmJzSXY5aThUODlOTmh3X1pab3IydzBDNDVjc25DU0dzZEFvZmRESzFwa2JjX2p3Ql9ZZnhfOEpYTTd2SEZubFVtZy00M3BHMW9RVktCZG1HdkhQbTFzQw?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Chenghengwei%20founder",
+    "x": "https://x.com/search?q=Chenghengwei%20founder&f=user",
+    "web": "https://www.google.com/search?q=Chenghengwei%20startup"
+   }
+  },
+  "mattersai": {
+   "company": "Matters.AI",
+   "round": "series a",
+   "amount_m": 13.69,
+   "date": "2026-11-23",
+   "headline": "Matters.AI Raises ₹115 Cr in Pre-Series A Round",
+   "india": true,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYVc2MWctMm1xWURESnhpcEp0aEJ4VF8yamZicHhFREw0TkR0OWhwRHVLRHZlTGFaMzh4WS1OZUxJbEJ4U2p2MXNKX3B0TFZzX2thcjROVVBrOVZERGMwdmN4djhtdFM4TTdMcjJwaFNVVzd4a2xzOUVESW1yRXlJRk51emphWm5tVXRsOVFSM1YzLXVnTy1NSlF5MEZhYVdPMVlz?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxNQmoxRzRZaHFLSnRFdGZna1l4RmhlUjU0OWVkSllvNmVvRXo3S05nRi1JYjdfdTVNZkpPUUdDU0twcVY2RmpaVWJPSUphQm1lQlg1WEJHZkxlSzVwWHpMNkh0WHFqYjk1cThOSjJrWFlrZXJwaHFOZDNKZkJzdVg5SGNDWWQydkpDaTExS2ZuaTB2UQ?oc=5",
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxOd25XemZRTG5ZQXZFb1lEYWQ2Q3RFQ1JJQnMtRTVZNmJNaHRSdkRLSnV3RjN3cjJpLWlTMGtMcUJ6UEJUZEV1WXF6Q1h3NHYxajN6M0tsVnNDcDBBeS1KLVZCZXBhZFhPNHRTWUFtQllMSGlPQWJEOWIyZHBsOGJPal9aR1ktSVB5WVpMMlphSnBTcjFsMVRwWW8wLWM5eldU?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTVZ0LU1qSVRIVTVYNHFIbWFvNG1zVFB3bUVhbGdycnZBODMya0xhRjdNYlZyeUtGbHlNX09iMkljMGZ1SWpkdlZ4X05xSjUxcllFMnZpMUstMloyeDd0Sm9IV1MxbVBQdjA1NTNacFU1WF9kYXd0eVRmNnd5WGg5VVdwUVJYNVlHS3dyRHhFNm9URkQ0al9WdlRzSTROMFU?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbVJ5QjV3R2c4UEMyV1h3YWt1SDRNblBLNE13d05HRnhGdEVtTFdXRFplX1IxYy1YbHpCR1NYRzNyVkdEb2pKMnpOdW92NTRrM1YxNlJLNG9tVHhYcHlsd1o3ZnJyWUhxQzlLS0dpaUtwRW1jVnNUU2M5RGpWZC1pYVZsTnFFTU5mMVhzSUdUcUpNS1BmOUxzNXFmbW8xLUUwNjVINlozU09jeGYzTjE2MFFpWU8wWTEtMkVQTkg3VQ?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZ2lPVzJDS2ZHX0tqQ0ppUVdXeEVXZk9nMkw3ZU9LYzNqbmI1TVlTdlBKUXJmZjNXYnVPYlUzLUxteXdYVHZTcC1oUWNSaEVGVTU1Z2E1TnF3eUlXNGJEZVZ2bkJpZFZTcS1pSjJIT2xzYlVMS240OWhIdEVHbWM0MGlDNG1HbDNsSFlqV1J0RTJncWxOa2NUNXBUT3VLVHFpSE54bWw1NEFoSFBTNHdHaUJMV3c5Z09lcHJsZ2ZXalJ6cE1LaHc?oc=5",
+    "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPOEtLUEQyaTNpSHpQU0hVODZXSkM4REJrTlFvaWdfQTIxZ2FKM1VaY1ZFcnFpQURNakdpeUlrVS1QeUd1bVMtQ0ZtTkMxOHYxeG5RT1d2ZFhBUWh0bDhORGRHcjdtNU5tWF9BdUdWd3ZZWW5SWUZZYUc2SWsybkFSakU4WU1MUVU2MHZiZ1ZiY1Z6emhZTmFmTHFUMHV6d3pIWmlvQVFhT252UTlpNTczV3RuRDR0WTdRN1VhRF9peUsyUTVsNWU4TGpRWjk2MUJJRHJHejM3d3pab0Y5Y05lWXZwN3c2YUVF0gHuAUFVX3lxTFAyWFFJOEdIcmRDbFUyTWlrTDFaa3hTdWdhdE1JWHVHY1RZcWw1Q3Z4bXM5NGM1TXhyZGlPVktvZVdyaXA4NG5QaUlleWcxbE1lYzJIOXRIa3J2MVJ2V0ZlcVNRLUpaTnpWd1E1X3dXQXVha0dfUDVwd3U2ZEJGR3V2MXFMbGFRTzRqakJkRVFOaU9TVTVDTGZQNUNIMDJPTjNhWkx5RkkxdVhUUFdjM1piZl9jeG1PdWx4dzZaajN4MzhRU0hjUnVJVm1zZVZqVlBmZkJRZGI2ci1VWU5FVXh0aG1wLTJMY1dHQi1BZ2c?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9oS3ZXUk5wLTVBVXpsaEk1QlRJMzg2VXFfX0Z6bjNhbFFKd0NTMC01UHAyWERCTFZjQ0tlVm1lcHNhcmRvRHhleVJLb0pCR2w2WGIxQzd0V0lWWDRMOTlrWkhTTGRudW5QaktmRXN4UUYxaU9VSXc?oc=5",
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOMW92dVlYa2xoQmxDMXg1V1hXbFF3Z01sUWVnSEZDYldBNGNlb0hGOVROUzBvQlhhcmlzMmYwT2REU0RGM2Z6dXMtUHVlZDR1QThzb3dtcFZiOFZsQlhxWjVaMGR1OUNXVjFPaW1tcDNYcnNEOGdWNzVpNUNCcXp3TldkeWcyUmRTVl9BSDVqWVQxM1ZHcV9xZGozcTFORm5KMlZ3d1RNQ2EwT2ZoNGtZYTk0X0YtN3BzZDI0N011cmNwbG9wTHM4clRCeU0weEhPZUE5Ng?oc=5",
+    "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOYVo2Q2twSE5GM2NKU2hCbXBobmZYTmhkby0wc3J4YkRqdFEzSGs5a0VoZzI3ZGhZcmhHQTJJVDMybk9zaDZCQVVNRWFCdUdqRHcxb1NSRzdwR3YwNk5Zck1lZDZQVDI2X3E1d0REV2dQYUZrQkZ1SnVVT2RlWVdYQ3p5SHQ2MXJlRDhIclpnWVAzTnRGNDhzcThRZnc4SGhaVlZGUHRZakZSNXhGbEdjLTN0UkIxVHBwd1U3LUNvWEV6X3lPNkhVNUJWX0w4ek5Mc003c2h5bDdhY21oTXfSAeMBQVVfeXFMT0o3dV9mQTYzX1ducldaWXFNNTdhQnpXcGtYUkNaTzRLUGh5NXpNbi1pNktoWnctOVIyOGV3QXV5QUxuazN4MzZ6a3BzYjk4VEZYWlJDTXdtVzJaZFByNHhpZ3R5a2xnSnlpUkRxSnB5Uzloelk4U1otbVJzTDQ3OFlXV3oyYWZXdXJTMVRwWjNfVnBLMWV3azdWcmhVWFc0b2cwLTI0TWQ3djJPY1hIaE1uLThVTGRWUnZERXVTZTdra2gyaVBwcV9EMXV6dXNuZ004VVR1aDJ6RVMwR0dlWjFrUUU?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxQT081Q194V2NINDNvckV5aTRXekNMRjlKSGlDdTh2Mi1NaEJkYWdJdWwwaktzTDgzMlgtcFhuV1FzYXFWZGs1VjlmMG43M2d5SUpnTjcxcWJBelIwY2tUcllCNlZMSS1OaWNUbWVaX3MtaENvZk5QRlgyNmpQNkFTT1pURWF3ZFNJS0djRFh5dlBKWUtHYzhDcXAyWkZjQW9SOUVLZnhDbWFwcXBtakE?oc=5",
+    "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNbzBoUU5rWTdZNWVpN3Q3V1dSRllXNnZmOC1rcU1keFVnZUFydHJCdDRjd1Nwc3NwNDBSdDRQcTJIM2w2cExlRFpRb0pDUUZRQllUd3owbjlnU0w0bjlPZno5Q1ZhcHlPMVBRNHplSlNsRFJfanhFVG1lV0NqelpkVXBUbEZNcXRmbkJyOGZUNUh1aU9SX2NBTWNIQkJnMGh1ZzdhQm5WZmM3WGI5Y3Y3Z2hidW04MDNfTy1lYWdIcWxoNG8wNE9ycE53S3FlMVJldG9JazJSUkVhVXVMUFN5QVRUZWR5cm5SZWVqTHpCa2lhYjZkeWE2d3dBUXN4UdIBgwJBVV95cUxOQnFLTjRISjRUOTkwRlY2ME1qdzJuQ0E3LXVBTi1Ld2RBMG85RnJENS15Rnpra2taV0tEX3hqZTJ0MTEtbC1lclc5X0o1YjJFUk5UNGlNdC1ETExra3JTcC1oOTU2VDg5SzVuRk9udVo1VDc5bC1Ca0x6YURiWjA3aUY0RHV0MmZ1bDdoV1dQNFVzZ21MSXdLTmktVl80WDRtOU5DVlVYYnBZdGFqUlZraDJ3VFJlZ2lfNkhHTVhiZTlIdUZaZFd3aVJ6U2tWQmlSMEZNcjd4dGdYcDlaQ3ppcUFEZXFYZUN3cmlqQkdJY0FnbVY2dnhoSVJDZ1FxTVg1dDhR?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUTdVczVydnExcFRaVEFOdGd2ak1fOWdzT0tYYlloZl9WdTB3ZTV3aXpIS0Jza0VyQ2lVZ1oxaF9yTkljYWhRTm5aU1IzLWMwUzBlZkFHVmd6Z1ZzY3dPSHRNc3JyRUpGdUY3REdObEx0Vk85ZEVXMExneHhDd0NpZnJmSTVWTVJTNndZUms0LUF4X0RVTm55OVNjazBKUzBBRVNOR2lWMUFmVnF0U094bTFFWWJnWnVRZUlSSy0zZ2h4NzgzQnc?oc=5"
+   ],
+   "source": "shattered.io",
+   "first_seen": "2026-11-25",
+   "tracked": "Matters.AI",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Matters.AI%20founder",
+    "x": "https://x.com/search?q=Matters.AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Matters.AI%20startup"
+   }
+  },
+  "humynlabs": {
+   "company": "Humyn Labs",
+   "round": "series a",
+   "amount_m": 47.0,
+   "date": "2026-11-18",
+   "headline": "Physical AI startup Humyn Labs raises $47 million in Series A funding to expand global operations",
+   "india": true,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi6AFBVV95cUxORlExTDI4WnpUN2NBSDRncFpFcktrdmc3QjhIVVcySU5qcWt2MU1pTFVldTVsckJfMU1kcGFLaUFVbFQyVEF4NEl3NlhfdnhYdWY3ZGRQazl0ai1DWUZqUzBocHoxZDgtRGsxYVhfR1dHQXo3VXhJamx2TnUzTi02YWsydGltaktaaFZRRUptNGRJYkNIaWt4cHdpNlFHa3dLclg5OEVfWlpyekI0RWFLNGxBZURtMm1QRmFnbE1nRGx0Y20wRXBsaENJb0VCR2M4SmZzMnpVQXJUVW80UW1RbVVPY3c5bTNh?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5oU3htTy1tZG5yQUVVSTZlcHVTQklLeUdqVzVwSWhvdzd3eGNXTC1nSTdodFF2RklGb2g3YXNBRGNVb0tMZEF3LU9rUVFPU0tfUUFr?oc=5",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRTNnYnVTenhZTFRnWjNWQnRZWUhKRlp6emZMNDByelhIMVR2aUoyd3BJS0ZIOVRsME1WdWE4TUowU3V3aHlIdm1ickJ6VDBVSmJ3ZU9UTDJqSFNRaWdRQ09fTDZfaFUyVXdKUldPUk9ZN0tFdnU0MmdIcVduZmRtSFdwZ1ZRb3Fpc0lqUmxkV2g?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxORms3VEkzbFVnLTlKYS00ZlA4R3V6b3VYeW91VGhkVThjZVloRFhmMG9zMnEyTkpRMGZReW5reFJManFGQXBhc2VwaGtmYkVueGF0N1h5T3pRUXR1Uzl2SmZ6X0E1SERuRmkxb0I4OVBIMVhvbFljMUx3WGN5eXpJSUdCTVN5ajB6Z1hFTG04bGhoeW1FRzBneGFR?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNXZSOGpKLWxTdFIzakN4c0JQS3BJdkM5MVNfRDA0QUZjVUdxMWZOSUdWbHROQ0ZYQmh6VjNSSm1xQmFXZnZGMVlyMHBSeTFtem1OTUhoMEtfZWZfRkZMdXduT2ZSQVNETV9rZGptWmJEckg4cU4yTVNES3hKU2NNY3gwaDR1Q0tESFRlSTZ3bTVUN1B5TTQtcFlhUHRrR2V5X2tlYkxJTTV4d2JvWjRMTnRnbHhMWkVHNWJPSFJTUWo0dlJpWGFEYjQxdTNodVnSAdQBQVVfeXFMUDBNU251cTZyY1huU29YVFhrd3lqUHNPNlBVRXNLR0I5T3d6aWpaazBPX1Q2NGcybjZ2ZTZoZG9lYjl3VnBLOHlRQkdHQzBmNWhyZmY2YTJPd1NiVk9zTjFYVXk4SXBodWotVlpQbTJlbUt6czliUzhDRlVqX1lNa29pZjl6SGx3dVFseFR3UUhXOXg2QllDMjdJM0xVZVM0OGpCVEFOQkFhbldrMmltRWdScXhWY0t6dTdCa3gxTWdFNVc0SmhGZG01cjB4SG9JQl9HRl8?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbFB6Z2cyTFg0ZnJRYzdYdFAzTXNNQ0RTd3RSaXdsVklVWWozd3dselZtY0NmeVd3dkJaak9Jb0tycHBrNnZjcVAxTHBOSXkxeWwxcXBzLVpMTnMyQi1IV2xzczluUl8wbjRaMEpkWGxVUWZJb1hESEZNTkhnOVZod0Jlb0Z0YllYYUZyMUE3OHZvS00?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSjQ0VnVmQW1nOFF4aVg3WWZMbnJPR0oyNlh0OXM2UVNFWm5VcG5zLW1BNXl6Y0FYLU93TlhZOGNoOUwtSFFWMk5wRDZ3TmE1eG83UkVnQmdnUmNUdUIzcHpycmVWSHlJVWhYQlBzU21zd0ZwYXp5LVgyeFZFZktQaG9mUFBQTWNMdExEV0JXNVl3cFVja0lPNmwyR216TmZNUjItQVlRdjZtbnRIYmV5MU5Ccm84S0tKV0xEazdzLTV4dnNN0gHKAUFVX3lxTE55U29scGR3dFVkRGZMcjR2NU9NQ0NxU0hZYXZCOVpkZEViNnA5NDZtdDBJaGo0Q1ZOOUxMdldVMmZSRGk0MFctTjdBZ09EZVkydzVPcFA3dlFGR1MxT2Nnbk9SZ1hTQmdNcjF5X01ZT3JqcHFtb2dieDdFdTZBdnF3RnV5M3Y5cmFXZE1DUldZMlNrM3dBd1JmNkdaMkFVdXJDcTRpSHhZSlNLemRhaE1rZ1oyamxyVEk2T2tGQmZJLUxhaEVMNjNjUnc?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTG9MZWdHS3VyUHFMYW5JaHJWdkhVSTREeURjVU1sXzI2eXBlNURvcUN3YTlMdVNnbG5xUC16X1paa0dqWjM0aDI5dTlwT3FHY1VqamlMQXdyLTljTVA1bDV1em5PeGdjVHhqNXFvMFFrX2tzUklmeUpoU1I0TGJVVk5wZmVfa3dQV2hQSTRNcWdGcks3Snc?oc=5",
+    "https://entrackr.com/news/physical-ai-startup-humyn-labs-raises-47-mn-in-equity-and-debt-12820886"
+   ],
+   "source": "TradingView",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Humyn%20Labs%20founder",
+    "x": "https://x.com/search?q=Humyn%20Labs%20founder&f=user",
+    "web": "https://www.google.com/search?q=Humyn%20Labs%20startup"
+   }
+  },
+  "medialabs": {
+   "company": "MediaLabs",
+   "round": "series a",
+   "amount_m": null,
+   "date": "2026-11-19",
+   "headline": "MediaLabs Raises Eight-Figure Series A to Expand TikTok Shop and Social Commerce Platform",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVHJIbmFYMzlwQ3dYMEpPQjZRX1BCTGhLV1plSHVWdGVMLU9LSUxyVklXMFdwVUtDWU01YUxpMHJpbEFmM0Z1QzNIblpiY2YzZXJ4VWR0S2JickNmMC1peFAwVWdPXzFJX3NrOHRBcThJeEdNdFNvQUs3UFhVbHFDa1ZBbW83cHc2al9fZFhrcU5HaGVIMEg1cWpmcGtlUVlhUmk3eU5LVkVkbnhGMEpFVXUtOERHcE9qWGZRU3ZiNFdTUFdTZndF?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=MediaLabs%20founder",
+    "x": "https://x.com/search?q=MediaLabs%20founder&f=user",
+    "web": "https://www.google.com/search?q=MediaLabs%20startup"
+   }
+  },
+  "everful": {
+   "company": "Everful",
+   "round": "series a",
+   "amount_m": 48.5,
+   "date": "2026-11-19",
+   "headline": "Everful Raises $48.5 Million Series A to Expand AI Commerce Infrastructure",
+   "india": true,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQV21WdHVWZTV1WEpVelZ3Z1poWXF1cWdSRV9tYktDQkxVNDRzWURUVmIzT0RsMjJIdmxRTDVxZ3VHanBRTjhyd3dCTEdrZnBPWDdlWnU5aU1yb0dMVGNRZ1E1eXdGdnNHUlFvRm00OXZFcUlSN3NOWDhTSGlZSms0QkNhOVIxSnU2Vmt6Y0g0SVFxUDE1QlREWlItOHpyREVvbTk5dmk5dmhmZnZVQzhpSWV3?oc=5",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOGFFMDdGZWhkWEM1NDJhU3lXaUhoV212Y0JqYWZHTXZYNFZfT091M0Zyb3laYm1kWXQtVGswajBrR2tEdjJRTzBYcnZFT3BvdmtuRXRnVF9pVE9pZl9YOWJXLXBOXzAxOE1VSnNYMEcxUDUyaC12dEJPemJPZ1E0bDg3VTJHWUM1aFlOQkZCamJGUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNWlRWbEZ5TUNZTENLQWpSSmFCRFdDVnRlQU1XU291ZVRvS1VkWU9RbEhtTXlwb29ncVhGbEZ0UlBnV09BXzZRcVdyRnFYOUVTaC1ZTDZRTVdWbXgxcGZWZXg3TWg4TE91b19QdlJIUVNNaGZKc2IxQVBnYWtrUnljQ2V1eXNGeHpDM1ctYVIwZE1YdEJHSjBmbGdwWUlJWngzaE9wMUFocjZzV0VPVTBOWXVBekVlckhCVWpkWTBxeVZaMVRydVgxRTFHX1l1Z0NhQUE?oc=5",
+    "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNYUdOU0R4TXBqbkdhT2tjV2lFSlFvNXNaYlgxRmNPc0h1VU5Kc3dJT3R2UmEzam8yRFNYS3dEZnhSYXNHeEh2ZXpKYVp2YXh0RGVad1Jwc2ljUEJGQzNwWFNFRDZWS3Y0Y3lBb3pZSDhwbU9TLU90WG00TnZwa19EVzNGVEcwTC01R0J2Rnhkb25zaG1FOC1uYmFlR0todWNlLUYyMTl6aUd3LVFka1RqRWVzb3MxQ0h6TnBXUzdKX0FsaDNMd05RbGtJd1JpVXRfYV9oODFrSGZPODVWZFZBN1NocjhHbFY0b3R2a0pJclVnbFZwV2dWRmctMHF0c1JMLU9rVHR0Tks?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSnFOQktuYldCUURYcDVZdE1vdkJtWVpuNzRZS2ItUVpSMERjSXJGLWVpbE5WbUlfQllrRlNWR3hlUUxobjRPTVlOZ2pYSGhoRGxWSkppakQtYUFXd1QtcUpPOW1EbnpmR3FsTzVzU3pxUWJwNktneVVhdmtEbkdzc1JtSHk1ZktwdHRwRm4za3BkcHNZV2ZTMHc4bE9zcFp5RHRmWk5VYw?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Everful%20founder",
+    "x": "https://x.com/search?q=Everful%20founder&f=user",
+    "web": "https://www.google.com/search?q=Everful%20startup"
+   }
+  },
+  "arvaai": {
+   "company": "Arva AI",
+   "round": "series a",
+   "amount_m": 20.0,
+   "date": "2026-11-19",
+   "headline": "Arva AI raises $20 mn Series A to automate banking decisions with AI agents",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE13d3owcnJrdFpjRVQxMVBDOG9iS1phcFltbWRKYTlwaWY4b2FJdUxnak1mTlF3TGhPRXY4OHNoT2Vhd2VRMDRteU1FT1lWVVdaYm5CejM4RU02T0o1TVZUaHdkaVFhZw?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbHJVN2xydWl1OHpQNWFPaElDUWEwbHZvdkQ2RmFNQ2RpejVqbDIwWkJ5aFF1azQ2M3NWSmZncUVjRS1iZ2VWMm9FeHZzNU5HT1lDbjljemtZclpvMGV0Qml0Vk83S3l3aVZLSThmdnFvb25SaFN5THJ5aDVUdjBhTEc5RVVMaVZuT3E0Q21Ed2FZcHI4NHJaQkc0dWZGNTdtcHVqUTFWRlExNEhqYUNLRXdYQ1Y?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObTJhUE9zTkctRUtwTTloaUVyb2ZoN1NXcHB1TVBHQjB6bmtxUGR0ZzhKdnBwS3lXSUlWdVlvOEhPQ0FGQ0IxRWNaVTRhWXNzbUFidnhLS1lpX3V5QTduTVJvSG9nRkFtbnpCRWg4RVJ1UnZvamJ4bXZqbGU4N1g1TmhMekprXy1HNHY4?oc=5",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQVWtuNmJYTzlfWjYtS3NZV3RiaHNZSjlLSE03bnVjVkxBVW1vU1p0MG12UHhzck9OMlNsdkloT1Q4Z2JjUTItVmZEY0ZqU1lxZGIwai0xTWtTNERyd2Y5SktmUTdFbE1fdEgxWjBLUm1iVW1XeVcxc0pPRXdwbnhiY29jYTdHeDRXdEF6endhRXZodmZlamlFQTJBZVYwd0NHYkVVN256bnJmSU1OcDZoRlM4SVJrZ1JBUnFkOENsRTU4Q0o4b292MmdacjZCdWp0Z2JIc2dXUHctSnVpSVJMZi1HOEhqR28?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE95UEl3YUE2M3ZfMVR3TjJNUW9BN2VsVFdJaWgxNGZfRFloZy1hb1ltLXZDRk9PUFhiSGlIWkw0TWRIVXViMHlXekJ2VDkxV2RXMng4?oc=5"
+   ],
+   "source": "Beinsure",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Arva%20AI%20founder",
+    "x": "https://x.com/search?q=Arva%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Arva%20AI%20startup"
+   }
+  },
+  "jordanianfintechinvoiceq": {
+   "company": "Jordanian Fintech invoiceQ",
+   "round": "series a",
+   "amount_m": 5.0,
+   "date": "2026-11-23",
+   "headline": "Jordanian Fintech invoiceQ Raises $5 Million in Series A Funding",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWVhWOUcyX3E4VXJzT1c3blhHVmJrMFNKOEFMZmNTeWFkZnBGck9iR0RjX2NHUllsc3ZzU1BkRmFwanNxWlYtNlN2MmNvcWlGcGZTX0k5c2tLdFU5dHBTbDJyeHFFWEdZbC1iSUt1M3QzT1loSVVHX0hJNUhaZkc5STZYaW1EVXNkSnUzSU5LSVIxVFUtWTFUQXhzWQ?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxNMXM3X2xyTy0xS2s1ODZrUkRObENwVTd3ZFlzczJIYzVWQm1tUkJFYndnemd5RDJGQllGWnBJOUpyenVsRVhBdlBZZ2dtcGRBeU5HaV9FMnVPUVkwY0p6dFZ2R1JOazZaMk5fRmpVNnZrZmkzQm9ielRFdlBxUW9qeGYwdUZRSG5EaE0zR1NzcDZnX2ZfZmx2Z3ppUTF6QQ?oc=5"
+   ],
+   "source": "CairoScene",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Jordanian%20Fintech%20invoiceQ%20founder",
+    "x": "https://x.com/search?q=Jordanian%20Fintech%20invoiceQ%20founder&f=user",
+    "web": "https://www.google.com/search?q=Jordanian%20Fintech%20invoiceQ%20startup"
+   }
+  },
+  "stepsecurity": {
+   "company": "StepSecurity",
+   "round": "series a",
+   "amount_m": 20.0,
+   "date": "2026-11-20",
+   "headline": "StepSecurity Raises $20M Series A to Expand Software Supply Chain Security Platform",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxObW5XQnRnQ3UweGtEMy1kQnNlWGVJelp0b1lZV1hYUXRjUmdUS3l0aDluM1ladG5qTnE0bHFpY25ndVZxamFlVjNqZkZGOWtWWXcwWUU0ZUNaelVNaXBDc09IbGNUdXVkMW03dGgyVUxhNUU4alhrb21jTGFobHNmSzBDd1c5cjJLMS1qLWk4M1EzTmN2NGg2ckdyQTB3RHd0VFpMTXh1dDRYM3NhRC1LZXdMMnphbDNsQ3dUNG53?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZl9zS1V5R3lkVjhzaHF6bFJTY2hCQ01IVC1ta0M1akRxRVVoZl9xUXJxSjIzR1VESzRuTFRBNXlYR0ZvTkYwZEItYmx0UVp6NEx1VDVfc0pIbEVqQVVvWHIwVjJhU050ZTI3ZUpYSzNMMk83V1k4Vy1Fckg2bzBxVkt3S0h6YlJUTU5oYkZ6U1h2RkJxbXdJRXc3SDc5aXI3VDlXNA?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=StepSecurity%20founder",
+    "x": "https://x.com/search?q=StepSecurity%20founder&f=user",
+    "web": "https://www.google.com/search?q=StepSecurity%20startup"
+   }
+  },
+  "ils": {
+   "company": "ILS",
+   "round": "series a",
+   "amount_m": 11.0,
+   "date": "2026-11-24",
+   "headline": "ILS raises $11M Series A co-led by Aquiline and BlackFin to expand legaltech platform for private funds",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxPaWVyRHRZZFZyUllua2twb0wwMGJ0dy1pQ0lnR05mUHZmNUJjY3FoWFVkZklUaFl3bC1vVEY5M0p1YnlZc3ZPMTJwMDRUc3MtT3VfS09odmdzRHdhYUxTSE9YbGpoeENCNG5LcjEwNHcwd012NzJKWG16eVM2bmpJOXdrbUdQM1FxU3pZQVlmQWpBV2RFRmhqUVI5eUFsUThBcVFsZjhnZ2RUZGMyekwyWWxYUmdrSlNERVNMUnV5Qi10RWpBWlFCRFkzQQ?oc=5"
+   ],
+   "source": "Tech Funding News",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=ILS%20founder",
+    "x": "https://x.com/search?q=ILS%20founder&f=user",
+    "web": "https://www.google.com/search?q=ILS%20startup"
+   }
+  },
+  "apricityrobotics": {
+   "company": "Apricity Robotics",
+   "round": "series a",
+   "amount_m": 16.1,
+   "date": "2026-11-24",
+   "headline": "Apricity Robotics Raises $16.1M in Series A Funding to Develop Robotic Ultrasound Assistant",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWHgyNXM5MXlXWUlwVDBRS2t1MWVFWXYycFV5VEVXaXR3LThKem1DeUoxVkNDM1hreGFLcEhKNnBZMUZGU3EzM1JvYVBJa29lWmVNNFlTN1MtZEtJTFctQWRzOXdDRllRcGt0Wk9UWTFHa3UzcnNoalEyeWlkSy0tRXIxQmhnVzc4R2JGVTdIckc2dmkyT3RDcl9ncDlWQ0ZiNmppMGVsNVVpQ1d4S3RNS3NOTzBoUUFfMFRHM29TVU1xRGVWQ19Z?oc=5"
+   ],
+   "source": "AI Insider",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Apricity%20Robotics%20founder",
+    "x": "https://x.com/search?q=Apricity%20Robotics%20founder&f=user",
+    "web": "https://www.google.com/search?q=Apricity%20Robotics%20startup"
+   }
+  },
+  "corma": {
+   "company": "Corma",
+   "round": "series a",
+   "amount_m": 125.0,
+   "date": "2026-11-20",
+   "headline": "Corma Raises $125M Series A at $1B Valuation to Scale Its Frontier Foundation Model for Cyber Defense as Fortune 500 Adoption of Its Models Surges",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijwJBVV95cUxPUnFaRmNiXzlXRUFJaHhBOF9xbF9GTUJGcWVrc0s3S25Wb3RJOS1Sd1ZsaEE5OWFoZ0RHWnVLTnoyYnlKcl9YY1ktTEJjM3YtbUpEcnVSa3VqNHpYN1BDdXRwSzRfRHg1YUQtMTFCY2lwRXhya0ljSnZpbXRsNW5kTUdwQVpZMDZQendvYlFJZ2xoajFndmtZcU1CM08tMWM1WTN6eTNKWC1GWlJOSWtzSDlCSnJ4RVVQUGl0U2Q1YnBOVUVzVm4wSHM2LUZ5M0szVk5UeGF4UllrT2FSNV9QZGNQSjg0cFowTFlaWDhNU3VlaF8zd0M2MHhiVVlMdnFiazZIZWZSVmRfSVdLNDBZ?oc=5"
+   ],
+   "source": "AI Insider",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Corma%20founder",
+    "x": "https://x.com/search?q=Corma%20founder&f=user",
+    "web": "https://www.google.com/search?q=Corma%20startup"
+   }
+  },
+  "boltz": {
+   "company": "Boltz",
+   "round": "series a",
+   "amount_m": 110.0,
+   "date": "2026-11-18",
+   "headline": "Boltz Raises $110 Million Series A to Scale Biomolecular AI",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTktVUnR1bHp1VzJ0LTZmWmtiMVpzWVYxZkVSZHZaMlBCb3VjaXl3ZTMxSDAzSEFQU29nQ1VLWWxLV0dHdnNYR1ZHcE9yTVVjRVhOenF4UmJwSlhkMlJYaVBXMkJQMjQ1a1BlNktkMml6VjduaW9EOEJ3WmlrcW9GVlYxU1otRFp5ZEFoRFl3?oc=5",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBvc2lVbjcyc3IwaWV1TWN1LXRYTDhWdzhyMU82QUpDNmtveGVQQ3RseGhWTVNERmJ3aXNuLUFFSXV1cEFFak5yWjlya1FZS1M2b2RUeVI3NC1ObWVxbUhaUUt0RzU2OE5LdjhYZF9icDM3czJ5RXc?oc=5",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQVNkSzBndnBqYjVLeGVHLURsTjRjQ09FSWV0bmNWdVZDVm95alJJSFM1cVl5RzhCcG9DMUtlblhNMnBHX2RBZnZ1b3NGTTNnNGR1S1RDWDdXNEtMUHhWTlVrM1MyX2l2ZWlwVmxaSGJIeC1OYzZPZFRFclVhc0FxeE1qZGRjVFM3SnZjMGVvRklUc0g3dHFocDB4UjZBaDBINnEzSmNWNFRtd3JOZ183Q0I2WGpQMGdEMk9GMGFvbTBmWjlQRHc?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1YcUc3X0xDRGRJYTVhajZDT2xTa2NsVFVXSzU5UXcwTmJ1VHlscWZPcktGN2dGZGJ6NDZmbGR2d1ZIZnl5cjVmMGQtVjRsZndpanNN?oc=5"
+   ],
+   "source": "Securities.io",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/boltz",
+    "jobs": 11
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Boltz%20founder",
+    "x": "https://x.com/search?q=Boltz%20founder&f=user",
+    "web": "https://www.google.com/search?q=Boltz%20startup"
+   }
+  },
+  "linq": {
+   "company": "Linq",
+   "round": "series b",
+   "amount_m": 90.0,
+   "date": "2026-11-19",
+   "headline": "Linq Raises $90 Million Series B to Build Messaging Infrastructure for AI Agents",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0tS3dlOTh1Y2JmZmN0UGZ3OE5XRC1zVnluX0ZRajRkMXdHbVN3cnE1MGFKczlfbmVwSFVpcFpjOTd0aWZOMW41NGVIRFdhQjdIMERB?oc=5",
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQTGo2QU90VjFoWGZwQUIxUWdXM3I2NGJ5b21qdHdSLVplMUk4cF94S3MwNDZHMFJXTjFTUkxuVE1sbFpiRC1KZWZlMVc2T01vNEVuVzNxSVo2dXByVEVoaUM1S1d2U0k3OWhEbjh4VkpVLWFiSTJFbzR0Y3NaUFhuTThzY1RadEZ6SFk1TXhNTU1LS1RyVjFjSGtTM050QVc0TkhqSHdLOS1OWmlsM0xFVEdZMXYwM1FQYjNKZm1ESUcwNTNnYVk1bTVnWFBtV2xLbzNxNHpQYk96dw?oc=5"
+   ],
+   "source": "Wowtale",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Linq%20founder",
+    "x": "https://x.com/search?q=Linq%20founder&f=user",
+    "web": "https://www.google.com/search?q=Linq%20startup"
+   }
+  },
+  "apricity": {
+   "company": "Apricity",
+   "round": "series a",
+   "amount_m": 16.1,
+   "date": "2026-11-23",
+   "headline": "Apricity raises $16.1M Series A for robotic ultrasound",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOOENPcnotTVRzUWs0ZFQzREFKeHFQZ0lybktUZDZoU2xrUG5lU1dJYm5kTHZWT2JkZmJOcjBZUkk3dUY3Q3RHb09yUnF5UEZOa29GZUlZemRuTnJabFM0eXQwamZHTkxLdnlTQW5hckE4bGt0bkQxYk1XZ0QtblV5WF90TmVCaDA5VTVfeGFZSTU?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Apricity%20founder",
+    "x": "https://x.com/search?q=Apricity%20founder&f=user",
+    "web": "https://www.google.com/search?q=Apricity%20startup"
+   }
+  },
+  "laronixbionicvoicebrisbane": {
+   "company": "Laronix Bionic Voice: Brisbane",
+   "round": "series a",
+   "amount_m": 5.0,
+   "date": "2026-11-23",
+   "headline": "Laronix Bionic Voice: Brisbane Raises $5M Pre-Series A",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSHRRNm9McVN1OFczbWlqUGFDbFRfVWVFak11TDd2dkVGb3FkNzdmbFBYN0JVR1M3M2ZlU24zTXhRYUxab3Q2eUpkcVdZMkxLVGVxNDFPZzQ2cE91RUl5ZENBS1VEeE1aOWh0YVI0RTZfcENZb3dYTHU5OTBxbGg2TFh0alY2QWdqVjhNakNiaUFyaUdCU0E?oc=5"
+   ],
+   "source": "shattered.io",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Laronix%20Bionic%20Voice%3A%20Brisbane%20founder",
+    "x": "https://x.com/search?q=Laronix%20Bionic%20Voice%3A%20Brisbane%20founder&f=user",
+    "web": "https://www.google.com/search?q=Laronix%20Bionic%20Voice%3A%20Brisbane%20startup"
+   }
+  },
+  "laronix": {
+   "company": "Laronix",
+   "round": "series a",
+   "amount_m": 5.0,
+   "date": "2026-11-23",
+   "headline": "Laronix raises $5m in pre-Series A to take AI voice restoration tech to US and Europe",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQVBtcjlBMGxNalRZMEgzdzluclkwb29BendWVTFWUTIyTUNxX3dGUkFBTVJobkM2OHl1b0w0VklQQzJXZkF0dlMyTi1JcUdlTzNvUE84V1o2dVd2ZjhiZXRLZ1hfR2dvZU92c3lPZGotN25oVVJfS1hwMDBQZlZmajRXUHY4MGotbnFSRi04WTNjeTdXUTJZSG1CblpaWklKbmdOSnl0VEYyNEswSWdXUjBSRk9EU1laR3hsMkNjREJGeUs5QVBMbXhlVUlzX3hyN0HSAd4BQVVfeXFMUDdtb2lxd3ZjWVNBcWRiRHF2UFZPWlFsdnFIa19fRWY2Mkxuc1hWVXZtUzNYOFdJTER6UnVIbzJRbm1lSWM1OGNEQ09ndzdQWGtHQWpseWZMYmlyRTV2WkFLNTFsbmFzM3JsdUlZSEIycGhWZ2tTbG12M1VaOUJVQ3FBN0gxYkNEV2NvdDgtcG13ZVUtWUJiX0hXRGJPQ3EwbzBfWnczZFVtbHk2RUJOTlVtMmIxeEpSUjhnR0ZkNnR6aGtTbDByT2QwRmFSek1FQUhIcU1jMl90ZG16MlRn?oc=5"
+   ],
+   "source": "Business News Australia",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Laronix%20founder",
+    "x": "https://x.com/search?q=Laronix%20founder&f=user",
+    "web": "https://www.google.com/search?q=Laronix%20startup"
+   }
+  },
+  "ramonspace": {
+   "company": "Ramon.Space",
+   "round": "series b",
+   "amount_m": 124.0,
+   "date": "2026-11-18",
+   "headline": "Ramon.Space Raises $124 Million Series B to Expand Orbital Computing Infrastructure",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcUk4aE9NV1NfS0UtS243d09CaGVhTlJleURhU1FBRjM3YzJma09hMWx0cXF1THk1S0VjZFJoMWVlNlBIUFc1X1V4c204OGRaemExbk5pb2ppaXFEc294SHdUT0RSb1ZjZUU5a1lGU1ZWM3RJZmgzTkJpcTlYbnkwTWFvTGZiSUJMMjF0NkNEeUdxLVJIVnJhREhiQUNtd1B3X1lGdEhlcVdnY2dZUVU0T3NUS2dzTkp1?oc=5"
+   ],
+   "source": "SpaceWatch.GLOBAL",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Ramon.Space%20founder",
+    "x": "https://x.com/search?q=Ramon.Space%20founder&f=user",
+    "web": "https://www.google.com/search?q=Ramon.Space%20startup"
+   }
+  },
+  "matriq": {
+   "company": "MatriQ",
+   "round": "series b",
+   "amount_m": 140.0,
+   "date": "2026-11-20",
+   "headline": "Neutral-atom quantum startup MatriQ raises Series B, tops $140M in a year",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdU91akdWX01Rb0lBYzJQOEVmUVV6NXR1WjdOd0RxMmNPbnlDYkxRaDhhQVpLM2V4UDg0UlZGN0ZVRlBSVWpJV0JKbTZKWlN5c3FvSW4tN2hLQld0NmRpV2NIanRmb01JYTRTM3NoeEN0R0tOdUtlT0haTEdVWVpiTkt5UV9OUS1NWVN0N01WNERZaFNvcFJSeE03U3lScGxtU0pjc2NKeVY?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=MatriQ%20founder",
+    "x": "https://x.com/search?q=MatriQ%20founder&f=user",
+    "web": "https://www.google.com/search?q=MatriQ%20startup"
+   }
+  },
+  "zushealth": {
+   "company": "Zus Health",
+   "round": "series b",
+   "amount_m": 33.0,
+   "date": "2026-11-20",
+   "headline": "Zus Health raises US$33m Series B",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZ2FwRVNtNkZTQU9taEFjRDBLMTFZMzR2bFlJRUVxRWJ1TGdNNEZNVDh0M2VrcFVSLXNEVGwxNDAyc3RXRTYyNk1kYXZtel9ua3FzZlZ3YUhHTURESDJFUEQ1YzNDUE5pRmJ6ZWxuZEgwQ1EzQmhGRU9Sa2VxbFlHOFdKQjBzQ3kzT0x2bg?oc=5"
+   ],
+   "source": "Health Tech World",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.lever.co/zushealth",
+    "jobs": 6
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Zus%20Health%20founder",
+    "x": "https://x.com/search?q=Zus%20Health%20founder&f=user",
+    "web": "https://www.google.com/search?q=Zus%20Health%20startup"
+   }
+  },
+  "promiserobotics": {
+   "company": "Promise Robotics",
+   "round": "series b",
+   "amount_m": 40.0,
+   "date": "2026-11-18",
+   "headline": "Promise Robotics Raises CAN$40M in Series B Funding to Expand Automated Homebuilding Network",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOSWtJU1NDb0pHeVVHWHppZ2lIZmpfUzgteXpCR3ByMW40SHBtazk2YnRDc19iUXRKRGZqSWJpNTU0ck9UOUdZMXRBbkQzcURlWlVodTREcmlEaEtWTTZCZVI1OTlhYWtwa1JyRUxndUlrMW1ES0NuOHBDYzlBbWhZMm51RDA4ZDNobjlHOGZtdFVMbWFwbzgtWGU2OElnM0JBTE9ZN0RFU3Ftc0N5cG50WlZRdEtGRmc5R1VKVTlna2ZabkZtZDkwOA?oc=5"
+   ],
+   "source": "AI Insider",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.lever.co/promiserobotics",
+    "jobs": 19
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Promise%20Robotics%20founder",
+    "x": "https://x.com/search?q=Promise%20Robotics%20founder&f=user",
+    "web": "https://www.google.com/search?q=Promise%20Robotics%20startup"
+   }
+  },
+  "modelml": {
+   "company": "Model ML",
+   "round": "series b",
+   "amount_m": 250.0,
+   "date": "2026-11-18",
+   "headline": "Model ML raises USD 250 mln Series B for AI agents in finance",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxPU3kwUVhxbWVwLTdSY3dQNXozMXNuSF9BVk12RERNdkxfUWdvX3pxOG9aUnVGYW0zNDJodThuYVNiMGRoZ2FIbmZYRUNGbE05S0w3Zk9kZ0tzOGtmOW9adzdadHh2dzhiZWNfdkZvSjdNbncycUp0SEUwd3BNWVk0THk2d0dnUlpMWXZqUkdjYV9yamZxQWQ2a1A0TnBpQQ?oc=5"
+   ],
+   "source": "The Paypers",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Model%20ML%20founder",
+    "x": "https://x.com/search?q=Model%20ML%20founder&f=user",
+    "web": "https://www.google.com/search?q=Model%20ML%20startup"
+   }
+  },
+  "lancedb": {
+   "company": "LanceDB",
+   "round": "series b",
+   "amount_m": 57.5,
+   "date": "2026-11-19",
+   "headline": "LanceDB Raises $57.5M Series B to Scale Multimodal AI Data Infrastructure",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSzVTS0c1YnNMYWVoUkUxYkhvbVhkSmFhODBxdGtxRVpZb0xNWWs0bHVHYTNjaC12QnpfeE9uWmNZNDdMSU1VeEJ4eTY4eE9XUG93dU40LWxkUVRkSFI5RXhvMFI4Q0Vub1RoOEU1Z0tLZFN0MW9QNDdac0txU1NvVjNSaTlyamlFMEo5eFNJUldKZWV0ZmFuYmFYbV96MHpwMFpWRDVxc3RoOTktNkZDMA?oc=5",
+    "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOdFAtMUFWc3ZYQmxFQzN6QUNZU2VsWEZkWTFiT1M2T3k5TFYwZ2hYNGhYeDFaa2dhQXNYSGw0eGliM3JQVF9sVTRGTDBHaHExTzlPeXE4LWw1VkozZzAzSEl3YmtQMzBGMFhTTEZPcFNPUzVoQWtjVDk2TERtUnZyUE9aQlhfeFpreXlXMGhEQ2FnbUJHaTB5cUVPdzkzSXpaV0FzNG5Ub3c0ckxFOTFSY2d3aFAwa2dHRi13VTc0UlUwR2ZfUFdkaDB2YnZXS2tYQVA3TjBWRERQTzNua0tMV1ZEREw?oc=5"
+   ],
+   "source": "citybiz",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/lancedb",
+    "jobs": 11
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=LanceDB%20founder",
+    "x": "https://x.com/search?q=LanceDB%20founder&f=user",
+    "web": "https://www.google.com/search?q=LanceDB%20startup"
+   }
+  },
+  "isomorphic": {
+   "company": "Isomorphic",
+   "round": "series c",
+   "amount_m": 5000.0,
+   "date": "2026-11-18",
+   "headline": "Isomorphic raises record $5B series C to scale AI drug discovery",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTS1CZWI3akFvQUF5d0IzeDh6akxxOXJsSWliMXQ0aTdlazh5bXFIV1pFQ2RhR3RfaFYydTFRaUNHeGVVRDVIckVSV00zQnkyMXF0dGtpeGdDV2FXazgzOHlWRlROTThKUUZzSmNqRDhTX2g0bU1tamY4UldOT0lqcVZucDBiWGNFOWlJSFNiR2gzcFVwY3pmalRPbExZN1JlZ0ZodzZjZw?oc=5"
+   ],
+   "source": "BioWorld News",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Isomorphic%20founder",
+    "x": "https://x.com/search?q=Isomorphic%20founder&f=user",
+    "web": "https://www.google.com/search?q=Isomorphic%20startup"
+   }
+  },
+  "payhawk": {
+   "company": "Payhawk",
+   "round": "series c",
+   "amount_m": 280.0,
+   "date": "2026-11-18",
+   "headline": "Payhawk Raises $280M Series C at $2B Valuation to Build an AI Finance OS",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbGlzZHlsUzdKV09ZcTRiQzhRNzh0U1lteXh3cjkzQ2pJd2lGa0xpZlJLMThoY2pmRDFPbE5CTkhzU2pONXM0cm12d0UtMHFxSFRTWnl4UDhPVU9oSlFTQzFxU3JNR0psb3hTU1NyZjFaRHFralN1ek94S1dyaEh3T3R0Z2ZjbnhXUU9TOHQwM2ZLNms4SmpN?oc=5",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1yeDBJMGc5MFpKdnktNzRIa09oWWFscXFZa3hMRzVldUtDaG9ZWlBGWXFzZjhXdXAxbkI0cFh4ZklqOUI1Mjd6Z3FidGZWZHJsZFln?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUlAwX3B2WWMtZ3JCaF9iOWlmbjR0TzBQbWlCTmozR0VQYWtFdS16eDhFWmRhYXBxREYxUzZ5NkcyV0kwa3hLUHhmSTVtWkI5QkNsR3FGZ2toQWxDbm1pZWtwQVFIZTRyX2UzS250THVmQ2NVNzNVZE95M3lTMFZDbFIxMUV0cG9ScTlPb2xfMW5OakxYaWlIUnVhZExYbE0?oc=5",
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQVZaM3UwV1NzbklJVmJZZ0E0TGNVVERQd2xBblZDUXJvcFdMQWJJcVgzbEg4QTlfTVpmSVhyMU5EbVhNeTZybEw0eUJXV1FLYzZ1NUhHSjU5Smpsa1Jjb3UxVGNKR2NuTl9GQk5PaUxJWVAxYU1kMnJzcTFHNkUweDQzc0pab003NmhvZmJzNzhDS2V0ZzRyN2Q0dHNVUnJKVXBQUG1SWlo2eDRpNGZnNDlkekhfM0lEOHRYbF9HSlpRSFlhTGVZbEdJMUttS1VveXlxcA?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxQc19rc1ZNMXRldDhHYzNFc2J6MHBrSVJXOHdHQnIzNGlIdExRaEU5YWxsVDVtT1FvcGdjamR3X3dpQWEycHYtbTlxTGhOOXFuREJrQnlDX1N4MzdYclY5U29Rd0o0akEwQnV3WEZuNWljLVo3OHFzV2tDMFpHVzNXZHFuTmpYYUlhOHQzVHJ6ekxmV1lUdXBqTHZleUk?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Payhawk%20founder",
+    "x": "https://x.com/search?q=Payhawk%20founder&f=user",
+    "web": "https://www.google.com/search?q=Payhawk%20startup"
+   }
+  },
+  "chinaelectronicscloud": {
+   "company": "China Electronics Cloud",
+   "round": "series b",
+   "amount_m": 149.0,
+   "date": "2026-11-24",
+   "headline": "China Electronics Cloud raises $149M Series B led by state fund",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxQb1VCa2d5anlEOXZLX1dKcFRJbXNvcnltSUk5b01pOS1BLW16c05TY2s3Wng1ZnptZlZFVmlrNzZhRTRXSndpXzZqVUgzQkloVlZiVzZyd2Y5TDB5MFJsREFFTHplbVBOc0Y3YndfZWtQNEJ3WDB5TnVHWDhWVWpkUUFQVEs3aE1YZUVDbDJicTI0U2ZXQkkwZTJOdWw?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=China%20Electronics%20Cloud%20founder",
+    "x": "https://x.com/search?q=China%20Electronics%20Cloud%20founder&f=user",
+    "web": "https://www.google.com/search?q=China%20Electronics%20Cloud%20startup"
+   }
+  },
+  "chengfeng": {
+   "company": "Chengfeng",
+   "round": "series b",
+   "amount_m": 4.5,
+   "date": "2026-11-23",
+   "headline": "Chengfeng raises $4.5M Series B to expand chip inspection gear",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVk1XbVc4UjhzekRUbWlOY2FMTWhfc2hteU5wSHZKTG1xZ1prSGdvdVFZUlFETmJUY1h5RTdXb3V4Z0NVUnlEWFNjRlEtalVKUDY0UnJJaVBJMlBFTEpLb29wUDZpNG9HbXotWmxDVy1leUxnMHJMdFNHcTNLUGJRWDRTbW1XS3lILUp3VzNpUk84RGgxMWYzcUYwYw?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Chengfeng%20founder",
+    "x": "https://x.com/search?q=Chengfeng%20founder&f=user",
+    "web": "https://www.google.com/search?q=Chengfeng%20startup"
+   }
+  },
+  "enhancedrobotics": {
+   "company": "Enhanced Robotics",
+   "round": "series b",
+   "amount_m": 15.0,
+   "date": "2026-11-23",
+   "headline": "AI tennis-robot maker Enhanced Robotics raises $15M Series B",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNndFVWZHMF9yY2VKZDV4VkVoU2M5NFQ4Y1FKcldBa1VkQWpLWW9lMDdpaHEzNy12dHNNWGhVNXJuMW1oa2dIWDRveTlRdnpTUWpGM0tXU3VMSnE3UDhqN29ob1o2cWUxMjlHTXZadmVuVFRaMlZfNTBJRlI4dXFsWU0weUVDdlllT1R2N1JndzY1UFhKMHBKeg?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Enhanced%20Robotics%20founder",
+    "x": "https://x.com/search?q=Enhanced%20Robotics%20founder&f=user",
+    "web": "https://www.google.com/search?q=Enhanced%20Robotics%20startup"
+   }
+  },
+  "variational": {
+   "company": "Variational",
+   "round": "series b",
+   "amount_m": 110.0,
+   "date": "2026-11-18",
+   "headline": "On-Chain Derivatives Platform Variational Raises USD 110M Series B Led by Bain Capital Crypto",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE05TmFRa1lHUVQ2U0JjNFl3RlFzbDJaRnZUUmZ3TjMxdUdiMmFZblJJWG9BSmlORGQ3aG1aeWFoSUZzdW1wUC02R05Dd3JuTGVwNFNj?oc=5",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE80Yjh3UGszaldaWVYwcEw1dlFNQ096Qk9qT1pkMTVhUTQzeFFlbkJ2M0szWHdkT2U2bnZOYWtTbzdfZG9vMXNJWHdfNnVPNDA3OS0tOFdBMkVvQzlQTlp4Z18yQ3hDOExvbXV0UjlSYWZIOHhMVE5F?oc=5",
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZlJBTWRzVHJhSjdYLTR2cnVUaXhkejd2YkRDcV80bTFReG5CbVgyZTZOajltVVhvZXBVUy10djZuTkNNVzdCVW1zYXRnRFdhM2JOUjBYSzd2b05OSW1kcERTR0YxM1hqUzdIdUJsdDAxaTBWdUYwdEFzaFlFd3JNcWRqUUV1WkVmV0U0MzlZTDA4Ymt0b3hacG9mMDVHQ252bFU5LXJwODhIelFVT2trNWFaSEJMTFNHajJ0dlprX1FXR2hXa3FkYk9KZFM0a2MzMW91dQ?oc=5"
+   ],
+   "source": "Wowtale",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Variational%20founder",
+    "x": "https://x.com/search?q=Variational%20founder&f=user",
+    "web": "https://www.google.com/search?q=Variational%20startup"
+   }
+  },
+  "satsure": {
+   "company": "SatSure",
+   "round": "series b",
+   "amount_m": null,
+   "date": "2026-11-25",
+   "headline": "SatSure raises Series B to scale its Full-Stack Earth Intelligence Platform for Global Markets",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTDY5M2hiV0Q2SDN3ZENQTDNoRXBoc0UwdmpESHRvUElYSGFpR0hvcDdBcjR2Z2Rza0ZZLW9HSU9PNmpRRDE3aTZzZzA2LVRxWkRwMEJHdHBlRTd4QXRmdHcxQlU1bVVSQkhSZ21GdzJ5RVF6UlM1aElrUlFSa3ZtMDU4TkNTczNOcGlxRjBpX2Z5U2Z3UWJtbVhPb1d0SlFIRUtXLUZqVDFpNkNaVWpRbFNrUWo4OWNqRWpNVl9WQzJnMkJVeXhtNHBCMmxhQkNzdktn?oc=5"
+   ],
+   "source": "Cyprus Shipping News",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=SatSure%20founder",
+    "x": "https://x.com/search?q=SatSure%20founder&f=user",
+    "web": "https://www.google.com/search?q=SatSure%20startup"
+   }
+  },
+  "disseqtai": {
+   "company": "Disseqt AI",
+   "round": "series a",
+   "amount_m": 8.0,
+   "date": "2026-11-19",
+   "headline": "Disseqt AI Raises $8 Million in Pre-Series A Funding Led by Gresham House Ventures",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOOXBxTVJOSFlyLWd5a25yZXdhSFo1NTB4VmlmLTR3RTR4aDdBLV9kdFNaNkV6dTVjWkRQSTBWX0dLY082UndGWnhFR1V4N3pLWlVfclE1dXZLS1NNWWFKOWlfQzhvelFFTHRiRVpxR1RTYmE0cWNpNzRmcnRwMTlZb0V1aFhqdXAzdU84X0FLYncyVnZmTGdJak84eXl5SzJza3FyeDJkNVlwMjQ1cWpBVklXOWNBQUdRdV82eHRVQ096c2pWZFU3MmRHMS1UMHlvTDBLMzJzQjdseC02b0xHVGwyRQ?oc=5",
+    "https://entrackr.com/snippets/disseqt-ai-raises-8-mn-led-by-gresham-house-ventures-rahul-dravid-joins-round-12822900"
+   ],
+   "source": "Siliconindia",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Disseqt%20AI%20founder",
+    "x": "https://x.com/search?q=Disseqt%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=Disseqt%20AI%20startup"
+   }
+  },
+  "fintechpayhawk": {
+   "company": "Fintech Payhawk",
+   "round": "series c",
+   "amount_m": 280.0,
+   "date": "2026-11-19",
+   "headline": "Fintech Payhawk raises $280 mn in Series C funding at $2 bn valuation",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOaE1VNHQ1enRPLUg0dVRZRUhuQUdUNEt2VTdwOW03TXFDRDJxRnFCQlFlUWtFMFVJZG9yZkxXdl84ZFFBZnRId19fRlJmLTFQTWc0TGl6WWd6bkdITUJ3U2VoTjhwajJ0QWNjbjNRM0hPc05aRnBOWDdjN0kxcXpidm90OEJPemNPeXoxZ25vbXUwUDlBQ1h3V0ln?oc=5"
+   ],
+   "source": "Beinsure",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Fintech%20Payhawk%20founder",
+    "x": "https://x.com/search?q=Fintech%20Payhawk%20founder&f=user",
+    "web": "https://www.google.com/search?q=Fintech%20Payhawk%20startup"
+   }
+  },
+  "avicena": {
+   "company": "Avicena",
+   "round": "series c",
+   "amount_m": 100.0,
+   "date": "2026-11-24",
+   "headline": "Avicena Raises $100M+ Series C to Commercialize microLED Optical Links",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZ1JmeUxXekwyZHJ5WEhReThVcGdYb1N2Y3ZZaVdWR2c3MHJkYWRPQkN6Z1VRa3RCZldEeTdsR05nRzgwdlk3aFZib3JEbnpPNnd4MWVEQ2d0WGoxNUx3aWlsUml2S0xsMkFnZ2tSVW1sWHI5Sl9idHBOdG5WWnJMbERHZENNNkJZWU5yU1RMcEgwY01HY1ZRTXdrTQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikAJBVV95cUxOekU0a3RvVTYxbTFPNGhwSi02THVTZFY1QlpSeVZOa1JDRWRWcm1HZkdYRXMtdzdZZU15bzdEUlBmRzAyYWFUTlVmcUNkUUx4TjVSVWUyQThVQ0piTjhzNjF5VHF2V184c2kzUzJGeHo5dFhLQ250OF9JQndFRV81QlJTSUhCVnJkaFJnNjIxMkdJVzMzbHRvT0MwNUlId1VTSU10MlFuYlFLanVUczN0NWpaaGV6MktIeXVXZzNmSXlTUXVhRUpFTENFRVBQb2JXTGkyM1VVMFY5TERXRHBMNzR3T1VFX3hCUjhGQXRPZUI4QWFza3JrQXU5QlNTWVZCWVlrS3hWenM1a05qbDI1Sw?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRnB4N1MwTUY3UUJLOEZ5ckNnbEQwal9UWkt6Wms3dnJVbng5VW94VXF6V1RHZ1ZmOC1lT0xzdzFMOEUzT2Y5eU90V1NvWGE2R0hmVWlhbXhuWlVvejVEb3hPRFp0aUJETDZXSmk1eHlsdDFFS3hXM0FUZ2ZoUFlpS2VoQ3p2VWhPT1RIS2FucmZ6TVQ30gGUAUFVX3lxTFBGcHg3UzBNRjdRQks4RnlyQ2dsRDBqX1RaS3paazd2clVueDlVb3hVcXpXVEdnVmY4LWVPTHN3MUw4RTNPZjl5T3RXU29YYTZHSGZVaWFteG5aVW96NURveE9EWnRpQkRMNldKaTV4eWx0MUVLeFczQVRnZmhQWWlLZWhDenZVaE9PVEhLYW5yZnpNVDc?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Avicena%20founder",
+    "x": "https://x.com/search?q=Avicena%20founder&f=user",
+    "web": "https://www.google.com/search?q=Avicena%20startup"
+   }
+  },
+  "brazilianfintechnomad": {
+   "company": "Brazilian fintech Nomad",
+   "round": "series c",
+   "amount_m": 172.0,
+   "date": "2026-11-18",
+   "headline": "Brazilian fintech Nomad raises R$172 million Series C led by Tether Capital: Finsiders Brasil",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MVVF6cGQ2VjItdzJoUGkzV0N2UFBudFJwS0hkeDJwbUdiTWNkS00xT0RDdEdrOEZUdklwaE8yRkY2VjBpbnFFNTJQbk5XbVdCaHlJdVJteTlaMnZyWEpCX3FiZW9CSURvX0xPNEM2R21MT3pmOEM1bA?oc=5"
+   ],
+   "source": "CryptoRank",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Brazilian%20fintech%20Nomad%20founder",
+    "x": "https://x.com/search?q=Brazilian%20fintech%20Nomad%20founder&f=user",
+    "web": "https://www.google.com/search?q=Brazilian%20fintech%20Nomad%20startup"
+   }
+  },
+  "qctrl": {
+   "company": "Q-CTRL",
+   "round": "series c",
+   "amount_m": 290.0,
+   "date": "2026-11-22",
+   "headline": "Q-CTRL Raises $290M Series C Led by Salesforce Ventures as Quantum Navigation Drives Early Revenue - Avi-Go",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MWEhuTHFGaEM3VjY4V0FQWXZObmtKYmlJcnR3U2ZzOWlDTVNCUk1VbXVpRDE5dzVjc3NyNXlwZ09KMnFRSEVVdzg3VUFMQzdUR1hlX1ppQlUxQ2FlMWN2NjVOVjJoY2xIVVRSMDByYjNrcXc?oc=5"
+   ],
+   "source": "Avi-Go",
+   "first_seen": "2026-11-25",
+   "tracked": "Q-CTRL",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Q-CTRL%20founder",
+    "x": "https://x.com/search?q=Q-CTRL%20founder&f=user",
+    "web": "https://www.google.com/search?q=Q-CTRL%20startup"
+   }
+  },
+  "lawvek": {
+   "company": "Lawvek",
+   "round": "pre-seed",
+   "amount_m": 0.55,
+   "date": "2026-11-24",
+   "headline": "Lawvek raises $550K in pre-seed round led by Neon Fund",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://entrackr.com/snippets/lawvek-raises-550k-in-pre-seed-round-led-by-neon-fund-12838009"
+   ],
+   "source": "",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Lawvek%20founder",
+    "x": "https://x.com/search?q=Lawvek%20founder&f=user",
+    "web": "https://www.google.com/search?q=Lawvek%20startup"
+   }
+  },
+  "inprimefinserv": {
+   "company": "InPrime Finserv",
+   "round": "series b",
+   "amount_m": 12.02,
+   "date": "2026-11-19",
+   "headline": "InPrime Finserv raises Rs 101 Cr in Series B round led by FMO",
+   "india": true,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://entrackr.com/snippets/inprime-finserv-raises-rs-101-cr-in-series-b-round-led-by-fmo-12823682"
+   ],
+   "source": "",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=InPrime%20Finserv%20founder",
+    "x": "https://x.com/search?q=InPrime%20Finserv%20founder&f=user",
+    "web": "https://www.google.com/search?q=InPrime%20Finserv%20startup"
+   }
+  },
+  "lemonpeel": {
+   "company": "Lemonpeel",
+   "round": "pre-seed",
+   "amount_m": 1.0,
+   "date": "2026-11-17",
+   "headline": "AI video production startup Lemonpeel raises $1 Mn in pre-seed round led by Shastra VC",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://entrackr.com/snippets/ai-video-production-startup-lemonpeel-raises-1-mn-in-pre-seed-round-led-by-shastra-vc-12816726"
+   ],
+   "source": "",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Lemonpeel%20founder",
+    "x": "https://x.com/search?q=Lemonpeel%20founder&f=user",
+    "web": "https://www.google.com/search?q=Lemonpeel%20startup"
+   }
+  }
+ },
+ "probes": {
+  "reversa": null,
+  "originframe": null,
+  "chipverse": null,
+  "wepinioninc": null,
+  "coprod": {
+   "url": "https://jobs.ashbyhq.com/coprod",
+   "jobs": 11
+  },
+  "rcoast": null,
+  "009": null,
+  "zippy": null,
+  "clace": null,
+  "nilocas": null,
+  "khaime": null,
+  "null": null,
+  "verosecurity": null,
+  "pulmogate": null,
+  "wilgot": null,
+  "embo": {
+   "url": "https://jobs.ashbyhq.com/embo",
+   "jobs": 9
+  },
+  "tesorai": null,
+  "huver": null,
+  "kara": null,
+  "nodalnetworks": {
+   "url": "https://jobs.lever.co/nodal-networks",
+   "jobs": 9
+  },
+  "sona": {
+   "url": "https://jobs.ashbyhq.com/sona",
+   "jobs": 15
+  },
+  "lato": null,
+  "maple": null,
+  "minicor": null,
+  "agroreply": null,
+  "semanta": null,
+  "omenx": null,
+  "rialto": null,
+  "marlowe": null,
+  "dulo": null,
+  "aevius": null,
+  "globalkiwilabs": null,
+  "supertake": null,
+  "perryai": null,
+  "verra": null,
+  "commitbiologics": null,
+  "insurtecheightbyzero80": null,
+  "qsecurity": null,
+  "alecto": {
+   "url": "https://jobs.ashbyhq.com/alecto",
+   "jobs": 2
+  },
+  "protegey": null,
+  "luparobotics": null,
+  "verkkorobotics": null,
+  "dawadose": null,
+  "soketai": null,
+  "modernindustrials": null,
+  "ycbackedlato": null,
+  "metano": null,
+  "codex": {
+   "url": "https://jobs.ashbyhq.com/codex",
+   "jobs": 6
+  },
+  "nvidiabackedgenesisai": null,
+  "zipher": null,
+  "agon": {
+   "url": "https://jobs.ashbyhq.com/agon",
+   "jobs": 5
+  },
+  "aidenai": null,
+  "hatzai": null,
+  "chenghengwei": null,
+  "humynlabs": null,
+  "medialabs": null,
+  "everful": null,
+  "arvaai": null,
+  "jordanianfintechinvoiceq": null,
+  "stepsecurity": null,
+  "ils": null,
+  "apricityrobotics": null,
+  "corma": null,
+  "boltz": {
+   "url": "https://jobs.ashbyhq.com/boltz",
+   "jobs": 11
+  },
+  "linq": null,
+  "apricity": null,
+  "laronixbionicvoicebrisbane": null,
+  "laronix": null,
+  "ramonspace": null,
+  "matriq": null,
+  "zushealth": {
+   "url": "https://jobs.lever.co/zushealth",
+   "jobs": 6
+  },
+  "promiserobotics": {
+   "url": "https://jobs.lever.co/promiserobotics",
+   "jobs": 19
+  },
+  "modelml": null,
+  "lancedb": {
+   "url": "https://jobs.ashbyhq.com/lancedb",
+   "jobs": 11
+  },
+  "isomorphic": null,
+  "payhawk": null,
+  "chinaelectronicscloud": null,
+  "chengfeng": null,
+  "enhancedrobotics": null,
+  "variational": null,
+  "satsure": null,
+  "disseqtai": null,
+  "fintechpayhawk": null,
+  "avicena": null,
+  "brazilianfintechnomad": null,
+  "lawvek": null,
+  "inprimefinserv": null,
+  "lemonpeel": null
+ },
+ "sec_seen": []
+}

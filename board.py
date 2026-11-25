@@ -86,7 +86,25 @@ def kind_of(j):
     return "fde" if FDE_RE.search(j["title"]) else role
 
 
-def build(jobs, out=OUT, seen_path=SEEN):
+def funded_rows(profile, path=None):
+    """Recently funded startups from funding.json, each tagged with the areas of the
+    profile it fits (profile.yaml `funding_fit`). Only the board uses the fit; the
+    email lists every round."""
+    path = path or os.path.join(os.path.dirname(os.path.abspath(__file__)), "funding.json")
+    if not os.path.exists(path):
+        return []
+    with open(path) as f:
+        rounds = (json.load(f) or {}).get("rounds", {})
+    areas = [(a["label"], re.compile(a["re"], re.I)) for a in profile.get("funding_fit") or []]
+    out = []
+    for key, r in rounds.items():
+        text = f"{r['company']} {r.get('headline', '')}"
+        fit = [label for label, rx in areas if rx.search(text)]
+        out.append({**r, "key": "fund|" + key, "fit": fit})
+    return sorted(out, key=lambda r: (r["date"], r["first_seen"]), reverse=True)
+
+
+def build(jobs, out=OUT, seen_path=SEEN, funding_path=None):
     with open(PROFILE) as f:
         profile = yaml.safe_load(f)
     rules = {s: _rules(profile, s) for s in ("skills", "seniority", "off_profile")}
@@ -131,7 +149,8 @@ def build(jobs, out=OUT, seen_path=SEEN):
     meta = {"name": profile.get("name", ""), "summary": profile.get("summary", ""),
             "built": dt.datetime.now().strftime("%d %b %Y, %H:%M"),
             "first_build": first_build, "today": today}
-    data = json.dumps({"meta": meta, "jobs": rows}, separators=(",", ":"))
+    funded = funded_rows(profile, funding_path)
+    data = json.dumps({"meta": meta, "jobs": rows, "funded": funded}, separators=(",", ":"))
     page = TEMPLATE.replace("/*DATA*/null", data.replace("</", "<\\/"))
     page = page.replace("{{NAME}}", html.escape(meta["name"]))
     with open(out, "w") as f:
@@ -201,6 +220,7 @@ def main():
     ap.add_argument("--jobs", help="build from this matches JSON instead of scanning")
     ap.add_argument("--out", default=OUT, help="where to write the page (default board.html)")
     ap.add_argument("--seen", default=SEEN, help="first-seen dates file (default board_seen.json)")
+    ap.add_argument("--funding", help="recently funded rounds (default funding.json)")
     args = ap.parse_args()
 
     if args.jobs or args.no_scan:
@@ -211,7 +231,7 @@ def main():
             jobs = json.load(f)
     else:
         jobs = scan()
-    build(jobs, args.out, args.seen)
+    build(jobs, args.out, args.seen, args.funding)
     if args.no_serve:
         return
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
@@ -255,6 +275,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
 .pill{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:4px 11px;cursor:pointer}
 .pill.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .pill span{opacity:.7;margin-left:3px}
+[hidden]{display:none!important}
 .row2{display:flex;gap:16px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-bottom:10px}
 .row2 label{display:flex;gap:6px;align-items:center}
 .count{margin-left:auto}
@@ -307,6 +328,13 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
   <label><input type="checkbox" id="newonly"> New since last build</label>
   <span class="count" id="count"></span>
 </div>
+<div class="row2" id="fundbar" hidden>
+  <label><input type="checkbox" id="fitonly"> Fits my experience</label>
+  <label>Round <select id="fround"><option value="">All rounds</option><option value="pre-seed">Pre-seed</option><option value="seed">Seed</option><option value="series a">Series A</option><option value="series b">Series B</option><option value="series c">Series C</option></select></label>
+  <label><input type="checkbox" id="findia"> India only</label>
+  <label>Show <select id="fstat"><option value="">To contact</option><option value="messaged">Messaged</option><option value="replied">Replied</option><option value="hidden">Hidden</option><option value="all">All</option></select></label>
+  <span class="count" id="fcount"></span>
+</div>
 <main id="list"></main>
 <button class="btn more" id="more" hidden>Show more</button>
 </div>
@@ -316,7 +344,9 @@ const REGIONS = {contract:"Contract openings", india:"India & Remote", us_h1b:"U
 const STAGES = {research:"Research lab", public:"Public / big co", late:"Late stage", series_c:"Series C", series_b:"Series B", series_a:"Series A", seed:"Seed", pre_seed:"Pre-seed", contract:"Contract platform", other:"Other"};
 const STATUS = {saved:"Saved", applied:"Applied", interview:"Interviewing", offer:"Offer", rejected:"Rejected", hidden:"Hidden"};
 const KINDS = {engineering:"Engineering", fde:"Forward deployed", science:"Scientist", product:"Product management"};
-const TABS = [["review","To review"],["saved","Saved"],["applied","Applied"],["hidden","Hidden"]];
+const TABS = [["review","To review"],["saved","Saved"],["applied","Applied"],["hidden","Hidden"],["funded","Recently funded"]];
+const ROUND = {"pre-seed":"Pre-seed", seed:"Seed", "series a":"Series A", "series b":"Series B", "series c":"Series C"};
+DATA.funded = DATA.funded || [];
 const PAGE = 60;
 let apps = {}, server = false, tab = "review", region = "", kind = "", shown = PAGE;
 const $ = id => document.getElementById(id);
@@ -403,9 +433,57 @@ function card(j) {
     </div></article>`;
 }
 
+// --- Recently funded startups (outreach to founders) ---
+const fst = f => (apps[f.key] || {}).status || "";
+const fopen = f => !fst(f) || fst(f) === "note";
+function fundedRows() {
+  const q = $("q").value.trim().toLowerCase(), fit = $("fitonly").checked, rnd = $("fround").value,
+        india = $("findia").checked, show = $("fstat").value;
+  return DATA.funded.filter(f => (show === "all" || (show ? fst(f) === show : fopen(f)))
+    && (!fit || f.fit.length) && (!rnd || f.round === rnd) && (!india || f.india)
+    && (!q || (f.company + " " + f.headline + " " + (f.founders||[]).join(" ")).toLowerCase().includes(q)));
+}
+function fcard(f) {
+  const s = fst(f), a = apps[f.key] || {}, L = f.links || {};
+  const amt = f.amount_m ? `$${f.amount_m >= 1 ? f.amount_m : f.amount_m.toFixed(2)}M` : "";
+  const chips = [`<span class="chip">${esc(ROUND[f.round] || f.round)}${f.round_guessed ? " (est.)" : ""}</span>`,
+    amt ? `<span class="chip">${esc(amt)}</span>` : "", f.india ? '<span class="chip new">India</span>' : "",
+    f.tracked ? '<span class="chip">On watch list</span>' : "",
+    ...f.fit.map(w => `<span class="chip g">${esc(w)}</span>`)].join("");
+  const ppl = (f.founders || []).length ? `<div class="sub">Founders / officers: ${esc(f.founders.join(", "))}</div>` : "";
+  const board = f.board ? `<a href="${esc(f.board.url)}" target="_blank" rel="noopener" title="Found by name; check it is the same company">Job board (${f.board.jobs} open) ↗</a> · ` : "";
+  return `<article class="card" data-fkey="${esc(f.key)}">
+    <div class="score" style="color:${f.fit.length >= 2 ? "var(--hi)" : f.fit.length ? "var(--mid)" : "var(--lo)"}" title="Areas of your experience it fits">${f.fit.length}</div>
+    <div><div class="t"><a href="${esc((f.sources||[])[0] || L.web)}" target="_blank" rel="noopener">${esc(f.company)}</a></div>
+      <div class="sub">${esc(f.headline)}</div>
+      <div class="sub found"><b>Announced ${ago(f.date)}</b>${f.source ? " · " + esc(f.source) : ""}</div>
+      ${ppl}<div class="chips">${chips}</div>
+      <div class="sub">${board}<a href="${esc(L.linkedin)}" target="_blank" rel="noopener">Founders on LinkedIn ↗</a> · <a href="${esc(L.x)}" target="_blank" rel="noopener">X ↗</a> · <a href="${esc(L.web)}" target="_blank" rel="noopener">Website ↗</a></div>
+      ${s && s !== "hidden" || a.note ? `<input class="note" data-act="note" placeholder="Notes (who you messaged, when, reply…)" value="${esc(a.note||"")}">` : ""}
+    </div>
+    <div class="acts"><div class="btn-row">
+      <button class="btn${s==="messaged"?" on":""}" data-act="messaged">Messaged</button>
+      <button class="btn${s==="replied"?" on":""}" data-act="replied">Replied</button>
+      <button class="btn${s==="hidden"?" on":""}" data-act="hidden" title="Not interested">Hide</button></div>
+    </div></article>`;
+}
+const fobj = f => ({key: f.key, company: f.company, title: `${ROUND[f.round] || f.round} round`, url: (f.sources||[])[0] || ""});
+
 function render(keep) {
   if (!keep) shown = PAGE;
-  $("tabs").innerHTML = TABS.map(([k,v]) => `<button class="tab${tab===k?" on":""}" data-tab="${k}">${v}<b>${DATA.jobs.filter(j => inTab(j,k)).length}</b></button>`).join("");
+  const funded = tab === "funded";
+  $("tabs").innerHTML = TABS.map(([k,v]) => `<button class="tab${tab===k?" on":""}" data-tab="${k}">${v}<b>${k === "funded" ? DATA.funded.filter(fopen).length : DATA.jobs.filter(j => inTab(j,k)).length}</b></button>`).join("");
+  ["kinds","regions"].forEach(id => $(id).hidden = funded);
+  document.querySelector(".row2:not(#fundbar)").hidden = funded;
+  $("fundbar").hidden = !funded;
+  ["stage","sort"].forEach(id => $(id).hidden = funded);
+  if (funded) {
+    const rows = fundedRows();
+    $("fcount").textContent = `${rows.length} startup${rows.length===1?"":"s"}`;
+    $("list").innerHTML = rows.length ? rows.slice(0, shown).map(fcard).join("") : '<p class="empty">Nothing here with these filters.</p>';
+    $("more").hidden = rows.length <= shown;
+    return;
+  }
   const base = filtered(true), counts = {};
   base.forEach(j => counts[j.region] = (counts[j.region]||0) + 1);
   $("regions").innerHTML = `<button class="pill${!region?" on":""}" data-region="">All<span>${base.length}</span></button>` +
@@ -424,8 +502,13 @@ function render(keep) {
 }
 
 const byKey = new Map(DATA.jobs.map(j => [j.key, j]));
+const byFKey = new Map(DATA.funded.map(f => [f.key, fobj(f)]));
 $("list").addEventListener("click", e => {
   const el = e.target.closest("[data-act]"); if (!el) return;
+  const fc = el.closest("[data-fkey]");
+  if (fc) { const f = byFKey.get(fc.dataset.fkey), act = el.dataset.act;
+    if (act === "note") return;
+    setStatus(f, ((apps[f.key]||{}).status) === act ? "" : act); render(true); return; }
   const j = byKey.get(el.closest(".card").dataset.key), act = el.dataset.act;
   if (act === "apply") { if (!st(j)) { setStatus(j, "saved"); setTimeout(() => render(true), 300); } return; }
   if (act === "status" || act === "note") return;
@@ -433,13 +516,15 @@ $("list").addEventListener("click", e => {
 });
 $("list").addEventListener("change", e => {
   const el = e.target.closest("[data-act]"); if (!el) return;
+  const fc = el.closest("[data-fkey]");
+  if (fc) { const f = byFKey.get(fc.dataset.fkey); if (el.dataset.act === "note") setStatus(f, (apps[f.key]||{}).status || "note", el.value); return; }
   const j = byKey.get(el.closest(".card").dataset.key);
   if (el.dataset.act === "status") { setStatus(j, el.value); render(true); }
   if (el.dataset.act === "note") setStatus(j, st(j) || "note", el.value);
 });
 $("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) { tab = b.dataset.tab; render(); } });
 $("regions").addEventListener("click", e => { const b = e.target.closest("[data-region]"); if (b) { region = b.dataset.region; render(); } });
-["q","stage","sort","newonly","age"].forEach(id => $(id).addEventListener("input", () => render()));
+["q","stage","sort","newonly","age","fitonly","fround","findia","fstat"].forEach(id => $(id).addEventListener("input", () => render()));
 $("min").addEventListener("input", () => { $("minv").textContent = $("min").value; render(); });
 $("kinds").addEventListener("click", e => { const b = e.target.closest("[data-kind]"); if (b) { kind = b.dataset.kind; render(); } });
 $("export").addEventListener("click", e => { e.preventDefault();

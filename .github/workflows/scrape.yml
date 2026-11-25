@@ -40,6 +40,7 @@ jobs:
           SENDER_GMAIL: ${{ secrets.SENDER_GMAIL }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT: ${{ secrets.RECIPIENT }}
+          SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}   # optional: turns on SEC Form D (founder names)
         run: |
           if [[ "${{ inputs.email_first_run }}" == "true" ]]; then
             python scrape.py --email-first-run --dump-matches matches.json
@@ -57,10 +58,11 @@ jobs:
 
       - name: Persist state
         run: |
-          if [[ -n "$(git status --porcelain state.json site_seen.json)" ]]; then
+          if [[ -n "$(git status --porcelain state.json site_seen.json funding.json)" ]]; then
             git config user.name "job-watcher"
             git config user.email "actions@github.com"
             git add state.json
+            [[ -f funding.json ]] && git add funding.json
             [[ -f site_seen.json ]] && git add site_seen.json
             git commit -m "Update seen-jobs state [skip ci]"
             git push

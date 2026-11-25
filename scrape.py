@@ -27,6 +27,7 @@ import yaml
 
 import ats as ats_mod
 import contracts
+import funding
 
 HERE = __file__.rsplit("/", 1)[0]
 COMPANIES_YAML = f"{HERE}/companies.yaml"
@@ -491,7 +492,7 @@ def load_academic():
     return set(doc.get("academic", []) or [])
 
 
-def render_email(new_jobs, lab_updates=(), contract_jobs=()):
+def render_email(new_jobs, lab_updates=(), contract_jobs=(), funded=()):
     stages = load_stages()
     academic_names = load_academic()
     academic = [j for j in new_jobs if j["company"] in academic_names]
@@ -531,6 +532,8 @@ def render_email(new_jobs, lab_updates=(), contract_jobs=()):
     if abroad:
         lines += [f"{len(abroad)} new listing(s) abroad (visa-sponsoring / open to Indian nationals):", ""]
         lines += _render_section(abroad)
+    if funded:
+        lines += funding.render_email(funded)
     return "\n".join(lines)
 
 
@@ -794,6 +797,16 @@ def main():
         with open(args.dump_matches, "w") as f:
             json.dump(matches + [{**j, "contract": True} for j in contract_jobs], f)
 
+    # Recently funded startups (pre-seed to Series C), for messaging founders.
+    # Updates funding.json; returns rounds new since the last run.
+    new_funded = []
+    if not args.no_ats and not args.dry_run:
+        try:
+            new_funded = funding.update()
+            print(f"Funding: {len(new_funded)} new round(s).", file=sys.stderr)
+        except Exception as e:  # noqa: BLE001 - never let this break the job alerts
+            print(f"Funding step failed: {e}", file=sys.stderr)
+
     lab_updates, lab_state = [], None
     if not args.no_ats:
         labs = load_lab_watch()
@@ -811,21 +824,23 @@ def main():
         return
 
     # Decide whether to email.
-    should_email = bool(new_jobs or lab_updates or new_contracts)
+    should_email = bool(new_jobs or lab_updates or new_contracts or new_funded)
     if fresh_state and not args.email_first_run:
         # First ever run: seed state silently, don't blast every existing listing.
         should_email = False
         print("First run: seeding state without emailing (use --email-first-run to email current snapshot).", file=sys.stderr)
 
     if should_email:
-        parts = [f"{len(new_jobs)} new listing(s)"] if new_jobs or not new_contracts else []
+        parts = [f"{len(new_jobs)} new listing(s)"] if new_jobs or not (new_contracts or new_funded) else []
         if new_contracts:
             parts.append(f"{len(new_contracts)} contract opening(s)")
         if lab_updates:
             parts.append(f"{len(lab_updates)} lab hiring update(s)")
+        if new_funded:
+            parts.append(f"{len(new_funded)} newly funded startup(s)")
         subject = f"{EMAIL_TITLE}: {', '.join(parts)}"
         try:
-            ok = send_email(subject, render_email(new_jobs, lab_updates, new_contracts))
+            ok = send_email(subject, render_email(new_jobs, lab_updates, new_contracts, new_funded))
         except Exception as e:  # noqa: BLE001
             print(f"ERROR sending email: {e}", file=sys.stderr)
             ok = False

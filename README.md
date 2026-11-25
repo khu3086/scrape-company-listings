@@ -242,3 +242,23 @@ Enable it once in the repo: Settings → Pages → Source: GitHub Actions. On th
 hosted page, tracking lives in the browser; use Export / Import to move it
 between devices or into `applications.json` for the local server. The repo is
 public, so the hosted page is too.
+
+## Recently funded startups (founder outreach)
+
+`funding.py` collects pre-seed to Series C rounds every run from Google News
+(US and India editions), TechCrunch, Crunchbase News, Inc42 and Entrackr, and keeps
+the last 90 days in `funding.json`.
+
+- **Email:** a "Recently funded" section lists rounds that are new since the last run
+  (every round, no profile filter): company, round, amount in USD, headline + link,
+  India flag, founders when known, and a LinkedIn search for the founders.
+- **Board:** a "Recently funded" tab with Messaged / Replied / Hide tracking, notes,
+  round and India filters, and a **Fits my experience** filter that tags each startup
+  with the areas of your background it touches (`funding_fit` in `profile.yaml`).
+- **Job boards:** each company is probed on Ashby / Greenhouse / Lever. A match is shown
+  as "possible job board" (same-name companies exist), not added to `companies.yaml`.
+- **SEC Form D (optional):** set the `SEC_CONTACT_EMAIL` repository secret (any address
+  you're happy to give SEC; it goes in the request header, as SEC requires) to also read
+  US Form D filings, which name founders / officers. Form D has no round name, so the
+  round is estimated from the amount (under $3M seed, $3-20M A, $20-60M B, $60-150M C).
+- Headline parsing is heuristic: expect the odd wrong company name or a missed round.
