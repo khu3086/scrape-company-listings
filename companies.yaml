@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 504  |  Unresolved: 163
+# Resolved: 504  |  Unresolved: 166
 
 companies:
   1Password:
@@ -2150,6 +2150,9 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
+- Absolute Street Capital
+- FOT Partners
+- KeyQuant
 - DeepSeek
 - Moonshot AI
 - Kling AI
