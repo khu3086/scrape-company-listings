@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 504  |  Unresolved: 166
+# Resolved: 506  |  Unresolved: 166
 
 companies:
   1Password:
@@ -846,6 +846,9 @@ companies:
   Hamming AI:
     ats: yc
     slug: hamming-ai
+  Handshake AI:
+    ats: ashby
+    slug: handshake   # staff roles; its contract gigs come via contracts.py
   HappyRobot:
     ats: ashby
     slug: happyrobot.ai
@@ -1924,6 +1927,9 @@ companies:
   Turbopuffer:
     ats: ashby
     slug: turbopuffer
+  Turing:
+    ats: greenhouse
+    slug: turing   # staff roles; its contract gigs come via contracts.py
   Turnitin:
     ats: smartrecruiters
     slug: TurnitinLLC
@@ -2708,6 +2714,8 @@ stages:
   - Arista Networks
   - Texas Instruments
   late:
+  - Turing
+  - Handshake AI
   - Wayve
   - Synthesia
   - Supabase
