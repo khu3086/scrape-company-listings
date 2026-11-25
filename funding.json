@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T08:14+00:00",
+ "updated": "2026-11-25T09:42+00:00",
  "rounds": {
   "reversa": {
    "company": "Reversa",
@@ -1690,7 +1690,7 @@
    ],
    "source": "Health Tech World",
    "first_seen": "2026-11-25",
-   "tracked": "",
+   "tracked": "Zus Health",
    "board": {
     "url": "https://jobs.lever.co/zushealth",
     "jobs": 6
@@ -2112,6 +2112,53 @@
     "x": "https://x.com/search?q=Lemonpeel%20founder&f=user",
     "web": "https://www.google.com/search?q=Lemonpeel%20startup"
    }
+  },
+  "collamo": {
+   "company": "Collamo",
+   "round": "pre-seed",
+   "amount_m": 0.6,
+   "date": "2026-11-25",
+   "headline": "Collamo Raises $600K in Pre-Seed Funding to Expand Platform and Global Operations",
+   "india": true,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMUpaS3pqcXlwU1pXamd6eXlscFBibXU2TEw1SFhpZUpvQnUyUGlhLVJWX3ladURETHFfV0J1SXNwZGRXY2dQLTZ0N3NRWkdQS2JsSXpGTlE5bFhRVERVU09hODhzR1FOckg4US1Yb19ETG9NWC1naWRmbnhVZTN3aU5RdURrOHluUUR2RVlSdlhpRUZaQjVLUDE5Y0R0MHFZajBTU18tclRvNmF2b190dXFnRFJ5Y2pRLTlrNTJ4cVRBOEJ1UjBYOGliZVYwdEFtUTlzWmJfank3NjRBNmNyVTBVU1dUQdIB6wFBVV95cUxQX2Fia0xjNmxvTExiUVhaeWp4N0wzUk41Ym1MOWlNT3F6SnVhS2NvNW1NdHY3UEZBcUhKOFB2V0hIYTh3Zmx3UUx1cU9PZExBdVpfN3d1SFdvbGE0MlVTTk1qMWtrZ0xmcUExQWtnRjRHbm9fZ0R5WFd4eXE3Q1lkSFdYODA5NGNYbENDdkZwRGxFMjVyeHJvYWZpdlNkckJnb3lEdWpoS3NnS2dteVo3NHRmNUs5enp0T3Y5aFE0TENsemhocWJPUERFUVpUUWNQSWxNLVptZV9QenI2eF9kSlVJeENNLXRVbTU4?oc=5"
+   ],
+   "source": "Business Standard",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Collamo%20founder",
+    "x": "https://x.com/search?q=Collamo%20founder&f=user",
+    "web": "https://www.google.com/search?q=Collamo%20startup"
+   }
+  },
+  "sequelio": {
+   "company": "Sequel.io",
+   "round": "series b",
+   "amount_m": 15.0,
+   "date": "2026-11-18",
+   "headline": "Sequel.io Raises $15M Series B to Expand AI Agents and Personalization",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxONGc5WGl6cUpoLTNDem5GdEJQLTdweDMtZmVyZEM0b19FQ3ZGazFZZFYxUm00Umw1cEE4M1hFSmJXYXpTQXN5eHVESnZnQ0wwcERLMXhPMFJBWjJJa0VqaGxBd2x3ZWg3TzJyRTZzdVduQTd6NC1WU3BRWm90ektrV2hwdE5kUE4tZU00aThXYnl2MTljb2c?oc=5"
+   ],
+   "source": "Unite.AI",
+   "first_seen": "2026-11-25",
+   "tracked": "",
+   "board": {
+    "url": "https://jobs.ashbyhq.com/sequel-io",
+    "jobs": 7
+   },
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Sequel.io%20founder",
+    "x": "https://x.com/search?q=Sequel.io%20founder&f=user",
+    "web": "https://www.google.com/search?q=Sequel.io%20startup"
+   }
   }
  },
  "probes": {
@@ -2235,7 +2282,12 @@
   "brazilianfintechnomad": null,
   "lawvek": null,
   "inprimefinserv": null,
-  "lemonpeel": null
+  "lemonpeel": null,
+  "collamo": null,
+  "sequelio": {
+   "url": "https://jobs.ashbyhq.com/sequel-io",
+   "jobs": 7
+  }
  },
  "sec_seen": []
 }
