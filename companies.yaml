@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 506  |  Unresolved: 166
+# Resolved: 553  |  Unresolved: 279
 
 companies:
   1Password:
@@ -34,6 +34,9 @@ companies:
   Accend:
     ats: yc
     slug: accend
+  AcuityMD:
+    ats: greenhouse
+    slug: acuitymd
   Adalat AI:
     ats: json
     url: https://api.manatal.com/open/v3/career-page/adalat/jobs/?page_size=100
@@ -73,6 +76,9 @@ companies:
   Airbnb:
     ats: greenhouse
     slug: airbnb
+  Ajaib:
+    ats: yc
+    slug: ajaib
   Akuna Capital:
     ats: greenhouse
     slug: akunacapital
@@ -249,6 +255,9 @@ companies:
   Bedrock Robotics:
     ats: ashby
     slug: bedrock-robotics
+  Belvo:
+    ats: ashby
+    slug: belvo
   BentoLabs AI:
     ats: yc
     slug: bentolabs-ai
@@ -315,6 +324,9 @@ companies:
   Buffer:
     ats: ashby
     slug: buffer
+  BukuWarung:
+    ats: yc
+    slug: bukuwarung
   BusinessOnBot:
     ats: yc
     slug: businessonbot
@@ -416,6 +428,9 @@ companies:
   Clay:
     ats: ashby
     slug: claylabs
+  Clerk:
+    ats: ashby
+    slug: clerk
   ClickHouse:
     ats: ashby
     slug: clickhouse
@@ -440,6 +455,9 @@ companies:
   Coinbase:
     ats: greenhouse
     slug: coinbase
+  CoinTracker:
+    ats: ashby
+    slug: cointracker
   CoLoop:
     ats: yc
     slug: coloop
@@ -528,6 +546,9 @@ companies:
   Dataiku:
     ats: greenhouse
     slug: dataiku
+  Datree:
+    ats: yc
+    slug: datree
   David AI:
     ats: ashby
     slug: david-ai
@@ -548,6 +569,9 @@ companies:
   Deccan AI:
     ats: dover
     slug: 67f2878a-67d0-4fdf-8a05-f59915f790d9
+  Deed:
+    ats: yc
+    slug: deed
   Deel:
     ats: page
     url: https://www.deel.com/careers/
@@ -585,6 +609,9 @@ companies:
   Doppel:
     ats: greenhouse
     slug: doppel
+  Doppler:
+    ats: ashby
+    slug: doppler
   DrDroid:
     ats: yc
     slug: drdroid
@@ -597,6 +624,9 @@ companies:
   DRW:
     ats: greenhouse
     slug: drweng
+  Duffel:
+    ats: ashby
+    slug: duffel
   E2B:
     ats: ashby
     slug: e2b
@@ -651,6 +681,9 @@ companies:
   Eventual:
     ats: ashby
     slug: eventualcomputing
+  evervault:
+    ats: ashby
+    slug: evervault
   Exa:
     ats: ashby
     slug: exa
@@ -698,12 +731,18 @@ companies:
     url: 'https://fleetai.com/careers'
     default_location: 'San Francisco, CA'
     embedded: '<a[^>]*href="(?P<url>/careers/[a-z0-9-]+)"[^>]*>(?:\s*<[^>]+>)*\s*(?P<loc>[^<]+?)\s*(?:<[^>]+>\s*)+[^<]+?(?:\s*<[^>]+>)+\s*(?P<title>[^<]+?)\s*<'
+  Flock Homes:
+    ats: greenhouse
+    slug: flockhomes
   Floworks:
     ats: yc
     slug: floworks
   Fluidstack:
     ats: ashby
     slug: fluidstack
+  Fondeadora:
+    ats: yc
+    slug: fondeadora
   Fractal Analytics:
     ats: workday
     tenant: fractal
@@ -1109,6 +1148,9 @@ companies:
     wait_ms: 4000
     block: class="title-section"[^>]*>(.*?)View and Apply
     default_location: Bengaluru, India
+  Lokal:
+    ats: yc
+    slug: lokal
   Lovable:
     ats: greenhouse
     slug: lovable
@@ -1145,6 +1187,9 @@ companies:
     title: title
     location: locations
     link: https://careers.manus.im/en/jobs/{id}
+  ManyChat:
+    ats: ashby
+    slug: manychat
   marketfeed:
     ats: page
     url: https://www.marketfeed.com/careers
@@ -1165,6 +1210,9 @@ companies:
   Meesho:
     ats: lever
     slug: meesho
+  Memfault:
+    ats: yc
+    slug: memfault
   Mercari:
     ats: workable
     slug: mercari
@@ -1181,6 +1229,9 @@ companies:
   Mercury:
     ats: greenhouse
     slug: mercury
+  Meru Health:
+    ats: greenhouse
+    slug: meruhealth
   Meshy:
     ats: ashby
     slug: meshy
@@ -1258,12 +1309,24 @@ companies:
     url: https://mudrex.careers-page.com/
     link: /jobs/[0-9a-f-]{36}$
     default_location: Bengaluru, India
+  Multiply Labs:
+    ats: lever
+    slug: multiplylabs
+  Multis:
+    ats: yc
+    slug: multis
   n8n:
     ats: ashby
     slug: n8n
+  Nabis:
+    ats: greenhouse
+    slug: nabis
   NanoNets:
     ats: ashby
     slug: nanonets
+  Narrator:
+    ats: yc
+    slug: narrator
   Neko Health:
     ats: ashby
     slug: neko-health
@@ -1355,6 +1418,9 @@ companies:
   OpenRouter:
     ats: ashby
     slug: openrouter
+  Ophelia:
+    ats: greenhouse
+    slug: ophelia
   Optiver:
     ats: greenhouse
     slug: optiverus
@@ -1391,18 +1457,27 @@ companies:
   Paradigm:
     ats: ashby
     slug: paradigm
+  Paragon:
+    ats: yc
+    slug: paragon
   Parallel:
     ats: ashby
     slug: parallel   # parallel.ai, web search API (greenhouse 'parallel' is Parallel Systems, rail)
   Pareto AI:
     ats: ashby
     slug: pareto-ai
+  Passport:
+    ats: ashby
+    slug: passport
   Patronus AI:
     ats: greenhouse
     slug: patronusaiinc
   PayJoy:
     ats: lever
     slug: payjoy
+  PayMongo:
+    ats: yc
+    slug: paymongo
   PayPal:
     ats: workday
     tenant: paypal
@@ -1456,6 +1531,9 @@ companies:
   Poolside:
     ats: ashby
     slug: poolside
+  PopSQL:
+    ats: yc
+    slug: popsql
   Porter:
     ats: lever
     slug: porter
@@ -1475,6 +1553,9 @@ companies:
   Prime Intellect:
     ats: ashby
     slug: primeintellect
+  Prodigal:
+    ats: greenhouse
+    slug: prodigal
   Profound:
     ats: greenhouse
     slug: profound
@@ -1495,6 +1576,9 @@ companies:
     title: name
     location: displayLocation
     link: https://careers.publicissapient.com{jobDetailUrl}
+  Pyka:
+    ats: lever
+    slug: pyka
   Q-CTRL:
     ats: lever
     slug: q-ctrl
@@ -1515,9 +1599,15 @@ companies:
     domain: qualcomm.com
     location: India
     max: 50
+  QuestDB:
+    ats: yc
+    slug: questdb
   Quickchat AI:
     ats: yc
     slug: quickchat-ai
+  Quince:
+    ats: greenhouse
+    slug: quince
   Qure.ai:
     ats: page
     url: https://career.qure.ai/jobs/Careers
@@ -1537,6 +1627,9 @@ companies:
   Raven:
     ats: yc
     slug: raven
+  Raycast:
+    ats: yc
+    slug: raycast
   Razorpay:
     ats: greenhouse
     slug: razorpaysoftwareprivatelimited
@@ -1551,6 +1644,9 @@ companies:
   Reface:
     ats: breezy
     slug: reface
+  Reflect Orbital:
+    ats: ashby
+    slug: reflect-orbital
   Reflection AI:
     ats: ashby
     slug: reflectionai
@@ -1616,6 +1712,9 @@ companies:
   Rollstack:
     ats: ashby
     slug: rollstack
+  Rose Rocket:
+    ats: yc
+    slug: rose-rocket
   Rowboat Labs:
     ats: yc
     slug: rowboat-labs
@@ -1639,6 +1738,9 @@ companies:
   Safe Superintelligence:
     ats: ashby
     slug: safe
+  SafetyWing:
+    ats: yc
+    slug: safetywing
   Sail Research:
     ats: ashby
     slug: sail
@@ -1689,6 +1791,9 @@ companies:
   SE3 Labs:
     ats: ashby
     slug: se3
+  Second Front Systems:
+    ats: ashby
+    slug: second-front-systems
   Seekho:
     ats: workable
     slug: seekho
@@ -1698,6 +1803,9 @@ companies:
   ServiceNow:
     ats: smartrecruiters
     slug: servicenow
+  SFOX:
+    ats: greenhouse
+    slug: sfox
   Shaped:
     ats: smartrecruiters
     slug: shaped
@@ -1758,6 +1866,9 @@ companies:
     tenant: snapchat
     dc: wd1
     site: snap
+  Snappr:
+    ats: lever
+    slug: snappr
   Snorkel AI:
     ats: greenhouse
     slug: snorkelai
@@ -1781,6 +1892,9 @@ companies:
   Speechify:
     ats: greenhouse
     slug: speechify
+  Spenmo:
+    ats: yc
+    slug: spenmo
   SpotDraft:
     ats: ashby
     slug: spotdraft
@@ -1790,6 +1904,9 @@ companies:
   Sprinto:
     ats: lever
     slug: Sprinto
+  SpruceID:
+    ats: ashby
+    slug: spruceid
   Stord:
     ats: workday
     tenant: stord
@@ -1822,6 +1939,9 @@ companies:
   SuperKalam:
     ats: yc
     slug: superkalam
+  Supermove:
+    ats: lever
+    slug: supermove
   Surge AI:
     ats: ashby
     slug: surge-ai
@@ -1924,6 +2044,9 @@ companies:
   TrueFoundry:
     ats: greenhouse
     slug: truefoundry
+  Truv:
+    ats: lever
+    slug: truv
   Turbopuffer:
     ats: ashby
     slug: turbopuffer
@@ -1933,6 +2056,9 @@ companies:
   Turnitin:
     ats: smartrecruiters
     slug: TurnitinLLC
+  Turquoise Health:
+    ats: ashby
+    slug: turquoise-health
   Twenty:
     ats: ashby
     slug: twenty
@@ -2000,6 +2126,12 @@ companies:
   Vercel:
     ats: greenhouse
     slug: vercel
+  Verto:
+    ats: yc
+    slug: vertofx
+  Vesta:
+    ats: ashby
+    slug: vesta
   Vibrium AI:
     ats: page
     url: https://www.vibrium.ai/company/careers/
@@ -2030,6 +2162,9 @@ companies:
     render: true
     link: careers\.vodex\.ai/[\w-]+-\d+/?$
     default_location: Bengaluru, India
+  Voldex:
+    ats: ashby
+    slug: voldex
   Voleon:
     ats: ashby
     slug: voleon
@@ -2146,16 +2281,135 @@ companies:
     wait_ms: 4000
     block: class="title-section"[^>]*>(.*?)View and Apply
     default_location: Bengaluru, India
+  zeroheight:
+    ats: yc
+    slug: zeroheight
   ZOKO:
     ats: yc
     slug: zoko
   Zoox:
     ats: lever
     slug: zoox
+  Zus Health:
+    ats: lever
+    slug: zushealth
   Zymbly:
     ats: yc
     slug: zymbly
 unresolved:
+- Stainless
+- Seaplane IO
+- Glide Apps
+- Conduktor
+- Tabular Technologies
+- Stacker
+- Robocorp
+- Slintel
+- Releasehub
+- Netdata
+- CodeSandbox
+- Atomist
+- Wallarm
+- Tara Intelligence
+- Netography
+- HyperTrack
+- Zomentum
+- Coiled
+- Nym Technologies
+- Iron Fish
+- Solana
+- DFINITY
+- Oasis Labs
+- Castle
+- Callsign
+- Syndicate
+- Thesis
+- Caldera
+- Yellow Card
+- Fold App
+- Faraway
+- Wave Mobile Money
+- Empower
+- Level
+- Lula
+- Catch
+- Gatsby Trading
+- Previse
+- Giraffe360
+- Metawave
+- Nomagic
+- Stoke Space
+- Coco
+- Cellino
+- GenEdit
+- Contraline
+- Hoxton Farms
+- ADVANO
+- Akash Systems
+- Skydrop
+- Raptor Maps
+- Elemental Machines
+- Blues
+- Shiok Meats
+- Fountain Therapeutics
+- Loyal
+- Flow Neuroscience
+- Helium Health
+- FidoCure
+- Yes Health
+- HeartVista
+- Eligo Bioscience
+- Connie Health
+- Elemeno Health
+- Curtsy
+- Rutter
+- Wander
+- Kitchenful
+- Quell Tech
+- Popshop Live
+- Fat Llama
+- Hubble Contacts
+- Scentbird
+- UNTUCKit
+- BULLETIN
+- Karma
+- Aalto
+- Atmos
+- One More Game
+- FRVR
+- PortalOne
+- Elodie Games
+- Audius
+- Virtually Human Studio
+- Playco
+- Bunch
+- Bigscreen
+- Kapwing
+- Veed
+- HOOKED
+- Streamloots
+- Mobalytics
+- Searchlight
+- Dover
+- WorkWhile
+- Advantage Club
+- Landed
+- Shipamax
+- Nowports
+- Ganaz
+- Humi
+- inFeedo
+- Sign In Enterprise
+- Silo
+- Run The World
+- Miso
+- Jopwell
+- Playbook
+- Whimsical
+- Causal
+- Subject
+- Primer
+- Disco
 - Absolute Street Capital
 - FOT Partners
 - KeyQuant
@@ -2855,6 +3109,53 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - AcuityMD
+  - Ajaib
+  - Belvo
+  - BukuWarung
+  - Clerk
+  - CoinTracker
+  - Datree
+  - Deed
+  - Doppler
+  - Duffel
+  - evervault
+  - Flock Homes
+  - Fondeadora
+  - Lokal
+  - ManyChat
+  - Memfault
+  - Meru Health
+  - Multiply Labs
+  - Multis
+  - Nabis
+  - Narrator
+  - Ophelia
+  - Paragon
+  - Passport
+  - PayMongo
+  - PopSQL
+  - Prodigal
+  - Pyka
+  - QuestDB
+  - Quince
+  - Raycast
+  - Reflect Orbital
+  - Rose Rocket
+  - SafetyWing
+  - Second Front Systems
+  - SFOX
+  - Snappr
+  - Spenmo
+  - SpruceID
+  - Supermove
+  - Truv
+  - Turquoise Health
+  - Verto
+  - Vesta
+  - Voldex
+  - zeroheight
+  - Zus Health
   - PhysicsX
   - Liquid AI
   - Bedrock Robotics
