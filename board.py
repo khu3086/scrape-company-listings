@@ -329,7 +329,8 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
   <span class="count" id="count"></span>
 </div>
 <div class="row2" id="fundbar" hidden>
-  <label><input type="checkbox" id="fitonly"> Fits my experience</label>
+  <label>Experience fit <select id="ffit"><option value="">Any startup</option><option value="*">Fits any of my areas</option></select></label>
+  <label>Sort <select id="fsort"><option value="new">Newest first</option><option value="fit">Best fit</option><option value="amount">Biggest round</option></select></label>
   <label>Round <select id="fround"><option value="">All rounds</option><option value="pre-seed">Pre-seed</option><option value="seed">Seed</option><option value="series a">Series A</option><option value="series b">Series B</option><option value="series c">Series C</option></select></label>
   <label><input type="checkbox" id="findia"> India only</label>
   <label>Announced <select id="fage"><option value="">Any time</option><option value="1">Past 24 hours</option><option value="3">Past 3 days</option><option value="7">Past week</option><option value="30">Past month</option></select></label>
@@ -438,10 +439,10 @@ function card(j) {
 const fst = f => (apps[f.key] || {}).status || "";
 const fopen = f => !fst(f) || fst(f) === "note";
 function fundedRows() {
-  const q = $("q").value.trim().toLowerCase(), fit = $("fitonly").checked, rnd = $("fround").value,
+  const q = $("q").value.trim().toLowerCase(), fit = $("ffit").value, rnd = $("fround").value,
         india = $("findia").checked, show = $("fstat").value, fage = +$("fage").value;
   return DATA.funded.filter(f => (show === "all" || (show ? fst(f) === show : fopen(f)))
-    && (!fit || f.fit.length) && (!rnd || f.round === rnd) && (!india || f.india)
+    && (!fit || (fit === "*" ? f.fit.length > 0 : f.fit.includes(fit))) && (!rnd || f.round === rnd) && (!india || f.india)
     && (!fage || Date.parse(f.date + "T00:00:00") >= Date.now() - fage * DAY)
     && (!q || (f.company + " " + f.headline + " " + (f.founders||[]).join(" ")).toLowerCase().includes(q)));
 }
@@ -480,7 +481,9 @@ function render(keep) {
   $("fundbar").hidden = !funded;
   ["stage","sort"].forEach(id => $(id).hidden = funded);
   if (funded) {
-    const rows = fundedRows();
+    const rows = fundedRows(), fs = $("fsort").value;
+    if (fs === "fit") rows.sort((a,b) => b.fit.length - a.fit.length || b.date.localeCompare(a.date));
+    else if (fs === "amount") rows.sort((a,b) => (b.amount_m||0) - (a.amount_m||0) || b.date.localeCompare(a.date));
     $("fcount").textContent = `${rows.length} startup${rows.length===1?"":"s"}`;
     $("list").innerHTML = rows.length ? rows.slice(0, shown).map(fcard).join("") : '<p class="empty">Nothing here with these filters.</p>';
     $("more").hidden = rows.length <= shown;
@@ -526,7 +529,7 @@ $("list").addEventListener("change", e => {
 });
 $("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) { tab = b.dataset.tab; render(); } });
 $("regions").addEventListener("click", e => { const b = e.target.closest("[data-region]"); if (b) { region = b.dataset.region; render(); } });
-["q","stage","sort","newonly","age","fitonly","fround","findia","fage","fstat"].forEach(id => $(id).addEventListener("input", () => render()));
+["q","stage","sort","newonly","age","ffit","fsort","fround","findia","fage","fstat"].forEach(id => $(id).addEventListener("input", () => render()));
 $("min").addEventListener("input", () => { $("minv").textContent = $("min").value; render(); });
 $("kinds").addEventListener("click", e => { const b = e.target.closest("[data-kind]"); if (b) { kind = b.dataset.kind; render(); } });
 $("export").addEventListener("click", e => { e.preventDefault();
@@ -544,6 +547,8 @@ $("importf").addEventListener("change", async () => {
 $("more").addEventListener("click", () => { shown += PAGE; render(true); });
 $("theme").addEventListener("change", () => { const v = $("theme").value; v ? document.documentElement.dataset.theme = v : delete document.documentElement.dataset.theme; lsSet("board-theme", v); });
 const th = lsGet("board-theme"); if (th) { $("theme").value = th; document.documentElement.dataset.theme = th; }
+{ const areas = [...new Set(DATA.funded.flatMap(f => f.fit))].sort(), n = a => DATA.funded.filter(f => f.fit.includes(a)).length;
+  $("ffit").innerHTML += areas.map(a => `<option value="${esc(a)}">${esc(a)} (${n(a)})</option>`).join(""); }
 $("stage").innerHTML += Object.entries(STAGES).map(([k,v]) => `<option value="${k}">${v}</option>`).join("");
 $("summary").textContent = `${DATA.meta.summary} · ${DATA.jobs.length} openings · updated ${DATA.meta.built}`;
 loadApps().then(() => render());

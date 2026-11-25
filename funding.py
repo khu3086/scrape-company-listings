@@ -136,6 +136,11 @@ def company_from_title(title):
     if re.search(r"['’]s\s+\S", co):
         co = re.split(r"['’]s\s+", co)[-1]
     co = re.sub(r"^(the|how|why|india'?s|us-based|uk-based|[a-z]+-based)\s+", "", co, flags=re.I)
+    # "Nvidia-backed Genesis AI", "Fintech Payhawk", "YC-backed Foo" -> the company itself
+    co = re.sub(r"^([\w.&-]+-(backed|founded|led|owned)\s+)+", "", co, flags=re.I)
+    co = re.sub(r"^(fintech|edtech|healthtech|insurtech|proptech|agritech|agtech|deeptech|cleantech|climate ?tech|"
+                r"legaltech|saas|b2b|d2c|ai|gen ?ai|crypto|web3|robotics|quantum|biotech|defen[cs]e ?tech|"
+                r"cybersecurity|logistics|ev|spacetech|healthcare|insurance|payments?)\s+(?=[A-Z0-9])", "", co, flags=re.I)
     co = re.sub(r"['’]s$", "", co).strip(" ,:;-")
     words = co.split()
     if not words or len(words) > 5 or not re.match(r"[A-Z0-9]", words[0]):
