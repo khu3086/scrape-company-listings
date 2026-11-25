@@ -332,6 +332,7 @@ input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);
   <label><input type="checkbox" id="fitonly"> Fits my experience</label>
   <label>Round <select id="fround"><option value="">All rounds</option><option value="pre-seed">Pre-seed</option><option value="seed">Seed</option><option value="series a">Series A</option><option value="series b">Series B</option><option value="series c">Series C</option></select></label>
   <label><input type="checkbox" id="findia"> India only</label>
+  <label>Announced <select id="fage"><option value="">Any time</option><option value="1">Past 24 hours</option><option value="3">Past 3 days</option><option value="7">Past week</option><option value="30">Past month</option></select></label>
   <label>Show <select id="fstat"><option value="">To contact</option><option value="messaged">Messaged</option><option value="replied">Replied</option><option value="hidden">Hidden</option><option value="all">All</option></select></label>
   <span class="count" id="fcount"></span>
 </div>
@@ -438,9 +439,10 @@ const fst = f => (apps[f.key] || {}).status || "";
 const fopen = f => !fst(f) || fst(f) === "note";
 function fundedRows() {
   const q = $("q").value.trim().toLowerCase(), fit = $("fitonly").checked, rnd = $("fround").value,
-        india = $("findia").checked, show = $("fstat").value;
+        india = $("findia").checked, show = $("fstat").value, fage = +$("fage").value;
   return DATA.funded.filter(f => (show === "all" || (show ? fst(f) === show : fopen(f)))
     && (!fit || f.fit.length) && (!rnd || f.round === rnd) && (!india || f.india)
+    && (!fage || Date.parse(f.date + "T00:00:00") >= Date.now() - fage * DAY)
     && (!q || (f.company + " " + f.headline + " " + (f.founders||[]).join(" ")).toLowerCase().includes(q)));
 }
 function fcard(f) {
@@ -456,7 +458,7 @@ function fcard(f) {
     <div class="score" style="color:${f.fit.length >= 2 ? "var(--hi)" : f.fit.length ? "var(--mid)" : "var(--lo)"}" title="Areas of your experience it fits">${f.fit.length}</div>
     <div><div class="t"><a href="${esc((f.sources||[])[0] || L.web)}" target="_blank" rel="noopener">${esc(f.company)}</a></div>
       <div class="sub">${esc(f.headline)}</div>
-      <div class="sub found"><b>Announced ${ago(f.date)}</b>${f.source ? " · " + esc(f.source) : ""}</div>
+      <div class="sub found"><b title="${f.round_guessed ? "Date of the SEC Form D filing" : "Date the funding news was published"}">${f.round_guessed ? "Filed" : "Funded"} ${fmtDate(f.date)}</b> (${ago(f.date)})${f.source ? " · " + esc(f.source) : ""}</div>
       ${ppl}<div class="chips">${chips}</div>
       <div class="sub">${board}<a href="${esc(L.linkedin)}" target="_blank" rel="noopener">Founders on LinkedIn ↗</a> · <a href="${esc(L.x)}" target="_blank" rel="noopener">X ↗</a> · <a href="${esc(L.web)}" target="_blank" rel="noopener">Website ↗</a></div>
       ${s && s !== "hidden" || a.note ? `<input class="note" data-act="note" placeholder="Notes (who you messaged, when, reply…)" value="${esc(a.note||"")}">` : ""}
@@ -524,7 +526,7 @@ $("list").addEventListener("change", e => {
 });
 $("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) { tab = b.dataset.tab; render(); } });
 $("regions").addEventListener("click", e => { const b = e.target.closest("[data-region]"); if (b) { region = b.dataset.region; render(); } });
-["q","stage","sort","newonly","age","fitonly","fround","findia","fstat"].forEach(id => $(id).addEventListener("input", () => render()));
+["q","stage","sort","newonly","age","fitonly","fround","findia","fage","fstat"].forEach(id => $(id).addEventListener("input", () => render()));
 $("min").addEventListener("input", () => { $("minv").textContent = $("min").value; render(); });
 $("kinds").addEventListener("click", e => { const b = e.target.closest("[data-kind]"); if (b) { kind = b.dataset.kind; render(); } });
 $("export").addEventListener("click", e => { e.preventDefault();

@@ -54,8 +54,14 @@ EXCLUDE_RE = re.compile(
 )
 
 
+# Gigs that need fluency in another language ("Bilingual Spanish Generalist — AI Safety").
+# Hindi is kept: Khushi speaks it.
+LANGUAGE_RE = re.compile(r"^(?!.*\bhindi\b).*\b(bilingual|spanish|chinese|mandarin|cantonese|japanese|korean|german|french|portuguese|italian|arabic|russian|turkish|vietnamese|thai|indonesian|malay|tagalog|filipino|dutch|polish|hebrew|swedish|norwegian|danish|finnish|greek|czech(?! republic)|romanian|ukrainian|hungarian|farsi|persian|swahili|bangla|bengali|urdu|tamil|telugu|kannada|malayalam|marathi|gujarati|punjabi|native speaker|linguist\w*)\b", re.I)
+
+
 def is_tech_role(title):
-    return bool(ROLE_RE.search(title or "")) and not EXCLUDE_RE.search(title or "")
+    t = title or ""
+    return bool(ROLE_RE.search(t)) and not EXCLUDE_RE.search(t) and not LANGUAGE_RE.search(t)
 
 
 def _get(url, **kw):

@@ -216,7 +216,7 @@ def from_form_d(seen_filings, days=7):
     if not contact:
         return [], []
     headers = {"User-Agent": f"scrape-company-listings job watcher {contact}"}
-    filings = []
+    filings, filed_on = [], {}
     today = dt.date.today()
     for back in range(days):
         d = today - dt.timedelta(days=back)
@@ -235,6 +235,7 @@ def from_form_d(seen_filings, days=7):
                 path = line.split()[-1]
                 if path not in seen_filings:
                     filings.append(path)
+                    filed_on[path] = d.isoformat()
         time.sleep(0.2)
 
     def read(path):
@@ -279,7 +280,7 @@ def from_form_d(seen_filings, days=7):
             filed = re.search(r"/(\d{10})-(\d{2})-", path)
             rounds.append({
                 "company": name.title() if name.isupper() else name, "round": round_from_amount(sold),
-                "round_guessed": True, "amount_m": round(sold, 2), "date": today.isoformat(),
+                "round_guessed": True, "amount_m": round(sold, 2), "date": filed_on.get(path, today.isoformat()),
                 "headline": f"Form D: sold ${sold:.1f}M ({industry}), {g('city').title()}, {g('stateOrCountry')}",
                 "url": f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={path.split('/')[2]}&type=D",
                 "source": "SEC Form D", "india": False, "tech": True, "founders": people[:4],
@@ -404,7 +405,8 @@ def render_email(new):
         amt = f"${r['amount_m']:g}M" if r.get("amount_m") else "amount n/a"
         rnd = ROUND_LABEL.get(r["round"], r["round"]) + (" (guess from amount)" if r.get("round_guessed") else "")
         tags = [t for t in ("India" if r["india"] else "", "on watch list" if r.get("tracked") else "") if t]
-        lines.append(f"== {r['company']} · {rnd} · {amt}{' · ' + ', '.join(tags) if tags else ''}")
+        when = dt.date.fromisoformat(r["date"]).strftime("%d %b %Y")
+        lines.append(f"== {r['company']} · {rnd} · {amt} · funded {when}{' · ' + ', '.join(tags) if tags else ''}")
         lines.append(f"  {r['headline']}")
         if r.get("founders"):
             lines.append(f"  Founders / officers: {', '.join(r['founders'])}")

@@ -52,6 +52,8 @@ off_profile:
   - {label: Hardware, weight: -45, re: 'hardware|embedded|firmware|fpga|asic|\brtl\b|verification|analog|silicon|physical design|electrical|mechanical|layout|\bdft\b|\bsoc\b|circuit|thermal|manufactur'}
   - {label: Non-eng / support, weight: -45, re: '\bsales\b|account executive|account manag|support engineer|customer (success|support|service)|solutions consultant|recruit|marketing|\bqa\b|test engineer|\bsdet\b|quality|technician|it support|helpdesk|salesforce|\bsap\b|servicenow developer|mainframe|cobol'}
   - {label: Security ops, weight: -10, re: 'security operations|\bsoc analyst|penetration|red team'}
+  # Needs fluency in a language other than English / Hindi ("Bilingual Spanish ... AI Safety").
+  - {label: Needs another language, weight: -60, re: '^(?!.*\bhindi\b).*\b(bilingual|spanish|chinese|mandarin|cantonese|japanese|korean|german|french|portuguese|italian|arabic|russian|turkish|vietnamese|thai|indonesian|malay|tagalog|filipino|dutch|polish|hebrew|swedish|norwegian|danish|finnish|greek|czech(?! republic)|romanian|ukrainian|hungarian|farsi|persian|swahili|bangla|bengali|urdu|tamil|telugu|kannada|malayalam|marathi|gujarati|punjabi|native speaker|linguist\w*)\b'}
 
 # Bonus by where the role is (visa effort).
 location_bonus:

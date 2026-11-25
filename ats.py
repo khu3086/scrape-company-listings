@@ -14,6 +14,7 @@ import email.utils
 import html
 import json
 import re
+import threading
 import time
 import xml.etree.ElementTree as ET
 from urllib.parse import urljoin
@@ -358,11 +359,33 @@ def bamboohr(slug):
 _YC_PAGE_RE = re.compile(r'data-page="([^"]+)"')
 
 
+# ycombinator.com answers 429 when several pages are fetched at once (the scan runs
+# 12 boards in parallel), which used to look like "no jobs". All YC page requests go
+# through one throttle, and a 429 is retried after a pause.
+_YC_LOCK = threading.Lock()
+_YC_LAST = [0.0]
+YC_GAP = 3.0  # seconds between YC page requests (YC allows roughly 20 a minute)
+
+
+def _yc_get(url, headers=None):
+    r = None
+    for attempt in range(4):
+        with _YC_LOCK:
+            wait = _YC_LAST[0] + YC_GAP - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            _YC_LAST[0] = time.monotonic()
+        r = requests.get(url, headers=headers or HEADERS, timeout=TIMEOUT)
+        if r.status_code != 429:
+            return r
+        time.sleep(20 * (attempt + 1))
+    return r
+
+
 def yc(slug):
     """Jobs on ycombinator.com/companies/<slug>/jobs (props embedded in the page)."""
     try:
-        r = requests.get(f"https://www.ycombinator.com/companies/{slug}/jobs",
-                         headers=HEADERS, timeout=TIMEOUT)
+        r = _yc_get(f"https://www.ycombinator.com/companies/{slug}/jobs")
         m = _YC_PAGE_RE.search(r.text) if r.status_code == 200 else None
         if not m:
             return []
@@ -949,7 +972,7 @@ def yc_board(pages=YC_BOARD_PAGES, pause=1.5):
         if i:
             time.sleep(pause)
         try:
-            r = requests.get("https://www.ycombinator.com" + path, headers=ua, timeout=TIMEOUT)
+            r = _yc_get("https://www.ycombinator.com" + path, headers=ua)
             m = re.search(r'data-page="([^"]*)"', r.text) if r.status_code == 200 else None
             posts = json.loads(html.unescape(m.group(1)))["props"]["jobPostings"] if m else []
         except (requests.RequestException, ValueError, KeyError):
