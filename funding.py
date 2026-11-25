@@ -391,13 +391,16 @@ def update(path=STATE):
         json.dump({"updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"),
                    "rounds": rounds, "probes": probes, "sec_seen": sorted(sec_seen)[-20000:]},
                   f, indent=1, ensure_ascii=False)
-    new = [r for r in new if r["date"] >= cutoff]
+    # A company seen twice in one run (e.g. "seed" then "Series A") keeps only the last record.
+    new = [r for r in new if rounds.get(norm(r["company"])) is r]
     return [] if first_run else sorted(new, key=lambda r: (not r["india"], r["company"].lower()))
 
 
 def render_email(new):
     lines = ["######## Recently funded (pre-seed to Series C): message the founders ########", ""]
     for r in new:
+        r.setdefault("links", links(r["company"]))
+        r.setdefault("sources", [""])
         amt = f"${r['amount_m']:g}M" if r.get("amount_m") else "amount n/a"
         rnd = ROUND_LABEL.get(r["round"], r["round"]) + (" (guess from amount)" if r.get("round_guessed") else "")
         tags = [t for t in ("India" if r["india"] else "", "on watch list" if r.get("tracked") else "") if t]

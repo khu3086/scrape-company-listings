@@ -533,7 +533,10 @@ def render_email(new_jobs, lab_updates=(), contract_jobs=(), funded=()):
         lines += [f"{len(abroad)} new listing(s) abroad (visa-sponsoring / open to Indian nationals):", ""]
         lines += _render_section(abroad)
     if funded:
-        lines += funding.render_email(funded)
+        try:
+            lines += funding.render_email(funded)
+        except Exception as e:  # noqa: BLE001 - a funding bug must never block the job alerts
+            print(f"Funding section skipped: {e}", file=sys.stderr)
     return "\n".join(lines)
 
 
