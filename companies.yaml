@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 591  |  Unresolved: 294
+# Resolved: 593  |  Unresolved: 302
 
 companies:
   1Password:
@@ -1110,6 +1110,14 @@ companies:
   Jump Trading:
     ats: greenhouse
     slug: jumptrading
+  Jurisphere:
+    ats: page
+    url: https://www.jurisphere.ai/careers
+    render: true
+    heading: engineer|developer|scientist|manager|designer|analyst|architect|specialist|intern|head of|officer|associate
+    tags: h[1-6]
+    default_location: India
+    careers_url: https://www.jurisphere.ai/careers
   Juspay:
     ats: json
     url: https://joinus.juspay.in/api/careerJobOpening?limit=1000
@@ -1942,6 +1950,14 @@ companies:
     title: title
     location: jobLocations.0.name
     link: https://skit.keka.com/careers/jobdetails/{id}
+  Skyroot Aerospace:
+    ats: page
+    url: https://www.skyroot.in/careers
+    render: true
+    heading: engineer|developer|scientist|manager|designer|analyst|architect|lead|specialist|intern|head of|officer|associate
+    tags: h[1-6]|strong|b|p|div
+    default_location: Hyderabad, India
+    careers_url: https://skyroot.zohorecruit.in/jobs/Careers   # Zoho Recruit portal
   Slidely AI:
     ats: yc
     slug: slidely-ai
@@ -2411,6 +2427,14 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
+- Pronto
+- ecofy
+- BigEndian Semiconductors
+- Chosen
+- Tsavorite Scalable Intelligence
+- Aurm
+- Adroid
+- General Autonomy
 - Boston Medical Sciences
 - Xlue
 - nPhase AI
@@ -3099,6 +3123,7 @@ stages:
   - Arista Networks
   - Texas Instruments
   late:
+  - Skyroot Aerospace
   - Turing
   - Handshake AI
   - Wayve
@@ -3498,6 +3523,7 @@ stages:
   - General Translation
   - Luminal
   seed:
+  - Jurisphere
   - Sail Research
   - AfterQuery
   - Arga Labs

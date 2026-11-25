@@ -65,7 +65,16 @@ jobs:
             [[ -f funding.json ]] && git add funding.json
             [[ -f site_seen.json ]] && git add site_seen.json
             git commit -m "Update seen-jobs state [skip ci]"
-            git push
+            # Code may have been pushed while the scan ran; rebase the state commit onto it.
+            # Only this bot writes the state files, so the rebase can't conflict with code.
+            pushed=0
+            for i in 1 2 3 4; do
+              git push && { pushed=1; break; }
+              echo "Push rejected (attempt $i); rebasing on the latest main"
+              sleep $((i * 5))
+              git pull --rebase origin main
+            done
+            [[ $pushed == 1 ]] || { echo "Could not push state after 4 attempts"; exit 1; }
           else
             echo "No state change."
           fi
