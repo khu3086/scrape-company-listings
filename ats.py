@@ -990,6 +990,153 @@ def yc_board(pages=YC_BOARD_PAGES, pause=1.5):
     return out
 
 
+# Wellfound (ex-AngelList Talent) SEO landing pages: /role/l/<role>/<location> and, for
+# remote roles, /role/r/<role>. Each page embeds ~20 startups with up to 3 "highlighted"
+# listings each, in Next.js's __NEXT_DATA__ (Apollo cache). Postings aren't date-ordered,
+# so every page is read (pageCount comes from page 1).
+WELLFOUND_ROLES = ("software-engineer", "machine-learning-engineer", "data-scientist",
+                   "data-engineer", "product-manager")
+WELLFOUND_PAGES = [f"/role/l/{r}/{loc}" for loc in ("india", "san-francisco", "new-york")
+                   for r in WELLFOUND_ROLES] + [f"/role/r/{r}" for r in WELLFOUND_ROLES]
+WELLFOUND_MAX_PAGES = 40
+# A startup showing the full 3 highlighted listings probably has more: its own jobs page
+# (/company/<slug>/jobs) lists them all. Those pages are fetched a few per run, oldest
+# first, and cached in state.json (WELLFOUND_COMPANIES, loaded / saved by scrape.py).
+WELLFOUND_COMPANY_BUDGET = 40
+WELLFOUND_COMPANY_TTL_DAYS = 7
+WELLFOUND_COMPANIES = {}  # slug -> {"fetched": "YYYY-MM-DD", "jobs": [normalized job, ...]}
+_NEXT_DATA_RE = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
+# Descriptions that rule out a visa holder (US roles only matter with sponsorship).
+WELLFOUND_NO_SPONSOR_RE = re.compile(
+    r"\bu\.?s\.? citizen|citizenship (is )?required|security clearance|\bclearance required|"
+    r"no (visa )?sponsorship|without (the need for )?(visa |employer )?sponsorship|"
+    r"(not|unable to|cannot|can't|can not|won't|will not|do not|don't|does not) "
+    r"(be able to )?(currently )?(offer|provide|support)?\s*(visa |h-?1b )?sponsor", re.I)
+_WF_HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                             "(KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+               "Accept": "text/html,application/xhtml+xml", "Accept-Language": "en-US,en;q=0.9"}
+
+
+class WellfoundBlocked(Exception):
+    """Cloudflare answered with a challenge / 429: stop the whole pass, don't keep knocking."""
+
+
+def _wellfound_apollo(url):
+    """The Apollo cache embedded in one Wellfound page, or None (past the last page, gone)."""
+    try:
+        r = requests.get(url, headers=_WF_HEADERS, timeout=TIMEOUT, allow_redirects=False)
+    except requests.RequestException:
+        raise WellfoundBlocked("request failed")
+    if r.status_code in (403, 429) or r.headers.get("cf-mitigated"):
+        raise WellfoundBlocked(f"HTTP {r.status_code}")
+    m = _NEXT_DATA_RE.search(r.text) if r.status_code == 200 else None
+    try:
+        return (json.loads(m.group(1))["props"]["pageProps"]["apolloState"]["data"] or None) if m else None
+    except (ValueError, KeyError, TypeError):
+        return None
+
+
+def _wellfound_page_count(data):
+    for k, v in ((data.get("ROOT_QUERY") or {}).get("talent") or {}).items():
+        if k.startswith("seoLandingPageJobSearchResults") and isinstance(v, dict):
+            return int(v.get("pageCount") or 1)
+    return 1
+
+
+def _wellfound_job(company, j, data=None):
+    rc = j.get("remoteConfig") or {}
+    if "__ref" in rc:
+        rc = (data or {}).get(rc["__ref"]) or {}
+    locs = [_s(x) for x in j.get("locationNames") or [] if _s(x)]
+    remote = bool(j.get("remote")) or (rc.get("kind") or "").upper() == "REMOTE"
+    if remote:
+        accepted = [_s(x) for x in j.get("acceptedRemoteLocationNames") or [] if _s(x)]
+        locs.insert(0, f"Remote ({', '.join(accepted)})" if accepted else "Remote")
+    pay = " • ".join(x.strip() for x in _s(j.get("compensation")).split("•")
+                     if x.strip() and x.strip().lower() != "no equity")
+    text = _s(j.get("description") or j.get("descriptionSnippet"))
+    jid = _s(j.get("id"))
+    return {"company": company, "id": jid, "title": _s(j.get("title")),
+            "location": "; ".join(dict.fromkeys(locs)), "remote": remote,
+            "url": f"https://wellfound.com/jobs/{jid}-{_s(j.get('slug'))}",
+            "posted": _posted(j.get("liveStartAt")), "pay": pay,
+            "no_sponsor": bool(WELLFOUND_NO_SPONSOR_RE.search(text))}
+
+
+def _wellfound_company(slug, data):
+    """Every live listing in one startup's Wellfound jobs page (its Apollo cache)."""
+    if not data:
+        return []
+    name = next((_s(v.get("name")) for v in data.values()
+                 if isinstance(v, dict) and v.get("__typename") == "Startup" and v.get("slug") == slug), "")
+    return [_wellfound_job(name, v, data) for v in data.values()
+            if isinstance(v, dict) and v.get("__typename") == "JobListing" and v.get("id")
+            and v.get("public", True) and name]
+
+
+def wellfound_board(pages=WELLFOUND_PAGES, pause=1.5, max_pages=WELLFOUND_MAX_PAGES,
+                    company_budget=WELLFOUND_COMPANY_BUDGET):
+    """Jobs from Wellfound's public role/location pages, across all startups there, plus
+    each truncated startup's full jobs page (a budget per run, cached in WELLFOUND_COMPANIES).
+    Returns (jobs, complete): `complete` is False when Cloudflare blocked the role pages
+    partway. Jobs carry their own `company`; remote roles get the countries they accept in
+    `location` ("Remote (India)", "Remote (United States)") so foreign-only ones filter out,
+    and `no_sponsor` when the description rules out visa sponsorship.
+    Fetched one page at a time: parallel fetching gets the IP challenged within minutes."""
+    jobs, startups, truncated, complete = {}, {}, set(), True
+    calls = [0]
+
+    def get(url):
+        if calls[0]:
+            time.sleep(pause)
+        calls[0] += 1
+        return _wellfound_apollo(url)
+
+    try:
+        for path in pages:
+            n, p = 1, 1
+            while p <= n:
+                data = get(f"https://wellfound.com{path}?page={p}")
+                if data is None:
+                    break
+                if p == 1:
+                    n = min(_wellfound_page_count(data), max_pages)
+                p += 1
+                for su in data.values():
+                    if not (isinstance(su, dict) and su.get("__typename") == "StartupResult"
+                            and su.get("name") and su.get("slug")):
+                        continue
+                    startups[su["slug"]] = _s(su["name"])
+                    refs = su.get("highlightedJobListings") or []
+                    if len(refs) >= 3:
+                        truncated.add(su["slug"])
+                    for ref in refs:
+                        j = data.get((ref or {}).get("__ref") or "")
+                        if isinstance(j, dict) and _s(j.get("id")):
+                            jobs.setdefault(_s(j["id"]), _wellfound_job(_s(su["name"]), j))
+    except WellfoundBlocked:
+        complete = False
+
+    today = dt.date.today()
+    cutoff = (today - dt.timedelta(days=WELLFOUND_COMPANY_TTL_DAYS)).isoformat()
+    for slug in [s for s, c in WELLFOUND_COMPANIES.items() if c.get("fetched", "") < cutoff]:
+        del WELLFOUND_COMPANIES[slug]
+    if complete:
+        due = sorted(truncated, key=lambda s: WELLFOUND_COMPANIES.get(s, {}).get("fetched", ""))
+        try:
+            for slug in due[:company_budget]:
+                data = get(f"https://wellfound.com/company/{slug}/jobs")
+                recent = (today - dt.timedelta(days=60)).isoformat()  # keeps state.json small
+                WELLFOUND_COMPANIES[slug] = {"fetched": today.isoformat(), "jobs": [
+                    j for j in _wellfound_company(slug, data) if j["posted"][:10] >= recent]}
+        except WellfoundBlocked:
+            pass
+    for slug in startups:
+        for j in (WELLFOUND_COMPANIES.get(slug) or {}).get("jobs") or []:
+            jobs.setdefault(j["id"], {**j, "company": startups[slug]})
+    return list(jobs.values()), complete
+
+
 CFG_ADAPTERS = {"eightfold_pcsx": eightfold_pcsx, "ibm": ibm, "goldman": goldman}
 
 

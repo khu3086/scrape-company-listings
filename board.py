@@ -43,7 +43,10 @@ def scan():
     print(f"Scanning {len(reg)} companies (takes several minutes)...", file=sys.stderr)
     jobs = scrape.gather_matches(reg, h1b_sponsors=scrape.load_h1b_sponsors(),
                                  hub_companies=scrape.load_us_hub_companies(reg))
-    jobs += scrape.gather_yc_board(reg)
+    yc = scrape.gather_yc_board(reg)
+    scrape.load_wellfound_cache(scrape.STATE_JSON)  # read-only: board.py doesn't save state
+    wf, _ = scrape.gather_wellfound_board(reg, exclude={j["company"] for j in yc})
+    jobs += yc + wf
     contract_jobs, _, _ = contracts.gather()
     jobs += [{**j, "contract": True} for j in contract_jobs]
     with open(JOBS_CACHE, "w") as f:

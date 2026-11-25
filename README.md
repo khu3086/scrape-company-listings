@@ -118,6 +118,28 @@ match as usual; SF / NYC roles go in the startups section unless YC marks them
 "US citizen/visa only". Its current roles were recorded silently the first time.
 The full YC list (Work at a Startup) needs a login, so it isn't used.
 
+## Wellfound
+
+Each run also reads Wellfound's public role pages (software, ML, data science, data
+engineering and product roles in India, San Francisco, New York and remote) and keeps
+roles at startups that aren't tracked directly or on the YC board, posted in the last 45
+days. India and open-remote roles match as usual. Remote roles limited to other countries
+("Remote (United States)") are dropped. SF / NYC roles go in the startups section,
+unless the description rules out sponsorship (US citizens only, security clearance,
+"not sponsoring visas"). Wellfound's salary / equity range shows on the board.
+
+Role pages show at most 3 listings per startup. For startups showing 3, the startup's own
+Wellfound jobs page (which lists every opening) is also read, 40 a run, least recently read
+first. These are cached in `state.json` (`wellfound_companies`) and refreshed within about
+a day. Roles found this way that were posted more than 10 days earlier are recorded
+silently, so only genuinely new postings are emailed.
+
+- Wellfound is behind Cloudflare. Pages are fetched one at a time with a pause, because
+  fetching in parallel got the IP challenged within minutes. The first 429 or challenge
+  stops the pass for that run.
+- Current roles are recorded silently the first time, but only after a full, unblocked
+  pass, so a partial scan can't leave a backlog to be emailed later.
+
 ## Contract openings (AI training platforms)
 
 `contracts.py` reads the paid-contract listings on Mercor, micro1, Ethos

@@ -12,6 +12,7 @@ from the environment (see config.example.env).
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import html
 import json
 import os
@@ -306,6 +307,8 @@ def save_state(seen, path, us_seeded=(), lab_watch=None, hub_seeded=None, contra
         data["company_seeded"] = sorted(company_seeded)
     if contracts.MICRO1_TITLES:
         data["micro1_titles"] = dict(sorted(contracts.MICRO1_TITLES.items()))
+    if ats_mod.WELLFOUND_COMPANIES:
+        data["wellfound_companies"] = dict(sorted(ats_mod.WELLFOUND_COMPANIES.items()))
     if lab_watch is not None:
         data["lab_watch"] = lab_watch
     with open(path, "w") as f:
@@ -510,6 +513,44 @@ def gather_yc_board(registry):
             j["us_hub"] = True
             out.append(j)
     return out
+
+
+WELLFOUND_BOARD = "(Wellfound)"
+WELLFOUND_MAX_AGE_DAYS = 45  # Wellfound keeps years-old listings live; only recent ones count
+
+
+def load_wellfound_cache(path):
+    """Startups' full Wellfound jobs pages fetched on earlier runs (see ats.WELLFOUND_COMPANIES)."""
+    ats_mod.WELLFOUND_COMPANIES.update(_read_state(path).get("wellfound_companies", {}))
+
+
+WELLFOUND_EMAIL_DAYS = 10  # older unseen Wellfound roles (newly surfaced) are recorded silently
+
+
+def gather_wellfound_board(registry, exclude=()):
+    """Roles from Wellfound's public role pages at startups not tracked directly (nor in
+    `exclude`, e.g. the YC board's companies), posted in the last WELLFOUND_MAX_AGE_DAYS.
+    India / open-remote roles match as usual; SF / NYC roles go in the startups section
+    unless the description rules out sponsorship (US citizen, clearance, no sponsorship).
+    Returns (jobs, complete); complete is False if Cloudflare blocked the pass partway."""
+    skip = {c.lower() for c in registry} | {c.lower() for c in exclude}
+    cutoff = (dt.datetime.now(dt.timezone.utc)
+              - dt.timedelta(days=WELLFOUND_MAX_AGE_DAYS)).strftime("%Y-%m-%d")
+    jobs, complete = ats_mod.wellfound_board()
+    out = []
+    for j in jobs:
+        if j["company"].lower() in skip or (j.get("posted") or "")[:10] < cutoff:
+            continue
+        role = role_type(j["title"])
+        if not role:
+            continue
+        j["role"], j["wellfound"] = role, True
+        if is_india_or_remote(j):
+            out.append(j)
+        elif is_us_hub(j) and not j.get("no_sponsor"):
+            j["us_hub"] = True
+            out.append(j)
+    return out, complete
 
 
 # --- email ------------------------------------------------------------------
@@ -745,6 +786,11 @@ def main():
         print(f"YC jobs board: {len(yc)} matching roles at YC companies not tracked directly.",
               file=sys.stderr)
         matches += yc
+        load_wellfound_cache(args.state)
+        wf, wf_complete = gather_wellfound_board(registry, exclude={j["company"] for j in yc})
+        print(f"Wellfound: {len(wf)} matching India / remote roles at startups not tracked directly"
+              + ("." if wf_complete else " (blocked by Cloudflare partway; partial)."), file=sys.stderr)
+        matches += wf
         n_us = sum(1 for j in matches if j.get("us_h1b"))
         n_hub = sum(1 for j in matches if j.get("us_hub"))
         n_abroad = sum(1 for j in matches if j.get("abroad"))
@@ -810,6 +856,20 @@ def main():
             print(f"Seeding {len(backlog)} existing YC jobs-board roles without emailing.", file=sys.stderr)
         if any(j.get("yc_board") for j in matches):
             company_seeded.add(YC_BOARD)
+        # Wellfound likewise: recorded silently the first time it returns any roles.
+        # Wellfound likewise, but only after a complete (unblocked) pass, so a partial first
+        # scan can't leave part of the backlog to be emailed as "new" later.
+        wf_jobs = [j for j in matches if j.get("wellfound")]
+        if WELLFOUND_BOARD not in company_seeded and not fresh_state:
+            seen.update(job_key(j["company"], j) for j in wf_jobs)
+            print(f"Seeding {len(wf_jobs)} existing Wellfound roles without emailing.", file=sys.stderr)
+        if wf_jobs and wf_complete:
+            company_seeded.add(WELLFOUND_BOARD)
+        # Wellfound gives real posting dates: a role first seen now but posted weeks ago
+        # (surfaced by a startup's full jobs page) isn't new, so it's recorded silently.
+        old = (dt.datetime.now(dt.timezone.utc)
+               - dt.timedelta(days=WELLFOUND_EMAIL_DAYS)).strftime("%Y-%m-%d")
+        seen.update(job_key(j["company"], j) for j in wf_jobs if (j.get("posted") or "")[:10] < old)
     new_jobs = [j for j in matches if job_key(j["company"], j) not in seen and not j.get("london")]
 
     # Contract platforms (Mercor, micro1, ...): absorb each one's current listings
