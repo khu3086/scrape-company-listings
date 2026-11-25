@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 573  |  Unresolved: 288
+# Resolved: 591  |  Unresolved: 294
 
 companies:
   1Password:
@@ -246,6 +246,9 @@ companies:
   Atoms:
     ats: greenhouse
     slug: atoms
+  Baba:
+    ats: ashby
+    slug: baba
   Banza:
     ats: greenhouse
     slug: banza
@@ -301,6 +304,9 @@ companies:
   Bolna:
     ats: ashby
     slug: bolna
+  Boltz:
+    ats: ashby
+    slug: boltz
   Booking.com:
     ats: json
     url: https://jobs.booking.com/api/jobs?limit=100
@@ -319,6 +325,9 @@ companies:
   Bree:
     ats: ashby
     slug: bree
+  Brellium:
+    ats: ashby
+    slug: brellium
   Brex:
     ats: greenhouse
     slug: brex
@@ -413,6 +422,9 @@ companies:
     ats: page
     url: https://jobs.chargebee.com/search/?q=&sortColumn=referencedate&sortDirection=desc
     block: class="jobTitle visible-phone">(.*?)</span></span>
+  Charta Health:
+    ats: ashby
+    slug: chartahealth
   Chasi:
     ats: gem
     slug: chasi-ai
@@ -693,6 +705,9 @@ companies:
     location: city.0.name
     default_location: India
     link: https://careers.epam.com/en/vacancy/{uid}_en
+  Epochal:
+    ats: ashby
+    slug: epochal
   Epsilon3:
     ats: lever
     slug: epsilon3
@@ -941,6 +956,9 @@ companies:
   Headout:
     ats: ashby
     slug: headout
+  Healthleap:
+    ats: ashby
+    slug: healthleap
   Hebbia:
     ats: ashby
     slug: hebbia-ai
@@ -1129,6 +1147,9 @@ companies:
   Klaviyo:
     ats: greenhouse
     slug: klaviyo
+  Knit Health:
+    ats: greenhouse
+    slug: knithealth
   Kore.ai:
     ats: smartrecruiters
     slug: Koreai
@@ -1290,6 +1311,9 @@ companies:
   Midjourney:
     ats: ashby
     slug: midjourney
+  Midstream Health:
+    ats: ashby
+    slug: midstream
   Mihup AI:
     ats: page
     url: https://mihup.keka.com/careers/
@@ -1343,6 +1367,9 @@ companies:
   Morphle Labs:
     ats: yc
     slug: morphle-labs
+  Mosaic Intelligence Labs:
+    ats: ashby
+    slug: mosaicintelligence
   Mudrex:
     ats: page
     url: https://mudrex.careers-page.com/
@@ -1468,6 +1495,9 @@ companies:
     host: eeho.fa.us2.oraclecloud.com
     site: CX_45001
     careers: https://careers.oracle.com/en/sites/jobsearch
+  Orakl Oncology:
+    ats: ashby
+    slug: orakloncology
   OrbitShift:
     ats: page
     url: https://orbitshift.ai/careers
@@ -1508,6 +1538,9 @@ companies:
   Passport:
     ats: ashby
     slug: passport
+  Pathos:
+    ats: ashby
+    slug: pathos
   Patronus AI:
     ats: greenhouse
     slug: patronusaiinc
@@ -1695,6 +1728,9 @@ companies:
   Reka AI:
     ats: ashby
     slug: reka
+  Remedy Robotics:
+    ats: ashby
+    slug: remedyrobotics
   Renaissance Technologies:
     ats: page
     url: https://www.rentec.com/Careers.action?jobs=true
@@ -1884,6 +1920,9 @@ companies:
     location: location
     default_location: Bengaluru, India
     link: https://jobs.pyjamahr.com/simplismart?job_uuid={slug}-{id}
+  Sirona Medical:
+    ats: greenhouse
+    slug: sironamedical
   Skan AI:
     ats: json
     url: https://skanai.keka.com/careers/api/embedjobs/default/active/d83629ac-cbae-4575-a5b0-a6e0e556f459
@@ -2180,6 +2219,9 @@ companies:
   Velvet:
     ats: yc
     slug: velvet
+  Vera Health:
+    ats: ashby
+    slug: verahealth
   Vercel:
     ats: greenhouse
     slug: vercel
@@ -2198,6 +2240,9 @@ companies:
   Virtu Financial:
     ats: greenhouse
     slug: virtu
+  Vitalize:
+    ats: ashby
+    slug: vitalize
   Vivodyne:
     ats: greenhouse
     slug: vivodyne
@@ -2216,6 +2261,9 @@ companies:
     tags: h3
     heading: engineer|developer|scientist|research|programmer|architect|devops|sre|ml|ai |designer|intern|lead|manager|analyst|head of
     default_location: Bengaluru, India
+  Vocca:
+    ats: ashby
+    slug: vocca
   Vodex:
     ats: page
     url: https://careers.vodex.ai/
@@ -2248,6 +2296,9 @@ companies:
   Warp:
     ats: ashby
     slug: warp   # joinwarp.com, AI-run payroll / HR (not warp.dev, the terminal, on Greenhouse 'warp')
+  Warp Sciences:
+    ats: ashby
+    slug: warp-sciences
   Waymo:
     ats: greenhouse
     slug: waymo
@@ -2268,6 +2319,9 @@ companies:
     host: wd1.myworkdaysite.com
     tenant: wf
     site: WellsFargoJobs
+  WhiteLab Genomics:
+    ats: yc
+    slug: whitelab-genomics
   Wifi Dabba:
     ats: yc
     slug: wifi-dabba-inc
@@ -2357,6 +2411,12 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
+- Boston Medical Sciences
+- Xlue
+- nPhase AI
+- Rivercell
+- Aevius Labs
+- XpertDox
 - Sema4.ai
 - Wonder Dynamics
 - copy.ai
@@ -2851,6 +2911,7 @@ lab_watch:
 # Companies not listed here are grouped under other.
 stages:
   research:
+  - Epochal
   - Harmonic
   - VMax
   - Caltech
@@ -3179,6 +3240,12 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - Boltz
+  - Charta Health
+  - Pathos
+  - Remedy Robotics
+  - Sirona Medical
+  - Warp Sciences
   - Squint
   - Callsign
   - Allium
@@ -3320,6 +3387,17 @@ stages:
   - Garage
   - Luminoah
   series_a:
+  - Baba
+  - Brellium
+  - Healthleap
+  - Knit Health
+  - Midstream Health
+  - Mosaic Intelligence Labs
+  - Orakl Oncology
+  - Vera Health
+  - Vitalize
+  - Vocca
+  - WhiteLab Genomics
   - Humanoid
   - OLIX
   - Aaru
