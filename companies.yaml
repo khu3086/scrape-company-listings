@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 553  |  Unresolved: 279
+# Resolved: 571  |  Unresolved: 290
 
 companies:
   1Password:
@@ -92,6 +92,9 @@ companies:
   Alice & Bob:
     ats: lever
     slug: alice-bob
+  Allium:
+    ats: ashby
+    slug: allium
   Alltius:
     ats: page
     url: https://www.alltius.ai/company/careers
@@ -217,6 +220,9 @@ companies:
   Astraea:
     ats: yc
     slug: astraea
+  Ataraxis:
+    ats: ashby
+    slug: ataraxis-ai
   Athina AI:
     ats: yc
     slug: gooseworks
@@ -304,6 +310,9 @@ companies:
     title: data.title
     location: data.full_location
     link: https://jobs.booking.com/booking/jobs/{slug}
+  Bot MD:
+    ats: yc
+    slug: bot-md
   Braintrust:
     ats: ashby
     slug: braintrust
@@ -371,6 +380,9 @@ companies:
   Cekura:
     ats: yc
     slug: vocera
+  Centaur Labs:
+    ats: yc
+    slug: centaur-labs
   Cerebras Systems:
     ats: ashby
     slug: cerebras
@@ -518,6 +530,9 @@ companies:
     location: jobLocations.0.name
     default_location: Bengaluru, India
     link: https://cropinhrms.keka.com/careers/jobdetails/{id}
+  CrowdAI:
+    ats: yc
+    slug: crowdai
   CrowdStrike:
     ats: workday
     tenant: crowdstrike
@@ -600,6 +615,9 @@ companies:
   Distyl AI:
     ats: ashby
     slug: distyl
+  Docbot:
+    ats: yc
+    slug: docbot
   DocVita:
     ats: yc
     slug: docvita
@@ -627,6 +645,9 @@ companies:
   Duffel:
     ats: ashby
     slug: duffel
+  Dyno Therapeutics:
+    ats: greenhouse
+    slug: dynotherapeutics
   E2B:
     ats: ashby
     slug: e2b
@@ -645,6 +666,9 @@ companies:
   ElevenLabs:
     ats: ashby
     slug: elevenlabs
+  Ema:
+    ats: ashby
+    slug: ema
   Emergent:
     ats: greenhouse
     slug: emergentlabsinc
@@ -899,6 +923,9 @@ companies:
   Hark:
     ats: greenhouse
     slug: hark
+  Harmonic:
+    ats: ashby
+    slug: harmonic
   Harvey AI:
     ats: ashby
     slug: harvey
@@ -1045,6 +1072,9 @@ companies:
   Jane Street:
     ats: greenhouse
     slug: janestreet
+  Jerry:
+    ats: ashby
+    slug: Jerry.ai
   JPMorgan Chase:
     ats: oracle
     host: jpmc.fa.oraclecloud.com
@@ -1195,6 +1225,9 @@ companies:
     url: https://www.marketfeed.com/careers
     link: /careers/[\w-]+$
     default_location: Bengaluru, India
+  MarqVision:
+    ats: greenhouse
+    slug: marqvision
   Matters.AI:
     ats: page
     url: https://www.matters.ai/careers
@@ -1270,6 +1303,9 @@ companies:
     ats: eightfold
     host: mlp.eightfold.ai
     domain: mlp.com
+  MindsDB:
+    ats: yc
+    slug: mindsdb
   Mintlify:
     ats: ashby
     slug: mintlify
@@ -1605,6 +1641,9 @@ companies:
   Quickchat AI:
     ats: yc
     slug: quickchat-ai
+  Quilter:
+    ats: ashby
+    slug: quilter
   Quince:
     ats: greenhouse
     slug: quince
@@ -1682,6 +1721,9 @@ companies:
   Retell AI:
     ats: ashby
     slug: retell-ai
+  REVL:
+    ats: yc
+    slug: revl
   Rifa AI:
     ats: ashby
     slug: rifa
@@ -1741,6 +1783,9 @@ companies:
   SafetyWing:
     ats: yc
     slug: safetywing
+  Sahara AI:
+    ats: ashby
+    slug: sahara
   Sail Research:
     ats: ashby
     slug: sail
@@ -1980,6 +2025,9 @@ companies:
   Tavily:
     ats: greenhouse
     slug: tavily
+  Tavus:
+    ats: ashby
+    slug: tavus
   Teenage Engineering:
     ats: feed
     url: https://careers.teenage.engineering/jobs.rss
@@ -2007,6 +2055,9 @@ companies:
   TGS Management:
     ats: lever
     slug: tgsmc
+  Thatch:
+    ats: greenhouse
+    slug: thatch
   The Browser Company:
     ats: ashby
     slug: The Browser Company
@@ -2141,6 +2192,9 @@ companies:
   Virtu Financial:
     ats: greenhouse
     slug: virtu
+  Vivodyne:
+    ats: greenhouse
+    slug: vivodyne
   VMax:
     ats: greenhouse
     slug: vmax
@@ -2297,6 +2351,17 @@ companies:
     ats: yc
     slug: zymbly
 unresolved:
+- Sema4.ai
+- Squint
+- Wonder Dynamics
+- copy.ai
+- Neural Magic
+- Catch&Release
+- Phiar Technologies
+- Crosschq
+- Lexion.ai
+- Pixie
+- Luka
 - Stainless
 - Seaplane IO
 - Glide Apps
@@ -2782,6 +2847,7 @@ lab_watch:
 # Companies not listed here are grouped under other.
 stages:
   research:
+  - Harmonic
   - VMax
   - Caltech
   - Goodfire
@@ -3109,6 +3175,23 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - Allium
+  - Ataraxis
+  - Bot MD
+  - Centaur Labs
+  - CrowdAI
+  - Docbot
+  - Dyno Therapeutics
+  - Ema
+  - Jerry
+  - MarqVision
+  - MindsDB
+  - Quilter
+  - REVL
+  - Sahara AI
+  - Tavus
+  - Thatch
+  - Vivodyne
   - AcuityMD
   - Ajaib
   - Belvo
