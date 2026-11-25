@@ -10,7 +10,7 @@
 #                  eightfold_pcsx (host, domain, location, max: Microsoft/Qualcomm/Citi),
 #                  ibm (country or query: IBM, HashiCorp), goldman (no fields);
 #                  page also takes embedded: a regex with id/title/loc/url groups over JSON in the HTML (Deel)
-# Resolved: 571  |  Unresolved: 290
+# Resolved: 573  |  Unresolved: 288
 
 companies:
   1Password:
@@ -342,6 +342,9 @@ companies:
   Callosum:
     ats: ashby
     slug: callosum
+  Callsign:
+    ats: workable
+    slug: callsign
   Caltech:
     ats: taleo
     host: phf.tbe.taleo.net
@@ -1952,6 +1955,9 @@ companies:
   SpruceID:
     ats: ashby
     slug: spruceid
+  Squint:
+    ats: ashby
+    slug: squint.ai
   Stord:
     ats: workday
     tenant: stord
@@ -2352,7 +2358,6 @@ companies:
     slug: zymbly
 unresolved:
 - Sema4.ai
-- Squint
 - Wonder Dynamics
 - copy.ai
 - Neural Magic
@@ -2386,7 +2391,6 @@ unresolved:
 - DFINITY
 - Oasis Labs
 - Castle
-- Callsign
 - Syndicate
 - Thesis
 - Caldera
@@ -3175,6 +3179,8 @@ stages:
   - Nominal
   - Clara
   series_b:
+  - Squint
+  - Callsign
   - Allium
   - Ataraxis
   - Bot MD
