@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T03:53+00:00",
+ "updated": "2026-11-27T16:31+00:00",
  "rounds": {
   "lemonpeel": {
    "company": "Lemonpeel",
@@ -373,7 +373,8 @@
    "round_guessed": false,
    "founders": [],
    "sources": [
-    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcUk4aE9NV1NfS0UtS243d09CaGVhTlJleURhU1FBRjM3YzJma09hMWx0cXF1THk1S0VjZFJoMWVlNlBIUFc1X1V4c204OGRaemExbk5pb2ppaXFEc294SHdUT0RSb1ZjZUU5a1lGU1ZWM3RJZmgzTkJpcTlYbnkwTWFvTGZiSUJMMjF0NkNEeUdxLVJIVnJhREhiQUNtd1B3X1lGdEhlcVdnY2dZUVU0T3NUS2dzTkp1?oc=5"
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcUk4aE9NV1NfS0UtS243d09CaGVhTlJleURhU1FBRjM3YzJma09hMWx0cXF1THk1S0VjZFJoMWVlNlBIUFc1X1V4c204OGRaemExbk5pb2ppaXFEc294SHdUT0RSb1ZjZUU5a1lGU1ZWM3RJZmgzTkJpcTlYbnkwTWFvTGZiSUJMMjF0NkNEeUdxLVJIVnJhREhiQUNtd1B3X1lGdEhlcVdnY2dZUVU0T3NUS2dzTkp1?oc=5",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWDZoWTN1bVYwVnhhdC1WY2Y2SXFsNi1rdU5xUUVFeDZmekJjVkk2OVNtZlRQbVg2eEFhMHRtYVc0VXNnOS1YSHNQVkQxcnlNZlNRTUJQc1ZmMU5EUzFUYmdaeG9ZTW0tYmJTWXg5dEQtd2VFTHhERnlTSzBmMVd0a0hrOEVVS1F4OWhPOFQzeTZSVlhqTVZPU2pGOTdUZ0FKdWdHNm1UU0pKYkE4TUJ6VEx6ZTlZbDVvWW56OVJ3?oc=5"
    ],
    "source": "SpaceWatch.GLOBAL",
    "first_seen": "2026-11-25",
@@ -2089,7 +2090,8 @@
    "founders": [],
    "sources": [
     "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPTWd3TWFReVVOQUxyU3VnTThUQkxyUjNIVUtWU0tPRm91bmdkVmVkV0NUUXdzcm1vNzY5UUFpVkN5Z2FDRnozVW5pRldnY1dDWDhBaWVoa1MxMkxqTkFDcTIycFBPYnlORDUzN1RDODU3blllaTU2dGtmQmZ1LW5nOV9qY2ZqSVB6X01xZ05aZEc0bjZ1S04wSTIxc1FmeENKcGxubUNkLXJfdU1DUnVqVVJ5WGJMT29tY29ZcXp1WER5OVRJVW1UTnkwdWVIaExRc1BjTmtPZGd0Zw?oc=5",
-    "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeEFuRUxYdlhJdUUteVdqV3plajMwWmc5Nm83RXBZbDNvU01ETFppTTF5SXU3SUFfTWpVdDBUOF9fMmJyZHZUQ2t3NGtSTFpHTC1TZmtNbDJoTWRhU3VuWjJ6M3AtZi1jdThiX092cmFTZ3pqVHVmWFZoaU5GZUh6U0NNRWhzaHRhbnRuaVRFOWpVQnM?oc=5"
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeEFuRUxYdlhJdUUteVdqV3plajMwWmc5Nm83RXBZbDNvU01ETFppTTF5SXU3SUFfTWpVdDBUOF9fMmJyZHZUQ2t3NGtSTFpHTC1TZmtNbDJoTWRhU3VuWjJ6M3AtZi1jdThiX092cmFTZ3pqVHVmWFZoaU5GZUh6U0NNRWhzaHRhbnRuaVRFOWpVQnM?oc=5",
+    "https://news.google.com/rss/articles/CBMiekFVX3lxTE5KajVpRTJBQmNpa0tnUzJfUkZrVFFtNHBIRWo3SnhJbmFqY1lsOXdteXo2REFTWnUtdDVZT0o3b0dNajhQTWVUVFVZcjBuZ1I1Y2V3UkJMbWJsd29DRVhuQThyRjZ3OFVPMWJ0ak5GWWRzT21xN3pBc2tB?oc=5"
    ],
    "source": "NewsCord",
    "first_seen": "2026-11-25",
@@ -2506,7 +2508,10 @@
     "https://news.google.com/rss/articles/CBMikwJBVV95cUxPVGIyVTNUN1pCcDZXVGVtVkdVY3E5RGdTRFNmU3RsNDE3SGhLQmlPbElER3h2VlZSb2dIMUV5WVA5NnVVeUxPbVd3WmlBd1puMjZMR0U5LVU3OHdScjRlMTVVdVo1Qm9pUnVuMzBxVFJQSHpFWlRLU1BITGlvZ2NOVDZraFctd1F4WWotaUNVemVvbWlLZUhqRTNqVTB2TDVwUFZXWl9SUFE3MHlUNnFocnZvYmpJcDluNWtpY1hmc2hWUFNLdjdQS3NHR2dIM3lqWjNoZDNoZWtjVUhYUVp4SGxSMVJYVnBfQ29fX1c1RDRwWDlnZ2dsZmx2Tk9uN2ExQzJDRThHQzh1UXNPZjJIS3FVRQ?oc=5",
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1IaXBiRVlLZDFoOXJ5UG5Fb2NNOGJsLXp1QXhPMWFkNDMyUGJLTmw4SlYwWlA0R01uLXh4NVdHUlAwZjNWMUhNcmt3ajd3bTF0MjYzckpwOTFRUXgtWnRCbw?oc=5",
     "https://news.google.com/rss/articles/CBMisgFBVV95cUxOR3d3bGNpWGFreWNiLTNabzJBdE1pTDZVdmxjVkpjS1Rqa3FCdmZkMDM4TlZKN3FnUU1FNjUtMnRKQjI3WkVzYTA0TlQ3VFNHeEpQcUdhV1U2ZHJlWXdEemQxRHdlX1ZZQmI0VEJUeGtSMkpSbTNzYzc2MjlWNmxYYVpzVHB5MEhDNG1uU2t3a1ZkdlZOaEc1Ukl2bGZuU1d1S0ZNUVV2X0VJVWIwRzRfb2ZR?oc=5",
-    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQldfV2o4aFE0clBDaU1wSDFtTnBJWm1qQVdNWFp4ZGVHbk5kS2JvTXB0WkRISUhHejZqYWl0T2Z2OEh2SVlLc1F3UTduWmR5U1QwY05yaWRLYzl6ZFR1Y09Wd3JBN0xuYjdodEdLLVg5OE9EV1NsRWVlTDlnZGV4cGEtRElBSlhCV1BRRTB1NC1kSmp4YkFOTEFvSGtLVXk0Rmc0UTFQRWJQUzhicVRmc1J1T1NXVERUUEkxWnp4LUVjMUtUT3ZIUW1SN083MWpJLXpmMQ?oc=5"
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQldfV2o4aFE0clBDaU1wSDFtTnBJWm1qQVdNWFp4ZGVHbk5kS2JvTXB0WkRISUhHejZqYWl0T2Z2OEh2SVlLc1F3UTduWmR5U1QwY05yaWRLYzl6ZFR1Y09Wd3JBN0xuYjdodEdLLVg5OE9EV1NsRWVlTDlnZGV4cGEtRElBSlhCV1BRRTB1NC1kSmp4YkFOTEFvSGtLVXk0Rmc0UTFQRWJQUzhicVRmc1J1T1NXVERUUEkxWnp4LUVjMUtUT3ZIUW1SN083MWpJLXpmMQ?oc=5",
+    "https://news.google.com/rss/articles/CBMikgJBVV95cUxQTVFBT3ktYjNRTmZhMHVWY1hQMXUwUy0zVkNfdDVacXZFV0Z6Mzh4di13S3J0ekJMS3BjNzlNZGdXR2hsY2NjdHdZbkNaaWRxaC04a1NjNjNfVlhoWW1fNjFiN2tScVdIUG03Vjc2anhvWmRPTDlzV29MTHpaZDRLYy1tdEx0X1NBNWZLUVhuZkZRWTlaRDhrdVlIMk9Mc1NPVFhiSVk1MHUwcmFFNkljS1A2Y0NjM250cXl5VXJ1U0U4TjJZek5ZNXNicU96RUFXb2k0Qm9jWEpKT3MwQlVlOEEzX3BFWXBlaVFCSUgtOUQ0ekdzYXNTSC1VMGJreHZGQ1V5YjFlYXBKT09PV1VxSVl3?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbkx5aWc1TlN2NE1TWFBSWFB0Z3NXLXJrN1laalhBWFBLbHJtSkJkNTFZbml6NnFMem44S0xwZ1F4b1hPR1ZjMTZrM2JDaEtlNWM0WWVVMzFZemw5ZUpyaVpyaHpydE1FZFpndWJsRU1jVTlTWS1KODAzOURSZ0hIZDd5SGE5UmlfUTFCQnc2OVp1cXQ2MUFIQ1NVVTdYM3RmZGFZ?oc=5",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbkU3OXN3RGw3R0FYZTE0cEdTVWJrZzlNMmctSERqYmFzbUQ0UVZ5SmxrLTJ3N2lIeEZydnBnR3M2cUpYRzJSaFd4M1VRUjl6NFlrbUxnN2I1U3U3UzRoal82d1pzaFpFYzBaQXlYYzNOX0RWRVF1Wmg1YWRRaEw3eWhqS0RXaGVyQ1Bv?oc=5"
    ],
    "source": "Unite.AI",
    "first_seen": "2026-11-26",
@@ -2761,6 +2766,160 @@
     "x": "https://x.com/search?q=Saudi%20%C2%ABMawj%C2%BB%20founder&f=user",
     "web": "https://www.google.com/search?q=Saudi%20%C2%ABMawj%C2%BB%20startup"
    }
+  },
+  "aikidosecurity": {
+   "company": "Aikido Security",
+   "round": "pre-seed",
+   "amount_m": 2.16,
+   "date": "2026-11-24",
+   "headline": "Aikido Security Raises €2M Pre-Seed for Security Platform",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQmxQbjlIWXdRMnAza1ByWGNRcWdlQnoxUUJ6UTMzNmlmeldldFpEcGRUNGdwVXBrYkV5dkY4VnVlZFN1aTh5S1UwS2ZaQUdTTDNRSUI0X1h5MkxYSzhDa1A4WGpPM1U3UVo2V1VxUHpmcWRXZEIxUjJGd1NlQmhWTUlPU3VKaFROQkhJR0EyZThFU3dTb185bWZIQU5La2dyRkw4WnNFSkI3NG5qVkRQYVNXT1VlWmVWRUYwUl9WUHdWUGtOYmpEU3F3dWo?oc=5"
+   ],
+   "source": "Aikido Security",
+   "first_seen": "2026-11-27",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Aikido%20Security%20founder",
+    "x": "https://x.com/search?q=Aikido%20Security%20founder&f=user",
+    "web": "https://www.google.com/search?q=Aikido%20Security%20startup"
+   }
+  },
+  "neuralsat": {
+   "company": "NeuralSat",
+   "round": "pre-seed",
+   "amount_m": 3.2,
+   "date": "2026-11-27",
+   "headline": "NeuralSat raises $3.2m pre-seed on 72-satellite 50Gbps data relay & processing constellation",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMizAFBVV95cUxObUdSM1Q3X0xVenQ0VW1JcEpLT1g3N1pDcHl6cFFUbFM3eFhNWjdiQlAwLTRQOW5maVd4Z2xCb1M5bmhOWlVfN3FJT3RwY3llaXp3MVZwbXhRNlJNdTVxQnpqZ2VUWHJZMHZtM210cFI1M3lhNV93aTN6SGJQUVNBbFMzZ1lCUEF2SWZYWFJxaWhuejZkN25pUDhJTlVyQldGLV94eC1yOTd5SnBpTU1NLW9rZE9jc3NWUUt6dS1YaUZQLVNQSTAyZUh1UWk?oc=5"
+   ],
+   "source": "Data Center Dynamics",
+   "first_seen": "2026-11-27",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=NeuralSat%20founder",
+    "x": "https://x.com/search?q=NeuralSat%20founder&f=user",
+    "web": "https://www.google.com/search?q=NeuralSat%20startup"
+   }
+  },
+  "inve": {
+   "company": "INVE",
+   "round": "pre-seed",
+   "amount_m": 0.3,
+   "date": "2026-11-25",
+   "headline": "INVE Raises $300K Pre-Seed for Saudi Event Tech [2026]",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE1KWGRyQW13SDB1RUw4SmxHNjRfZk41aTJqUkRWNm5BSll0TDdUOHZiZklzc3k3dXc5ajhvTWlVN2hWZXFTSGlKUEthV2hZYU5VdkNtbUR4WGhtVUViLXRkM1pQRWE0cnBYcFBQZzU1R2pEcGgwWE9lN1htX25fM3c?oc=5"
+   ],
+   "source": "shattered.io",
+   "first_seen": "2026-11-27",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=INVE%20founder",
+    "x": "https://x.com/search?q=INVE%20founder&f=user",
+    "web": "https://www.google.com/search?q=INVE%20startup"
+   }
+  },
+  "firstpersonlabs": {
+   "company": "First Person Labs",
+   "round": "seed",
+   "amount_m": 10.0,
+   "date": "2026-11-26",
+   "headline": "First Person Labs Raises $10M Seed Led by a16z for Second, a Portable Model of You",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTE51LVViWWZLaGdZVlplUzV3bm1aRHVRcTV2QnRXenVhRTZ1LTc3c0k4RHJiRmFoQWdGTmtidXNBNDBpWmtpdk5MNmRxYy11QWh0SWJB?oc=5"
+   ],
+   "source": "Wowtale",
+   "first_seen": "2026-11-27",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=First%20Person%20Labs%20founder",
+    "x": "https://x.com/search?q=First%20Person%20Labs%20founder&f=user",
+    "web": "https://www.google.com/search?q=First%20Person%20Labs%20startup"
+   }
+  },
+  "korben": {
+   "company": "Korben",
+   "round": "seed",
+   "amount_m": 11.02,
+   "date": "2026-11-27",
+   "headline": "Korben Raises €10.2M in Seed Funding to Expand Robotics Software Across Europe",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxON3J6N0ZOdWNLQUliQ3V0N3hTWklLa29rWFRMaXgzQlpmRzdCWUVVLWZRbzBucHdjb054LVU3MzUySjZ6ZUI1czhoOGpyR3MwRkI2djF5Y0hneVdLMFZ0dWN1NUJra1hLYndVeWlkRjg5el9qOWlGcFNBWWpzazNKanlFenczeEg1YllCLWg5bkhUWlhrWHNWQXpWeEkyRnpBQUFqZWtkbUNkQ0FXMnpYYlhNLXpXZFk?oc=5"
+   ],
+   "source": "AI Insider",
+   "first_seen": "2026-11-27",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Korben%20founder",
+    "x": "https://x.com/search?q=Korben%20founder&f=user",
+    "web": "https://www.google.com/search?q=Korben%20startup"
+   }
+  },
+  "photonicxai": {
+   "company": "PhotonicX AI",
+   "round": "series a",
+   "amount_m": 21.8,
+   "date": "2026-11-27",
+   "headline": "PhotonicX AI raises $21.8M Series A for optical chips at $266M valuation",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNeGV6dC1yU3hELTlBZ3o5eTBBdzZSblFqZ09CLUtEUVFReDZiRWR1WllnMXFXWTBqRXZtM3dCeVpsenllcEVObjY1MHNFdllNY053MGRsam9nN0NmN1llRkhraVA5Q21qY2lfd19LU1gwWXdzVGhjWDNtY0pBeHZfTXU1NV9wbWlPNnhEUzBpN1Y0VF92ZlpXQ2lHaTNzRFpjQmxMTnhHVQ?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-27",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=PhotonicX%20AI%20founder",
+    "x": "https://x.com/search?q=PhotonicX%20AI%20founder&f=user",
+    "web": "https://www.google.com/search?q=PhotonicX%20AI%20startup"
+   }
+  },
+  "nammayatri": {
+   "company": "Namma Yatri",
+   "round": "series a",
+   "amount_m": 3.24,
+   "date": "2026-11-27",
+   "headline": "Exclusive: Namma Yatri raises Rs 27.25 Cr led by Michael & Susan Dell Foundation",
+   "india": true,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://entrackr.com/exclusive/exclusive-namma-yatri-raises-rs-2725-cr-led-by-michael-susan-dell-foundation-12844724"
+   ],
+   "source": "",
+   "first_seen": "2026-11-27",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Namma%20Yatri%20founder",
+    "x": "https://x.com/search?q=Namma%20Yatri%20founder&f=user",
+    "web": "https://www.google.com/search?q=Namma%20Yatri%20startup"
+   }
   }
  },
  "probes": {
@@ -2919,7 +3078,14 @@
   "airedge": null,
   "bodenai": null,
   "kunstigaero": null,
-  "saudimawj": null
+  "saudimawj": null,
+  "aikidosecurity": null,
+  "neuralsat": null,
+  "inve": null,
+  "firstpersonlabs": null,
+  "korben": null,
+  "photonicxai": null,
+  "nammayatri": null
  },
  "sec_seen": []
 }
