@@ -489,10 +489,15 @@
 "Adobe:R173660",
 "Adobe:R173668",
 "Adobe:R173685",
+"Adobe:R173702",
 "Adobe:R173704",
+"Adobe:R173706",
 "Adobe:R173707",
+"Adobe:R173708",
 "Adobe:R173710",
 "Adobe:R173713",
+"Adobe:R173715",
+"Adobe:R173744",
 "Adobe:R173746",
 "Adobe:R173771",
 "Adobe:R173786",
@@ -676,6 +681,7 @@
 "Alchemyst AI:4011105",
 "Alchemyst AI:4430599",
 "Alchi Design Studio:4824678",
+"AlethAI:5137558",
 "Alignment Healthcare:4929417",
 "Alignment Healthcare:5056464",
 "Alignment Healthcare:5081319",
@@ -689,6 +695,12 @@
 "Allium:ffa65512-ae82-432f-a079-c17faf3ec636",
 "Allminds:3143348",
 "Alloy:4446186",
+"Alloy:5034781",
+"Alloy:5034788",
+"Alloy:5034791",
+"Alloy:5034792",
+"Alloy:5034793",
+"Alloy:5034795",
 "Alloy:5044881",
 "Alloy:5137309",
 "Alpaca:4781639",
@@ -882,6 +894,7 @@
 "Amazon:10614072",
 "Amazon:10615371",
 "Amazon:10615389",
+"Amazon:10615615",
 "Ambient.ai:0a43c6a3-8f88-47a3-b45b-6d5b04430fe6",
 "Ambient.ai:0e41df72-b6c6-43c5-9601-8bf48226acc1",
 "Ambient.ai:16078dde-74dc-4fd9-a16f-d6d96b87eb4f",
@@ -1512,6 +1525,7 @@
 "Anysphere:f7ec7811-a573-42fa-8ade-01e2d07681ef",
 "Anysphere:fa7a821b-ca2b-43fe-8942-07f215a060c7",
 "Anza:4995372",
+"Aparoksha Financial Services:5137947",
 "Apna Mart:5127102",
 "Apollo:6110329004",
 "Apollo:6116404004",
@@ -1673,6 +1687,7 @@
 "Apple:https://jobs.apple.com/en-in/details/200696473-1052/senior-qa-automation-engineer-find-my?team=SFTWR",
 "Apple:https://jobs.apple.com/en-in/details/200696475-1052/senior-software-qa-engineer-find-my?team=SFTWR",
 "Apple:https://jobs.apple.com/en-in/details/200696858-1052/machine-learning-engineer-experimentation?team=SFTWR",
+"Applecart:4873853",
 "Applied Compute:09798d21-a721-47fa-8169-6eed54daa2fa",
 "Applied Compute:0e93c8ac-446e-4e87-ba94-bfd4de05c333",
 "Applied Compute:13138e7c-f2b3-402f-bb41-d6078e76b23c",
@@ -2396,7 +2411,9 @@
 "BioSpace:5031120",
 "BitGo:5112860",
 "BitGo:5112870",
+"Bitwarden:4627493",
 "Bitwarden:4630063",
+"Bitwarden:4692240",
 "Bitwarden:4735283",
 "Bitwarden:4764734",
 "Bitwarden:4881288",
@@ -2539,6 +2556,7 @@
 "Bolna:e18828d6-f33f-4530-9efe-0768d26cdfa5",
 "Boltz:08f43889-699b-45e7-99c1-9a5ba58cefbc",
 "Boltz:0abca70d-c937-415b-ac84-486e7af376ca",
+"Boltz:1eaa8ccf-f162-4978-90a5-94df5afca409",
 "Boltz:2f891131-7092-4309-87c3-8e1b5c5a92e0",
 "Boltz:3ee8716b-121a-4138-b06f-14e81eafe595",
 "Boltz:4ccecd7e-3eda-4df7-8e98-cd1b3a6471a8",
@@ -2590,9 +2608,11 @@
 "Brave:5017014",
 "Brave:5039220",
 "Braze:4797151",
+"Braze:4855288",
 "Braze:4875146",
 "Braze:4970229",
 "Braze:4970238",
+"Braze:4985476",
 "Braze:4985479",
 "Braze:5127283",
 "Braze:5127286",
@@ -2864,6 +2884,9 @@
 "Capgemini:5002130",
 "Capgemini:5067990",
 "Capgemini:5068110",
+"Capgemini:5109910",
+"Capgemini:5120034",
+"Capgemini:5120075",
 "Capital One:R1000358",
 "Capital One:R1000827",
 "Capital One:R1000997",
@@ -3273,6 +3296,7 @@
 "Capital One:R1004323",
 "Capital One:R1004324",
 "Capital One:R1004340",
+"Capital One:R1004403",
 "Capital One:R1004410",
 "Capital One:R1004415",
 "Capital One:R1004419",
@@ -3390,7 +3414,9 @@
 "Capital One:R1006323",
 "Capital One:R1006354",
 "Capital One:R1006400",
+"Capital One:R1006402",
 "Capital One:R1006438",
+"Capital One:R1006441",
 "Capital One:R1006471",
 "Capital One:R1006497",
 "Capital One:R1006499",
@@ -3817,6 +3843,7 @@
 "Cloudworx Technologies:1215601",
 "CoLoop:92733",
 "Coast:5008567",
+"Coast:5008568",
 "Coast:5008680",
 "Coast:5127312",
 "Coastal Carbon:4895920",
@@ -4761,6 +4788,7 @@
 "Crusoe:5076304",
 "Crusoe:5100033",
 "Crusoe:5124284",
+"Crusoe:5140940",
 "Crustdata:123469",
 "Crustdata:79859",
 "Crustdata:82761",
@@ -5578,6 +5606,7 @@
 "Datadog:8418089",
 "Dataiku:6236320004",
 "Dataiku:6236322004",
+"DataraAI:4866667",
 "Dataviv:5101346",
 "David AI:04943bcf-5496-4eb5-a515-d8c2e13cc539",
 "David AI:111cd71f-99c3-48ad-9cdc-73354f7ff0b9",
@@ -6000,7 +6029,12 @@
 "Earnest:5067490",
 "Eccentric Machines:4777714",
 "Edmo:5008558",
+"Eight Sleep:5035366",
+"Eight Sleep:5044750",
+"Eight Sleep:5044751",
 "Eight Sleep:5081999",
+"Eight Sleep:5137895",
+"Eight Sleep:5137896",
 "Eightfold AI:68758162425",
 "Eightfold AI:68759943613",
 "Eightfold AI:68760308055",
@@ -6589,6 +6623,7 @@
 "FloMobility:5061270",
 "FloMobility:5105960",
 "Flock Homes:4745234005",
+"FlowGen Labs:5027539",
 "FlowGen Labs:5027541",
 "FlowGen Labs:5027542",
 "FlowGen Labs:5027545",
@@ -6959,6 +6994,7 @@
 "Gnani.ai:Sol-Mum-2026-11-16-162",
 "Gnani.ai:Sup--2026-11-12-160",
 "GoComet:4829590",
+"GoComet:5137951",
 "GoGoGrandparent:78968",
 "GoSats:93240",
 "Goldman Sachs:0565380c-d0e8-40e8-a4dc-1b53361eafaf",
@@ -13653,6 +13689,8 @@
 "Jerry.ai:5127395",
 "Jerry.ai:5127397",
 "Jerry.ai:5137900",
+"Jerry.ai:5139094",
+"Jerry.ai:5139100",
 "Jerry:0081a0a9-e34a-4932-bf55-f6737a17b46a",
 "Jerry:263b19da-29af-4d85-a1b5-e2b5d08a32ac",
 "Jerry:312844bc-5e59-4ad7-8b4a-99281bafef3e",
@@ -13753,6 +13791,7 @@
 "Juspay:VSA-I01",
 "K Health:4903607",
 "K&S Digiprotect:5137163",
+"Kaizen Labs:4995388",
 "Kaizen Labs:5044955",
 "Kalepa:4884703",
 "Kalshi:13c4b111-5dab-4560-9843-70c06c1acf6e",
@@ -14087,6 +14126,7 @@
 "LawnStarter:5086261",
 "LawnStarter:5086262",
 "LawnStarter:5086263",
+"LawnStarter:5138196",
 "Layer Health:4895807",
 "Layer Health:4903584",
 "Layer Health:4965746",
@@ -14336,6 +14376,7 @@
 "Magic.dev:bcc8d988-47ea-4089-9619-80260abb71b5",
 "Magic.dev:f1d3988f-f93c-42b7-ad1a-f9fb3d07ff26",
 "Magic.dev:f9b3e872-cffa-400a-b9e0-621149c5f566",
+"Magic:4901306",
 "Magic:4901311",
 "Magic:4901312",
 "Magic:4986283",
@@ -14352,6 +14393,10 @@
 "Maropost India:5105648",
 "Maropost India:5123436",
 "Marvin:4844661",
+"Mastercard:4975831",
+"Mastercard:4990268",
+"Mastercard:4990469",
+"Mastercard:5052094",
 "Matters.AI:https://www.matters.ai/careers#lead security researcher",
 "Matters.AI:https://www.matters.ai/careers#machine learning / ai engineer (systems & scalability focus)",
 "Matters.AI:https://www.matters.ai/careers#solutions engineer (se)",
@@ -14674,6 +14719,7 @@
 "Microsoft:200054960",
 "Microsoft:200056110",
 "Microsoft:200056801",
+"Microsoft:200056894",
 "Microsoft:200057418",
 "Microsoft:200057613",
 "Microsoft:200057796",
@@ -14823,6 +14869,8 @@
 "Millennium:REQ-32092",
 "Millennium:REQ-32129",
 "Mira Health:5101336",
+"Mira Labs Ai:4602448",
+"Mirage:5078019",
 "Mirage:5078020",
 "Mirage:5078021",
 "Mirage:5078022",
@@ -14869,7 +14917,13 @@
 "Mistral AI:ec418d5f-70f5-450e-a6db-dbb00e662b2f",
 "Mistral AI:ee9d2f24-527c-4ad8-b50e-6dbacee081f4",
 "Mistral AI:fe471824-c80a-4ea4-9625-2217f81c52ae",
+"Mixpanel:4882685",
+"Mixpanel:4987969",
+"Mixpanel:5017751",
 "Mixpanel:5017822",
+"Mixpanel:5017936",
+"Mixpanel:5018121",
+"Mixpanel:5023063",
 "Mnemio AI:4844754",
 "Mochi Health:4452690",
 "Mochi Health:4452691",
@@ -17012,6 +17066,7 @@
 "Neoware Technology Solutions:4897479",
 "Neoware Technology Solutions:4938712",
 "NetBox Labs:4779376",
+"NetBox Labs:4779377",
 "NetBox Labs:5127365",
 "Netflix:AJRT30201",
 "Netflix:JR28715",
@@ -20169,6 +20224,7 @@
 "Prime Intellect:eecf9af5-46fb-4b62-b8c8-921098fd6514",
 "PrivaSapien:5094794",
 "Proaction:5035336",
+"Procedure Tech:5138093",
 "Procore Technologies:4990203",
 "Procore Technologies:4990213",
 "Prodigal:4592126007",
@@ -20915,6 +20971,7 @@
 "Rippling:ff353c88-a860-4d95-9af5-1c99def25962",
 "Rivexta:5105889",
 "Rivia.AI:63158",
+"Rivian:5122850",
 "RoaDo:4985958",
 "Robinhood:6669758",
 "Robinhood:6674980",
@@ -21180,6 +21237,7 @@
 "Roblox:8275414",
 "Roblox:8282837",
 "Roblox:8283467",
+"Roblox:8283619",
 "Roblox:8283641",
 "Roblox:8283707",
 "Roblox:8283709",
@@ -21226,6 +21284,7 @@
 "Roblox:8397868",
 "Roblox:8417328",
 "Rocket Money:4844729",
+"Rocket Money:4889906",
 "Rocket Money:4985482",
 "Rogo:0080ced3-1d06-46fe-bacf-c7de66f1ba89",
 "Rogo:04777127-53d6-49cb-9372-4332280857a1",
@@ -22397,6 +22456,7 @@
 "Snap:R0047537",
 "Snap:R0047539",
 "Snap:R0047557",
+"Snap:R0047584",
 "Snapchat:4851330",
 "Snapchat:4911760",
 "Sniffspot:5034768",
@@ -22661,6 +22721,7 @@
 "Socure:5116820",
 "Socure:5116850",
 "Socure:5116976",
+"Sodalis AI:4063670",
 "Softprobe.ai:5079523",
 "Soket AI Labs:https://soket.ai/careers/jobs/ai_data_engineer_fm",
 "Soket AI Labs:https://soket.ai/careers/jobs/ai_solutions_partnerships_architect",
@@ -23577,6 +23638,7 @@
 "System:5124055",
 "TGIT Solutions:5137264",
 "TRG Screen:4938730",
+"TRG Screen:5138122",
 "TRM Labs:0b8546c0-39ba-44db-aba5-3425bcb2e68d",
 "TRM Labs:0f8feeff-b2fd-492b-9f43-a24fcd6c72eb",
 "TRM Labs:223d83e0-50d4-4d96-b9d9-dd0dbf4cc3b0",
@@ -23704,6 +23766,7 @@
 "Target:R0000479703",
 "Target:R0000480538",
 "Target:R0000480540",
+"Target:R0000481753",
 "Tata Consultancy Services:4929384",
 "Tatvic Analytics:4824649",
 "Tavily:4845644101",
@@ -24531,6 +24594,8 @@
 "TopGrep Tech:3152592",
 "Topflight:3231322",
 "Topsort:5137816",
+"Topsort:5138182",
+"Topsort:5138183",
 "Tower Research Capital:4357723",
 "Tower Research Capital:6629676",
 "Tower Research Capital:7080209",
@@ -25247,6 +25312,7 @@
 "Warp:d427ee55-2f0f-4a32-990b-8189f611dab8",
 "Wasmer:78392",
 "Watney Robotics:4860579",
+"Watney Robotics:4860580",
 "Watney Robotics:4860581",
 "Watney Robotics:5137891",
 "Waymo:6499165",
@@ -26173,6 +26239,7 @@
 "contract:Mercor:list_AAABocIjXAmzfoIQVvRAl5UN",
 "contract:Mercor:list_AAABocIjoyFBFQFxWfBBdZf7",
 "contract:Mercor:list_AAABod-XpCFXW1KhVe9F8pnR",
+"contract:Mercor:list_AAABohqcDWwaXV8VM_tDTpZR",
 "contract:Patronus AI:4478718009",
 "contract:Patronus AI:4478719009",
 "contract:Patronus AI:4517979009",
@@ -26188,9 +26255,11 @@
 "contract:Terac:ec78d0cb-e906-4428-97bb-7cf916be7fb6",
 "contract:micro1:03ef0cc7-8c09-466f-9b37-b4d8b3c97de5",
 "contract:micro1:0db2a044-3c6c-47e9-b610-292eddd305d2",
+"contract:micro1:10d08059-db58-47b3-8456-be749e353a08",
 "contract:micro1:14f2ea89-1bc3-4cdb-b43a-d26a8d755c00",
 "contract:micro1:16a30c0f-7cb0-4587-82e1-0de5c2762cd7",
 "contract:micro1:190225df-d67a-402d-bd7f-d9c7c40bb693",
+"contract:micro1:19dd49c8-27c4-4fd7-a171-6f7626c17de1",
 "contract:micro1:1f738cfe-c245-4f5c-991e-eb3bedc55705",
 "contract:micro1:210d9d7c-bf43-466a-a401-56a4675bb2b2",
 "contract:micro1:2a540080-4b36-4fc3-ad1d-1eafa512a606",
@@ -28170,6 +28239,247 @@
 }
 ]
 },
+"alloy-2": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Alloy",
+"id": "5137309",
+"title": "Senior Product Manager, Digital Banking Fraud",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137309-senior-product-manager-digital-banking-fraud",
+"posted": "2026-11-24T11:11:05Z",
+"pay": "$156k \u2013 $198k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "4446186",
+"title": "Engineering Manager, Developer Experience",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4446186-engineering-manager-developer-experience",
+"posted": "2026-11-17T21:11:52Z",
+"pay": "$222k \u2013 $285k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5067506",
+"title": "Technical Partner Operations Analyst",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5067506-technical-partner-operations-analyst",
+"posted": "2026-11-13T21:11:01Z",
+"pay": "$105k \u2013 $125k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5044881",
+"title": "Engineering Manager, Infrastructure",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044881-engineering-manager-infrastructure",
+"posted": "2026-11-12T21:10:17Z",
+"pay": "$222k \u2013 $280k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "3096753",
+"title": "Account Executive, Enterprise",
+"location": "New York City; San Francisco Bay Area",
+"remote": false,
+"url": "https://wellfound.com/jobs/3096753-account-executive-enterprise",
+"posted": "2026-11-12T11:09:58Z",
+"pay": "$140k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034795",
+"title": "Engineering Manager, Data Platform",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034795-engineering-manager-data-platform",
+"posted": "2026-11-10T21:11:21Z",
+"pay": "$255k \u2013 $295k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034794",
+"title": "Sales Manager, Fintech",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034794-sales-manager-fintech",
+"posted": "2026-11-10T21:11:19Z",
+"pay": "$320k \u2013 $380k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034793",
+"title": "Senior Solutions Architect - IAM",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5034793-senior-solutions-architect-iam",
+"posted": "2026-11-10T21:11:17Z",
+"pay": "$145k \u2013 $175k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034792",
+"title": "Senior Solutions Architect - Transaction Monitoring",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5034792-senior-solutions-architect-transaction-monitoring",
+"posted": "2026-11-10T21:11:16Z",
+"pay": "$145k \u2013 $175k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034791",
+"title": "Senior IT Security Engineer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034791-senior-it-security-engineer",
+"posted": "2026-11-10T21:11:14Z",
+"pay": "$162k \u2013 $190k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034790",
+"title": "Senior Solutions Engineer",
+"location": "London",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034790-senior-solutions-engineer",
+"posted": "2026-11-10T21:11:13Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034789",
+"title": "Deal Desk Analyst",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034789-deal-desk-analyst",
+"posted": "2026-11-10T21:11:11Z",
+"pay": "$80k \u2013 $100k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034788",
+"title": "Director of Operations (Product, Engineering & Technical Solutions)",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034788-director-of-operations-product-engineering-technical-solutions",
+"posted": "2026-11-10T21:11:09Z",
+"pay": "$200k \u2013 $240k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034787",
+"title": "Senior Product Designer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034787-senior-product-designer",
+"posted": "2026-11-10T21:11:07Z",
+"pay": "$165k \u2013 $215k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034786",
+"title": "Strategic Partner Development Manager, Banking",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034786-strategic-partner-development-manager-banking",
+"posted": "2026-11-10T21:11:06Z",
+"pay": "$140k \u2013 $201k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034785",
+"title": "Partner Development Manager, Banking",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034785-partner-development-manager-banking",
+"posted": "2026-11-10T21:11:04Z",
+"pay": "$120k \u2013 $155k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034784",
+"title": "Senior Implementation Engineer",
+"location": "London",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034784-senior-implementation-engineer",
+"posted": "2026-11-10T21:11:03Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034783",
+"title": "Enterprise Account Executive",
+"location": "London",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034783-enterprise-account-executive",
+"posted": "2026-11-10T21:11:01Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034781",
+"title": "Senior Cloud Security Engineer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034781-senior-cloud-security-engineer",
+"posted": "2026-11-10T21:10:57Z",
+"pay": "$163k \u2013 $206k",
+"no_sponsor": false
+},
+{
+"company": "Alloy",
+"id": "5034780",
+"title": "Senior Technical Success Manager",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034780-senior-technical-success-manager",
+"posted": "2026-11-10T21:10:56Z",
+"pay": "$140k \u2013 $175k",
+"no_sponsor": false
+}
+]
+},
+"amazon": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Amazon",
+"id": "4949396",
+"title": "Sr. Forward Deployed Engineer",
+"location": "Boston; New York City; Seattle; Arlington; East Palo Alto",
+"remote": false,
+"url": "https://wellfound.com/jobs/4949396-sr-forward-deployed-engineer",
+"posted": "2026-10-31T07:13:10Z",
+"pay": "",
+"no_sponsor": false
+}
+]
+},
 "apiphany-ai": {
 "fetched": "2026-11-25",
 "jobs": []
@@ -28186,6 +28496,77 @@
 "url": "https://wellfound.com/jobs/4810203-founding-machine-learning-engineer",
 "posted": "2026-10-06T00:02:41Z",
 "pay": "$250k \u2013 $250k",
+"no_sponsor": false
+}
+]
+},
+"arize-ai": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Arize AI",
+"id": "4201765",
+"title": "Forward Deployed Engineer, APJ",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/4201765-forward-deployed-engineer-apj",
+"posted": "2026-11-17T21:27:23Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Arize AI",
+"id": "5035167",
+"title": "Senior AI Product Manager, Evals & Annotations",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5035167-senior-ai-product-manager-evals-annotations",
+"posted": "2026-11-11T11:24:21Z",
+"pay": "$200k \u2013 $250k",
+"no_sponsor": false
+},
+{
+"company": "Arize AI",
+"id": "5034831",
+"title": "Director of Sales, APJ",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5034831-director-of-sales-apj",
+"posted": "2026-11-10T21:25:55Z",
+"pay": "$370k \u2013 $450k SGD",
+"no_sponsor": false
+},
+{
+"company": "Arize AI",
+"id": "4970270",
+"title": "Enterprise Account Executive, MEA",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/4970270-enterprise-account-executive-mea",
+"posted": "2026-11-03T21:24:18Z",
+"pay": "$250k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Arize AI",
+"id": "4879028",
+"title": "Principal of Technical Content & Editorial",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4879028-principal-of-technical-content-editorial",
+"posted": "2026-10-22T08:23:26Z",
+"pay": "$175k \u2013 $200k",
+"no_sponsor": false
+},
+{
+"company": "Arize AI",
+"id": "4879027",
+"title": "Head of Growth Marketing",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4879027-head-of-growth-marketing",
+"posted": "2026-10-22T08:23:25Z",
+"pay": "$225k \u2013 $275k",
 "no_sponsor": false
 }
 ]
@@ -28616,6 +28997,235 @@
 "bevel-health": {
 "fetched": "2026-11-25",
 "jobs": []
+},
+"binocs-1": {
+"fetched": "2026-11-27",
+"jobs": []
+},
+"bitwarden": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Bitwarden",
+"id": "4692240",
+"title": "Software Engineer (Secrets Manager )",
+"location": "Delhi; Noida",
+"remote": false,
+"url": "https://wellfound.com/jobs/4692240-software-engineer-secrets-manager",
+"posted": "2026-11-26T21:12:34Z",
+"pay": "$36k \u2013 $36k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5127310",
+"title": "Senior Database Engineer",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5127310-senior-database-engineer",
+"posted": "2026-11-20T21:14:41Z",
+"pay": "$210k \u2013 $210k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5106071",
+"title": "Senior Software Engineer, Self-Host Orchestration",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5106071-senior-software-engineer-self-host-orchestration",
+"posted": "2026-11-19T21:13:00Z",
+"pay": "$150k \u2013 $150k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5106070",
+"title": "Sr. Product Marketing Manager, Secrets Manager",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5106070-sr-product-marketing-manager-secrets-manager",
+"posted": "2026-11-19T21:12:57Z",
+"pay": "$185k \u2013 $185k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5101898",
+"title": "Sr. Director Revenue Accounting",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5101898-sr-director-revenue-accounting",
+"posted": "2026-11-18T21:13:43Z",
+"pay": "$225k \u2013 $225k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5101897",
+"title": "Mid-Market Account Executive - ANZ",
+"location": "Remote (United States); Anza",
+"remote": true,
+"url": "https://wellfound.com/jobs/5101897-mid-market-account-executive-anz",
+"posted": "2026-11-18T21:13:40Z",
+"pay": "$108k \u2013 $108k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5101896",
+"title": "Sales Development Representative",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5101896-sales-development-representative",
+"posted": "2026-11-18T21:13:37Z",
+"pay": "$85k \u2013 $85k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5101696",
+"title": "Senior Software Engineer - Frontend (Passkeys)",
+"location": "Noida",
+"remote": false,
+"url": "https://wellfound.com/jobs/5101696-senior-software-engineer-frontend-passkeys",
+"posted": "2026-11-18T11:12:44Z",
+"pay": "$61k \u2013 $61k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5086210",
+"title": "Public Sector - Account Executive",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5086210-public-sector-account-executive",
+"posted": "2026-11-16T21:14:29Z",
+"pay": "$125k \u2013 $125k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5035161",
+"title": "Senior Software Engineer - Rust & Typescript",
+"location": "Noida",
+"remote": false,
+"url": "https://wellfound.com/jobs/5035161-senior-software-engineer-rust-typescript",
+"posted": "2026-11-11T11:14:04Z",
+"pay": "$58k \u2013 $58k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5034800",
+"title": "Channel Account Executive - LATAM",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5034800-channel-account-executive-latam",
+"posted": "2026-11-10T21:14:41Z",
+"pay": "$100k \u2013 $100k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5034799",
+"title": "Senior Customer Marketing Manager",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5034799-senior-customer-marketing-manager",
+"posted": "2026-11-10T21:14:39Z",
+"pay": "$185k \u2013 $185k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5034798",
+"title": "Vice President, Public Sector",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5034798-vice-president-public-sector",
+"posted": "2026-11-10T21:14:30Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "5027400",
+"title": "Director, Revenue & Strategic Finance",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5027400-director-revenue-strategic-finance",
+"posted": "2026-11-09T21:13:39Z",
+"pay": "$210k \u2013 $210k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "4630063",
+"title": "Implementation Engineer, Customer Support (APAC)",
+"location": "Remote; Apac",
+"remote": true,
+"url": "https://wellfound.com/jobs/4630063-implementation-engineer-customer-support-apac",
+"posted": "2026-11-09T21:13:32Z",
+"pay": "$140k \u2013 $140k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "4995334",
+"title": "Senior Software Engineer  (TypeScript/Electron)- Desktop Native",
+"location": "Noida",
+"remote": false,
+"url": "https://wellfound.com/jobs/4995334-senior-software-engineer-typescript-electron-desktop-native",
+"posted": "2026-11-05T21:13:18Z",
+"pay": "$42k \u2013 $42k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "4764734",
+"title": "Lead Software Engineer - (Web Platform)",
+"location": "Delhi; Noida",
+"remote": false,
+"url": "https://wellfound.com/jobs/4764734-lead-software-engineer-web-platform",
+"posted": "2026-11-03T11:13:49Z",
+"pay": "$75k \u2013 $75k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "4627493",
+"title": "Senior Software Engineer (Web Platforms)",
+"location": "Noida",
+"remote": false,
+"url": "https://wellfound.com/jobs/4627493-senior-software-engineer-web-platforms",
+"posted": "2026-11-03T11:13:46Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "4901591",
+"title": "Mid-Market Sales Leader",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/4901591-mid-market-sales-leader",
+"posted": "2026-10-28T20:13:02Z",
+"pay": "$160k \u2013 $160k",
+"no_sponsor": false
+},
+{
+"company": "Bitwarden",
+"id": "4901590",
+"title": "Senior Software Engineer (PAM)",
+"location": "Delhi",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901590-senior-software-engineer-pam",
+"posted": "2026-10-28T20:12:54Z",
+"pay": "$61k \u2013 $61k",
+"no_sponsor": false
+}
+]
 },
 "blackcloak-1": {
 "fetched": "2026-11-26",
@@ -29301,6 +29911,456 @@
 "url": "https://wellfound.com/jobs/4781209-technical-product-manager",
 "posted": "2026-09-28T00:00:00Z",
 "pay": "",
+"no_sponsor": false
+}
+]
+},
+"capgemini": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Capgemini",
+"id": "5130516",
+"title": "System Engineer Automotive",
+"location": "Modena",
+"remote": false,
+"url": "https://wellfound.com/jobs/5130516-system-engineer-automotive",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$31k \u2013 $40k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120153",
+"title": "Java Solution Architect",
+"location": "Atlanta",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120153-java-solution-architect",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$100k \u2013 $118k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120147",
+"title": "Senior Project Manager/Program Manager",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120147-senior-project-manager-program-manager",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$89k \u2013 $125k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120140",
+"title": "Lead AWS Data Engineer",
+"location": "Atlanta",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120140-lead-aws-data-engineer",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$89k \u2013 $120k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120099",
+"title": "Lead Pre-Sales Solutioner - Sales Engineer (MALS)",
+"location": "Burlington",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120099-lead-pre-sales-solutioner-sales-engineer-mals",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$124k \u2013 $201k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120075",
+"title": "Mechanical & Industrial Design Engineer",
+"location": "California",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120075-mechanical-industrial-design-engineer",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$89k \u2013 $166k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120044",
+"title": "Senior Director - Business Development Executive",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120044-senior-director-business-development-executive",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$169k \u2013 $266k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120039",
+"title": "Forward Deployed Engineer",
+"location": "Akron",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120039-forward-deployed-engineer",
+"posted": "2026-11-11T00:00:00Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120036",
+"title": "Anthropic Technical Specialist",
+"location": "Chicago",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120036-anthropic-technical-specialist",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$101k \u2013 $182k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120034",
+"title": "Senior Embedded Software Engineer",
+"location": "California",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120034-senior-embedded-software-engineer",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$89k \u2013 $166k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120033",
+"title": "Anthropic Technical Specialist",
+"location": "Atlanta",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120033-anthropic-technical-specialist",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$101k \u2013 $182k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120005",
+"title": "Java Production Engineering Lead",
+"location": "Atlanta",
+"remote": false,
+"url": "https://wellfound.com/jobs/5120005-java-production-engineering-lead",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$93k \u2013 $120k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5120004",
+"title": "Enterprise Context Architect- Data Governance- AI",
+"location": "Remote (United States); Paris",
+"remote": true,
+"url": "https://wellfound.com/jobs/5120004-enterprise-context-architect-data-governance-ai",
+"posted": "2026-11-10T00:00:00Z",
+"pay": "$117k \u2013 $223k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5119985",
+"title": "Anthropic Identity & Integration Lead",
+"location": "Chicago",
+"remote": false,
+"url": "https://wellfound.com/jobs/5119985-anthropic-identity-integration-lead",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$101k \u2013 $182k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5119972",
+"title": "Sr. Java Developer",
+"location": "Chicago",
+"remote": false,
+"url": "https://wellfound.com/jobs/5119972-sr-java-developer",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$86k \u2013 $127k",
+"no_sponsor": true
+},
+{
+"company": "Capgemini",
+"id": "5119970",
+"title": "Anthropic Identity & Integration Lead",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5119970-anthropic-identity-integration-lead",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$101k \u2013 $182k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5119964",
+"title": "Context Graph Engineer- Governance",
+"location": "Remote (United States); Paris",
+"remote": true,
+"url": "https://wellfound.com/jobs/5119964-context-graph-engineer-governance",
+"posted": "2026-11-10T00:00:00Z",
+"pay": "$76k \u2013 $150k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5119963",
+"title": "Mainframe Developer - Onsite in Lake Mary, FL",
+"location": "Tampa",
+"remote": false,
+"url": "https://wellfound.com/jobs/5119963-mainframe-developer-onsite-in-lake-mary-fl",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$70k \u2013 $85k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5119962",
+"title": "AWS Cloud - Center of Excellence (CoE)",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5119962-aws-cloud-center-of-excellence-coe",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$154k \u2013 $242k",
+"no_sponsor": false
+},
+{
+"company": "Capgemini",
+"id": "5109910",
+"title": "GEN AI Developer",
+"location": "Remote (New York City, New York); Paris",
+"remote": true,
+"url": "https://wellfound.com/jobs/5109910-gen-ai-developer",
+"posted": "2026-11-14T00:00:00Z",
+"pay": "$81k \u2013 $128k",
+"no_sponsor": false
+}
+]
+},
+"capital-one": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Capital One",
+"id": "5126755",
+"title": "Manager, Product Management - Consumer & Developer Experience",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5126755-manager-product-management-consumer-developer-experience",
+"posted": "2026-11-14T00:00:00Z",
+"pay": "$179k \u2013 $205k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5123555",
+"title": "Full-stack Engineer 5, Marketing and Messaging",
+"location": "Chicago",
+"remote": false,
+"url": "https://wellfound.com/jobs/5123555-full-stack-engineer-5-marketing-and-messaging",
+"posted": "2026-11-06T00:00:00Z",
+"pay": "$209k \u2013 $238k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5122673",
+"title": "Manager, Data Analysis",
+"location": "Richmond",
+"remote": false,
+"url": "https://wellfound.com/jobs/5122673-manager-data-analysis",
+"posted": "2026-11-10T00:00:00Z",
+"pay": "$149k \u2013 $171k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5122646",
+"title": "Senior Associate Product Manager - Commercial Banking",
+"location": "Richmond",
+"remote": false,
+"url": "https://wellfound.com/jobs/5122646-senior-associate-product-manager-commercial-banking",
+"posted": "2026-11-11T00:00:00Z",
+"pay": "$101k \u2013 $115k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5122627",
+"title": "Senior Associate Product Manager - Commercial Banking",
+"location": "McLean",
+"remote": false,
+"url": "https://wellfound.com/jobs/5122627-senior-associate-product-manager-commercial-banking",
+"posted": "2026-11-11T00:00:00Z",
+"pay": "$111k \u2013 $126k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5122590",
+"title": "Senior Manager, Senior Counsel - Network Marketing, Brand, and Communications",
+"location": "Deerfield",
+"remote": false,
+"url": "https://wellfound.com/jobs/5122590-senior-manager-senior-counsel-network-marketing-brand-and-communications",
+"posted": "2026-11-07T00:00:00Z",
+"pay": "$182k \u2013 $249k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5122586",
+"title": "Senior Associate, Data Scientist - Card Intelligence",
+"location": "McLean",
+"remote": false,
+"url": "https://wellfound.com/jobs/5122586-senior-associate-data-scientist-card-intelligence",
+"posted": "2026-11-10T00:00:00Z",
+"pay": "$135k \u2013 $154k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5122464",
+"title": "Senior Manager, Product Management - Consumer & Developer Experience",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5122464-senior-manager-product-management-consumer-developer-experience",
+"posted": "2026-11-05T00:00:00Z",
+"pay": "$219k \u2013 $249k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5122434",
+"title": "Lead Software Engineer (Generative AI - Risk Tech)",
+"location": "McLean",
+"remote": false,
+"url": "https://wellfound.com/jobs/5122434-lead-software-engineer-generative-ai-risk-tech",
+"posted": "2026-11-11T00:00:00Z",
+"pay": "$197k \u2013 $225k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118482",
+"title": "Data Engineer 4",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118482-data-engineer-4",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$215k \u2013 $245k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118442",
+"title": "Director, Data Scientist - Global Payment Network",
+"location": "Deerfield",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118442-director-data-scientist-global-payment-network",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$244k \u2013 $279k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118437",
+"title": "Manager, Data Analysis",
+"location": "McLean",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118437-manager-data-analysis",
+"posted": "2026-11-10T00:00:00Z",
+"pay": "$164k \u2013 $188k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118430",
+"title": "Senior Associate, Product Management - Upmarket Referrals",
+"location": "Richmond",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118430-senior-associate-product-management-upmarket-referrals",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$101k \u2013 $115k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118413",
+"title": "Full-stack Engineer 4 (Risk Tech)",
+"location": "Cambridge",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118413-full-stack-engineer-4-risk-tech",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$197k \u2013 $225k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118410",
+"title": "Senior Associate, Data Science - Compliance Model Risk",
+"location": "Deerfield",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118410-senior-associate-data-science-compliance-model-risk",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$123k \u2013 $140k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118372",
+"title": "Manager, Project Management - Card Planning and Delivery Team (Hybrid)",
+"location": "Deerfield",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118372-manager-project-management-card-planning-and-delivery-team-hybrid",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$138k \u2013 $173k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118352",
+"title": "Data Engineer 4",
+"location": "Richmond",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118352-data-engineer-4",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$179k \u2013 $204k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5118277",
+"title": "Email Marketing Lead, Principal Associate",
+"location": "Deerfield",
+"remote": false,
+"url": "https://wellfound.com/jobs/5118277-email-marketing-lead-principal-associate",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$109k \u2013 $125k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5110953",
+"title": "Email Marketing Lead, Principal Associate",
+"location": "Chicago",
+"remote": false,
+"url": "https://wellfound.com/jobs/5110953-email-marketing-lead-principal-associate",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$109k \u2013 $125k",
+"no_sponsor": false
+},
+{
+"company": "Capital One",
+"id": "5110868",
+"title": "Manager, Data Scientist - Optimization & Experimentation",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5110868-manager-data-scientist-optimization-experimentation",
+"posted": "2026-11-14T00:00:00Z",
+"pay": "$215k \u2013 $245k",
 "no_sponsor": false
 }
 ]
@@ -29994,6 +31054,154 @@
 }
 ]
 },
+"coastpay": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Coast",
+"id": "5137651",
+"title": "Director, Demand Generation",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137651-director-demand-generation",
+"posted": "2026-11-25T11:13:54Z",
+"pay": "$190k \u2013 $230k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "5127312",
+"title": "Engineer, Platform",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5127312-engineer-platform",
+"posted": "2026-11-20T21:15:45Z",
+"pay": "$160k \u2013 $215k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "5008680",
+"title": "Operations Engineer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5008680-operations-engineer",
+"posted": "2026-11-06T21:14:42Z",
+"pay": "$150k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "5008679",
+"title": "Staff Product Designer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5008679-staff-product-designer",
+"posted": "2026-11-06T21:14:40Z",
+"pay": "$205k \u2013 $230k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "5008568",
+"title": "AI Operations Engineer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5008568-ai-operations-engineer",
+"posted": "2026-11-06T11:14:03Z",
+"pay": "$150k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "5008567",
+"title": "Product Engineer, Foundations Team",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5008567-product-engineer-foundations-team",
+"posted": "2026-11-06T11:14:00Z",
+"pay": "$160k \u2013 $215k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "4965698",
+"title": "Business Operations Lead",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4965698-business-operations-lead",
+"posted": "2026-11-02T11:13:29Z",
+"pay": "$160k \u2013 $200k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "4965697",
+"title": "Business Operations Associate",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4965697-business-operations-associate",
+"posted": "2026-11-02T11:13:26Z",
+"pay": "$85k \u2013 $110k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "4817856",
+"title": "Account Executive (SMB) SLC",
+"location": "Salt Lake City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4817856-account-executive-smb-slc",
+"posted": "2026-10-07T20:14:49Z",
+"pay": "$60k \u2013 $75k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "4817855",
+"title": "Staff Product Manager, Corporate Spend",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4817855-staff-product-manager-corporate-spend",
+"posted": "2026-10-07T20:14:48Z",
+"pay": "$205k \u2013 $230k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "4817854",
+"title": "Account Executive (Mid-Market) NYC",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4817854-account-executive-mid-market-nyc",
+"posted": "2026-10-07T20:14:45Z",
+"pay": "$185k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "4797162",
+"title": "Staff Data Engineer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4797162-staff-data-engineer",
+"posted": "2026-10-02T20:15:23Z",
+"pay": "$170k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "Coast",
+"id": "4781417",
+"title": "Manager, Strategic Partnerships",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4781417-manager-strategic-partnerships",
+"posted": "2026-09-29T08:15:13Z",
+"pay": "$160k \u2013 $195k",
+"no_sponsor": false
+}
+]
+},
 "codal-5": {
 "fetched": "2026-11-26",
 "jobs": [
@@ -30111,6 +31319,10 @@
 },
 "codepath-org": {
 "fetched": "2026-11-26",
+"jobs": []
+},
+"coinbag-1": {
+"fetched": "2026-11-27",
 "jobs": []
 },
 "coinbase": {
@@ -30590,6 +31802,55 @@
 "url": "https://wellfound.com/jobs/4042956-member-of-technical-staff-infrastructure",
 "posted": "2026-10-15T00:00:00Z",
 "pay": "$250k \u2013 $360k",
+"no_sponsor": false
+}
+]
+},
+"cubbystorage": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Cubby",
+"id": "5137717",
+"title": "Associate Product Manager",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137717-associate-product-manager",
+"posted": "2026-11-25T15:11:59Z",
+"pay": "$115k \u2013 $132k",
+"no_sponsor": false
+},
+{
+"company": "Cubby",
+"id": "2843629",
+"title": "Sales Development Representative",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/2843629-business-development-representative-bdr",
+"posted": "2026-11-17T15:23:35Z",
+"pay": "$53k \u2013 $90k",
+"no_sponsor": false
+},
+{
+"company": "Cubby",
+"id": "5035139",
+"title": "Partner Success Manager, Scale",
+"location": "New York City; Lehi",
+"remote": false,
+"url": "https://wellfound.com/jobs/5035139-partner-success-manager-scale",
+"posted": "2026-11-11T09:43:13Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Cubby",
+"id": "5035135",
+"title": "Senior Manager, Product Marketing",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5035135-senior-manager-product-marketing",
+"posted": "2026-11-11T09:27:48Z",
+"pay": "$150k \u2013 $190k",
 "no_sponsor": false
 }
 ]
@@ -31130,6 +32391,198 @@
 "fetched": "2026-11-25",
 "jobs": []
 },
+"eightsleep": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Eight Sleep",
+"id": "5137896",
+"title": "New Grad - Engineering (internship)",
+"location": "Boston; New York City; San Francisco; Milan",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137896-new-grad-engineering-internship",
+"posted": "2026-11-26T00:53:42Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5137895",
+"title": "New Grad - Engineering (full-time)",
+"location": "Boston; New York City; San Francisco; Milan",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137895-new-grad-engineering-full-time",
+"posted": "2026-11-26T00:53:40Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5137894",
+"title": "New Grad - Business Functions (internship)",
+"location": "Boston; New York City; San Francisco; Milan",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137894-new-grad-business-functions-internship",
+"posted": "2026-11-26T00:53:38Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "4678065",
+"title": "Android Mobile Software Engineer (Milan)",
+"location": "Milan",
+"remote": false,
+"url": "https://wellfound.com/jobs/4678065-android-mobile-software-engineer-milan",
+"posted": "2026-11-19T00:00:00Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "4150306",
+"title": "Staff Product Designer",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/4150306-staff-product-designer",
+"posted": "2026-11-18T12:53:09Z",
+"pay": "$250k \u2013 $280k",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5095067",
+"title": "New Grad - Business Functions (full-time)",
+"location": "Boston; New York City; San Francisco; Milan",
+"remote": false,
+"url": "https://wellfound.com/jobs/5095067-new-grad-business-functions-full-time",
+"posted": "2026-11-18T01:23:21Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "3806013",
+"title": "Product Designer (Senior/Lead)",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/3806013-product-designer-senior-lead",
+"posted": "2026-11-18T00:00:00Z",
+"pay": "$180k \u2013 $240k",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5094803",
+"title": "Customer Support Specialist (Contract or Intern)",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5094803-customer-support-specialist-contract-or-intern",
+"posted": "2026-11-17T12:56:13Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5081999",
+"title": "Field Service Engineer (Contract or Intern)",
+"location": "Los Angeles; New York City; San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5081999-field-service-engineer-contract-or-intern",
+"posted": "2026-11-16T00:50:55Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "3805985",
+"title": "Business Operations Manager (Milan)",
+"location": "Milan",
+"remote": false,
+"url": "https://wellfound.com/jobs/3805985-business-operations-manager-milan",
+"posted": "2026-11-13T00:55:04Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5044751",
+"title": "Staff Mechanical Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044751-staff-mechanical-engineer",
+"posted": "2026-11-12T12:51:13Z",
+"pay": "$160k \u2013 $240k",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5044750",
+"title": "Senior Mechanical Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044750-senior-mechanical-engineer",
+"posted": "2026-11-12T12:51:10Z",
+"pay": "$140k \u2013 $200k",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5035366",
+"title": "Mechanical Engineer (New Grad 2027)",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5035366-mechanical-engineer-new-grad-2027",
+"posted": "2026-11-12T00:51:22Z",
+"pay": "$100k \u2013 $130k",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5034931",
+"title": "Recruiter (Milan)",
+"location": "Milan",
+"remote": false,
+"url": "https://wellfound.com/jobs/5034931-recruiter-milan",
+"posted": "2026-11-11T01:03:53Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "5008769",
+"title": "Technical Program Manager",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5008769-technical-program-manager",
+"posted": "2026-11-07T00:54:28Z",
+"pay": "$160k \u2013 $230k",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "4756990",
+"title": "Staff Security Engineer",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4756990-staff-security-engineer",
+"posted": "2026-10-31T00:00:00Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Eight Sleep",
+"id": "4943388",
+"title": "Eight Sleep Advisor, Sales",
+"location": "New York City; Texas; San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4943388-eight-sleep-advisor-sales",
+"posted": "2026-10-30T23:50:44Z",
+"pay": "$75k \u2013 $85k",
+"no_sponsor": false
+}
+]
+},
 "energyhub": {
 "fetched": "2026-11-25",
 "jobs": [
@@ -31208,6 +32661,22 @@
 "url": "https://wellfound.com/jobs/4972555-senior-client-success-manager",
 "posted": "2026-11-02T08:16:24Z",
 "pay": "$110k \u2013 $135k",
+"no_sponsor": false
+}
+]
+},
+"enigma-data": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Enigma Technologies",
+"id": "3239669",
+"title": "UX Engineer, API and Data Delivery Team",
+"location": "Los Angeles; New York; San Fransisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/3239669-ux-engineer-api-and-data-delivery-team",
+"posted": "2026-11-04T21:05:28Z",
+"pay": "$160k \u2013 $210k",
 "no_sponsor": false
 }
 ]
@@ -31858,6 +33327,10 @@
 "fetched": "2026-11-25",
 "jobs": []
 },
+"fictiv": {
+"fetched": "2026-11-27",
+"jobs": []
+},
 "fieldguide": {
 "fetched": "2026-11-26",
 "jobs": [
@@ -32157,6 +33630,132 @@
 "flipcx": {
 "fetched": "2026-11-26",
 "jobs": []
+},
+"flowgen-labs": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "FlowGen Labs",
+"id": "5027547",
+"title": "Strategic AI Partnerships Lead",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027547-strategic-ai-partnerships-lead",
+"posted": "2026-11-10T01:09:54Z",
+"pay": "$300k \u2013 $450k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027546",
+"title": "Strategic Account Executive",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027546-strategic-account-executive",
+"posted": "2026-11-10T01:09:52Z",
+"pay": "$350k \u2013 $400k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027545",
+"title": "Staff Software Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027545-staff-software-engineer",
+"posted": "2026-11-10T01:09:51Z",
+"pay": "$225k \u2013 $450k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027544",
+"title": "SAP Technical Lead",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027544-sap-technical-lead",
+"posted": "2026-11-10T01:09:50Z",
+"pay": "$200k \u2013 $400k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027543",
+"title": "SAP Functional Consultant",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027543-sap-functional-consultant",
+"posted": "2026-11-10T01:09:49Z",
+"pay": "$175k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027542",
+"title": "GTM Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027542-gtm-engineer",
+"posted": "2026-11-10T01:09:47Z",
+"pay": "$150k \u2013 $250k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027541",
+"title": "Founding Research Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027541-founding-research-engineer",
+"posted": "2026-11-10T01:09:46Z",
+"pay": "$200k \u2013 $375k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027540",
+"title": "Founding Account Executive",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027540-founding-account-executive",
+"posted": "2026-11-10T01:09:44Z",
+"pay": "$350k \u2013 $400k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027539",
+"title": "Forward Deployed Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027539-forward-deployed-engineer",
+"posted": "2026-11-10T01:09:43Z",
+"pay": "$200k \u2013 $375k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027538",
+"title": "Chief of Staff, Founder's Office",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027538-chief-of-staff-founder-s-office",
+"posted": "2026-11-10T01:09:42Z",
+"pay": "$150k \u2013 $250k",
+"no_sponsor": false
+},
+{
+"company": "FlowGen Labs",
+"id": "5027537",
+"title": "AI Strategist",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027537-ai-strategist",
+"posted": "2026-11-10T01:09:41Z",
+"pay": "$200k \u2013 $375k",
+"no_sponsor": false
+}
+]
 },
 "flox-dev": {
 "fetched": "2026-11-26",
@@ -32978,6 +34577,66 @@
 }
 ]
 },
+"getaleph": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Aleph",
+"id": "5137881",
+"title": "Senior Performance Marketing Manager",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5137881-senior-performance-marketing-manager",
+"posted": "2026-11-26T00:36:13Z",
+"pay": "$106k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "Aleph",
+"id": "5034657",
+"title": "Senior Marketing Operations Engineer",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5034657-senior-marketing-operations-engineer",
+"posted": "2026-11-10T12:37:04Z",
+"pay": "$87k \u2013 $195k",
+"no_sponsor": false
+},
+{
+"company": "Aleph",
+"id": "4995391",
+"title": "Strategic Business Development Lead, Private Equity",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4995391-strategic-business-development-lead-private-equity",
+"posted": "2026-11-06T00:37:43Z",
+"pay": "$94k \u2013 $225k",
+"no_sponsor": false
+},
+{
+"company": "Aleph",
+"id": "4986245",
+"title": "Manager, CX",
+"location": "United States",
+"remote": false,
+"url": "https://wellfound.com/jobs/4986245-manager-cx",
+"posted": "2026-11-05T00:38:28Z",
+"pay": "$153k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Aleph",
+"id": "3752484",
+"title": "Business Development Representative",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/3752484-business-development-representative",
+"posted": "2026-11-03T17:30:34Z",
+"pay": "$57k \u2013 $68k",
+"no_sponsor": false
+}
+]
+},
 "getnametag": {
 "fetched": "2026-11-25",
 "jobs": [
@@ -33488,9 +35147,298 @@
 }
 ]
 },
+"glossgenius": {
+"fetched": "2026-11-27",
+"jobs": []
+},
 "gomotive": {
 "fetched": "2026-11-25",
 "jobs": []
+},
+"grafana-labs-1": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Grafana Labs",
+"id": "5132677",
+"title": "Engineering Manager - Grafana Infrastructure (Remote, USA)",
+"location": "Remote (Canada, United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5132677-engineering-manager-grafana-infrastructure-remote-usa",
+"posted": "2026-11-20T08:53:38Z",
+"pay": "$189k \u2013 $227k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5132220",
+"title": "Engineering Manager - Grafana Infrastructure (Remote, Canada)",
+"location": "Remote (Canada); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5132220-engineering-manager-grafana-infrastructure-remote-canada",
+"posted": "2026-11-20T08:53:36Z",
+"pay": "$192k \u2013 $231k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5129636",
+"title": "Senior Commercial Account Executive, Acquisition | CA | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5129636-senior-commercial-account-executive-acquisition-ca-remote",
+"posted": "2026-11-19T10:58:12Z",
+"pay": "$200k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5129205",
+"title": "Senior Engineering Manager, Grafana Data Visualization | USA | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5129205-senior-engineering-manager-grafana-data-visualization-usa-remote",
+"posted": "2026-11-19T13:48:01Z",
+"pay": "$214k \u2013 $257k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5129182",
+"title": "Senior Product Partnership Manager | United States | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5129182-senior-product-partnership-manager-united-states-remote",
+"posted": "2026-11-18T13:55:22Z",
+"pay": "$183k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5129029",
+"title": "Senior Engineering Manager, Grafana Data Visualization | Canada | Remote",
+"location": "Remote (Canada); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5129029-senior-engineering-manager-grafana-data-visualization-canada-remote",
+"posted": "2026-11-19T13:49:39Z",
+"pay": "$218k \u2013 $262k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5128644",
+"title": "Senior Commercial Account Executive, Growth | CA | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5128644-senior-commercial-account-executive-growth-ca-remote",
+"posted": "2026-11-19T10:54:50Z",
+"pay": "$200k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5120417",
+"title": "Manager, Solutions Engineering | East Coast | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5120417-manager-solutions-engineering-east-coast-remote",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$234k \u2013 $278k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5115790",
+"title": "Senior Full Stack Engineer | Experimentation - Product Analytics | NASA | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5115790-senior-full-stack-engineer-experimentation-product-analytics-nasa-remote",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$167k \u2013 $209k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5115711",
+"title": "Staff Backend Engineer - Grafana Enterprise | US | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5115711-staff-backend-engineer-grafana-enterprise-us-remote",
+"posted": "2026-11-13T00:00:00Z",
+"pay": "$174k \u2013 $209k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5105849",
+"title": "Regional Sales Director, Enterprise Acquisition | West | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5105849-regional-sales-director-enterprise-acquisition-west-remote",
+"posted": "2026-11-17T13:57:12Z",
+"pay": "$400k \u2013 $450k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5097587",
+"title": "Engineering Manager - Grafana Productivity  (Remote, Canada)",
+"location": "Remote (Canada); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5097587-engineering-manager-grafana-productivity-remote-canada",
+"posted": "2026-11-16T04:40:46Z",
+"pay": "$192k \u2013 $231k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5097558",
+"title": "Engineering Manager - Grafana Productivity  (Remote, USA)",
+"location": "Remote (Canada, United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5097558-engineering-manager-grafana-productivity-remote-usa",
+"posted": "2026-11-16T04:36:51Z",
+"pay": "$189k \u2013 $227k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5075209",
+"title": "Manager, Solutions Engineering | West Coast | Remote",
+"location": "Remote (United States, West Coast, New Zealand); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5075209-manager-solutions-engineering-west-coast-remote",
+"posted": "2026-11-13T11:46:58Z",
+"pay": "$234k \u2013 $278k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5064829",
+"title": "Staff Mobile Engineer - Session Replay | US | Remote",
+"location": "Remote (Canada, United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5064829-staff-mobile-engineer-session-replay-us-remote",
+"posted": "2026-11-12T14:19:22Z",
+"pay": "$189k \u2013 $227k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5064695",
+"title": "Senior Solutions Engineer, Growth | Mid Atlantic or Southeast | Remote",
+"location": "Remote (Atlanta, Georgia, Miami, Florida, Penfield, Monroe County, Orlando, Florida, Vietnam, Tampa, Florida); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5064695-senior-solutions-engineer-growth-mid-atlantic-or-southeast-remote",
+"posted": "2026-11-12T11:51:41Z",
+"pay": "$204k \u2013 $254k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5064652",
+"title": "Staff Mobile Engineer - Session Replay | Canada | Remote",
+"location": "Remote (Canada); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5064652-staff-mobile-engineer-session-replay-canada-remote",
+"posted": "2026-11-12T14:19:24Z",
+"pay": "$192k \u2013 $231k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5049276",
+"title": "Senior Product Manager, App o11y | Canada | Remote",
+"location": "Remote (Canada); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5049276-senior-product-manager-app-o11y-canada-remote",
+"posted": "2026-11-09T15:40:31Z",
+"pay": "$170k \u2013 $204k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5043093",
+"title": "Senior Product Manager, App o11y | US | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5043093-senior-product-manager-app-o11y-us-remote",
+"posted": "2026-11-09T15:40:41Z",
+"pay": "$167k \u2013 $200k",
+"no_sponsor": false
+},
+{
+"company": "Grafana Labs",
+"id": "5017152",
+"title": "Senior Sales Recruiter | EST | Remote",
+"location": "Remote (United States); New York City",
+"remote": true,
+"url": "https://wellfound.com/jobs/5017152-senior-sales-recruiter-est-remote",
+"posted": "2026-11-06T12:35:48Z",
+"pay": "$144k \u2013 $160k",
+"no_sponsor": false
+}
+]
+},
+"great-question": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Great Question",
+"id": "5137500",
+"title": "Account Manager",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5137500-account-manager",
+"posted": "2026-11-25T00:35:16Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Great Question",
+"id": "4995394",
+"title": "Business Development Representative",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4995394-business-development-representative",
+"posted": "2026-11-06T00:38:34Z",
+"pay": "$75k \u2013 $80k CAD",
+"no_sponsor": false
+},
+{
+"company": "Great Question",
+"id": "4903690",
+"title": "Product Manager",
+"location": "Remote (Canada); Vancouver",
+"remote": true,
+"url": "https://wellfound.com/jobs/4903690-product-manager",
+"posted": "2026-10-29T23:39:55Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Great Question",
+"id": "4824267",
+"title": "Business Development Representative",
+"location": "Remote; Canada",
+"remote": true,
+"url": "https://wellfound.com/jobs/4824267-business-development-representative",
+"posted": "2026-10-09T23:37:19Z",
+"pay": "$75k \u2013 $80k CAD",
+"no_sponsor": false
+},
+{
+"company": "Great Question",
+"id": "4817919",
+"title": "Product Manager",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4817919-product-manager",
+"posted": "2026-10-07T23:42:14Z",
+"pay": "",
+"no_sponsor": false
+}
+]
 },
 "green-usd": {
 "fetched": "2026-11-26",
@@ -34410,6 +36358,110 @@
 }
 ]
 },
+"kaizen-labs-2": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Kaizen Labs",
+"id": "5044956",
+"title": "Executive Assistant",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044956-executive-assistant",
+"posted": "2026-11-13T00:32:07Z",
+"pay": "$110k \u2013 $160k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "5044955",
+"title": "AI/ML Engineer",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044955-ai-ml-engineer",
+"posted": "2026-11-13T00:32:05Z",
+"pay": "$240k \u2013 $280k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "5027470",
+"title": "Chief of Staff",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027470-chief-of-staff",
+"posted": "2026-11-10T00:34:43Z",
+"pay": "$120k \u2013 $160k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "4995388",
+"title": "Senior Product Designer, Platform",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4995388-senior-product-designer-platform",
+"posted": "2026-11-06T00:33:14Z",
+"pay": "$170k \u2013 $210k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "4965878",
+"title": "Software Engineer",
+"location": "Washington DC",
+"remote": false,
+"url": "https://wellfound.com/jobs/4965878-software-engineer",
+"posted": "2026-11-03T00:32:53Z",
+"pay": "$160k \u2013 $230k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "4965877",
+"title": "Senior Software Engineer",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4965877-senior-software-engineer",
+"posted": "2026-11-03T00:32:51Z",
+"pay": "$180k \u2013 $260k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "4884762",
+"title": "Recruiter",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4884762-recruiter",
+"posted": "2026-10-23T23:33:17Z",
+"pay": "$140k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "4849902",
+"title": "Federal Growth Lead, Navy",
+"location": "Washington DC",
+"remote": false,
+"url": "https://wellfound.com/jobs/4849902-federal-growth-lead-navy",
+"posted": "2026-10-15T23:33:14Z",
+"pay": "$180k \u2013 $225k",
+"no_sponsor": false
+},
+{
+"company": "Kaizen Labs",
+"id": "4797228",
+"title": "Deployment Strategist (Cleared)",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4797228-deployment-strategist-cleared",
+"posted": "2026-10-02T23:31:58Z",
+"pay": "$140k \u2013 $180k",
+"no_sponsor": false
+}
+]
+},
 "karbonhq": {
 "fetched": "2026-11-26",
 "jobs": []
@@ -34611,6 +36663,231 @@
 "url": "https://wellfound.com/jobs/4287557-content-creator",
 "posted": "2026-10-20T19:18:32Z",
 "pay": "\u20b94.8L \u2013 \u20b96L",
+"no_sponsor": false
+}
+]
+},
+"klaviyo": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Klaviyo",
+"id": "5138162",
+"title": "Commercial Account Executive, France",
+"location": "Dublin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5138162-commercial-account-executive-france",
+"posted": "2026-11-26T21:12:22Z",
+"pay": "\u20ac57k \u2013 \u20ac57k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5138161",
+"title": "Commercial Account Executive - DACH",
+"location": "Dublin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5138161-commercial-account-executive-dach",
+"posted": "2026-11-26T21:12:20Z",
+"pay": "\u20ac57k \u2013 \u20ac57k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5137805",
+"title": "Customer Growth Account Executive - France",
+"location": "Dublin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137805-customer-growth-account-executive-france",
+"posted": "2026-11-25T21:13:41Z",
+"pay": "\u20ac57k \u2013 \u20ac57k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5137804",
+"title": "Customer Growth Account Executive - Eastern Europe",
+"location": "Dublin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137804-customer-growth-account-executive-eastern-europe",
+"posted": "2026-11-25T21:13:40Z",
+"pay": "\u20ac57k \u2013 \u20ac57k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5137803",
+"title": "Senior Software Engineer, Applied AI",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137803-senior-software-engineer-applied-ai",
+"posted": "2026-11-25T21:13:38Z",
+"pay": "$148k \u2013 $222k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5137802",
+"title": "Engineering Manager - Applied AI",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137802-engineering-manager-applied-ai",
+"posted": "2026-11-25T21:13:37Z",
+"pay": "$176k \u2013 $264k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "3915966",
+"title": "Customer Growth Account Executive, Commercial",
+"location": "Denver",
+"remote": false,
+"url": "https://wellfound.com/jobs/3915966-customer-growth-account-executive-commercial",
+"posted": "2026-11-24T21:15:05Z",
+"pay": "$65k \u2013 $65k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "3794914",
+"title": "Customer Growth Account Executive, Commercial",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/3794914-customer-growth-account-executive-commercial",
+"posted": "2026-11-24T21:15:04Z",
+"pay": "$65k \u2013 $65k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5137310",
+"title": "Customer Success Manager, At Scale (German speaking)",
+"location": "Dublin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137310-customer-success-manager-at-scale-german-speaking",
+"posted": "2026-11-24T11:14:00Z",
+"pay": "\u20ac52k \u2013 \u20ac78k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5135505",
+"title": "Lead Executive Recruiter, Non Tech",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/5135505-lead-executive-recruiter-non-tech",
+"posted": "2026-11-23T21:14:00Z",
+"pay": "$136k \u2013 $204k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5135504",
+"title": "Lead Executive Recruiter, R&D",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/5135504-lead-executive-recruiter-r-d",
+"posted": "2026-11-23T21:13:58Z",
+"pay": "$136k \u2013 $204k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5135503",
+"title": "Customer Success Manager, At Scale (Italian speaking)",
+"location": "Dublin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5135503-customer-success-manager-at-scale-italian-speaking",
+"posted": "2026-11-23T21:13:57Z",
+"pay": "\u20ac52k \u2013 \u20ac78k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5127309",
+"title": "Customer Growth Account Executive - Commercial",
+"location": "London",
+"remote": false,
+"url": "https://wellfound.com/jobs/5127309-customer-growth-account-executive-commercial",
+"posted": "2026-11-20T21:14:15Z",
+"pay": "\u00a365k \u2013 \u00a365k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5126910",
+"title": "Customer Success Manager - Mid/ Large Enterprise",
+"location": "London",
+"remote": false,
+"url": "https://wellfound.com/jobs/5126910-customer-success-manager-mid-large-enterprise",
+"posted": "2026-11-20T11:13:39Z",
+"pay": "\u00a356k \u2013 \u00a384k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "3890392",
+"title": "Account Executive, Mid-Enterprise",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/3890392-account-executive-mid-enterprise",
+"posted": "2026-11-18T21:12:55Z",
+"pay": "$115k \u2013 $115k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5086209",
+"title": "Account Executive, Mid Enteprise - Central Europe",
+"location": "Munich",
+"remote": false,
+"url": "https://wellfound.com/jobs/5086209-account-executive-mid-enteprise-central-europe",
+"posted": "2026-11-16T21:14:05Z",
+"pay": "\u20ac105k \u2013 \u20ac105k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5067508",
+"title": "Senior Security Engineer - Detection & Response",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/5067508-senior-security-engineer-detection-response",
+"posted": "2026-11-13T21:13:38Z",
+"pay": "$141k \u2013 $212k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5063239",
+"title": "Partner Account Manager, Mid Enterprise- Japanese Speaker",
+"location": "Boston; Denver; Singapore; San Francisco; London; Sydney; Dublin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5063239-partner-account-manager-mid-enterprise-japanese-speaker",
+"posted": "2026-11-13T11:13:30Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5063238",
+"title": "Software Engineer II - Flows Experience",
+"location": "Boston",
+"remote": false,
+"url": "https://wellfound.com/jobs/5063238-software-engineer-ii-flows-experience",
+"posted": "2026-11-13T11:13:29Z",
+"pay": "$116k \u2013 $174k",
+"no_sponsor": false
+},
+{
+"company": "Klaviyo",
+"id": "5044884",
+"title": "Head of Organic Search (SEO & AEO)",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044884-head-of-organic-search-seo-aeo",
+"posted": "2026-11-12T21:13:00Z",
+"pay": "$128k \u2013 $192k",
 "no_sponsor": false
 }
 ]
@@ -35070,6 +37347,10 @@
 }
 ]
 },
+"leantaas": {
+"fetched": "2026-11-27",
+"jobs": []
+},
 "lightfield-1": {
 "fetched": "2026-11-26",
 "jobs": [
@@ -35174,6 +37455,406 @@
 }
 ]
 },
+"lilt": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "LILT",
+"id": "5138208",
+"title": "AI Training Contributor - Welsh - Remote",
+"location": "Remote (United Kingdom); Cardiff",
+"remote": true,
+"url": "https://wellfound.com/jobs/5138208-ai-training-contributor-welsh-remote",
+"posted": "2026-11-27T00:26:17Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "3829011",
+"title": "AI Training Contributor - Spanish (Colombia) - Remote",
+"location": "Bogota",
+"remote": false,
+"url": "https://wellfound.com/jobs/3829011-ai-training-contributor-spanish-colombia-remote",
+"posted": "2026-11-27T00:26:14Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "5138207",
+"title": "AI Training Contributor - Malagasy - Remote",
+"location": "Remote (Madagascar); Madagascar",
+"remote": true,
+"url": "https://wellfound.com/jobs/5138207-ai-training-contributor-malagasy-remote",
+"posted": "2026-11-27T00:26:10Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "3829007",
+"title": "AI Training Contributor - Catalan - Remote",
+"location": "Remote (Spain); Madrid",
+"remote": true,
+"url": "https://wellfound.com/jobs/3829007-ai-training-contributor-catalan-remote",
+"posted": "2026-11-27T00:26:06Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "5130446",
+"title": "Project Manager EMEA, Production",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/5130446-project-manager-emea-production",
+"posted": "2026-11-21T12:27:18Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4579627",
+"title": "Linguist - Mongolian - Remote",
+"location": "Remote (Mongolia); Ulaanbaatar",
+"remote": true,
+"url": "https://wellfound.com/jobs/4579627-linguist-mongolian-remote",
+"posted": "2026-11-13T17:30:40Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "5035349",
+"title": "Medical Translators - Nepali - US-based",
+"location": "Remote (United States); San Francisco",
+"remote": true,
+"url": "https://wellfound.com/jobs/5035349-medical-translators-nepali-us-based",
+"posted": "2026-11-12T00:27:24Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4965871",
+"title": "Medical Translators - Thai - US-based",
+"location": "Remote (United States); San Francisco",
+"remote": true,
+"url": "https://wellfound.com/jobs/4965871-medical-translators-thai-us-based",
+"posted": "2026-11-03T00:28:26Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4965870",
+"title": "Medical Translators - Farsi - US-based",
+"location": "Remote (United States); San Francisco",
+"remote": true,
+"url": "https://wellfound.com/jobs/4965870-medical-translators-farsi-us-based",
+"posted": "2026-11-03T00:28:22Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4903482",
+"title": "Subject Matter Expert \u2013 Professional, Scientific & Technical Services (English/Russian) \u2013 Remote",
+"location": "Remote (Ukraine); Kyiv",
+"remote": true,
+"url": "https://wellfound.com/jobs/4903482-subject-matter-expert-professional-scientific-technical-services-english-russian-remote",
+"posted": "2026-10-29T11:29:07Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4901657",
+"title": "Subject Matter Expert \u2013 Real Estate, Property Management & Leasing (English/Arabic) \u2013 Remote",
+"location": "Remote (Egypt); Cairo",
+"remote": true,
+"url": "https://wellfound.com/jobs/4901657-subject-matter-expert-real-estate-property-management-leasing-english-arabic-remote",
+"posted": "2026-10-28T23:28:54Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4290068",
+"title": "AI Training Contributor - Tswana - Remote",
+"location": "Remote (Luxembourg); Luxembourg",
+"remote": true,
+"url": "https://wellfound.com/jobs/4290068-ai-training-contributor-tswana-remote",
+"posted": "2026-10-22T16:30:29Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4875231",
+"title": "Community Lead | Multiple Langs",
+"location": "Boston; Indianapolis; New York City; Washington DC; San Francisco; London; Berlin",
+"remote": false,
+"url": "https://wellfound.com/jobs/4875231-community-lead-multiple-langs",
+"posted": "2026-10-21T23:29:28Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4875009",
+"title": "Linguist - Icelandic - Remote",
+"location": "Remote (Iceland); Reykjav\u00edk",
+"remote": true,
+"url": "https://wellfound.com/jobs/4875009-linguist-icelandic-remote",
+"posted": "2026-10-21T11:26:32Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4860664",
+"title": "Subject Matter Expert \u2013 Government (English/Spanish) \u2013 Remote",
+"location": "Remote (Mexico); Mexico",
+"remote": true,
+"url": "https://wellfound.com/jobs/4860664-subject-matter-expert-government-english-spanish-remote",
+"posted": "2026-10-17T23:27:10Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4855196",
+"title": "Linguist - Tajik - Remote",
+"location": "Remote (Ukraine); Kyiv",
+"remote": true,
+"url": "https://wellfound.com/jobs/4855196-linguist-tajik-remote",
+"posted": "2026-10-16T11:26:46Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4361924",
+"title": "Project Coordinator EMEA, Production",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/4361924-project-coordinator-emea-production",
+"posted": "2026-10-15T16:30:40Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4307404",
+"title": "AI Training Contributor - Armenian - Remote",
+"location": "Remote (United States, Armenia); Yerevan",
+"remote": true,
+"url": "https://wellfound.com/jobs/4307404-ai-training-contributor-armenian-remote",
+"posted": "2026-10-15T16:30:39Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4290065",
+"title": "AI Training Contributor - Guarani - Remote",
+"location": "Remote (Paraguay); Asuncion",
+"remote": true,
+"url": "https://wellfound.com/jobs/4290065-ai-training-contributor-guarani-remote",
+"posted": "2026-10-15T16:30:39Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "LILT",
+"id": "4289741",
+"title": "AI Training Contributor - Balochi - Remote",
+"location": "Islamabad",
+"remote": false,
+"url": "https://wellfound.com/jobs/4289741-ai-training-contributor-balochi-remote",
+"posted": "2026-10-15T16:30:39Z",
+"pay": "",
+"no_sponsor": false
+}
+]
+},
+"magic-34": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Magic",
+"id": "4986283",
+"title": "Founding GTM Engineer",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4986283-founding-gtm-engineer",
+"posted": "2026-11-05T01:16:43Z",
+"pay": "$150k \u2013 $190k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4907121",
+"title": "Founding Business Operations",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4907121-founding-business-operations",
+"posted": "2026-10-30T00:15:55Z",
+"pay": "$110k \u2013 $150k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4901312",
+"title": "Senior Software Engineer, Infra",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901312-senior-software-engineer-infra",
+"posted": "2026-10-28T01:40:10Z",
+"pay": "$170k \u2013 $210k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4901311",
+"title": "Senior Software Engineer, Full Stack",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901311-senior-software-engineer-full-stack",
+"posted": "2026-10-28T01:40:09Z",
+"pay": "$150k \u2013 $200k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4901308",
+"title": "Founding Designer",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901308-founding-designer",
+"posted": "2026-10-28T01:40:07Z",
+"pay": "$160k \u2013 $200k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4901309",
+"title": "Founding Talent",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901309-founding-talent",
+"posted": "2026-10-28T01:40:07Z",
+"pay": "$140k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4901307",
+"title": "Founding Account Executive",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901307-founding-account-executive",
+"posted": "2026-10-28T01:40:06Z",
+"pay": "$140k \u2013 $280k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4901306",
+"title": "Forward Deployed Strategist",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901306-forward-deployed-strategist",
+"posted": "2026-10-28T01:40:05Z",
+"pay": "$100k \u2013 $150k",
+"no_sponsor": false
+},
+{
+"company": "Magic",
+"id": "4901305",
+"title": "Executive Assistant to the CEO",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4901305-executive-assistant-to-the-ceo",
+"posted": "2026-10-28T01:40:04Z",
+"pay": "$75k \u2013 $95k",
+"no_sponsor": false
+}
+]
+},
+"makai-labs": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Makai Labs",
+"id": "5127407",
+"title": "Senior Azure Platform / DevOps Engineer",
+"location": "Remote (Peru, Brazil, Uruguay, Venezuela, Colombia, Chile, Argentina); Caracas; Buenos Aires",
+"remote": true,
+"url": "https://wellfound.com/jobs/5127407-senior-azure-platform-devops-engineer",
+"posted": "2026-11-21T01:03:25Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Makai Labs",
+"id": "4493322",
+"title": "Senior Azure Platform / DevOps Engineer",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4493322-senior-azure-platform-devops-engineer",
+"posted": "2026-11-03T00:00:00Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Makai Labs",
+"id": "4493319",
+"title": "AI Engineer",
+"location": "Remote (United States); New York",
+"remote": true,
+"url": "https://wellfound.com/jobs/4493319-ai-engineer",
+"posted": "2026-10-23T00:00:00Z",
+"pay": "$115k \u2013 $130k",
+"no_sponsor": false
+},
+{
+"company": "Makai Labs",
+"id": "4829895",
+"title": "Project Manager",
+"location": "Remote (United States); New York",
+"remote": true,
+"url": "https://wellfound.com/jobs/4829895-project-manager",
+"posted": "2026-10-14T00:04:47Z",
+"pay": "$115k \u2013 $135k",
+"no_sponsor": false
+},
+{
+"company": "Makai Labs",
+"id": "4782368",
+"title": "Senior QA Engineer",
+"location": "Remote (Peru, Brazil, Venezuela, Argentina, Chile, Uruguay); Caracas; Montevideo",
+"remote": true,
+"url": "https://wellfound.com/jobs/4782368-senior-qa-engineer",
+"posted": "2026-09-30T00:10:49Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Makai Labs",
+"id": "4779711",
+"title": "Senior Next.js Developer",
+"location": "Remote (Peru, Brazil, Argentina, Chile, Uruguay); Montevideo",
+"remote": true,
+"url": "https://wellfound.com/jobs/4779711-senior-next-js-developer",
+"posted": "2026-09-29T00:06:26Z",
+"pay": "",
+"no_sponsor": false
+}
+]
+},
 "marketcatalyst": {
 "fetched": "2026-11-26",
 "jobs": [
@@ -35219,6 +37900,231 @@
 "url": "https://wellfound.com/jobs/4884713-research-analyst-equities-and-markets",
 "posted": "2026-10-23T20:26:17Z",
 "pay": "$80k \u2013 $120k",
+"no_sponsor": false
+}
+]
+},
+"mastercard": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Mastercard",
+"id": "5067150",
+"title": "Lead Site Reliability Engineer (Big Data)",
+"location": "O'Fallon",
+"remote": false,
+"url": "https://wellfound.com/jobs/5067150-lead-site-reliability-engineer-big-data",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$122k \u2013 $207k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "5066055",
+"title": "Regional Director, Digital Assets Sales & Commercialization, North America",
+"location": "San Carlos",
+"remote": false,
+"url": "https://wellfound.com/jobs/5066055-regional-director-digital-assets-sales-commercialization-north-america",
+"posted": "2026-11-07T00:00:00Z",
+"pay": "$190k \u2013 $304k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "5060635",
+"title": "Vice President, Business Operations",
+"location": "O'Fallon",
+"remote": false,
+"url": "https://wellfound.com/jobs/5060635-vice-president-business-operations",
+"posted": "2026-11-12T00:00:00Z",
+"pay": "$200k \u2013 $330k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "5052094",
+"title": "Lead AI Engineer",
+"location": "New York City; Virginia; Harrison; O'Fallon",
+"remote": false,
+"url": "https://wellfound.com/jobs/5052094-lead-ai-engineer",
+"posted": "2026-11-09T00:00:00Z",
+"pay": "$161k \u2013 $266k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "5031370",
+"title": "Manager, Forward-Deployed AI Engineer \u2014 AI Mobilization & Transformation",
+"location": "Atlanta; Virginia; Harrison",
+"remote": false,
+"url": "https://wellfound.com/jobs/5031370-manager-forward-deployed-ai-engineer-ai-mobilization-transformation",
+"posted": "2026-11-09T00:00:00Z",
+"pay": "$161k \u2013 $266k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "5016439",
+"title": "Manager, Account Management",
+"location": "O'Fallon",
+"remote": false,
+"url": "https://wellfound.com/jobs/5016439-manager-account-management",
+"posted": "2026-11-06T00:00:00Z",
+"pay": "$126k \u2013 $202k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "5016321",
+"title": "Manager - Product Management",
+"location": "Virginia; Harrison",
+"remote": false,
+"url": "https://wellfound.com/jobs/5016321-manager-product-management",
+"posted": "2026-11-06T00:00:00Z",
+"pay": "$150k \u2013 $254k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "5007723",
+"title": "Site Reliability Engineer I",
+"location": "O'Fallon",
+"remote": false,
+"url": "https://wellfound.com/jobs/5007723-site-reliability-engineer-i",
+"posted": "2026-11-05T00:00:00Z",
+"pay": "$61k \u2013 $102k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4998606",
+"title": "Software Engineer II - AI Platforms",
+"location": "Atlanta",
+"remote": false,
+"url": "https://wellfound.com/jobs/4998606-software-engineer-ii-ai-platforms",
+"posted": "2026-11-04T00:00:00Z",
+"pay": "$92k \u2013 $147k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4998570",
+"title": "Manager, Software Engineering, AI Foundations",
+"location": "Atlanta",
+"remote": false,
+"url": "https://wellfound.com/jobs/4998570-manager-software-engineering-ai-foundations",
+"posted": "2026-11-04T00:00:00Z",
+"pay": "$140k \u2013 $231k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4997799",
+"title": "Senior Software Engineer - AI Platforms",
+"location": "Atlanta",
+"remote": false,
+"url": "https://wellfound.com/jobs/4997799-senior-software-engineer-ai-platforms",
+"posted": "2026-11-04T00:00:00Z",
+"pay": "$115k \u2013 $184k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4990469",
+"title": "Vice President, Product Management, Agentic Commerce",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4990469-vice-president-product-management-agentic-commerce",
+"posted": "2026-10-29T00:00:00Z",
+"pay": "$245k \u2013 $391k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4990448",
+"title": "Vice President, Product Management, Agentic Commerce",
+"location": "Missouri",
+"remote": false,
+"url": "https://wellfound.com/jobs/4990448-vice-president-product-management-agentic-commerce",
+"posted": "2026-10-29T00:00:00Z",
+"pay": "$204k \u2013 $326k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4990268",
+"title": "Vice President, Product Management, Agentic Commerce",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4990268-vice-president-product-management-agentic-commerce",
+"posted": "2026-10-29T00:00:00Z",
+"pay": "$245k \u2013 $391k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4980523",
+"title": "Global Economics Intelligence Manager \u2013 Product Management",
+"location": "Boston; Virginia",
+"remote": false,
+"url": "https://wellfound.com/jobs/4980523-global-economics-intelligence-manager-product-management",
+"posted": "2026-11-03T00:00:00Z",
+"pay": "$150k \u2013 $254k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4980398",
+"title": "Software Engineer II",
+"location": "Vancouver",
+"remote": false,
+"url": "https://wellfound.com/jobs/4980398-software-engineer-ii",
+"posted": "2026-11-03T00:00:00Z",
+"pay": "$91k \u2013 $140k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4975831",
+"title": "Product Manager - B2B Payments",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4975831-product-manager-b2b-payments",
+"posted": "2026-10-30T00:00:00Z",
+"pay": "$156k \u2013 $265k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4972573",
+"title": "Director, Software Engineering",
+"location": "Virginia",
+"remote": false,
+"url": "https://wellfound.com/jobs/4972573-director-software-engineering",
+"posted": "2026-11-02T00:00:00Z",
+"pay": "$195k \u2013 $323k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4969905",
+"title": "Senior Product Manger - Technical",
+"location": "O'Fallon",
+"remote": false,
+"url": "https://wellfound.com/jobs/4969905-senior-product-manger-technical",
+"posted": "2026-11-02T00:00:00Z",
+"pay": "$104k \u2013 $177k",
+"no_sponsor": false
+},
+{
+"company": "Mastercard",
+"id": "4953473",
+"title": "Senior AI Engineer",
+"location": "Ireland",
+"remote": false,
+"url": "https://wellfound.com/jobs/4953473-senior-ai-engineer",
+"posted": "2026-10-30T00:00:00Z",
+"pay": "",
 "no_sponsor": false
 }
 ]
@@ -36222,9 +39128,343 @@
 "fetched": "2026-11-26",
 "jobs": []
 },
+"mirage-app": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Mirage",
+"id": "5137495",
+"title": "Senior Recruiter",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137495-senior-recruiter",
+"posted": "2026-11-25T00:25:11Z",
+"pay": "$150k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "5078023",
+"title": "Software Engineer, iOS",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5078023-software-engineer-ios",
+"posted": "2026-11-15T00:25:52Z",
+"pay": "$175k \u2013 $275k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "5078022",
+"title": "Software Engineer, Backend",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5078022-software-engineer-backend",
+"posted": "2026-11-15T00:25:50Z",
+"pay": "$175k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "5078021",
+"title": "Software Engineer, AI Developer Platform",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5078021-software-engineer-ai-developer-platform",
+"posted": "2026-11-15T00:25:48Z",
+"pay": "$175k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "5078020",
+"title": "Software Engineer, Agents",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5078020-software-engineer-agents",
+"posted": "2026-11-15T00:25:47Z",
+"pay": "$175k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "5078019",
+"title": "Software Engineer, 3D Rendering",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5078019-software-engineer-3d-rendering",
+"posted": "2026-11-15T00:25:45Z",
+"pay": "$175k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "5008728",
+"title": "Performance Marketing Manager",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/5008728-performance-marketing-manager",
+"posted": "2026-11-07T00:25:56Z",
+"pay": "$100k \u2013 $160k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "4985506",
+"title": "SEO/AEO Marketing Lead",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4985506-seo-aeo-marketing-lead",
+"posted": "2026-11-04T12:26:03Z",
+"pay": "$150k \u2013 $210k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "4897752",
+"title": "Organic Growth Hacker",
+"location": "Remote (United States); United States; New York",
+"remote": true,
+"url": "https://wellfound.com/jobs/4897752-organic-growth-hacker",
+"posted": "2026-10-27T23:26:11Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "4884753",
+"title": "Recruiter",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4884753-recruiter",
+"posted": "2026-10-23T23:26:13Z",
+"pay": "$100k \u2013 $160k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "4823864",
+"title": "Product Designer (7+ YOE)",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4823864-product-designer-7-yoe",
+"posted": "2026-10-08T23:26:51Z",
+"pay": "$175k \u2013 $275k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "4781707",
+"title": "Data Scientist, Product",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4781707-data-scientist-product",
+"posted": "2026-09-29T23:26:08Z",
+"pay": "$120k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "4779349",
+"title": "Research Engineer, Generative Video",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4779349-research-engineer-generative-video",
+"posted": "2026-09-28T23:26:38Z",
+"pay": "$175k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Mirage",
+"id": "4779348",
+"title": "Research Engineer, Agentic Systems",
+"location": "New York",
+"remote": false,
+"url": "https://wellfound.com/jobs/4779348-research-engineer-agentic-systems",
+"posted": "2026-09-28T23:26:37Z",
+"pay": "$175k \u2013 $300k",
+"no_sponsor": false
+}
+]
+},
+"mixpanel": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Mixpanel",
+"id": "5023063",
+"title": "Director of Product Management",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5023063-director-of-product-management",
+"posted": "2026-11-06T18:24:56Z",
+"pay": "$298k \u2013 $373k",
+"no_sponsor": false
+},
+{
+"company": "Mixpanel",
+"id": "5018121",
+"title": "Security Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5018121-security-engineer",
+"posted": "2026-11-06T18:13:33Z",
+"pay": "$160k \u2013 $210k",
+"no_sponsor": false
+},
+{
+"company": "Mixpanel",
+"id": "5017936",
+"title": "Senior Product Manager, Data",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5017936-senior-product-manager-data",
+"posted": "2026-11-06T18:23:57Z",
+"pay": "$212k \u2013 $250k",
+"no_sponsor": false
+},
+{
+"company": "Mixpanel",
+"id": "5017822",
+"title": "Staff Security Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5017822-staff-security-engineer",
+"posted": "2026-11-08T02:10:29Z",
+"pay": "$230k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Mixpanel",
+"id": "5017751",
+"title": "Staff Security Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5017751-staff-security-engineer",
+"posted": "2026-11-06T18:34:14Z",
+"pay": "$230k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Mixpanel",
+"id": "4987969",
+"title": "Marketing Systems Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4987969-marketing-systems-engineer",
+"posted": "2026-10-29T00:00:00Z",
+"pay": "$130k \u2013 $176k",
+"no_sponsor": false
+},
+{
+"company": "Mixpanel",
+"id": "4882685",
+"title": "Senior Software Engineer, Experimentation",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4882685-senior-software-engineer-experimentation",
+"posted": "2026-10-22T09:58:53Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Mixpanel",
+"id": "4781076",
+"title": "Senior Customer Engineer - LATAM",
+"location": "Remote (Florida, United States); San Francisco",
+"remote": true,
+"url": "https://wellfound.com/jobs/4781076-senior-customer-engineer-latam",
+"posted": "2026-09-28T14:18:35Z",
+"pay": "",
+"no_sponsor": false
+}
+]
+},
 "moab-3": {
 "fetched": "2026-11-26",
 "jobs": []
+},
+"modash": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Modash.io",
+"id": "4844768",
+"title": "Technical Customer Success Manager, Europe",
+"location": "Remote; Lisbon; Tallinn; Vilnius",
+"remote": true,
+"url": "https://wellfound.com/jobs/4844768-technical-customer-success-manager-europe",
+"posted": "2026-11-24T23:36:09Z",
+"pay": "\u20ac60k \u2013 \u20ac90k",
+"no_sponsor": false
+},
+{
+"company": "Modash.io",
+"id": "5067541",
+"title": "Web Product Manager",
+"location": "Remote; Tallinn; Vilnius",
+"remote": true,
+"url": "https://wellfound.com/jobs/5067541-web-product-manager",
+"posted": "2026-11-13T23:36:02Z",
+"pay": "\u20ac70k \u2013 \u20ac90k",
+"no_sponsor": false
+},
+{
+"company": "Modash.io",
+"id": "4903651",
+"title": "VP of Marketing",
+"location": "Remote; London; Lisbon; Tallinn",
+"remote": true,
+"url": "https://wellfound.com/jobs/4903651-vp-of-marketing",
+"posted": "2026-10-29T22:35:29Z",
+"pay": "\u20ac140k \u2013 \u20ac180k",
+"no_sponsor": false
+},
+{
+"company": "Modash.io",
+"id": "4824208",
+"title": "Senior Product Designer/Product Manager",
+"location": "Remote; Vilnius County; Tallinn; Riga",
+"remote": true,
+"url": "https://wellfound.com/jobs/4824208-senior-product-designer-product-manager",
+"posted": "2026-10-09T22:35:00Z",
+"pay": "\u20ac65k \u2013 \u20ac85k",
+"no_sponsor": false
+},
+{
+"company": "Modash.io",
+"id": "4817686",
+"title": "Technical Customer Success Manager, Toronto",
+"location": "Toronto",
+"remote": false,
+"url": "https://wellfound.com/jobs/4817686-technical-customer-success-manager-toronto",
+"posted": "2026-10-07T10:35:45Z",
+"pay": "$150k \u2013 $170k CAD",
+"no_sponsor": false
+},
+{
+"company": "Modash.io",
+"id": "4797208",
+"title": "Senior Software Engineer - Data Search (remote, Europe)",
+"location": "Remote; Amsterdam; Paris; Berlin; Prague; Tallinn; Warsaw",
+"remote": true,
+"url": "https://wellfound.com/jobs/4797208-senior-software-engineer-data-search-remote-europe",
+"posted": "2026-10-02T22:35:42Z",
+"pay": "\u20ac100k \u2013 \u20ac130k",
+"no_sponsor": false
+},
+{
+"company": "Modash.io",
+"id": "4797207",
+"title": "Senior Backend Engineer - Data Core (remote, Europe)",
+"location": "Remote; Bucharest; Berlin; Prague; Tallinn; Krak\u00f3w; Vilnius",
+"remote": true,
+"url": "https://wellfound.com/jobs/4797207-senior-backend-engineer-data-core-remote-europe",
+"posted": "2026-10-02T22:35:39Z",
+"pay": "\u20ac80k \u2013 \u20ac110k",
+"no_sponsor": false
+}
+]
 },
 "modemobile": {
 "fetched": "2026-11-26",
@@ -36451,6 +39691,88 @@
 "url": "https://wellfound.com/jobs/5066263-staff-site-reliability-engineer-infrastructure-security",
 "posted": "2026-11-07T00:00:00Z",
 "pay": "$151k \u2013 $297k",
+"no_sponsor": false
+}
+]
+},
+"monte-carlo-data-1": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Monte Carlo",
+"id": "4231328",
+"title": "Applied Forward Deployed Engineer (Post-Sales)",
+"location": "Remote (United States); San Francisco",
+"remote": true,
+"url": "https://wellfound.com/jobs/4231328-applied-forward-deployed-engineer-post-sales",
+"posted": "2026-11-07T00:22:57Z",
+"pay": "$140k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Monte Carlo",
+"id": "4884749",
+"title": "Enterprise Account Executive AMER",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4884749-enterprise-account-executive-amer",
+"posted": "2026-10-23T23:22:57Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Monte Carlo",
+"id": "4849885",
+"title": "Senior Account Executive, Key Accounts",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4849885-senior-account-executive-key-accounts",
+"posted": "2026-10-15T23:23:22Z",
+"pay": "$260k \u2013 $300k",
+"no_sponsor": false
+},
+{
+"company": "Monte Carlo",
+"id": "4844776",
+"title": "Enterprise Sales Manager, Americas",
+"location": "Remote (United States); San Francisco",
+"remote": true,
+"url": "https://wellfound.com/jobs/4844776-enterprise-sales-manager-americas",
+"posted": "2026-10-14T23:22:41Z",
+"pay": "$360k \u2013 $400k",
+"no_sponsor": false
+},
+{
+"company": "Monte Carlo",
+"id": "4811971",
+"title": "Strategic Account Executive, AMER",
+"location": "Remote (United States); San Francisco",
+"remote": true,
+"url": "https://wellfound.com/jobs/4811971-strategic-account-executive-amer",
+"posted": "2026-10-06T23:23:15Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Monte Carlo",
+"id": "4787336",
+"title": "Senior Backend Engineer",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4787336-senior-backend-engineer",
+"posted": "2026-09-30T23:22:50Z",
+"pay": "$180k \u2013 $230k",
+"no_sponsor": false
+},
+{
+"company": "Monte Carlo",
+"id": "4781703",
+"title": "Sr. Sales Engineer (Forward Deployed Engineer - Pre Sales)",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4781703-sr-sales-engineer-forward-deployed-engineer-pre-sales",
+"posted": "2026-09-29T23:22:47Z",
+"pay": "$240k \u2013 $270k",
 "no_sponsor": false
 }
 ]
@@ -36684,6 +40006,88 @@
 "fetched": "2026-11-26",
 "jobs": []
 },
+"naveera-technology-1": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Naveera Technology",
+"id": "5106019",
+"title": "GCP Data Engineer/ Lead/ Architect/ Manager",
+"location": "Madurai",
+"remote": false,
+"url": "https://wellfound.com/jobs/5106019-gcp-data-engineer-lead-architect-manager",
+"posted": "2026-11-19T17:18:21Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Naveera Technology",
+"id": "5061581",
+"title": "Sr AI-Forward .NET Full Stack Engineer (ReactJs | Claude Code)",
+"location": "Remote; Madurai",
+"remote": true,
+"url": "https://wellfound.com/jobs/5061581-sr-ai-forward-net-full-stack-engineer-reactjs-claude-code",
+"posted": "2026-11-13T09:59:21Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Naveera Technology",
+"id": "5027316",
+"title": "Naveera | Seeking Strategic Alliances & Business Partners \u2013 USA Enterprise IT Services",
+"location": "Remote; Atlanta",
+"remote": true,
+"url": "https://wellfound.com/jobs/5027316-naveera-seeking-strategic-alliances-business-partners-usa-enterprise-it-services",
+"posted": "2026-11-09T12:29:18Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Naveera Technology",
+"id": "4897451",
+"title": "SVP/Director/Global Head/Chief Procurement Officer -  (Data, AI & Engineering)",
+"location": "Remote; Atlanta",
+"remote": true,
+"url": "https://wellfound.com/jobs/4897451-svp-director-global-head-chief-procurement-officer-data-ai-engineering",
+"posted": "2026-10-27T07:24:45Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Naveera Technology",
+"id": "4897446",
+"title": "Tech Appointment Setter (Data, AI & Engineering Services)",
+"location": "Remote; Atlanta",
+"remote": true,
+"url": "https://wellfound.com/jobs/4897446-tech-appointment-setter-data-ai-engineering-services",
+"posted": "2026-10-27T07:04:53Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Naveera Technology",
+"id": "4895752",
+"title": "Executive Referral Partner Program: For CXOs, SVPs, Directors & Global Heads (Commission-Based)",
+"location": "Remote; Atlanta; California; North Carolina; Texas; Virginia; Florida; New Jersey; Washington; Georgia; Wisconsin; New York",
+"remote": true,
+"url": "https://wellfound.com/jobs/4895752-executive-referral-partner-program-for-cxos-svps-directors-global-heads-commission-based",
+"posted": "2026-10-26T13:40:30Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Naveera Technology",
+"id": "4817731",
+"title": "Solutions Architect & Engineering Manager - (GCP, AI/ML & GenAI) @ Naveera Tech, USA - Remote Work",
+"location": "Remote (Atlanta, Georgia); Atlanta",
+"remote": true,
+"url": "https://wellfound.com/jobs/4817731-solutions-architect-engineering-manager-gcp-ai-ml-genai-naveera-tech-usa-remote-work",
+"posted": "2026-10-07T12:53:05Z",
+"pay": "$140k \u2013 $170k",
+"no_sponsor": false
+}
+]
+},
 "navtech-solutions": {
 "fetched": "2026-11-26",
 "jobs": [
@@ -36877,6 +40281,231 @@
 "url": "https://wellfound.com/jobs/4938712-technical-lead-azure-data-engineer",
 "posted": "2026-10-30T07:00:20Z",
 "pay": "",
+"no_sponsor": false
+}
+]
+},
+"netbox-labs-2": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "NetBox Labs",
+"id": "5137501",
+"title": "Regional Sales Manager",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5137501-regional-sales-manager",
+"posted": "2026-11-25T00:35:21Z",
+"pay": "$140k \u2013 $160k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "5127365",
+"title": "Staff Software Engineer, Tech Lead - NetBox Core",
+"location": "Remote (United States); New York",
+"remote": true,
+"url": "https://wellfound.com/jobs/5127365-staff-software-engineer-tech-lead-netbox-core",
+"posted": "2026-11-21T00:37:06Z",
+"pay": "$110k \u2013 $240k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "5127364",
+"title": "Solutions Engineer",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5127364-solutions-engineer",
+"posted": "2026-11-21T00:37:04Z",
+"pay": "$130k \u2013 $150k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "5127363",
+"title": "Head of Financial Planning & Analysis",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5127363-head-of-financial-planning-analysis",
+"posted": "2026-11-21T00:37:01Z",
+"pay": "$225k \u2013 $260k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4544893",
+"title": "Technology Alliances Manager",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4544893-technology-alliances-manager",
+"posted": "2026-11-20T12:35:46Z",
+"pay": "$130k \u2013 $145k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4779377",
+"title": "Senior Software Engineer, Observability",
+"location": "New York City; United Kingdom",
+"remote": false,
+"url": "https://wellfound.com/jobs/4779377-senior-software-engineer-observability",
+"posted": "2026-11-20T12:35:45Z",
+"pay": "$85k \u2013 $195k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "5105939",
+"title": "Senior Product Marketing Manager",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5105939-senior-product-marketing-manager",
+"posted": "2026-11-20T12:35:45Z",
+"pay": "$165k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4779376",
+"title": "Senior Software Backend Engineer, Foundations",
+"location": "New York City; United Kingdom",
+"remote": false,
+"url": "https://wellfound.com/jobs/4779376-senior-software-backend-engineer-foundations",
+"posted": "2026-11-20T12:35:45Z",
+"pay": "$85k \u2013 $195k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4844585",
+"title": "Senior Product Designer",
+"location": "Remote (United States); New York",
+"remote": true,
+"url": "https://wellfound.com/jobs/4844585-senior-product-designer",
+"posted": "2026-11-20T12:35:44Z",
+"pay": "$175k \u2013 $195k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "5105938",
+"title": "Senior Product Manager, NetBox Core",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5105938-senior-product-manager-netbox-core",
+"posted": "2026-11-20T12:35:44Z",
+"pay": "$180k \u2013 $195k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "5106147",
+"title": "Senior Frontend Engineer, Foundations",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/5106147-senior-frontend-engineer-foundations",
+"posted": "2026-11-20T12:35:44Z",
+"pay": "$85k \u2013 $195k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "5126309",
+"title": "Senior Product Manager, NetBox Core",
+"location": "United States",
+"remote": false,
+"url": "https://wellfound.com/jobs/5126309-senior-product-manager-netbox-core",
+"posted": "2026-11-20T12:35:44Z",
+"pay": "$180k \u2013 $195k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4881345",
+"title": "Senior Customer Success Manager",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4881345-senior-customer-success-manager",
+"posted": "2026-11-20T12:35:43Z",
+"pay": "$135k \u2013 $150k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4467485",
+"title": "Senior Customer Support Engineer, Australia",
+"location": "Australia",
+"remote": false,
+"url": "https://wellfound.com/jobs/4467485-senior-customer-support-engineer-australia",
+"posted": "2026-11-20T12:35:43Z",
+"pay": "$130k \u2013 $150k AUD",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4897764",
+"title": "Senior Customer Success Manager - APAC",
+"location": "Remote; Australia",
+"remote": true,
+"url": "https://wellfound.com/jobs/4897764-senior-customer-success-manager-apac",
+"posted": "2026-11-20T12:35:43Z",
+"pay": "$160k \u2013 $180k AUD",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4811991",
+"title": "Manager, Customer Success - Americas",
+"location": "Remote (United States); College Station",
+"remote": true,
+"url": "https://wellfound.com/jobs/4811991-manager-customer-success-americas",
+"posted": "2026-11-20T12:35:42Z",
+"pay": "$135k \u2013 $140k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4766909",
+"title": "Field Marketing Coordinator",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4766909-field-marketing-coordinator",
+"posted": "2026-11-20T12:35:42Z",
+"pay": "$85k \u2013 $105k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4965888",
+"title": "Director, Total Rewards",
+"location": "Remote (United States); United States",
+"remote": true,
+"url": "https://wellfound.com/jobs/4965888-director-total-rewards",
+"posted": "2026-11-20T12:35:42Z",
+"pay": "$195k \u2013 $220k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4748879",
+"title": "Account Executive, France",
+"location": "France",
+"remote": false,
+"url": "https://wellfound.com/jobs/4748879-account-executive-france",
+"posted": "2026-11-20T12:35:41Z",
+"pay": "\u20ac70k \u2013 \u20ac85k",
+"no_sponsor": false
+},
+{
+"company": "NetBox Labs",
+"id": "4897763",
+"title": "Customer Success Manager",
+"location": "Remote (United States); College Station",
+"remote": true,
+"url": "https://wellfound.com/jobs/4897763-customer-success-manager",
+"posted": "2026-11-20T12:35:41Z",
+"pay": "$110k \u2013 $120k",
 "no_sponsor": false
 }
 ]
@@ -37236,6 +40865,209 @@
 "url": "https://wellfound.com/jobs/5027319-hardware-engineer",
 "posted": "2026-11-09T12:43:25Z",
 "pay": "$100k \u2013 $170k",
+"no_sponsor": false
+}
+]
+},
+"palmetto-3": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Palmetto",
+"id": "5137821",
+"title": "Tech Support Specialist I (Spanish Bilingual)",
+"location": "Remote (Philippines)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5137821-tech-support-specialist-i-spanish-bilingual",
+"posted": "2026-11-25T21:25:42Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4787288",
+"title": "Quanititive Associate, Capital Markets",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4787288-quanititive-associate-capital-markets",
+"posted": "2026-11-19T21:23:54Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "5101909",
+"title": "Director, Data & AI",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5101909-director-data-ai",
+"posted": "2026-11-18T21:25:42Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "5094956",
+"title": "Senior Manager, Software Engineering",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5094956-senior-manager-software-engineering",
+"posted": "2026-11-17T21:29:06Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "5094955",
+"title": "Staff Software Engineer, Growth",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/5094955-staff-software-engineer-growth",
+"posted": "2026-11-17T21:29:00Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "5086229",
+"title": "Capital Markets Analyst - Project Finance",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5086229-capital-markets-analyst-project-finance",
+"posted": "2026-11-16T21:27:04Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "5086228",
+"title": "Director, Capital Markets",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5086228-director-capital-markets",
+"posted": "2026-11-16T21:27:00Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "5064411",
+"title": "GM, VPP & Standalone Storage",
+"location": "Remote (United States); Charlotte",
+"remote": true,
+"url": "https://wellfound.com/jobs/5064411-gm-vpp-standalone-storage",
+"posted": "2026-11-13T11:26:06Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "5015926",
+"title": "Director, Channel Accounts, Comfort",
+"location": "Charlotte",
+"remote": false,
+"url": "https://wellfound.com/jobs/5015926-director-channel-accounts-comfort",
+"posted": "2026-11-07T11:24:36Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4385710",
+"title": "Customer Success Specialist I (Spanish Bilingual)",
+"location": "Remote (Philippines); Charlotte",
+"remote": true,
+"url": "https://wellfound.com/jobs/4385710-customer-success-specialist-i-spanish-bilingual",
+"posted": "2026-11-05T21:25:15Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4943315",
+"title": "Solar Field Service Technician",
+"location": "Los Angeles",
+"remote": false,
+"url": "https://wellfound.com/jobs/4943315-solar-field-service-technician",
+"posted": "2026-10-30T20:25:14Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4897694",
+"title": "Staff Data Engineer",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/4897694-staff-data-engineer",
+"posted": "2026-10-27T20:25:29Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4897693",
+"title": "Senior Manager, Data Engineering",
+"location": "Remote (United States)",
+"remote": true,
+"url": "https://wellfound.com/jobs/4897693-senior-manager-data-engineering",
+"posted": "2026-10-27T20:25:28Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4897692",
+"title": "Inside Sales Account Manager, Comfort",
+"location": "Charlotte",
+"remote": false,
+"url": "https://wellfound.com/jobs/4897692-inside-sales-account-manager-comfort",
+"posted": "2026-10-27T20:25:27Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4884712",
+"title": "Senior Manager, Supply Chain Planning",
+"location": "Charlotte",
+"remote": false,
+"url": "https://wellfound.com/jobs/4884712-senior-manager-supply-chain-planning",
+"posted": "2026-10-23T20:24:24Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4824189",
+"title": "Senior Director, Total Rewards",
+"location": "Charlotte",
+"remote": false,
+"url": "https://wellfound.com/jobs/4824189-senior-director-total-rewards",
+"posted": "2026-10-09T20:24:38Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4823822",
+"title": "Senior Quality Control Technician, HVAC",
+"location": "Remote; Charlotte",
+"remote": true,
+"url": "https://wellfound.com/jobs/4823822-senior-quality-control-technician-hvac",
+"posted": "2026-10-08T20:24:30Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Palmetto",
+"id": "4794632",
+"title": "Collections Specialist",
+"location": "Remote (Philippines)",
+"remote": true,
+"url": "https://wellfound.com/jobs/4794632-collections-specialist",
+"posted": "2026-10-02T08:24:53Z",
+"pay": "",
 "no_sponsor": false
 }
 ]
@@ -37693,6 +41525,55 @@
 "podium": {
 "fetched": "2026-11-26",
 "jobs": []
+},
+"podium-automation": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Podium Automation",
+"id": "5127182",
+"title": "Director of Supply Chain",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5127182-director-of-supply-chain",
+"posted": "2026-11-20T12:40:48Z",
+"pay": "$160k \u2013 $190k",
+"no_sponsor": false
+},
+{
+"company": "Podium Automation",
+"id": "5044989",
+"title": "Senior Software Engineer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044989-senior-software-engineer",
+"posted": "2026-11-13T00:44:23Z",
+"pay": "$150k \u2013 $190k",
+"no_sponsor": false
+},
+{
+"company": "Podium Automation",
+"id": "5044988",
+"title": "Inventory Coordinator",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5044988-inventory-coordinator",
+"posted": "2026-11-13T00:44:22Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Podium Automation",
+"id": "4849917",
+"title": "Electrical Design Engineer",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/4849917-electrical-design-engineer",
+"posted": "2026-10-15T23:44:51Z",
+"pay": "$70k \u2013 $100k",
+"no_sponsor": false
+}
+]
 },
 "pomelo-care": {
 "fetched": "2026-11-25",
@@ -39532,6 +43413,99 @@
 }
 ]
 },
+"sierra-studio-2": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Sierra Studio",
+"id": "5138691",
+"title": "Head of Engineering (TypeScript / React / GCP / AI), Supply Chain Operations",
+"location": "Remote (Brazil); S\u00e3o Paulo",
+"remote": true,
+"url": "https://wellfound.com/jobs/5138691-head-of-engineering-typescript-react-gcp-ai-supply-chain-operations",
+"posted": "2026-11-27T00:44:42Z",
+"pay": "$100k \u2013 $130k",
+"no_sponsor": false
+},
+{
+"company": "Sierra Studio",
+"id": "3428272",
+"title": "Lead AI Engineer",
+"location": "Remote (Brazil); S\u00e3o Paulo",
+"remote": true,
+"url": "https://wellfound.com/jobs/3428272-lead-ai-engineer",
+"posted": "2026-11-13T17:30:37Z",
+"pay": "$60k \u2013 $80k",
+"no_sponsor": false
+},
+{
+"company": "Sierra Studio",
+"id": "4575954",
+"title": "Engineering Manager",
+"location": "Remote (Brazil); S\u00e3o Paulo",
+"remote": true,
+"url": "https://wellfound.com/jobs/4575954-engineering-manager",
+"posted": "2026-11-12T17:31:02Z",
+"pay": "$80k \u2013 $120k",
+"no_sponsor": false
+},
+{
+"company": "Sierra Studio",
+"id": "4470128",
+"title": "Founding Engineer (Python / FastAPI / Next.js), Supply Chain SaaS",
+"location": "Remote (Brazil); S\u00e3o Paulo",
+"remote": true,
+"url": "https://wellfound.com/jobs/4470128-founding-engineer-python-fastapi-next-js-supply-chain-saas",
+"posted": "2026-11-04T00:48:29Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Sierra Studio",
+"id": "3428281",
+"title": "Lead Full Stack Engineer",
+"location": "Remote (Brazil); S\u00e3o Paulo",
+"remote": true,
+"url": "https://wellfound.com/jobs/3428281-2-lead-full-stack-engineer",
+"posted": "2026-10-15T16:30:35Z",
+"pay": "$70k \u2013 $90k",
+"no_sponsor": false
+},
+{
+"company": "Sierra Studio",
+"id": "4792092",
+"title": "Shopify Growth Developer (CRO), DTC Wellness Brand",
+"location": "Remote (Brazil); S\u00e3o Paulo",
+"remote": true,
+"url": "https://wellfound.com/jobs/4792092-shopify-growth-developer-cro-dtc-wellness-brand",
+"posted": "2026-10-01T23:49:03Z",
+"pay": "$50k \u2013 $100k",
+"no_sponsor": false
+},
+{
+"company": "Sierra Studio",
+"id": "4792091",
+"title": "Senior Engineer (AI / Robotics / R&D), In-Home Care AI",
+"location": "Brazil",
+"remote": false,
+"url": "https://wellfound.com/jobs/4792091-senior-engineer-ai-robotics-r-d-in-home-care-ai",
+"posted": "2026-10-01T23:48:59Z",
+"pay": "$180k \u2013 $360k",
+"no_sponsor": false
+},
+{
+"company": "Sierra Studio",
+"id": "4781777",
+"title": "Backend Engineer, AI Integrations",
+"location": "Remote (Brazil); S\u00e3o Paulo",
+"remote": true,
+"url": "https://wellfound.com/jobs/4781777-backend-engineer-ai-integrations",
+"posted": "2026-09-29T23:52:43Z",
+"pay": "$60k \u2013 $100k",
+"no_sponsor": false
+}
+]
+},
 "sigma-computing-2": {
 "fetched": "2026-11-26",
 "jobs": []
@@ -40977,6 +44951,10 @@
 }
 ]
 },
+"take2ai": {
+"fetched": "2026-11-27",
+"jobs": []
+},
 "talentxo-9": {
 "fetched": "2026-11-26",
 "jobs": [
@@ -41923,6 +45901,198 @@
 }
 ]
 },
+"traba-work": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Traba",
+"id": "4622553",
+"title": "Customer On-Site - Minneapolis, MN",
+"location": "Minneapolis",
+"remote": false,
+"url": "https://wellfound.com/jobs/4622553-customer-on-site-minneapolis-mn",
+"posted": "2026-11-25T00:32:36Z",
+"pay": "$50k \u2013 $70k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5135586",
+"title": "Strategic Finance Lead",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5135586-strategic-finance-lead",
+"posted": "2026-11-24T00:35:21Z",
+"pay": "$150k \u2013 $180k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5135585",
+"title": "Sales Development Representative - Summer 2027 Graduates",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5135585-sales-development-representative-summer-2027-graduates",
+"posted": "2026-11-24T00:35:18Z",
+"pay": "$65k \u2013 $65k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5135584",
+"title": "Operations Analyst - Summer 2027 Graduates",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/5135584-operations-analyst-summer-2027-graduates",
+"posted": "2026-11-24T00:35:16Z",
+"pay": "$85k \u2013 $85k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5127358",
+"title": "Customer On-Site - Mauldin, SC",
+"location": "Mauldin",
+"remote": false,
+"url": "https://wellfound.com/jobs/5127358-customer-on-site-mauldin-sc",
+"posted": "2026-11-21T00:33:52Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5127167",
+"title": "Customer On-Site - Elkton, MD",
+"location": "Elkton",
+"remote": false,
+"url": "https://wellfound.com/jobs/5127167-customer-on-site-elkton-md",
+"posted": "2026-11-20T12:32:56Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "3286164",
+"title": "Senior Technical Recruiter",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/3286164-senior-technical-recruiter",
+"posted": "2026-11-20T00:33:50Z",
+"pay": "$100k \u2013 $224k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5105932",
+"title": "Customer On-Site - Groveport, OH",
+"location": "Groveport",
+"remote": false,
+"url": "https://wellfound.com/jobs/5105932-customer-on-site-groveport-oh",
+"posted": "2026-11-19T12:33:32Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "3384485",
+"title": "Talent Recruiter",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/3384485-talent-recruiter",
+"posted": "2026-11-17T00:35:18Z",
+"pay": "$80k \u2013 $100k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "3224193",
+"title": "Director of Analytics & Data",
+"location": "New York City",
+"remote": false,
+"url": "https://wellfound.com/jobs/3224193-director-of-analytics-data",
+"posted": "2026-11-13T00:35:07Z",
+"pay": "$200k \u2013 $230k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5027476",
+"title": "Staff Software Engineer (Applied AI)",
+"location": "New York City; San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027476-staff-software-engineer-applied-ai",
+"posted": "2026-11-10T00:37:18Z",
+"pay": "$240k \u2013 $300k \u2022 0.13% \u2013 0.24%",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5027475",
+"title": "Staff Software Engineer (AI Agents)",
+"location": "New York City; San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027475-staff-software-engineer-ai-agents",
+"posted": "2026-11-10T00:37:16Z",
+"pay": "$240k \u2013 $300k \u2022 0.13% \u2013 0.24%",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5027474",
+"title": "Senior Software Engineer (Applied AI)",
+"location": "New York City; San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027474-senior-software-engineer-applied-ai",
+"posted": "2026-11-10T00:37:14Z",
+"pay": "$200k \u2013 $240k \u2022 0.08% \u2013 0.18%",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "5027473",
+"title": "Senior Software Engineer (AI Agents)",
+"location": "New York City; San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5027473-senior-software-engineer-ai-agents",
+"posted": "2026-11-10T00:37:12Z",
+"pay": "$200k \u2013 $240k \u2022 0.08% \u2013 0.18%",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "4895909",
+"title": "Customer On-Site - Philadelphia, PA",
+"location": "Philadelphia",
+"remote": false,
+"url": "https://wellfound.com/jobs/4895909-customer-on-site-philadelphia-pa",
+"posted": "2026-10-26T23:35:30Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "4849903",
+"title": "Customer On-Site Manager - Milpitas, CA",
+"location": "Henderson",
+"remote": false,
+"url": "https://wellfound.com/jobs/4849903-customer-on-site-manager-milpitas-ca",
+"posted": "2026-10-15T23:35:42Z",
+"pay": "$75k \u2013 $90k",
+"no_sponsor": false
+},
+{
+"company": "Traba",
+"id": "4797234",
+"title": "Customer On-Site - Hanover, MD",
+"location": "Columbia",
+"remote": false,
+"url": "https://wellfound.com/jobs/4797234-customer-on-site-hanover-md",
+"posted": "2026-10-02T23:34:21Z",
+"pay": "",
+"no_sponsor": false
+}
+]
+},
 "travefy": {
 "fetched": "2026-11-26",
 "jobs": [
@@ -42156,6 +46326,154 @@
 "trialspark": {
 "fetched": "2026-11-26",
 "jobs": []
+},
+"truebill": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Rocket Money",
+"id": "4692235",
+"title": "Operations Associate - Customer Support",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/4692235-operations-associate-customer-support",
+"posted": "2026-11-18T21:12:12Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "5086207",
+"title": "Social Producer",
+"location": "Detroit; New York City; Washington DC; San Francisco; Mi-Wuk Village",
+"remote": false,
+"url": "https://wellfound.com/jobs/5086207-social-producer",
+"posted": "2026-11-16T21:13:02Z",
+"pay": "$85k \u2013 $115k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4522633",
+"title": "Team Leader, Customer Support",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/4522633-team-leader-customer-support",
+"posted": "2026-11-11T11:12:33Z",
+"pay": "$60k \u2013 $75k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4410832",
+"title": "Operations Associate - Customer Support",
+"location": "Remote",
+"remote": true,
+"url": "https://wellfound.com/jobs/4410832-operations-associate-customer-support",
+"posted": "2026-11-09T21:12:19Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4985482",
+"title": "Team Leader, Engineering - Financial Connections",
+"location": "Remote (United States); New York City; Washington DC; San Francisco; Washington",
+"remote": true,
+"url": "https://wellfound.com/jobs/4985482-team-leader-engineering-financial-connections",
+"posted": "2026-11-04T11:12:51Z",
+"pay": "$150k \u2013 $200k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4901589",
+"title": "Creative Project Manager",
+"location": "Remote (United States); Detroit; New York City; Washington DC",
+"remote": true,
+"url": "https://wellfound.com/jobs/4901589-creative-project-manager",
+"posted": "2026-10-28T20:11:53Z",
+"pay": "$75k \u2013 $100k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4897675",
+"title": "Senior Product Marketing Manager, Financial Products",
+"location": "Detroit; New York City; Washington; District of Columbia",
+"remote": false,
+"url": "https://wellfound.com/jobs/4897675-senior-product-marketing-manager-financial-products",
+"posted": "2026-10-27T20:12:27Z",
+"pay": "$140k \u2013 $170k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4889906",
+"title": "Senior Analytics Engineer",
+"location": "Remote; Denver; Detroit; Miami; New York City; Phoenix; Washington DC; San Francisco; Washington; Clare",
+"remote": true,
+"url": "https://wellfound.com/jobs/4889906-senior-analytics-engineer",
+"posted": "2026-10-24T08:11:24Z",
+"pay": "$150k \u2013 $190k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4881283",
+"title": "Business Operations Manager - Deposit Products",
+"location": "Remote (United States); Detroit; New York City; Washington DC; San Francisco; Washington",
+"remote": true,
+"url": "https://wellfound.com/jobs/4881283-business-operations-manager-deposit-products",
+"posted": "2026-10-22T20:12:04Z",
+"pay": "$120k \u2013 $160k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4881282",
+"title": "Senior Analyst, Fraud and AML",
+"location": "Remote (United States); Detroit; New York City; San Francisco; Washington; District of Columbia",
+"remote": true,
+"url": "https://wellfound.com/jobs/4881282-senior-analyst-fraud-and-aml",
+"posted": "2026-10-22T20:12:00Z",
+"pay": "$100k \u2013 $125k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4844729",
+"title": "Senior Product Manager, Invest",
+"location": "Remote (United States); New York City; Washington DC; Washington",
+"remote": true,
+"url": "https://wellfound.com/jobs/4844729-senior-product-manager-invest",
+"posted": "2026-10-14T20:12:26Z",
+"pay": "$150k \u2013 $190k",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4814840",
+"title": "Rocket Money Talent Network",
+"location": "Washington DC; San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4814840-rocket-money-talent-network",
+"posted": "2026-10-07T08:13:00Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Rocket Money",
+"id": "4351179",
+"title": "Senior Full Stack Engineer, Account Linking",
+"location": "New York City; Washington DC; San Francisco; Washington",
+"remote": false,
+"url": "https://wellfound.com/jobs/4351179-senior-full-stack-engineer-account-linking",
+"posted": "2026-10-05T16:30:45Z",
+"pay": "$150k \u2013 $185k",
+"no_sponsor": false
+}
+]
 },
 "tulip-1": {
 "fetched": "2026-11-25",
@@ -42682,6 +47000,10 @@
 "no_sponsor": false
 }
 ]
+},
+"useascend": {
+"fetched": "2026-11-27",
+"jobs": []
 },
 "vannevar-labs": {
 "fetched": "2026-11-25",
@@ -43258,6 +47580,104 @@
 "url": "https://wellfound.com/jobs/4811773-content-marketing",
 "posted": "2026-10-06T11:36:40Z",
 "pay": "$160k \u2013 $190k",
+"no_sponsor": false
+}
+]
+},
+"walt-4": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "WALT",
+"id": "4587523",
+"title": "Forward Deployment Engineer",
+"location": "Bangalore Urban",
+"remote": false,
+"url": "https://wellfound.com/jobs/4587523-forward-deployment-engineer",
+"posted": "2026-11-16T17:30:51Z",
+"pay": "\u20b925L \u2013 \u20b935L \u2022 0.0% \u2013 0.1%",
+"no_sponsor": false
+},
+{
+"company": "WALT",
+"id": "4943162",
+"title": "Senior Platform Engineer",
+"location": "Bangalore Urban",
+"remote": false,
+"url": "https://wellfound.com/jobs/4943162-senior-platform-engineer",
+"posted": "2026-10-30T13:36:58Z",
+"pay": "",
+"no_sponsor": false
+}
+]
+},
+"watney-robotics": {
+"fetched": "2026-11-27",
+"jobs": [
+{
+"company": "Watney Robotics",
+"id": "5137891",
+"title": "Staff Mechanical Engineer - Robotics",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/5137891-staff-mechanical-engineer-robotics",
+"posted": "2026-11-26T00:48:50Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Watney Robotics",
+"id": "4904208",
+"title": "Senior Product Designer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4904208-senior-product-designer",
+"posted": "2026-10-29T23:53:40Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Watney Robotics",
+"id": "4860581",
+"title": "Staff Software Engineer - Infrastructure",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4860581-staff-software-engineer-infrastructure",
+"posted": "2026-10-17T11:44:30Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Watney Robotics",
+"id": "4860580",
+"title": "Staff Firmware Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4860580-staff-firmware-engineer",
+"posted": "2026-10-17T11:44:29Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Watney Robotics",
+"id": "4860579",
+"title": "Senior Software Engineer - Tools",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4860579-senior-software-engineer-tools",
+"posted": "2026-10-17T11:44:27Z",
+"pay": "",
+"no_sponsor": false
+},
+{
+"company": "Watney Robotics",
+"id": "4824289",
+"title": "Senior Manufacturing Engineer",
+"location": "San Francisco",
+"remote": false,
+"url": "https://wellfound.com/jobs/4824289-senior-manufacturing-engineer",
+"posted": "2026-10-09T23:47:30Z",
+"pay": "",
 "no_sponsor": false
 }
 ]
