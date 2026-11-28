@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T01:26+00:00",
+ "updated": "2026-11-28T11:42+00:00",
  "rounds": {
   "lemonpeel": {
    "company": "Lemonpeel",
@@ -1365,7 +1365,8 @@
     "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQkFqZXhjUTZBMkEzZUlOU21vbEJQeWxtOTByeG11NlQ5RkExSnpZcXFYbmlxVE9nbVAtZFdYNzVENS1KNW5CRWRuTlJlQks5VjN5dURtN3FWT2h5SlIwMnVOak14clF2TTNMLXdSMnlkOGJQaE9PUExYbmdjN2xIdUMxdm1NWWNQTVN3NHdGX2pycmpuZlVpVm1fajZwa1Zncmc?oc=5",
     "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5OamFjNC03YUdwODJ5MEcydGd0VUxraFJwM0I2eDBUSnVvd1Y5NFFKYkdlcmdZQVd5eWl2UWlubWQxcGZJTm1La0NhcHMwdnludE1N?oc=5",
     "https://news.google.com/rss/articles/CBMidEFVX3lxTFA0Q1YtNmczblk5aEFvemEyTnRIUHZ6SzBtbkk2QjZ5MldDLVBwbVg3UmNfRFVON0lPdVdxUmNGOHFabmJOLUZrbzIzYzk4MnV3TW1vX052cXpqazhfVTI4UkRWRlFRcGJzci1xQjdheDFGbmxu?oc=5",
-    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZC14WlpaUEpzTVdNSF9wZ0piLUlhSld1c25uc2hsbGlEdUwxRXlyLXk5enA4bG1taW1JdWNHSFRIamtxcHRxZ3VaOGJkZzNES0NTWnpCVXR3YmRmVDhBY1lNdXNYRUxIcFo5eC1LcHIybVp1TVpLRHVWOWVuaTJOREpqODJGR2l5QWF1WHM1SUtHMnZHM1BFYi1iSQ?oc=5"
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZC14WlpaUEpzTVdNSF9wZ0piLUlhSld1c25uc2hsbGlEdUwxRXlyLXk5enA4bG1taW1JdWNHSFRIamtxcHRxZ3VaOGJkZzNES0NTWnpCVXR3YmRmVDhBY1lNdXNYRUxIcFo5eC1LcHIybVp1TVpLRHVWOWVuaTJOREpqODJGR2l5QWF1WHM1SUtHMnZHM1BFYi1iSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNU2lqQlhlRHFGbHdncGpUY1dpaGZtMmNWQlhiT2hrWFF6WXEyd252NVVaOVJaejc2WHJ4c3RIVVJDWHFrT1ZsaWpKX3R0S1liRkZoWjcyQkdjQUcyck9CcDZxSzV5MmNBc2VIX2I5cnFzY2pCckZQZ1UwRTRYN0luNGtDb0lqeXdwaWxWMXhJYlRhaXM3RU8xTnVFUWJIRmJXSmhERkp2d1RPNzZxQV9BM25CSG9LZGc?oc=5"
    ],
    "source": "AI Insider",
    "first_seen": "2026-11-25",
@@ -2920,6 +2921,28 @@
     "x": "https://x.com/search?q=Namma%20Yatri%20founder&f=user",
     "web": "https://www.google.com/search?q=Namma%20Yatri%20startup"
    }
+  },
+  "ulys": {
+   "company": "Ulys",
+   "round": "seed",
+   "amount_m": 4.0,
+   "date": "2026-11-25",
+   "headline": "Ulys raises $4M seed for AI assistant that trades tokenised stocks",
+   "india": false,
+   "round_guessed": false,
+   "founders": [],
+   "sources": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWDdJVTE1Zmt6bGc0OW9MaHQtQnZFRG1tYUNCZmVENVRPRDlGaXllWEZ4ZEhkOFpON0Q3Y3o5VkFKa2hRT3dPbzlROGV1aExaUHBpbzBqMnlMN2szTklCclhBTEhJWklickJPUFdYS20tdUF6emJxOE9pZVZSakJCaVNQb2tVcW45Zlp6R3M5X2tlRERRZklEVGFRSDIxaWJV?oc=5"
+   ],
+   "source": "Dealroom",
+   "first_seen": "2026-11-28",
+   "tracked": "",
+   "board": null,
+   "links": {
+    "linkedin": "https://www.linkedin.com/search/results/people/?keywords=Ulys%20founder",
+    "x": "https://x.com/search?q=Ulys%20founder&f=user",
+    "web": "https://www.google.com/search?q=Ulys%20startup"
+   }
   }
  },
  "probes": {
@@ -3085,7 +3108,8 @@
   "firstpersonlabs": null,
   "korben": null,
   "photonicxai": null,
-  "nammayatri": null
+  "nammayatri": null,
+  "ulys": null
  },
  "sec_seen": []
 }
